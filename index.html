@@ -43,17 +43,16 @@ footer a:hover { text-decoration:underline; }
 <div class="container">
 <h1>Salary Pay Slip Generator</h1>
 <h2>Calculate Your Net Salary Online</h2>
-
-<h3>Employee Details</h3>
-<label>Employee Name</label><input type="text" id="empName" placeholder="John Doe">
+<!-- Company Logo / Name --><div id="companySection" style="text-align:center;margin-bottom:20px;">  <img id="companyLogoPreview" style="max-height:80px;display:none;margin-bottom:10px;">  <input type="file" id="companyLogo" accept="image/*">  <input type="text" id="companyName" placeholder="Enter Company Name (optional)"></div><h3>Employee Details</h3><label>Employee Name</label><input type="text" id="empName" placeholder="John Doe">
 <label>Designation</label><input type="text" id="designation" placeholder="Software Engineer">
 <label>Employee ID</label><input type="text" id="empId" placeholder="EMP001">
 <label>Date</label><input type="date" id="monthYear" placeholder="Select Date">
 
-<h3>Salary Details</h3>
-<label>Basic Salary</label><input type="number" id="basic" placeholder="Enter Basic Salary">
-<label>Allowances</label><input type="number" id="allow" placeholder="Total Allowances">
-<label>Overtime Amount</label><input type="number" id="ot" placeholder="Overtime Pay">
+<h3>Salary Details</h3><label>Basic Salary</label><input type="number" id="basic" placeholder="Enter Basic Salary"><label>Salary Type</label><select id="salaryType">  <option value="monthly" selected>Monthly</option>  <option value="weekly">Weekly</option>  <option value="daily">Daily</option>  <option value="hourly">Hourly</option></select>
+<label id="baseSalaryLabel"></label><label>Allowances</label><input type="number" id="allow" placeholder="Total Allowances"><div id="allowanceWidget" style="margin-top:10px;">  <label><input type="checkbox" class="allowItem" data-name="House Rent Allowance" data-id="hra"> House Rent Allowance</label>  <input type="number" id="hra" class="allowValue" placeholder="HRA Amount" style="display:none;">
+  <label><input type="checkbox" class="allowItem" data-name="Medical Allowance" data-id="medical"> Medical Allowance</label>  <input type="number" id="medical" class="allowValue" placeholder="Medical Amount" style="display:none;">
+  <label><input type="checkbox" class="allowItem" data-name="Transport Allowance" data-id="transport"> Transport Allowance</label>  <input type="number" id="transport" class="allowValue" placeholder="Transport Amount" style="display:none;">
+  <label><input type="checkbox" class="allowItem" data-name="Other Allowance" data-id="otherAllow"> Other Allowance</label>  <input type="number" id="otherAllow" class="allowValue" placeholder="Other Allowance Amount" style="display:none;"></div><label>Overtime Amount</label><input type="number" id="ot" placeholder="Overtime Pay">
 <label>Bonuses / Incentives</label><input type="number" id="bonus" placeholder="Bonuses">
 <label>Late Days</label><input type="number" id="late" placeholder="Number of Late Days">
 <label>Late Penalty Per Day</label><input type="number" id="penalty" placeholder="Penalty per late day">
