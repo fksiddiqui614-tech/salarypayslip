@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salary Pay Slip Generator – Calculate Net Salary Online</title>
+<title>Salary Pay Slip – Create a professional Salary Payslip Online</title>
 <meta name="description" content="Salary Pay Slip Generator – Calculate net salary including allowances, bonuses, deductions, taxes, and overtime. Free online salary calculator with print-ready corporate payslip and PDF download.">
 <meta name="keywords" content="salary calculator, net salary calculator, online salary tool, pay slip generator, employee salary calculator, tax calculator, salary deductions, payroll tool, corporate salary calculator">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -36,23 +36,57 @@ footer a:hover { text-decoration:underline; }
 .guide h3, .faq h3 { color:#007bff; text-align:center; }
 .guide h4, .faq h4 { margin-top:15px; color:#0056b3; cursor:pointer; padding:10px; background:#f0e68c; border-radius:5px; }
 .guide p, .faq p { text-align:justify; display:none; padding:10px; background:#fffbe6; border-radius:5px; margin-top:5px; }
+.company-header { text-align:center; margin-bottom:20px; padding:15px; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:white; border-radius:10px; }
+.company-header h2 { margin:0; font-size:24px; }
+.company-header p { margin:5px 0 0; font-size:16px; }
 @media(max-width:600px){ .container{ padding:20px; } input, select, button{ font-size:15px; padding:10px; } .output{ font-size:14px; } }
 </style>
 </head>
 <body>
 <div class="container">
 <h1>Salary Pay Slip Generator</h1>
-<h2>Calculate Your Net Salary Online</h2>
-<!-- Company Logo / Name --><div id="companySection" style="text-align:center;margin-bottom:20px;">  <img id="companyLogoPreview" style="max-height:80px;display:none;margin-bottom:10px;">  <input type="file" id="companyLogo" accept="image/*">  <input type="text" id="companyName" placeholder="Enter Company Name (optional)"></div><h3>Employee Details</h3><label>Employee Name</label><input type="text" id="empName" placeholder="John Doe">
-<label>Designation</label><input type="text" id="designation" placeholder="Software Engineer">
-<label>Employee ID</label><input type="text" id="empId" placeholder="EMP001">
-<label>Date</label><input type="date" id="monthYear" placeholder="Select Date">
+<h2>Create a professional Salary Payslip Online</h2>
 
-<h3>Salary Details</h3><label>Basic Salary</label><input type="number" id="basic" placeholder="Enter Basic Salary"><label>Salary Type</label><select id="salaryType">  <option value="monthly" selected>Monthly</option>  <option value="weekly">Weekly</option>  <option value="daily">Daily</option>  <option value="hourly">Hourly</option></select>
-<label id="baseSalaryLabel"></label><label>Allowances</label><input type="number" id="allow" placeholder="Total Allowances"><div id="allowanceWidget" style="margin-top:10px;">  <label><input type="checkbox" class="allowItem" data-name="House Rent Allowance" data-id="hra"> House Rent Allowance</label>  <input type="number" id="hra" class="allowValue" placeholder="HRA Amount" style="display:none;">
-  <label><input type="checkbox" class="allowItem" data-name="Medical Allowance" data-id="medical"> Medical Allowance</label>  <input type="number" id="medical" class="allowValue" placeholder="Medical Amount" style="display:none;">
-  <label><input type="checkbox" class="allowItem" data-name="Transport Allowance" data-id="transport"> Transport Allowance</label>  <input type="number" id="transport" class="allowValue" placeholder="Transport Amount" style="display:none;">
-  <label><input type="checkbox" class="allowItem" data-name="Other Allowance" data-id="otherAllow"> Other Allowance</label>  <input type="number" id="otherAllow" class="allowValue" placeholder="Other Allowance Amount" style="display:none;"></div><label>Overtime Amount</label><input type="number" id="ot" placeholder="Overtime Pay">
+  <input type="text" id="companyName" placeholder="Enter Company Name (Required for payslip)">
+</div>
+
+<h3>Employee Details</h3>
+
+<label>Employee Name</label><input type="text" id="empName" placeholder="John Doe" required>
+<label>Designation</label><input type="text" id="designation" placeholder="Software Engineer" required>
+<label>Employee ID</label><input type="text" id="empId" placeholder="EMP001" required>
+<label>Date</label><input type="date" id="monthYear" placeholder="Select Date" required>
+
+<h3>Salary Details</h3>
+
+<label>Basic Salary</label><input type="number" id="basic" placeholder="Enter Basic Salary" required>
+
+<label>Salary Type</label>
+<select id="salaryType">
+  <option value="monthly" selected>Monthly</option>
+  <option value="weekly">Weekly</option>
+  <option value="daily">Daily</option>
+  <option value="hourly">Hourly</option>
+</select>
+
+<label id="baseSalaryLabel"></label>
+<label>Allowances</label><input type="number" id="allow" placeholder="Total Allowances">
+
+<div id="allowanceWidget" style="margin-top:10px;">
+  <label><input type="checkbox" class="allowItem" data-name="House Rent Allowance" data-id="hra"> House Rent Allowance</label>
+  <input type="number" id="hra" class="allowValue" placeholder="HRA Amount" style="display:none;">
+  
+  <label><input type="checkbox" class="allowItem" data-name="Medical Allowance" data-id="medical"> Medical Allowance</label>
+  <input type="number" id="medical" class="allowValue" placeholder="Medical Amount" style="display:none;">
+  
+  <label><input type="checkbox" class="allowItem" data-name="Transport Allowance" data-id="transport"> Transport Allowance</label>
+  <input type="number" id="transport" class="allowValue" placeholder="Transport Amount" style="display:none;">
+  
+  <label><input type="checkbox" class="allowItem" data-name="Other Allowance" data-id="otherAllow"> Other Allowance</label>
+  <input type="number" id="otherAllow" class="allowValue" placeholder="Other Allowance Amount" style="display:none;">
+</div>
+
+<label>Overtime Amount</label><input type="number" id="ot" placeholder="Overtime Pay">
 <label>Bonuses / Incentives</label><input type="number" id="bonus" placeholder="Bonuses">
 <label>Late Days</label><input type="number" id="late" placeholder="Number of Late Days">
 <label>Late Penalty Per Day</label><input type="number" id="penalty" placeholder="Penalty per late day">
@@ -101,9 +135,10 @@ footer a:hover { text-decoration:underline; }
 <footer>
 <p>&copy; SalaryPaySlip-All Rights Reserved.</p>
 <p>
-<a href="privacy.html" target="_blank">Privacy Policy</a> | 
-<a href="terms.html" target="_blank">Terms & Conditions</a> | 
+<a href="privacy.html" target="_blank">Privacy Policy</a> |
+<a href="terms.html" target="_blank">Terms & Conditions</a> |
 <a href="disclaimer.html" target="_blank">Disclaimer</a>
+<a href="cookie-policy.html">Cookie Policy</a>
 </p>
 </footer>
 
@@ -116,98 +151,268 @@ currencyList.addEventListener('change',()=>{ toggleBtn.textContent=currencyList.
 
 // Salary calculation
 function formatCurrency(amount){ return currencyList.value + " " + amount.toFixed(2); }
+
 document.getElementById('calcBtn').addEventListener('click',function(){
-    const basic=parseFloat(document.getElementById('basic').value)||0;
-    const allow=parseFloat(document.getElementById('allow').value)||0;
-    const ot=parseFloat(document.getElementById('ot').value)||0;
-    const bonus=parseFloat(document.getElementById('bonus').value)||0;
-    const late=parseFloat(document.getElementById('late').value)||0;
-    const penalty=parseFloat(document.getElementById('penalty').value)||0;
-    const other=parseFloat(document.getElementById('other').value)||0;
-    const taxPerc=parseFloat(document.getElementById('tax').value)||0;
-    const gross=basic+allow+ot+bonus;
-    const lateDeduct=late*penalty;
-    const taxableIncome=gross-lateDeduct-other;
-    const taxAmount=taxableIncome*(taxPerc/100);
-    const totalDeduction=lateDeduct+other+taxAmount;
-    const netPay=gross-totalDeduction;
-    const resultDiv=document.getElementById('result');
-    resultDiv.style.display="block";
-    resultDiv.innerHTML=`
-        <h3 style="text-align:center;">Company Name Here</h3>
-        <h4 style="text-align:center;">Pay Slip</h4>
-        <table class="salary-table">
-            <tr><th>Employee Name</th><td>${document.getElementById('empName').value}</td></tr>
-            <tr><th>Designation</th><td>${document.getElementById('designation').value}</td></tr>
-            <tr><th>Employee ID</th><td>${document.getElementById('empId').value}</td></tr>
-            <tr><th>Date</th><td>${document.getElementById('monthYear').value}</td></tr>
-            <tr><th>Gross Salary</th><td class="amount">${formatCurrency(gross)}</td></tr>
-            <tr><th>Late Deduction</th><td class="amount">${formatCurrency(lateDeduct)}</td></tr>
-            <tr><th>Other Deductions</th><td class="amount">${formatCurrency(other)}</td></tr>
-            <tr><th>Tax Amount</th><td class="amount">${formatCurrency(taxAmount)}</td></tr>
-            <tr><th>Total Deductions</th><td class="amount">${formatCurrency(totalDeduction)}</td></tr>
-            <tr><th>Net Salary</th><td class="amount" style="color:green;">${formatCurrency(netPay)}</td></tr>
-        </table>
-        <table class="signature-table">
-            <tr>
-                <td>Employee Signature</td>
-                <td>HR/Manager Signature</td>
-            </tr>
-        </table>
-    `;
-    document.getElementById('printBtn').style.display="block";
-    document.getElementById('pdfBtn').style.display="block";
+    // Validate company name
+    const companyName = document.getElementById('companyName').value.trim();
+    if(!companyName) {
+        alert('Please enter Company Name for professional payslip');
+        document.getElementById('companyName').focus();
+        return;
+    }
+    
+    const basic=parseFloat(document.getElementById('basic').value)||0;
+    const allow=parseFloat(document.getElementById('allow').value)||0;
+    const ot=parseFloat(document.getElementById('ot').value)||0;
+    const bonus=parseFloat(document.getElementById('bonus').value)||0;
+    const late=parseFloat(document.getElementById('late').value)||0;
+    const penalty=parseFloat(document.getElementById('penalty').value)||0;
+    const other=parseFloat(document.getElementById('other').value)||0;
+    const taxPerc=parseFloat(document.getElementById('tax').value)||0;
+    const empName=document.getElementById('empName').value;
+    const designation=document.getElementById('designation').value;
+    const empId=document.getElementById('empId').value;
+    const date=document.getElementById('monthYear').value;
+    
+    const gross=basic+allow+ot+bonus;
+    const lateDeduct=late*penalty;
+    const taxableIncome=gross-lateDeduct-other;
+    const taxAmount=taxableIncome*(taxPerc/100);
+    const totalDeduction=lateDeduct+other+taxAmount;
+    const netPay=gross-totalDeduction;
+    const resultDiv=document.getElementById('result');
+    resultDiv.style.display="block";
+    
+    // FIXED: Company name dynamically from input field
+    resultDiv.innerHTML=`
+        <div class="company-header">
+            <h2>${companyName}</h2>
+            <p>Salary Pay Slip</p>
+        </div>
+        <table class="salary-table">
+            <tr><th colspan="2" style="background:#007bff;color:white;text-align:center;">Employee Information</th></tr>
+            <tr><th>Employee Name</th><td><strong>${empName}</strong></td></tr>
+            <tr><th>Designation</th><td>${designation}</td></tr>
+            <tr><th>Employee ID</th><td>${empId}</td></tr>
+            <tr><th>Pay Period</th><td>${date}</td></tr>
+            <tr><th colspan="2" style="background:#28a745;color:white;text-align:center;">Salary Breakdown</th></tr>
+            <tr><th>Basic Salary</th><td class="amount">${formatCurrency(basic)}</td></tr>
+            <tr><th>Allowances</th><td class="amount">${formatCurrency(allow)}</td></tr>
+            <tr><th>Overtime Pay</th><td class="amount">${formatCurrency(ot)}</td></tr>
+            <tr><th>Bonuses/Incentives</th><td class="amount">${formatCurrency(bonus)}</td></tr>
+            <tr><th><strong>Gross Salary</strong></th><td class="amount"><strong>${formatCurrency(gross)}</strong></td></tr>
+            <tr><th colspan="2" style="background:#dc3545;color:white;text-align:center;">Deductions</th></tr>
+            <tr><th>Late Days Deduction</th><td class="amount">${formatCurrency(lateDeduct)}</td></tr>
+            <tr><th>Other Deductions</th><td class="amount">${formatCurrency(other)}</td></tr>
+            <tr><th>Tax Deduction (${taxPerc}%)</th><td class="amount">${formatCurrency(taxAmount)}</td></tr>
+            <tr><th><strong>Total Deductions</strong></th><td class="amount"><strong>${formatCurrency(totalDeduction)}</strong></td></tr>
+            <tr><th colspan="2" style="background:#17a2b8;color:white;text-align:center;">Net Salary</th></tr>
+            <tr><th style="font-size:18px;background:#e9ecef;">Net Payable Amount</th>
+                <td style="font-size:18px;background:#e9ecef;color:green;font-weight:bold;text-align:right;">${formatCurrency(netPay)}</td>
+            </tr>
+        </table>
+        <table class="signature-table">
+            <tr>
+                <td>____________________<br>Employee Signature</td>
+                <td>____________________<br>HR/Manager Signature</td>
+                <td>____________________<br>Finance Department</td>
+            </tr>
+        </table>
+        <p style="text-align:center;margin-top:20px;font-style:italic;color:#666;">
+            This is a computer generated payslip. No signature required.
+        </p>
+    `;
+    document.getElementById('printBtn').style.display="block";
+    document.getElementById('pdfBtn').style.display="block";
 });
 
 // Print
 document.getElementById('printBtn').addEventListener('click',function(){
-    const printContents=document.getElementById('result').innerHTML;
-    const originalContents=document.body.innerHTML;
-    document.body.innerHTML=printContents;
-    window.print();
-    document.body.innerHTML=originalContents;
-    location.reload();
+    const printContents=document.getElementById('result').innerHTML;
+    const originalContents=document.body.innerHTML;
+    document.body.innerHTML=`
+        <div style="padding:20px;max-width:800px;margin:auto;">
+            ${printContents}
+            <div style="text-align:center;margin-top:30px;">
+                <button onclick="window.print()" style="background:#007bff;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">Print Now</button>
+                <button onclick="window.location.reload()" style="background:#6c757d;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">Back to Calculator</button>
+            </div>
+        </div>
+    `;
+    window.print();
+    setTimeout(() => {
+        location.reload();
+    }, 1000);
 });
 
-// PDF Generation
+// PDF Generation - FIXED: Company name from input
 document.getElementById('pdfBtn').addEventListener('click',function(){
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF({unit:"pt",format:"a4"});
-    const empName=document.getElementById('empName').value;
-    const designation=document.getElementById('designation').value;
-    const empId=document.getElementById('empId').value;
-    const date=document.getElementById('monthYear').value;
-    const currency=currencyList.value;
-    const basic=parseFloat(document.getElementById('basic').value)||0;
-    const allow=parseFloat(document.getElementById('allow').value)||0;
-    const ot=parseFloat(document.getElementById('ot').value)||0;
-    const bonus=parseFloat(document.getElementById('bonus').value)||0;
-    const late=parseFloat(document.getElementById('late').value)||0;
-    const penalty=parseFloat(document.getElementById('penalty').value)||0;
-    const other=parseFloat(document.getElementById('other').value)||0;
-    const taxPerc=parseFloat(document.getElementById('tax').value)||0;
-    const gross=basic+allow+ot+bonus;
-    const lateDeduct=late*penalty;
-    const taxableIncome=gross-lateDeduct-other;
-    const taxAmount=taxableIncome*(taxPerc/100);
-    const totalDeduction=lateDeduct+other+taxAmount;
-    const netPay=gross-totalDeduction;
+    // Validate company name
+    const companyName = document.getElementById('companyName').value.trim();
+    if(!companyName) {
+        alert('Please enter Company Name for PDF download');
+        document.getElementById('companyName').focus();
+        return;
+    }
+    
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({unit:"pt",format:"a4"});
+    const empName=document.getElementById('empName').value;
+    const designation=document.getElementById('designation').value;
+    const empId=document.getElementById('empId').value;
+    const date=document.getElementById('monthYear').value;
+    const currency=currencyList.value;
+    const basic=parseFloat(document.getElementById('basic').value)||0;
+    const allow=parseFloat(document.getElementById('allow').value)||0;
+    const ot=parseFloat(document.getElementById('ot').value)||0;
+    const bonus=parseFloat(document.getElementById('bonus').value)||0;
+    const late=parseFloat(document.getElementById('late').value)||0;
+    const penalty=parseFloat(document.getElementById('penalty').value)||0;
+    const other=parseFloat(document.getElementById('other').value)||0;
+    const taxPerc=parseFloat(document.getElementById('tax').value)||0;
+    const gross=basic+allow+ot+bonus;
+    const lateDeduct=late*penalty;
+    const taxableIncome=gross-lateDeduct-other;
+    const taxAmount=taxableIncome*(taxPerc/100);
+    const totalDeduction=lateDeduct+other+taxAmount;
+    const netPay=gross-totalDeduction;
 
-    doc.setFontSize(18); doc.text("Company Name Here",300,40,{align:"center"});
-    doc.setFontSize(14); doc.text("Pay Slip",300,60,{align:"center"});
-    doc.setFontSize(12);
-    const employeeData=[["Employee Name",empName],["Designation",designation],["Employee ID",empId],["Date",date]];
-    const salaryData=[["Gross Salary",currency+" "+gross.toFixed(2)],["Late Deduction",currency+" "+lateDeduct.toFixed(2)],["Other Deductions",currency+" "+other.toFixed(2)],["Tax Amount",currency+" "+taxAmount.toFixed(2)],["Total Deductions",currency+" "+totalDeduction.toFixed(2)],["Net Salary",currency+" "+netPay.toFixed(2)]];
-    doc.autoTable({startY:80, head:[["Employee Details",""]], body:employeeData, theme:"grid"});
-    doc.autoTable({startY:180, head:[["Salary Breakdown","Amount"]], body:salaryData, theme:"grid", headStyles:{fillColor:[0,123,255]}});
-    doc.setFontSize(12); doc.text("Employee Signature: ____________________", 80, doc.lastAutoTable.finalY + 60);
-    doc.text("HR/Manager Signature: ____________________", 330, doc.lastAutoTable.finalY + 60);
-    doc.save(`${empName}_PaySlip.pdf`);
+    // FIXED: Company name dynamically in PDF
+    doc.setFontSize(20); 
+    doc.setTextColor(102, 126, 234); // Blue color
+    doc.text(companyName, 300, 40, {align:"center"});
+    
+    doc.setFontSize(16);
+    doc.setTextColor(0, 0, 0);
+    doc.text("Salary Pay Slip", 300, 65, {align:"center"});
+    
+    doc.setFontSize(10);
+    doc.setTextColor(100, 100, 100);
+    doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 300, 80, {align:"center"});
+    
+    doc.setFontSize(12);
+    doc.setTextColor(0, 0, 0);
+    
+    // Employee Information
+    const employeeData = [
+        ["Employee Name:", empName],
+        ["Designation:", designation],
+        ["Employee ID:", empId],
+        ["Pay Period:", date],
+        ["Currency:", currency]
+    ];
+    
+    // Salary Breakdown
+    const salaryData = [
+        ["EARNINGS", "AMOUNT"],
+        ["Basic Salary", currency + " " + basic.toFixed(2)],
+        ["Allowances", currency + " " + allow.toFixed(2)],
+        ["Overtime Pay", currency + " " + ot.toFixed(2)],
+        ["Bonuses/Incentives", currency + " " + bonus.toFixed(2)],
+        ["", ""],
+        ["GROSS SALARY", currency + " " + gross.toFixed(2)],
+        ["", ""],
+        ["DEDUCTIONS", "AMOUNT"],
+        ["Late Days Deduction", currency + " " + lateDeduct.toFixed(2)],
+        ["Other Deductions", currency + " " + other.toFixed(2)],
+        [`Tax Deduction (${taxPerc}%)`, currency + " " + taxAmount.toFixed(2)],
+        ["", ""],
+        ["TOTAL DEDUCTIONS", currency + " " + totalDeduction.toFixed(2)],
+        ["", ""],
+        ["NET PAYABLE SALARY", currency + " " + netPay.toFixed(2)]
+    ];
+    
+    // Add company header
+    doc.setFillColor(102, 126, 234);
+    doc.rect(20, 90, 555, 20, 'F');
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(14);
+    doc.text("EMPLOYEE INFORMATION", 297.5, 103, {align:"center"});
+    
+    // Employee table
+    doc.setTextColor(0, 0, 0);
+    doc.autoTable({
+        startY: 115,
+        body: employeeData,
+        theme: "grid",
+        styles: {fontSize: 11, cellPadding: 8},
+        columnStyles: {0: {fontStyle: 'bold', cellWidth: 150}}
+    });
+    
+    // Salary table
+    const finalY = doc.lastAutoTable.finalY + 20;
+    
+    doc.setFillColor(40, 167, 69);
+    doc.rect(20, finalY, 555, 20, 'F');
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(14);
+    doc.text("SALARY BREAKDOWN", 297.5, finalY + 13, {align:"center"});
+    
+    doc.setTextColor(0, 0, 0);
+    doc.autoTable({
+        startY: finalY + 25,
+        body: salaryData,
+        theme: "grid",
+        styles: {fontSize: 11, cellPadding: 8},
+        columnStyles: {0: {fontStyle: 'bold', cellWidth: 250}},
+        headStyles: {fillColor: [40, 167, 69]},
+        didParseCell: function(data) {
+            if(data.row.index === 0 || data.row.index === 8 || data.row.index === 13 || data.row.index === 15) {
+                data.cell.styles.fontStyle = 'bold';
+                data.cell.styles.fillColor = [240, 240, 240];
+            }
+            if(data.row.index === 6) {
+                data.cell.styles.fontStyle = 'bold';
+                data.cell.styles.textColor = [0, 100, 0];
+            }
+            if(data.row.index === 13) {
+                data.cell.styles.fontStyle = 'bold';
+                data.cell.styles.textColor = [200, 0, 0];
+            }
+            if(data.row.index === 15) {
+                data.cell.styles.fontStyle = 'bold';
+                data.cell.styles.textColor = [0, 100, 0];
+                data.cell.styles.fillColor = [230, 255, 230];
+            }
+        }
+    });
+    
+    // Signatures
+    const sigY = doc.lastAutoTable.finalY + 40;
+    doc.setFontSize(12);
+    doc.text("Employee Signature: ____________   ", 80, sigY);
+    doc.text("HR/Manager Signature: _____________", 300, sigY);
+    
+    doc.text("Date: ______________", 80, sigY + 30);
+    doc.text("Company Stamp:______________", 300, sigY + 30);
+    
+    // Footer
+    doc.setFontSize(10);
+    doc.setTextColor(100, 100, 100);
+    doc.text("This is a computer generated document. No signature required.", 300, sigY + 60, {align:"center"});
+    doc.text(`© ${new Date().getFullYear()} ${companyName}. All rights reserved.`, 300, sigY + 80, {align:"center"});
+    
+    // Save PDF with company and employee name
+    doc.save(`${companyName.replace(/\s+/g, '_')}_${empName.replace(/\s+/g, '_')}_PaySlip_${date}.pdf`);
 });
 
 // FAQ & Guide accordion
 document.querySelectorAll('.faq h4').forEach(q=>{q.addEventListener('click',()=>{q.nextElementSibling.style.display=(q.nextElementSibling.style.display==='block')?'none':'block';});});
 document.querySelectorAll('.guide h4').forEach(q=>{q.addEventListener('click',()=>{q.nextElementSibling.style.display=(q.nextElementSibling.style.display==='block')?'none':'block';});});
+
+// Logo upload preview
+document.getElementById('companyLogo').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const img = document.getElementById('companyLogoPreview');
+            img.src = e.target.result;
+            img.style.display = 'block';
+        }
+        reader.readAsDataURL(file);
+    }
+});
 </script>
 </body>
 </html>
