@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salary Pay Slip – Online Salary PaySlip Calculator </title>
-<meta name="description" content="Online salary payslip calculator with print-ready professional payslip and PDF download.">
-<meta name="keywords" content="online salary calculator, net salary calculator, online salary tool, pay slip generator, employee salary calculator, tax calculator, salary deductions, payroll tool, corporate salary calculator">
+<title>Salary Pay Slip Generator – Calculate Net Salary Online</title>
+<meta name="description" content="Salary Pay Slip Generator – Calculate net salary including allowances, bonuses, deductions, taxes, and overtime. Free online salary calculator with print-ready corporate payslip and PDF download.">
+<meta name="keywords" content="salary calculator, net salary calculator, online salary tool, pay slip generator, employee salary calculator, tax calculator, salary deductions, payroll tool, corporate salary calculator">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 <style>
@@ -14,11 +14,11 @@ body { font-family: Arial, sans-serif; background:#f4f7fb; margin:0; padding:20p
 h1,h2,h3 { text-align:center; margin-bottom:15px; }
 label { font-weight:600; display:block; margin-top:15px; }
 input, select, button { width:100%; padding:12px; margin:8px 0 18px; border-radius:8px; font-size:16px; border:1px solid #ccc; }
-button { background:#007bff; color:#fff; border:none; cursor:pointer; font-weight:600; transition:0.3s; }
-button:hover { background:#0056b3; }
-.output { margin-top:25px; padding:20px; background:#e9f7ff; border-radius:10px; font-size:16px; }
-.print-btn { background:#28a745; margin-top:15px; }
-.pdf-btn { background:#ff6600; margin-top:10px; }
+button { cursor:pointer; font-weight:600; transition:0.3s; }
+button:hover { opacity:0.85; }
+.output { margin-top:25px; padding:20px; border-radius:10px; display:none; background:white; color:black; }
+.print-btn { background:#28a745; margin-top:15px; color:#fff; border:none; }
+.pdf-btn { background:#ff6600; margin-top:10px; color:#fff; border:none; }
 .currency-widget { position:relative; margin-top:10px; }
 .currency-toggle { background:#007bff; color:#fff; padding:12px; border:none; border-radius:8px; width:100%; cursor:pointer; text-align:left; font-weight:600; }
 .currency-toggle:hover { background:#0056b3; }
@@ -26,392 +26,284 @@ button:hover { background:#0056b3; }
 footer { margin-top:35px; text-align:center; font-size:14px; color:#555; padding:20px 15px; border-top:1px solid #ccc; background:#f8f9fa; }
 footer a { color:#007bff; text-decoration:none; margin:0 8px; }
 footer a:hover { text-decoration:underline; }
-.salary-table { width:100%; border-collapse:collapse; margin-top:15px; }
-.salary-table th, .salary-table td { border:1px solid #ccc; padding:10px; text-align:left; }
-.salary-table th { background:#007bff; color:#fff; }
-.salary-table td.amount { text-align:right; }
-.signature-table { width:100%; margin-top:40px; }
-.signature-table td { padding:25px; text-align:center; border-top:1px solid #000; }
+/* FAQ & Guide */
 .guide, .faq { margin-top:30px; background:#fff8e1; padding:20px; border-radius:10px; font-size:15px; color:#856404; }
 .guide h3, .faq h3 { color:#007bff; text-align:center; }
 .guide h4, .faq h4 { margin-top:15px; color:#0056b3; cursor:pointer; padding:10px; background:#f0e68c; border-radius:5px; }
 .guide p, .faq p { text-align:justify; display:none; padding:10px; background:#fffbe6; border-radius:5px; margin-top:5px; }
-.company-header { text-align:center; margin-bottom:20px; padding:15px; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:white; border-radius:10px; }
-.company-header h2 { margin:0; font-size:24px; }
-.company-header p { margin:5px 0 0; font-size:16px; }
-@media(max-width:600px){ .container{ padding:20px; } input, select, button{ font-size:15px; padding:10px; } .output{ font-size:14px; } }
+/* Payslip black & white */
+#result h3, #result h4 { color:black; text-align:center; }
+#result .salary-table { width:100%; border-collapse:collapse; background:white; color:black; margin-top:15px; }
+#result .salary-table th, #result .salary-table td { border:1px solid black; padding:8px; text-align:left; background:white; color:black; }
+#result .salary-table td.amount { text-align:right; color:black; }
+#result .signature-table td { border-top:1px solid black; padding:25px; text-align:center; color:black; }
+#result img { display:block; margin:auto; max-width:150px; max-height:150px; }
+@media(max-width:600px){
+.container{ padding:20px; }
+input, select, button{ font-size:15px; padding:10px; }
+.output{ font-size:14px; }
+}
 </style>
 </head>
 <body>
 <div class="container">
-<h1>Online Salary PaySlip Calculator</h1>
-<h2>Generate your Payslip Instantly</h2>
+<h1>Salary Pay Slip Generator</h1>
+<h2>Calculate Your Net Salary Online</h2>
 
-  <input type="text" id="companyName" placeholder="Enter Company Name (Required for payslip)">
+<!-- Company Section -->
+<div id="companySection" style="text-align:center;margin-bottom:20px;">
+  <input type="file" id="companyLogo" accept="image/*">
+  <input type="text" id="companyName" placeholder="Enter Company Name (optional)">
 </div>
 
 <h3>Employee Details</h3>
-
-<label>Employee Name</label><input type="text" id="empName" placeholder="John Doe" required>
-<label>Designation</label><input type="text" id="designation" placeholder="Software Engineer" required>
-<label>Employee ID</label><input type="text" id="empId" placeholder="EMP001" required>
-<label>Date</label><input type="date" id="monthYear" placeholder="Select Date" required>
+<label>Employee Name</label>
+<input type="text" id="empName" placeholder="John Doe">
+<label>Designation</label>
+<input type="text" id="designation" placeholder="Software Engineer">
+<label>Employee ID</label>
+<input type="text" id="empId" placeholder="EMP001">
+<label>Date</label>
+<input type="date" id="monthYear" placeholder="Select Date">
 
 <h3>Salary Details</h3>
+<label>Basic Salary</label>
+<input type="number" id="basic" placeholder="Enter Basic Salary">
 
-<label>Basic Salary</label><input type="number" id="basic" placeholder="Enter Basic Salary" required>
+<!-- Allowances -->
+<label>House Rent Allowance (HRA)</label>
+<input type="number" id="hra" placeholder="HRA Amount">
+<label>Medical Allowance</label>
+<input type="number" id="medical" placeholder="Medical Allowance">
 
-<label>Salary Type</label>
-<select id="salaryType">
-  <option value="monthly" selected>Monthly</option>
-  <option value="weekly">Weekly</option>
-  <option value="daily">Daily</option>
-  <option value="hourly">Hourly</option>
-</select>
+<label>Overtime Amount</label>
+<input type="number" id="ot" placeholder="Overtime Pay">
+<label>Bonuses / Incentives</label>
+<input type="number" id="bonus" placeholder="Bonuses">
 
-<label id="baseSalaryLabel"></label>
-<label>Allowances</label><input type="number" id="allow" placeholder="Total Allowances">
-
-<div id="allowanceWidget" style="margin-top:10px;">
-  <label><input type="checkbox" class="allowItem" data-name="House Rent Allowance" data-id="hra"> House Rent Allowance</label>
-  <input type="number" id="hra" class="allowValue" placeholder="HRA Amount" style="display:none;">
-  
-  <label><input type="checkbox" class="allowItem" data-name="Medical Allowance" data-id="medical"> Medical Allowance</label>
-  <input type="number" id="medical" class="allowValue" placeholder="Medical Amount" style="display:none;">
-  
-  <label><input type="checkbox" class="allowItem" data-name="Transport Allowance" data-id="transport"> Transport Allowance</label>
-  <input type="number" id="transport" class="allowValue" placeholder="Transport Amount" style="display:none;">
-  
-  <label><input type="checkbox" class="allowItem" data-name="Other Allowance" data-id="otherAllow"> Other Allowance</label>
-  <input type="number" id="otherAllow" class="allowValue" placeholder="Other Allowance Amount" style="display:none;">
-</div>
-
-<label>Overtime Amount</label><input type="number" id="ot" placeholder="Overtime Pay">
-<label>Bonuses / Incentives</label><input type="number" id="bonus" placeholder="Bonuses">
-<label>Late Days</label><input type="number" id="late" placeholder="Number of Late Days">
-<label>Late Penalty Per Day</label><input type="number" id="penalty" placeholder="Penalty per late day">
-<label>Other Deductions</label><input type="number" id="other" placeholder="Any other deductions">
-<label>Tax Percentage (%)</label><input type="number" id="tax" placeholder="Enter Tax %" step="0.01">
+<label>Late Days</label>
+<input type="number" id="late" placeholder="Number of Late Days">
+<label>Late Penalty Per Day</label>
+<input type="number" id="penalty" placeholder="Penalty per late day">
+<label>Other Deductions</label>
+<input type="number" id="other" placeholder="Any other deductions">
+<label>Tax Percentage (%)</label>
+<input type="number" id="tax" placeholder="Enter Tax %" step="0.01">
 
 <div class="currency-widget">
 <button type="button" class="currency-toggle" id="toggleCurrency">Select Currency</button>
 <select id="currency" class="currency-list" size="10"><option value="USD">US Dollar (USD)</option><option value="EUR">Euro (EUR)</option><option value="GBP">British Pound (GBP)</option><option value="PKR">Pakistani Rupee (PKR)</option><option value="INR">Indian Rupee (INR)</option><option value="AED">UAE Dirham (AED)</option><option value="SAR">Saudi Riyal (SAR)</option><option value="QAR">Qatari Riyal (QAR)</option><option value="KWD">Kuwaiti Dinar (KWD)</option><option value="OMR">Omani Rial (OMR)</option><option value="BHD">Bahraini Dinar (BHD)</option><option value="CAD">Canadian Dollar (CAD)</option><option value="AUD">Australian Dollar (AUD)</option><option value="NZD">New Zealand Dollar (NZD)</option><option value="SGD">Singapore Dollar (SGD)</option><option value="HKD">Hong Kong Dollar (HKD)</option><option value="JPY">Japanese Yen (JPY)</option><option value="CNY">Chinese Yuan (CNY)</option><option value="TRY">Turkish Lira (TRY)</option><option value="ZAR">South African Rand (ZAR)</option><option value="RUB">Russian Ruble (RUB)</option><option value="BRL">Brazilian Real (BRL)</option><option value="MXN">Mexican Peso (MXN)</option><option value="THB">Thai Baht (THB)</option><option value="MYR">Malaysian Ringgit (MYR)</option><option value="IDR">Indonesian Rupiah (IDR)</option><option value="BDT">Bangladeshi Taka (BDT)</option><option value="LKR">Sri Lankan Rupee (LKR)</option><option value="NPR">Nepalese Rupee (NPR)</option><option value="AFN">Afghan Afghani (AFN)</option><option value="IRR">Iranian Rial (IRR)</option><option value="IQD">Iraqi Dinar (IQD)</option><option value="SYP">Syrian Pound (SYP)</option><option value="KZT">Kazakhstani Tenge (KZT)</option><option value="UZS">Uzbekistani Som (UZS)</option><option value="AZN">Azerbaijani Manat (AZN)</option><option value="AMD">Armenian Dram (AMD)</option><option value="GEL">Georgian Lari (GEL)</option><option value="EGP">Egyptian Pound (EGP)</option><option value="MAD">Moroccan Dirham (MAD)</option><option value="DZD">Algerian Dinar (DZD)</option><option value="TND">Tunisian Dinar (TND)</option><option value="KES">Kenyan Shilling (KES)</option><option value="TZS">Tanzanian Shilling (TZS)</option><option value="UGX">Ugandan Shilling (UGX)</option><option value="GHS">Ghanaian Cedi (GHS)</option><option value="NGN">Nigerian Naira (NGN)</option><option value="ZMW">Zambian Kwacha (ZMW)</option><option value="ETB">Ethiopian Birr (ETB)</option><option value="SDG">Sudanese Pound (SDG)</option><option value="XAF">Central African CFA Franc (XAF)</option><option value="XOF">West African CFA Franc (XOF)</option><option value="MUR">Mauritian Rupee (MUR)</option><option value="SCR">Seychelles Rupee (SCR)</option><option value="CHF">Swiss Franc (CHF)</option><option value="SEK">Swedish Krona (SEK)</option><option value="NOK">Norwegian Krone (NOK)</option><option value="DKK">Danish Krone (DKK)</option><option value="PLN">Polish Zloty (PLN)</option><option value="HUF">Hungarian Forint (HUF)</option><option value="CZK">Czech Koruna (CZK)</option><option value="RON">Romanian Leu (RON)</option><option value="BGN">Bulgarian Lev (BGN)</option><option value="ISK">Icelandic Krona (ISK)</option><option value="HRK">Croatian Kuna (HRK)</option><option value="UAH">Ukrainian Hryvnia (UAH)</option><option value="BYN">Belarusian Ruble (BYN)</option><option value="COP">Colombian Peso (COP)</option><option value="ARS">Argentine Peso (ARS)</option><option value="CLP">Chilean Peso (CLP)</option><option value="PEN">Peruvian Sol (PEN)</option><option value="VEF">Venezuelan Bolívar (VEF)</option><option value="UYU">Uruguayan Peso (UYU)</option><option value="BOB">Bolivian Boliviano (BOB)</option><option value="GTQ">Guatemalan Quetzal (GTQ)</option><option value="CRC">Costa Rican Colón (CRC)</option><option value="DOP">Dominican Peso (DOP)</option><option value="HTG">Haitian Gourde (HTG)</option><option value="JMD">Jamaican Dollar (JMD)</option><option value="BBD">Barbadian Dollar (BBD)</option><option value="BSD">Bahamian Dollar (BSD)</option><option value="TTD">Trinidad & Tobago Dollar (TTD)</option><option value="SRD">Surinamese Dollar (SRD)</option><option value="HNL">Honduran Lempira (HNL)</option><option value="NIO">Nicaraguan Córdoba (NIO)</option><option value="PYG">Paraguayan Guarani (PYG)</option><option value="BWP">Botswana Pula (BWP)</option><option value="MWK">Malawian Kwacha (MWK)</option><option value="MZN">Mozambican Metical (MZN)</option><option value="MGA">Malagasy Ariary (MGA)</option></select></div>
 
 <button id="calcBtn">Calculate Salary</button>
-<div id="result" class="output" style="display:none;"></div>
-<button id="printBtn" class="print-btn" style="display:none;">Print Pay Slip</button>
-<button id="pdfBtn" class="pdf-btn" style="display:none;">Download PDF</button>
+<div id="result" class="output"></div>
+<button id="printBtn" class="print-btn">Print Pay Slip</button>
+<button id="pdfBtn" class="pdf-btn">Download PDF</button>
 
 <!-- How-to Guide -->
 <div class="guide">
-<h3>How to Use Online Salary PaySlip Calculator</h3>
+<h3>How to Use Salary Checker Tool</h3>
 <h4>Step 1: Fill Employee Details</h4>
-<p>Enter <b>Employee Name</b>, <b>Designation</b>, <b>Employee ID</b>, and select the <b>Date</b>.</p>
+<p>Enter Employee Name, Designation, Employee ID, and Date.</p>
 <h4>Step 2: Fill Salary Components</h4>
-<p>Enter <b>Basic Salary</b>, <b>Allowances</b>, <b>Overtime Pay</b>, <b>Bonuses</b>, <b>Late Days</b> and <b>Penalty per Day</b>, <b>Other Deductions</b>, and <b>Tax Percentage</b>.</p>
+<p>Enter Basic Salary, Allowances, Overtime, Bonuses, Late Days, Penalty, Other Deductions, and Tax %.</p>
 <h4>Step 3: Select Currency</h4>
-<p>Click "Select Currency" and choose your currency from the scrollable list.</p>
+<p>Choose your currency from the list.</p>
 <h4>Step 4: Calculate Salary</h4>
-<p>Click <b>Calculate Salary</b> to view net salary with breakdown in a professional pay slip.</p>
+<p>Click Calculate Salary to view net salary.</p>
 <h4>Step 5: Print or Download</h4>
-<p>Click <b>Print Pay Slip</b> for hard copy or <b>Download PDF</b> to save professional PDF payslip.</p>
+<p>Click Print or Download PDF for professional payslip.</p>
 </div>
 
 <!-- FAQ Section -->
 <div class="faq">
 <h3>Frequently Asked Questions (FAQ)</h3>
 <h4>Q1: Can I calculate salary for multiple dates?</h4>
-<p>Yes, select the required date, fill salary details, and calculate. Each calculation generates a new payslip.</p>
+<p>Yes, each calculation generates a new payslip.</p>
 <h4>Q2: Is the PDF professional format?</h4>
-<p>Yes, PDF includes company name, employee details, salary breakdown, net salary, and signature rows in corporate style.</p>
+<p>Yes, it includes company name, employee details, salary breakdown, net salary, and signature rows.</p>
 <h4>Q3: Can I include bonuses and overtime?</h4>
-<p>Yes, any bonuses, incentives, or overtime pay are included in net salary calculation.</p>
+<p>Yes, included in net salary.</p>
 <h4>Q4: Is this tool free?</h4>
-<p>Yes, completely free worldwide.</p>
+<p>Yes, free worldwide.</p>
 <h4>Q5: Can I select my local currency?</h4>
-<p>Yes, select from the currency dropdown with 200+ worldwide currencies. Scroll to find your currency.</p>
+<p>Yes, select from the dropdown.</p>
 </div>
 
 <footer>
 <p>&copy; SalaryPaySlip-All Rights Reserved.</p>
-<p>Last Updated December 2025</p>
-<a href="privacy.html" target="_blank">Privacy Policy</a> |
+<p><a href="privacy.html" target="_blank">Privacy Policy</a> |
 <a href="terms.html" target="_blank">Terms & Conditions</a> |
-<a href="disclaimer.html" target="_blank">Disclaimer</a>
+<a href="disclaimer.html" target="_blank">Disclaimer</a></p>
 <a href="cookie-policy.html">Cookie Policy</a>
-</p>
 </footer>
 
 <script>
-// Currency toggle
-const toggleBtn=document.getElementById('toggleCurrency');
-const currencyList=document.getElementById('currency');
-toggleBtn.addEventListener('click',()=>{ currencyList.style.display=(currencyList.style.display==='block')?'none':'block'; });
-currencyList.addEventListener('change',()=>{ toggleBtn.textContent=currencyList.value; currencyList.style.display='none'; });
+let logoData = null;
 
-// Salary calculation
-function formatCurrency(amount){ return currencyList.value + " " + amount.toFixed(2); }
-
-document.getElementById('calcBtn').addEventListener('click',function(){
-    // Validate company name
-    const companyName = document.getElementById('companyName').value.trim();
-    if(!companyName) {
-        alert('Please enter Company Name for professional payslip');
-        document.getElementById('companyName').focus();
-        return;
+// Logo Preview
+document.getElementById('companyLogo').addEventListener('change', function(e){
+    const reader = new FileReader();
+    reader.onload = function(){
+        logoData = reader.result;
     }
-    
-    const basic=parseFloat(document.getElementById('basic').value)||0;
-    const allow=parseFloat(document.getElementById('allow').value)||0;
-    const ot=parseFloat(document.getElementById('ot').value)||0;
-    const bonus=parseFloat(document.getElementById('bonus').value)||0;
-    const late=parseFloat(document.getElementById('late').value)||0;
-    const penalty=parseFloat(document.getElementById('penalty').value)||0;
-    const other=parseFloat(document.getElementById('other').value)||0;
-    const taxPerc=parseFloat(document.getElementById('tax').value)||0;
-    const empName=document.getElementById('empName').value;
-    const designation=document.getElementById('designation').value;
-    const empId=document.getElementById('empId').value;
-    const date=document.getElementById('monthYear').value;
-    
-    const gross=basic+allow+ot+bonus;
-    const lateDeduct=late*penalty;
-    const taxableIncome=gross-lateDeduct-other;
-    const taxAmount=taxableIncome*(taxPerc/100);
-    const totalDeduction=lateDeduct+other+taxAmount;
-    const netPay=gross-totalDeduction;
-    const resultDiv=document.getElementById('result');
-    resultDiv.style.display="block";
-    
-    // FIXED: Company name dynamically from input field
-    resultDiv.innerHTML=`
-        <div class="company-header">
-            <h2>${companyName}</h2>
-            <p>Salary Pay Slip</p>
-        </div>
-        <table class="salary-table">
-            <tr><th colspan="2" style="background:#007bff;color:white;text-align:center;">Employee Information</th></tr>
-            <tr><th>Employee Name</th><td><strong>${empName}</strong></td></tr>
-            <tr><th>Designation</th><td>${designation}</td></tr>
-            <tr><th>Employee ID</th><td>${empId}</td></tr>
-            <tr><th>Pay Period</th><td>${date}</td></tr>
-            <tr><th colspan="2" style="background:#28a745;color:white;text-align:center;">Salary Breakdown</th></tr>
-            <tr><th>Basic Salary</th><td class="amount">${formatCurrency(basic)}</td></tr>
-            <tr><th>Allowances</th><td class="amount">${formatCurrency(allow)}</td></tr>
-            <tr><th>Overtime Pay</th><td class="amount">${formatCurrency(ot)}</td></tr>
-            <tr><th>Bonuses/Incentives</th><td class="amount">${formatCurrency(bonus)}</td></tr>
-            <tr><th><strong>Gross Salary</strong></th><td class="amount"><strong>${formatCurrency(gross)}</strong></td></tr>
-            <tr><th colspan="2" style="background:#dc3545;color:white;text-align:center;">Deductions</th></tr>
-            <tr><th>Late Days Deduction</th><td class="amount">${formatCurrency(lateDeduct)}</td></tr>
-            <tr><th>Other Deductions</th><td class="amount">${formatCurrency(other)}</td></tr>
-            <tr><th>Tax Deduction (${taxPerc}%)</th><td class="amount">${formatCurrency(taxAmount)}</td></tr>
-            <tr><th><strong>Total Deductions</strong></th><td class="amount"><strong>${formatCurrency(totalDeduction)}</strong></td></tr>
-            <tr><th colspan="2" style="background:#17a2b8;color:white;text-align:center;">Net Salary</th></tr>
-            <tr><th style="font-size:18px;background:#e9ecef;">Net Payable Amount</th>
-                <td style="font-size:18px;background:#e9ecef;color:green;font-weight:bold;text-align:right;">${formatCurrency(netPay)}</td>
-            </tr>
-        </table>
-        <table class="signature-table">
-            <tr>
-                <td>____________________<br>Employee Signature</td>
-                <td>____________________<br>HR/Manager Signature</td>
-                <td>____________________<br>Finance Department</td>
-            </tr>
-        </table>
-        <p style="text-align:center;margin-top:20px;font-style:italic;color:#666;">
-            This is a computer generated payslip. No signature required.
-        </p>
-    `;
+    reader.readAsDataURL(e.target.files[0]);
+});
+
+// Currency Toggle
+const toggleBtn = document.getElementById('toggleCurrency');
+const currencyList = document.getElementById('currency');
+toggleBtn.addEventListener('click', ()=>{
+    currencyList.style.display = (currencyList.style.display==='block')?'none':'block';
+});
+currencyList.addEventListener('change', ()=>{
+    toggleBtn.textContent = currencyList.value;
+    currencyList.style.display='none';
+});
+
+// Format Currency
+function formatCurrency(amount){
+    return currencyList.value + " " + amount.toFixed(2);
+}
+
+// Calculate Salary
+document.getElementById('calcBtn').addEventListener('click', function(){
+    const basic = parseFloat(document.getElementById('basic').value)||0;
+    const hra = parseFloat(document.getElementById('hra').value)||0;
+    const medical = parseFloat(document.getElementById('medical').value)||0;
+    const ot = parseFloat(document.getElementById('ot').value)||0;
+    const bonus = parseFloat(document.getElementById('bonus').value)||0;
+    const late = parseFloat(document.getElementById('late').value)||0;
+    const penalty = parseFloat(document.getElementById('penalty').value)||0;
+    const other = parseFloat(document.getElementById('other').value)||0;
+    const taxPerc = parseFloat(document.getElementById('tax').value)||0;
+
+    const allowances = { "House Rent Allowance": hra, "Medical Allowance": medical };
+    const gross = basic + hra + medical + ot + bonus;
+    const lateDeduct = late*penalty;
+    const taxableIncome = gross - lateDeduct - other;
+    const taxAmount = taxableIncome*(taxPerc/100);
+    const totalDeduction = lateDeduct + other + taxAmount;
+    const netPay = gross - totalDeduction;
+
+    const companyName = document.getElementById('companyName').value || "Company Name Here";
+
+    let resultHTML = "";
+    if(logoData) resultHTML += `<img src="${logoData}">`;
+    resultHTML += `<h3>${companyName}</h3><h4>Pay Slip</h4>`;
+    resultHTML += `<table class="salary-table">
+        <tr><th>Employee Name</th><td>${document.getElementById('empName').value}</td></tr>
+        <tr><th>Designation</th><td>${document.getElementById('designation').value}</td></tr>
+        <tr><th>Employee ID</th><td>${document.getElementById('empId').value}</td></tr>
+        <tr><th>Date</th><td>${document.getElementById('monthYear').value}</td></tr>
+        <tr><th>Basic Salary</th><td class="amount">${formatCurrency(basic)}</td></tr>`;
+    for(let key in allowances){
+        resultHTML += `<tr><th>${key}</th><td class="amount">${formatCurrency(allowances[key])}</td></tr>`;
+    }
+    resultHTML += `<tr><th>Overtime</th><td class="amount">${formatCurrency(ot)}</td></tr>
+        <tr><th>Bonuses</th><td class="amount">${formatCurrency(bonus)}</td></tr>
+        <tr><th>Late Deduction</th><td class="amount">${formatCurrency(lateDeduct)}</td></tr>
+        <tr><th>Other Deductions</th><td class="amount">${formatCurrency(other)}</td></tr>
+        <tr><th>Tax Amount</th><td class="amount">${formatCurrency(taxAmount)}</td></tr>
+        <tr><th>Total Deductions</th><td class="amount">${formatCurrency(totalDeduction)}</td></tr>
+        <tr><th>Net Salary</th><td class="amount">${formatCurrency(netPay)}</td></tr>
+    </table>
+    <table class="signature-table">
+        <tr><td>Employee Signature</td><td>HR/Manager Signature</td></tr>
+    </table>
+    <p style="text-align:center;font-size:12px;margin-top:10px;">System Generated Payslip</p>`;
+
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = resultHTML;
+    resultDiv.style.display = "block";
     document.getElementById('printBtn').style.display="block";
     document.getElementById('pdfBtn').style.display="block";
 });
 
 // Print
-document.getElementById('printBtn').addEventListener('click',function(){
-    const printContents=document.getElementById('result').innerHTML;
-    const originalContents=document.body.innerHTML;
-    document.body.innerHTML=`
-        <div style="padding:20px;max-width:800px;margin:auto;">
-            ${printContents}
-            <div style="text-align:center;margin-top:30px;">
-                <button onclick="window.print()" style="background:#007bff;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">Print Now</button>
-                <button onclick="window.location.reload()" style="background:#6c757d;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">Back to Calculator</button>
-            </div>
-        </div>
-    `;
+document.getElementById('printBtn').addEventListener('click', function(){
+    const printContents = document.getElementById('result').innerHTML;
+    const originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
     window.print();
-    setTimeout(() => {
-        location.reload();
-    }, 1000);
+    document.body.innerHTML = originalContents;
+    location.reload();
 });
 
-// PDF Generation - FIXED: Company name from input
-document.getElementById('pdfBtn').addEventListener('click',function(){
-    // Validate company name
-    const companyName = document.getElementById('companyName').value.trim();
-    if(!companyName) {
-        alert('Please enter Company Name for PDF download');
-        document.getElementById('companyName').focus();
-        return;
-    }
-    
+// PDF
+document.getElementById('pdfBtn').addEventListener('click', function(){
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF({unit:"pt",format:"a4"});
+
     const empName=document.getElementById('empName').value;
     const designation=document.getElementById('designation').value;
     const empId=document.getElementById('empId').value;
     const date=document.getElementById('monthYear').value;
     const currency=currencyList.value;
-    const basic=parseFloat(document.getElementById('basic').value)||0;
-    const allow=parseFloat(document.getElementById('allow').value)||0;
-    const ot=parseFloat(document.getElementById('ot').value)||0;
-    const bonus=parseFloat(document.getElementById('bonus').value)||0;
-    const late=parseFloat(document.getElementById('late').value)||0;
-    const penalty=parseFloat(document.getElementById('penalty').value)||0;
-    const other=parseFloat(document.getElementById('other').value)||0;
-    const taxPerc=parseFloat(document.getElementById('tax').value)||0;
-    const gross=basic+allow+ot+bonus;
-    const lateDeduct=late*penalty;
-    const taxableIncome=gross-lateDeduct-other;
-    const taxAmount=taxableIncome*(taxPerc/100);
-    const totalDeduction=lateDeduct+other+taxAmount;
-    const netPay=gross-totalDeduction;
 
-    // FIXED: Company name dynamically in PDF
-    doc.setFontSize(20); 
-    doc.setTextColor(102, 126, 234); // Blue color
-    doc.text(companyName, 300, 40, {align:"center"});
-    
+    const basic = parseFloat(document.getElementById('basic').value)||0;
+    const hra = parseFloat(document.getElementById('hra').value)||0;
+    const medical = parseFloat(document.getElementById('medical').value)||0;
+    const ot = parseFloat(document.getElementById('ot').value)||0;
+    const bonus = parseFloat(document.getElementById('bonus').value)||0;
+    const late = parseFloat(document.getElementById('late').value)||0;
+    const penalty = parseFloat(document.getElementById('penalty').value)||0;
+    const other = parseFloat(document.getElementById('other').value)||0;
+    const taxPerc = parseFloat(document.getElementById('tax').value)||0;
+
+    const allowances = { "House Rent Allowance": hra, "Medical Allowance": medical };
+    const gross = basic + hra + medical + ot + bonus;
+    const lateDeduct = late*penalty;
+    const taxableIncome = gross - lateDeduct - other;
+    const taxAmount = taxableIncome*(taxPerc/100);
+    const totalDeduction = lateDeduct + other + taxAmount;
+    const netPay = gross - totalDeduction;
+    const companyName = document.getElementById('companyName').value || "Company Name Here";
+
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const centerX = pageWidth/2;
+    let startY = 20;
+
+    if(logoData){
+        doc.addImage(logoData,'PNG',centerX-75,startY,150,150);
+    }
+    startY += 160;
     doc.setFontSize(16);
-    doc.setTextColor(0, 0, 0);
-    doc.text("Salary Pay Slip", 300, 65, {align:"center"});
-    
-    doc.setFontSize(10);
-    doc.setTextColor(100, 100, 100);
-    doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 300, 80, {align:"center"});
-    
-    doc.setFontSize(12);
-    doc.setTextColor(0, 0, 0);
-    
-    // Employee Information
-    const employeeData = [
-        ["Employee Name:", empName],
-        ["Designation:", designation],
-        ["Employee ID:", empId],
-        ["Pay Period:", date],
-        ["Currency:", currency]
-    ];
-    
-    // Salary Breakdown
-    const salaryData = [
-        ["EARNINGS", "AMOUNT"],
-        ["Basic Salary", currency + " " + basic.toFixed(2)],
-        ["Allowances", currency + " " + allow.toFixed(2)],
-        ["Overtime Pay", currency + " " + ot.toFixed(2)],
-        ["Bonuses/Incentives", currency + " " + bonus.toFixed(2)],
-        ["", ""],
-        ["GROSS SALARY", currency + " " + gross.toFixed(2)],
-        ["", ""],
-        ["DEDUCTIONS", "AMOUNT"],
-        ["Late Days Deduction", currency + " " + lateDeduct.toFixed(2)],
-        ["Other Deductions", currency + " " + other.toFixed(2)],
-        [`Tax Deduction (${taxPerc}%)`, currency + " " + taxAmount.toFixed(2)],
-        ["", ""],
-        ["TOTAL DEDUCTIONS", currency + " " + totalDeduction.toFixed(2)],
-        ["", ""],
-        ["NET PAYABLE SALARY", currency + " " + netPay.toFixed(2)]
-    ];
-    
-    // Add company header
-    doc.setFillColor(102, 126, 234);
-    doc.rect(20, 90, 555, 20, 'F');
-    doc.setTextColor(255, 255, 255);
+    doc.text(companyName, centerX, startY, {align:"center"});
+    startY += 20;
     doc.setFontSize(14);
-    doc.text("EMPLOYEE INFORMATION", 297.5, 103, {align:"center"});
-    
-    // Employee table
-    doc.setTextColor(0, 0, 0);
-    doc.autoTable({
-        startY: 115,
-        body: employeeData,
-        theme: "grid",
-        styles: {fontSize: 11, cellPadding: 8},
-        columnStyles: {0: {fontStyle: 'bold', cellWidth: 150}}
-    });
-    
-    // Salary table
-    const finalY = doc.lastAutoTable.finalY + 20;
-    
-    doc.setFillColor(40, 167, 69);
-    doc.rect(20, finalY, 555, 20, 'F');
-    doc.setTextColor(255, 255, 255);
-    doc.setFontSize(14);
-    doc.text("SALARY BREAKDOWN", 297.5, finalY + 13, {align:"center"});
-    
-    doc.setTextColor(0, 0, 0);
-    doc.autoTable({
-        startY: finalY + 25,
-        body: salaryData,
-        theme: "grid",
-        styles: {fontSize: 11, cellPadding: 8},
-        columnStyles: {0: {fontStyle: 'bold', cellWidth: 250}},
-        headStyles: {fillColor: [40, 167, 69]},
-        didParseCell: function(data) {
-            if(data.row.index === 0 || data.row.index === 8 || data.row.index === 13 || data.row.index === 15) {
-                data.cell.styles.fontStyle = 'bold';
-                data.cell.styles.fillColor = [240, 240, 240];
-            }
-            if(data.row.index === 6) {
-                data.cell.styles.fontStyle = 'bold';
-                data.cell.styles.textColor = [0, 100, 0];
-            }
-            if(data.row.index === 13) {
-                data.cell.styles.fontStyle = 'bold';
-                data.cell.styles.textColor = [200, 0, 0];
-            }
-            if(data.row.index === 15) {
-                data.cell.styles.fontStyle = 'bold';
-                data.cell.styles.textColor = [0, 100, 0];
-                data.cell.styles.fillColor = [230, 255, 230];
-            }
-        }
-    });
-    
-    // Signatures
-    const sigY = doc.lastAutoTable.finalY + 40;
+    doc.text("Pay Slip", centerX, startY, {align:"center"});
+    startY += 20;
+
+    const employeeData=[["Employee Name",empName],["Designation",designation],["Employee ID",empId],["Date",date]];
+    doc.autoTable({startY:startY, head:[["Employee Details",""]], body:employeeData, theme:"grid"});
+    startY = doc.lastAutoTable.finalY + 10;
+
+    const salaryData = [["Basic Salary",currency+" "+basic.toFixed(2)]];
+    for(let key in allowances){ salaryData.push([key,currency+" "+allowances[key].toFixed(2)]); }
+    salaryData.push(["Overtime",currency+" "+ot.toFixed(2)]);
+    salaryData.push(["Bonuses",currency+" "+bonus.toFixed(2)]);
+    salaryData.push(["Late Deduction",currency+" "+lateDeduct.toFixed(2)]);
+    salaryData.push(["Other Deductions",currency+" "+other.toFixed(2)]);
+    salaryData.push(["Tax Amount",currency+" "+taxAmount.toFixed(2)]);
+    salaryData.push(["Total Deductions",currency+" "+totalDeduction.toFixed(2)]);
+    salaryData.push(["Net Salary",currency+" "+netPay.toFixed(2)]);
+    doc.autoTable({startY:startY, head:[["Salary Breakdown","Amount"]], body:salaryData, theme:"grid"});
+
+    startY = doc.lastAutoTable.finalY + 30;
     doc.setFontSize(12);
-    doc.text("Employee Signature: ____________   ", 80, sigY);
-    doc.text("HR/Manager Signature: _____________", 300, sigY);
-    
-    doc.text("Date: ______________", 80, sigY + 30);
-    doc.text("Company Stamp:______________", 300, sigY + 30);
-    
-    // Footer
+    doc.text("Employee Signature: ____________________", 80, startY);
+    doc.text("HR/Manager Signature: ____________________", 330, startY);
+
     doc.setFontSize(10);
-    doc.setTextColor(100, 100, 100);
-    doc.text("This is a computer generated document. No signature required.", 300, sigY + 60, {align:"center"});
-    doc.text(`© ${new Date().getFullYear()} ${companyName}. All rights reserved.`, 300, sigY + 80, {align:"center"});
-    
-    // Save PDF with company and employee name
-    doc.save(`${companyName.replace(/\s+/g, '_')}_${empName.replace(/\s+/g, '_')}_PaySlip_${date}.pdf`);
+    doc.text("System Generated Payslip", centerX, startY+50, {align:"center"});
+    doc.save(`${empName}_PaySlip.pdf`);
 });
 
-// FAQ & Guide accordion
-document.querySelectorAll('.faq h4').forEach(q=>{q.addEventListener('click',()=>{q.nextElementSibling.style.display=(q.nextElementSibling.style.display==='block')?'none':'block';});});
-document.querySelectorAll('.guide h4').forEach(q=>{q.addEventListener('click',()=>{q.nextElementSibling.style.display=(q.nextElementSibling.style.display==='block')?'none':'block';});});
-
-// Logo upload preview
-document.getElementById('companyLogo').addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const img = document.getElementById('companyLogoPreview');
-            img.src = e.target.result;
-            img.style.display = 'block';
-        }
-        reader.readAsDataURL(file);
-    }
+// FAQ & Guide toggle
+document.querySelectorAll('.faq h4, .guide h4').forEach(q=>{
+    q.addEventListener('click', ()=>{
+        q.nextElementSibling.style.display = (q.nextElementSibling.style.display==='block')?'none':'block';
+    });
 });
 </script>
 </body>
