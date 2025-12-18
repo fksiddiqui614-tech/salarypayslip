@@ -5,10 +5,10 @@
       "has": [
         {
           "type": "host",
-          "value": "www.salarypayslip.com"
+          "value": "salarypayslip.com"
         }
       ],
-      "destination": "https://salarypayslip.com/$1",
+      "destination": "https://www.salarypayslip.com/$1",
       "permanent": true
     }
   ]
