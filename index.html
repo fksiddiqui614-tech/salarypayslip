@@ -82,6 +82,8 @@ footer{border-top:1px solid #000;margin-top:40px;padding:20px;text-align:center;
 
 <!-- PAYSLIP -->
 <div class="payslip-preview" id="payslipPreview">
+
+<!-- LOGO CENTER ALIGNED -->
 <div style="text-align:center;margin-bottom:15px">
 <img id="previewLogo" style="max-width:120px;margin-bottom:10px">
 <h2>Pay Slip</h2>
@@ -114,35 +116,45 @@ footer{border-top:1px solid #000;margin-top:40px;padding:20px;text-align:center;
 <div class="guide">
 <h2>How to Use</h2>
 <p>
-This online salary payslip calculator and generator is designed for worldwide users.
-Start by uploading your company logo, which will appear on both the payslip and the downloaded PDF.
-Enter employee details such as name, designation, employee ID, and pay date.
-Add the basic salary along with allowances like HRA, medical, and other benefits.
-Include bonuses, deductions, and tax percentage if applicable.
-Click on <strong>Calculate Salary</strong> to instantly preview the payslip.
-Once satisfied, click <strong>Download PDF</strong> to save a system-generated payslip.
+This is a online salary payslip calculator and generator tool for personal, educational, and demo purposes only. It is not a payroll service.
+Start by uploading your company logo, which will appear on both the payslip and the downloaded PDF. 
+Enter the employee’s details such as name, designation, employee ID, and pay date.
+Input the basic salary along with allowances including HRA, Medical, and any other applicable allowances.
+Add bonuses and deductions if applicable.
+Enter the tax percentage, and the tool will calculate the tax amount automatically.
+Select your preferred currency from the dropdown.
+Click on “Calculate Salary” to view the payslip, then click “Download PDF” to get a ready-to-use, system-generated payslip.
 </p>
 </div>
 
 <!-- FAQ -->
 <div class="faq">
 <h2>FAQs</h2>
+
 <p><strong>Q1: Is this salary payslip calculator & generator for everyone?</strong><br>
-Yes, this tool is for worldwide users. You can generate and download unlimited payslips.</p>
+Yes, this tool is for everyone worldwide. You can generate and download unlimited payslips.</p>
 
 <p><strong>Q2: Will the downloaded PDF match the payslip?</strong><br>
 Yes, the downloaded PDF will exactly match the payslip, including employee details, salary breakdown, allowances, and company logo.</p>
 
 <p><strong>Q3: How is the tax calculated in this tool?</strong><br>
-The tax is automatically calculated based on the tax percentage you enter.</p>
+The tax is calculated automatically based on the tax percentage entered. The system applies it to the gross salary.</p>
 
-<p><strong>Q4: Can I change the currency for different employees or countries?</strong><br>
+<p><strong>Q4: Can I change the currency for different employees?</strong><br>
 Yes, you can select your preferred currency from the dropdown before calculating the salary.</p>
 
 <p><strong>Q5: Is this salary payslip generator mobile-friendly?</strong><br>
-Yes, the tool is fully responsive and works on mobile phones, tablets, and desktop devices.</p>
+Yes, the tool is fully responsive and works on mobile phones, tablets, and desktops.</p>
+
 </div>
 
+<!-- Policies -->
+<div class="policies">
+<h2>Policies</h2>
+<p>All data entered in this tool is kept private and not stored on any server. This tool is only for generating salary payslips for personal or company use.</p>
+</div>
+
+<!-- Social Share -->
 <div class="social-share">
 <strong>Share:</strong>
 <a id="shareFacebook" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" class="social-icon"></a>
@@ -168,61 +180,67 @@ Yes, the tool is fully responsive and works on mobile phones, tablets, and deskt
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 <script>
+// Logo upload & preview
 const logoUpload=document.getElementById('logoUpload');
 const logoPreview=document.getElementById('logoPreview');
 const previewLogo=document.getElementById('previewLogo');
 const logoText=document.getElementById('logoText');
 
 logoUpload.onchange=e=>{
-const f=e.target.files[0];
-if(!f)return;
-const r=new FileReader();
-r.onload=ev=>{
-logoPreview.src=previewLogo.src=ev.target.result;
-logoText.style.display="none";
-}
-r.readAsDataURL(f);
+    const f=e.target.files[0];
+    if(!f) return;
+    const r=new FileReader();
+    r.onload=ev=>{
+        logoPreview.src = previewLogo.src = ev.target.result;
+        logoText.style.display = "none";
+    };
+    r.readAsDataURL(f);
 };
 
+// Calculate payslip
 document.getElementById('calculateBtn').onclick=()=>{
-const g=id=>+document.getElementById(id).value||0;
-const cur=document.getElementById('currency').value;
-const gross=g('basicSalary')+g('hra')+g('medical')+g('otherAllowance')+g('bonus');
-const tax=(gross*g('taxPercent'))/100;
-document.getElementById('tax').value=tax.toFixed(2);
-const net=gross-g('deductions')-tax;
+    const g=id=>+document.getElementById(id).value||0;
+    const cur=document.getElementById('currency').value;
+    const gross=g('basicSalary')+g('hra')+g('medical')+g('otherAllowance')+g('bonus');
+    const tax=(gross*g('taxPercent'))/100;
+    document.getElementById('tax').value = tax.toFixed(2);
+    const net=gross-g('deductions')-tax;
 
-previewName.innerText=employeeName.value;
-previewDesignation.innerText=employeeDesignation.value;
-previewID.innerText=employeeID.value;
-previewDate.innerText=payDate.value;
-previewBasic.innerText=cur+g('basicSalary').toFixed(2);
-previewHRA.innerText=cur+g('hra').toFixed(2);
-previewMedical.innerText=cur+g('medical').toFixed(2);
-previewOther.innerText=cur+g('otherAllowance').toFixed(2);
-previewBonus.innerText=cur+g('bonus').toFixed(2);
-previewDeductions.innerText=cur+g('deductions').toFixed(2);
-previewTax.innerText=cur+tax.toFixed(2);
-previewNet.innerText=cur+net.toFixed(2);
+    previewName.innerText = employeeName.value;
+    previewDesignation.innerText = employeeDesignation.value;
+    previewID.innerText = employeeID.value;
+    previewDate.innerText = payDate.value;
+    previewBasic.innerText = cur+g('basicSalary').toFixed(2);
+    previewHRA.innerText = cur+g('hra').toFixed(2);
+    previewMedical.innerText = cur+g('medical').toFixed(2);
+    previewOther.innerText = cur+g('otherAllowance').toFixed(2);
+    previewBonus.innerText = cur+g('bonus').toFixed(2);
+    previewDeductions.innerText = cur+g('deductions').toFixed(2);
+    previewTax.innerText = cur+tax.toFixed(2);
+    previewNet.innerText = cur+net.toFixed(2);
 
-updateSocial();
+    updateSocial();
 };
 
+// Download PDF
 downloadBtn.onclick=()=>{
-html2canvas(payslipPreview,{scale:2}).then(c=>{
-const pdf=new jspdf.jsPDF('p','pt','a4');
-pdf.addImage(c.toDataURL(),'PNG',0,0,595,(c.height*595)/c.width);
-pdf.save('PaySlip.pdf');
-});
+    html2canvas(payslipPreview,{scale:2}).then(c=>{
+        const pdf=new jspdf.jsPDF('p','pt','a4');
+        pdf.addImage(c.toDataURL(),'PNG',0,0,595,(c.height*595)/c.width);
+        pdf.save('PaySlip.pdf');
+    });
 };
 
+// Social share
 function updateSocial(){
-const url=encodeURIComponent(location.href);
-shareFacebook.href=`https://facebook.com/sharer/sharer.php?u=${url}`;
-shareTwitter.href=`https://twitter.com/intent/tweet?url=${url}`;
-shareLinkedIn.href=`https://linkedin.com/shareArticle?mini=true&url=${url}`;
-shareWhatsApp.href=`https://api.whatsapp.com/send?text=${url}`;
+    const url = encodeURIComponent(location.href);
+    const text = encodeURIComponent("Check out this Online Salary Payslip Generator!");
+    shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+    shareTwitter.href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+    shareLinkedIn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+    shareWhatsApp.href = `https://api.whatsapp.com/send?text=${text}%20${url}`;
 }
+window.addEventListener('load', updateSocial);
 </script>
 
 </body>
