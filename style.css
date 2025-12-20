@@ -4,7 +4,7 @@ header{text-align:center;padding:20px}
 header h1{font-size:28px;margin-top:10px}
 .logo-box{width:100px;height:100px;border:1px solid #000;display:flex;justify-content:left;align-items:left;margin:0 auto;overflow:hidden;position:relative}
 .logo-box img{max-width:100px;max-height:100px}
-.logo-box span{position:absolute;font-size:14px;text-align:center;top:50%;left:50%;transform:translate(-50%,-50%)}
+.logo-box span{position:absolute;font-size:14px;text-align:left;top:50%;left:50%;transform:translate(-50%,-50%)}
 .container{width:90%;max-width:1000px;margin:20px auto;padding:20px;border:1px solid #000;border-radius:10px}
 label{font-weight:bold;margin-top:10px;display:block}
 input,select{width:100%;padding:10px;margin-bottom:15px;border:1px solid #000;border-radius:5px}
@@ -21,3 +21,4 @@ footer{border-top:1px solid #000;margin-top:40px;padding:20px;text-align:center;
 footer a{text-decoration:underline;color:#000;margin:0 10px}
 
 @media(max-width:768px){header h1{font-size:24px}.logo-box{width:120px;height:120px}}
+
