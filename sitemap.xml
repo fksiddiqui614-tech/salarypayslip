@@ -8,14 +8,14 @@
   <!-- Home Page -->
   <url>
     <loc>https://www.salarypayslip.com/</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
 
 <url>
     <loc>https://www.salarypayslip.com/paycheck-calculator-usa</loc>
-    <lastmod>2026-01-08</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -23,28 +23,28 @@
   <!-- Country SEO Pages -->
   <url>
     <loc>https://www.salarypayslip.com/salary-slip-usa.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://www.salarypayslip.com/salary-slip-uk.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://www.salarypayslip.com/salary-slip-canada.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://www.salarypayslip.com/salary-slip-eu.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -52,7 +52,7 @@
   <!-- Policies Pages -->
   <url>
     <loc>https://www.salarypayslip.com/privacy.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <priority>0.80</priority>
   </url>
 
@@ -75,4 +75,5 @@
   </url>
 
 </urlset>
+
 
