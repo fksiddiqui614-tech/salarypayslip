@@ -13,6 +13,13 @@
     <priority>1.00</priority>
   </url>
 
+<url>
+    <loc>https://www.salarypayslip.com/paycheck-calculator-usa</loc>
+    <lastmod>2026-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+      
   <!-- Country SEO Pages -->
   <url>
     <loc>https://www.salarypayslip.com/salary-slip-usa.html</loc>
@@ -68,3 +75,4 @@
   </url>
 
 </urlset>
+
