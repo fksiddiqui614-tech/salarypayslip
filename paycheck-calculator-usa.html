@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>USA Paycheck & Pay Stub Calculator – Estimate Your Take Home Pay</title>
+<meta name="description" content="Free USA Paycheck and Pay Stub Calculator. Quickly estimate your net take-home pay based on federal and state taxes. Simple, fast, and easy for employees in the United States.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://www.salarypayslip.com/paycheck-calculator-usa" />
+
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#f6f7f9;margin:0;padding:0;}
+.container{max-width:700px;margin:40px auto;background:#fff;padding:25px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,.08);}
+h1{text-align:center;font-size:26px;margin-bottom:20px;}
+label{display:block;margin-top:15px;font-weight:bold;}
+input,select,button{width:100%;padding:10px;margin-top:5px;font-size:16px;}
+button{
+  background:#000; /* black button */
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  margin-top:20px;
+  cursor:pointer;
+}
+button:hover{
+  background:#333; /* dark gray on hover */
+}
+.result{margin-top:25px;padding:15px;background:#f0f8ff;border-radius:6px;}
+.result p{margin:8px 0;font-size:16px;}
+.note{font-size:13px;color:#555;margin-top:15px;}
+</style>
+
+<!-- JSON-LD Schema for Calculator -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialCalculator",
+  "name": "USA Paycheck & Pay Stub Calculator",
+  "description": "Calculate your estimated take-home pay in the USA based on federal and state taxes. This tool provides an estimate only and does not replace official payroll calculations.",
+  "url": "https://www.salarypayslip.com/paycheck-calculator-usa",
+  "applicationCategory": "FinancialApplication",
+  "operatingSystem": "Web",
+  "audience": {
+    "@type": "Audience",
+    "geographicArea": "US",
+    "userType": "Employee"
+  },
+  "keywords": "Paycheck calculator, Pay stub calculator, USA salary calculator, Net pay estimator"
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+<h1>USA Paycheck Calculator</h1>
+
+<p>Calculate your <strong>paycheck</strong> or <strong>pay stub</strong> instantly. Enter your salary or hourly rate, select your state, and see your estimated take-home pay. <strong>Note:</strong> This tool provides an <strong>estimate only</strong> based on general federal and state tax assumptions. It does <strong>not</strong> replace official payroll calculations, IRS guidelines, or your employer's pay statements. Use this calculator for informational purposes only.</p>
+
+<label>Pay Type</label>
+<select id="payType">
+  <option value="hourly">Hourly</option>
+  <option value="salary">Salary</option>
+</select>
+
+<label>Hourly Wage ($) OR Annual Salary ($)</label>
+<input type="number" id="income" placeholder="Enter amount">
+
+<label>Hours Worked (if hourly)</label>
+<input type="number" id="hours" placeholder="e.g. 40">
+
+<label>Pay Frequency</label>
+<select id="frequency">
+  <option value="weekly">Weekly</option>
+  <option value="biweekly">Bi-Weekly</option>
+  <option value="monthly">Monthly</option>
+</select>
+
+<label>State</label>
+<select id="state">
+  <option value="CA">California</option>
+  <option value="NY">New York</option>
+  <option value="TX">Texas</option>
+  <option value="FL">Florida</option>
+  <option value="Other">Other</option>
+</select>
+
+<button onclick="calculatePaycheck()">Calculate Paycheck</button>
+
+<div class="result" id="result" style="display:none">
+  <p><strong>Gross Pay:</strong> $<span id="gross"></span></p>
+  <p><strong>Federal Tax (estimate):</strong> $<span id="federal"></span></p>
+  <p><strong>State Tax:</strong> $<span id="stateTax"></span></p>
+  <p><strong>Net Pay (Take Home):</strong> $<span id="net"></span></p>
+</div>
+
+<!-- Footer Disclaimer -->
+<div class="note" style="margin-top:30px;">
+<strong>Disclaimer:</strong> This Paycheck / Pay Stub Calculator provides an <strong>estimate only</strong> based on general federal and state tax assumptions. It does <strong>not</strong> replace official payroll calculations, IRS guidelines, or your employer's pay statements. Use this calculator for informational purposes only.
+</div>
+
+</div>
+
+<script>
+// Tax rates JSON (update yearly only)
+const taxRates = {
+  "federal": 0.10, // flat federal estimate
+  "states": {
+    "CA": 0.05,
+    "NY": 0.06,
+    "TX": 0,
+    "FL": 0.03,
+    "Other": 0.04
+  }
+};
+
+function calculatePaycheck(){
+  let payType = document.getElementById("payType").value;
+  let income = parseFloat(document.getElementById("income").value) || 0;
+  let hours = parseFloat(document.getElementById("hours").value) || 0;
+  let frequency = document.getElementById("frequency").value;
+  let state = document.getElementById("state").value;
+
+  let gross = 0;
+
+  if(payType === "hourly"){
+    gross = income * hours;
+  } else {
+    if(frequency === "weekly") gross = income / 52;
+    if(frequency === "biweekly") gross = income / 26;
+    if(frequency === "monthly") gross = income / 12;
+  }
+
+  let federalTax = gross * taxRates.federal;
+  let stateTax = gross * taxRates.states[state];
+  let netPay = gross - federalTax - stateTax;
+
+  document.getElementById("gross").innerText = gross.toFixed(2);
+  document.getElementById("federal").innerText = federalTax.toFixed(2);
+  document.getElementById("stateTax").innerText = stateTax.toFixed(2);
+  document.getElementById("net").innerText = netPay.toFixed(2);
+
+  document.getElementById("result").style.display = "block";
+}
+</script>
+
+</body>
+</html>
