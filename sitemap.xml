@@ -22,6 +22,13 @@
       
   <!-- Country SEO Pages -->
   <url>
+    <loc>https://www.salarypayslip.com/good-salary-in-pakistan-per-month.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+      
+  <url>
     <loc>https://www.salarypayslip.com/salary-slip-usa.html</loc>
     <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -75,6 +82,7 @@
   </url>
 
 </urlset>
+
 
 
 
