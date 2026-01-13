@@ -1,467 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <title>What Is a Good Salary in Pakistan Per Month?</title>
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.salarypayslip.com/</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
 
-  <!-- Meta SEO -->
-  <meta name="description" content="Learn what is considered a good salary in Pakistan per month. Explore real salary data for freelancers, students, corporate employees, and finance users. Use the SalaryPayslip tool to calculate your salary.">
-  <meta name="keywords" content="good salary in pakistan, average salary pakistan, freelancers salary, corporate salary, students salary, salary payslip tool">
-  <meta name="author" content="SalaryPayslip">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <url>
+    <loc>https://www.salarypayslip.com/paycheck-calculator-usa.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.salarypayslip.com/good-salary-in-pakistan-per-month.html">
+  <!-- Country SEO Pages -->
+  <url>
+    <loc>https://www.salarypayslip.com/good-salary-in-pakistan-per-month.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.png?v=2" type="image/png">
-  <link rel="apple-touch-icon" href="/favicon.png?v=2">
-  <link rel="shortcut icon" href="/favicon.png?v=2">
+  <url>
+    <loc>https://www.salarypayslip.com/salary-slip-usa.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="What Is a Good Salary in Pakistan Per Month?">
-  <meta property="og:description" content="Discover what is considered a good salary in Pakistan per month. Real salary ranges for freelancers, students, corporate employees, and finance users.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://www.salarypayslip.com/good-salary-in-pakistan-per-month.html">
-  <meta property="og:site_name" content="SalaryPayslip">
+  <url>
+    <loc>https://www.salarypayslip.com/salary-slip-uk.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
 
-  <!-- Article Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "What Is a Good Salary in Pakistan Per Month?",
-    "author": {
-      "@type": "Organization",
-      "name": "SalaryPayslip"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SalaryPayslip"
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.salarypayslip.com/good-salary-in-pakistan-per-month.html"
-    }
-  }
-  </script>
+  <url>
+    <loc>https://www.salarypayslip.com/salary-slip-canada.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
 
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "What is a good salary in Pakistan for a single person?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A good salary for a single person in Pakistan ranges between PKR 80,000 and 120,000 per month."
-      }
-    },{
-      "@type": "Question",
-      "name": "Is 50,000 PKR enough to live in Pakistan?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "PKR 50,000 may cover basic needs but is not considered a good salary in major cities."
-      }
-    },{
-      "@type": "Question",
-      "name": "What salary is middle class in Pakistan?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Middle-class income in Pakistan generally falls between PKR 60,000 and 120,000 per month."
-      }
-    },{
-      "@type": "Question",
-      "name": "What is a high salary in Pakistan?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A salary above PKR 200,000 per month is considered high in Pakistan."
-      }
-    }]
-  }
-  </script>
+  <url>
+    <loc>https://www.salarypayslip.com/salary-slip-eu.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      padding: 0;
-      background: #f4f6f8;
-      color: #222;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 25px;
-      background: #ffffff;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #ddd;
-      margin-bottom: 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-      color: #111;
-      text-align: left;
-    }
-    h1, h2, h3 {
-      color: #111;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    table, th, td {
-      border: 1px solid #ddd;
-    }
-    th, td {
-      padding: 10px;
-    }
-    footer {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      font-size: 14px;
-    }
-    footer a {
-      margin-right: 12px;
-      text-decoration: none;
-      color: #0066cc;
-    }
-    a.button {
-      display: inline-block;
-      padding: 10px 18px;
-      background: #0066cc;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-  </style>
-</head>
+  <!-- Policies Pages -->
+  <url>
+    <loc>https://www.salarypayslip.com/privacy.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <priority>0.80</priority>
+  </url>
 
-<body>
-  <div class="container">
+  <url>
+    <loc>https://www.salarypayslip.com/terms.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <priority>0.80</priority>
+  </url>
 
-    <!-- Logo Header Left Aligned -->
-    <header>
-      <h1>SalaryPayslip</h1>
-    </header>
+  <url>
+    <loc>https://www.salarypayslip.com/disclaimer.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <priority>0.80</priority>
+  </url>
 
-    <h1>What Is a Good Salary in Pakistan Per Month?</h1>
+  <url>
+    <loc>https://www.salarypayslip.com/cookie-policy.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <priority>0.80</priority>
+  </url>
 
-    <p>Many people in Pakistan wonder <strong>what is a good salary per month</strong>. With rising living costs, rent, education, and daily expenses, the definition of a “good salary” can vary depending on your profession, city, and lifestyle.</p>
-
-    <h2>Average Salary in Pakistan</h2>
-    <p>Based on multiple surveys and Google salary data, the average monthly salary in Pakistan ranges from <strong>PKR 35,000 to 82,000</strong>. Entry-level positions, informal work, and students usually earn on the lower side, while skilled professionals and corporate employees earn much more.</p>
-
-    <h2>Good Salary by Profession</h2>
-    <table>
-      <tr>
-        <th>Profession</th>
-        <th>Good Monthly Salary</th>
-      </tr>
-      <tr>
-        <td>Software Developer / IT Professional</td>
-        <td>PKR 150,000 – 450,000+</td>
-      </tr>
-      <tr>
-        <td>Engineer</td>
-        <td>PKR 100,000 – 250,000</td>
-      </tr>
-      <tr>
-        <td>Teacher</td>
-        <td>PKR 70,000 – 120,000</td>
-      </tr>
-      <tr>
-        <td>Freelancer / Digital Worker</td>
-        <td>PKR 30,000 – 120,000+</td>
-      </tr>
-      <tr>
-        <td>Corporate Employee</td>
-        <td>PKR 90,000 – 200,000+</td>
-      </tr>
-      <tr>
-        <td>Finance Professionals / Users</td>
-        <td>PKR 120,000 – 250,000+</td>
-      </tr>
-      <tr>
-        <td>Students / Interns</td>
-        <td>PKR 20,000 – 50,000</td>
-      </tr>
-    </table>
-
-  <h2>Salary for Freelancers in Pakistan</h2>
-
-  <p>Freelancing in Pakistan has grown tremendously over the past few years, offering individuals the flexibility to work from home, gain international clients, and scale their income according to skill and experience. Understanding the expected salary for freelancers can help newcomers set realistic goals and guide experienced freelancers in pricing their services effectively.</p>
-
-  <h3>1. Entry-Level Freelancers</h3>
-  <p>For beginners who are just starting in freelancing, the monthly income typically ranges between <strong>PKR 30,000 to 50,000</strong>. These freelancers may work on small projects like data entry, basic graphic design, content writing, or virtual assistance.</p>
-
-  <h4>Key points for beginners:</h4>
-  <ul>
-    <li>Focus on building a <strong>portfolio</strong> to showcase skills.</li>
-    <li>Use platforms like <strong>Upwork, Fiverr, and Freelancer.com</strong> to gain clients.</li>
-    <li>Initially, earnings may be low, but consistent work and good reviews help in increasing rates over time.</li>
-  </ul>
-
-  <h3>2. Mid-Level Freelancers</h3>
-  <p>Freelancers with <strong>1–3 years of experience</strong> and a solid client base can expect earnings between <strong>PKR 50,000 to 120,000 per month</strong>. At this stage, freelancers often specialize in areas such as:</p>
-  <ul>
-    <li>Web development or app development</li>
-    <li>Digital marketing and SEO</li>
-    <li>Professional content writing or copywriting</li>
-    <li>Advanced graphic design and video editing</li>
-  </ul>
-
-  <h4>Tips for mid-level freelancers:</h4>
-  <ul>
-    <li>Focus on <strong>repeat clients</strong> and building long-term relationships.</li>
-    <li>Consider creating <strong>packages or retainer models</strong> for consistent monthly income.</li>
-    <li>Improve skills in <strong>high-demand areas</strong> to command higher rates.</li>
-  </ul>
-
-  <h3>3. Experienced Freelancers</h3>
-  <p>Highly experienced freelancers with more than 3–5 years of expertise and international clients can <strong>exceed PKR 120,000 per month</strong>, sometimes reaching PKR 200,000 or more depending on project volume and niche.</p>
-
-  <h4>Characteristics of successful freelancers:</h4>
-  <ul>
-    <li>Strong <strong>personal branding</strong> and online presence.</li>
-    <li>Expertise in high-paying niches like <strong>software development, blockchain, AI, and financial consulting</strong>.</li>
-    <li>Ability to <strong>negotiate rates</strong> and manage multiple clients simultaneously.</li>
-  </ul>
-
-  <h3>4. Factors Affecting Freelance Income</h3>
-  <p>Several factors influence a freelancer’s monthly income:</p>
-  <ul>
-    <li><strong>Skill level</strong> – Specialized skills earn more.</li>
-    <li><strong>Client base</strong> – International clients often pay higher rates.</li>
-    <li><strong>Work hours</strong> – More dedicated hours lead to higher monthly earnings.</li>
-    <li><strong>Reputation and portfolio</strong> – Positive reviews attract better-paying clients.</li>
-  </ul>
-
-  <h3>5. Advantages of Freelancing</h3>
-  <p>Freelancing offers more than just income:</p>
-  <ul>
-    <li>Flexibility to choose work hours and projects.</li>
-    <li>Get to work with clients from around the world and earn money in different currencies.</li>
-    <li>Freedom to scale business independently.</li>
-    <li>Professional growth through diverse projects.</li>
-  </ul>
-
-  <h3>6. Using Tools to Manage Income</h3>
-  <p>Freelancers can make their financial life easier with tools like <strong>SalaryPayslip</strong>, which allows generating professional salary slips, tracking monthly earnings, and documenting income for bank verification, loans, or taxation purposes.</p>
-
-  <h2>Salary for Students and Interns in Pakistan</h2>
-
-  <p>Students and interns in Pakistan often start earning while still pursuing education, gaining valuable work experience, and building a professional portfolio. Understanding the expected <strong>monthly salary for students and interns</strong> helps them plan finances and make informed career decisions.</p>
-
-  <h3>1. Typical Salary Range</h3>
-  <p>For students and interns, monthly earnings usually range between <strong>PKR 20,000 to 50,000</strong>. The range varies depending on:</p>
-  <ul>
-    <li>Type of internship (paid vs unpaid)</li>
-    <li>Industry (IT, marketing, content, design, or corporate internships)</li>
-    <li>City of employment (major cities like Karachi, Lahore, and Islamabad often pay higher)</li>
-    <li>Working hours (part-time vs full-time)</li>
-  </ul>
-
-  <h3>2. Common Industries and Roles</h3>
-  <p>Some popular roles for students and interns include:</p>
-  <ul>
-    <li><strong>IT & Software Development:</strong> Coding projects, app testing, QA roles</li>
-    <li><strong>Digital Marketing & SEO:</strong> Social media management, content creation, marketing analytics</li>
-    <li><strong>Graphic Design & Multimedia includes creating:</strong> Logos, editing videos,and making illustrations</li>
-    <li><strong>Corporate & Admin Roles:</strong> Office internships, data entry, assistance in HR, finance, or sales departments</li>
-    <li><strong>Freelancing Internships:</strong> Remote projects via platforms like Upwork and Fiverr</li>
-  </ul>
-
-  <h3>3. Benefits Beyond Salary</h3>
-  <p>Internships and part-time work for students provide more than just income:</p>
-  <ul>
-    <li><strong>Work experience:</strong> Practical exposure helps in career building.</li>
-    <li><strong>Skill development:</strong> Students can enhance technical and soft skills.</li>
-    <li><strong>Networking:</strong> Internships help in establishing professional connections.</li>
-    <li><strong>Portfolio building:</strong> Real work examples make resumes stronger.</li>
-  </ul>
-
-  <h3>4. Tips for Maximizing Income as a Student or Intern</h3>
-  <ul>
-    <li>Seek <strong>paid internships</strong> instead of unpaid ones where possible.</li>
-    <li>Use platforms like <strong>SalaryPayslip</strong> to generate proper salary slips for bank verification or scholarships.</li>
-    <li>Take on freelance projects alongside internships to increase monthly income.</li>
-    <li>Focus on industries in high demand, such as IT, design, and digital marketing.</li>
-  </ul>
-
-  <h3>5. International Opportunities</h3>
-  <p>Some students and interns can access <strong>remote international internships</strong>, earning in foreign currency. This can significantly increase income, sometimes <strong>2–5x the local average</strong>. Remote internships also provide valuable global exposure and experience.</p>
-
-  <h3>6. Using Tools to Track and Document Income</h3>
-  <p>Tools like <strong>SalaryPayslip</strong> help students and interns:</p>
-  <ul>
-    <li>Generate professional salary slips</li>
-    <li>Keep track of monthly income</li>
-    <li>Provide documentation for bank accounts, scholarship applications, or taxation purposes</li>
-  </ul>
-
-  <h2>Salary for Corporate Employees in Pakistan</h2>
-
-  <p>Corporate jobs in Pakistan continue to be one of the most stable sources of income, offering structured salaries, benefits, and opportunities for career growth. Understanding the <strong>average and good salaries for corporate employees</strong> helps professionals set expectations and negotiate compensation effectively.</p>
-
-  <h3>1. Typical Salary Range</h3>
-  <p>Corporate salaries in Pakistan vary significantly depending on the role, industry, city, and level of experience. On average:</p>
-  <ul>
-    <li><strong>Entry-level positions:</strong> PKR 40,000 – 70,000 per month</li>
-    <li><strong>Mid-level employees:</strong> PKR 80,000 – 150,000 per month</li>
-    <li><strong>Senior management:</strong> PKR 200,000 – 500,000+ per month</li>
-  </ul>
-
-  <h3>2. Popular Roles and Industries</h3>
-  <p>Corporate employees work in diverse sectors such as:</p>
-  <ul>
-    <li><strong>Information Technology (IT):</strong> Software engineers, project managers, system analysts</li>
-    <li><strong>Finance & Accounting:</strong> Accountants, auditors, financial analysts, tax consultants</li>
-    <li><strong>Marketing & Sales:</strong> People who handle marketing, brand management, and sales.</li>
-    <li><strong>Human Resources:</strong> HR executives, recruiters, training and development specialists</li>
-    <li><strong>Operations & Administration:</strong> Positions such as office managers, operations coordinators, and supply chain analysts.</li>
-  </ul>
-
-  <h3>3. Factors Influencing Corporate Salaries</h3>
-  <p>Several factors affect how much a corporate employee earns:</p>
-  <ul>
-    <li><strong>Education and qualifications:</strong> MBAs, certifications, and specialized degrees often lead to higher pay</li>
-    <li><strong>Experience:</strong> Years of experience significantly influence salary progression</li>
-    <li><strong>Company size and industry:</strong> Multinational corporations typically offer higher salaries than local companies</li>
-    <li><strong>Location:</strong> Salaries are higher in major cities like Karachi, Lahore, and Islamabad</li>
-  </ul>
-
-  <h3>4. Benefits Beyond Salary</h3>
-  <p>Corporate jobs usually provide more than just the base salary:</p>
-  <ul>
-    <li>Health insurance and medical benefits</li>
-    <li>Retirement plans and provident funds</li>
-    <li>Bonuses and performance incentives</li>
-    <li>Paid leave and professional development programs</li>
-  </ul>
-
-  <h3>5. Tips to Maximize Corporate Earnings</h3>
-  <ul>
-    <li>Focus on gaining <strong>industry-relevant certifications</strong> to improve credibility</li>
-    <li>Build a <strong>strong professional network</strong> within the organization and industry</li>
-    <li>Take on <strong>leadership roles</strong> or additional responsibilities to increase promotion opportunities</li>
-    <li>Negotiate salaries using market data and tools like <strong>SalaryPayslip</strong> to generate documented salary slips</li>
-  </ul>
-
-  <h3>6. Using Tools for Salary Management</h3>
-  <p>Tools like <strong>SalaryPayslip</strong> help corporate employees:</p>
-  <ul>
-    <li>Maintain professional salary slips for official purposes</li>
-    <li>Track monthly income and deductions</li>
-    <li>Document income for bank loans, taxation, or visa applications</li>
-  </ul>
-
-  <h2>Salary for Finance Professionals in Pakistan</h2>
-
-  <p>Finance professionals in Pakistan are among the most sought-after employees due to their critical role in managing corporate budgets, investments, accounting, and financial planning. Understanding their <strong>expected salary ranges</strong> helps aspiring professionals, students, and freelancers in finance make informed career choices and negotiate compensation effectively.</p>
-
-  <h3>1. Typical Salary Range</h3>
-  <p>Finance professionals’ salaries vary widely depending on experience, qualifications, and the size of the company:</p>
-  <ul>
-    <li><strong>Entry-level (0–2 years):</strong> PKR 40,000 – 70,000 per month</li>
-    <li><strong>Mid-level (3–5 years):</strong> PKR 80,000 – 150,000 per month</li>
-    <li><strong>Senior-level / Managers:</strong> PKR 200,000 – 400,000+ per month</li>
-    <li><strong>Specialized roles (CFA, financial analysts, investment bankers):</strong> PKR 250,000 – 600,000+ per month</li>
-  </ul>
-
-  <h3>2. Common Roles in Finance</h3>
-  <p>Some of the popular roles for finance professionals include:</p>
-  <ul>
-    <li><strong>Accountants & Auditors:</strong> Accountants and auditors are responsible for managing bookkeeping, conducting audits, and preparing financial reports.</li>
-    <li><strong>Financial Analysts:</strong> Analyzing investment opportunities and company performance</li>
-    <li><strong>Investment Bankers:</strong> Managing mergers, acquisitions, and investment portfolios</li>
-    <li><strong>Tax Consultants & Advisors:</strong> Tax consultants and advisors assist people or businesses in following tax laws and regulations. They help ensure that everyone is meeting the necessary requirements when it comes to paying taxes.</li>
-    <li><strong>Corporate Finance Executives:</strong> Budget planning, risk management, and strategic financial decisions</li>
-  </ul>
-
-  <h3>3. Factors Affecting Salaries</h3>
-  <p>Several factors determine the earnings of finance professionals:</p>
-  <ul>
-    <li><strong>Qualifications:</strong> Degrees like ACCA, CA, CFA, MBA Finance boost earning potential</li>
-    <li><strong>Experience:</strong> More years in finance roles lead to higher salaries and senior positions</li>
-    <li><strong>Company & Industry:</strong> Multinational corporations, banks, and investment firms pay more than smaller local companies</li>
-    <li><strong>Location:</strong> Salaries are higher in cities like Karachi, Lahore, and Islamabad</li>
-  </ul>
-
-  <h3>4. Benefits Beyond Salary</h3>
-  <p>Finance professionals often receive additional perks:</p>
-  <ul>
-    <li>Performance-based bonuses</li>
-    <li>Health and life insurance</li>
-    <li>Retirement benefits and provident funds</li>
-    <li>Professional development opportunities</li>
-  </ul>
-
-  <h3>5. Tips to Maximize Earnings</h3>
-  <ul>
-    <li>Pursue relevant certifications like <strong>ACCA, CFA, or CA</strong></li>
-    <li>Gain experience in high-demand sectors such as investment banking, corporate finance, and auditing</li>
-    <li>Develop skills in financial modeling, risk analysis, and accounting software</li>
-    <li>Use tools like <strong>SalaryPayslip</strong> to track income, generate official salary slips, and maintain records for banks or taxation</li>
-  </ul>
-
-  <h3>6. Using Tools to Track and Document Income</h3>
-  <p>Tools like <strong>SalaryPayslip</strong> help finance professionals:</p>
-  <ul>
-    <li>Generate professional salary slips for official use</li>
-    <li>Keep track of monthly income, deductions, and bonuses</li>
-    <li>Maintain documentation for bank loans, taxation, or visa applications</li>
-  </ul>
-
-    <h2>Good Salary by City</h2>
-    <ul>
-      <li><strong>Karachi:</strong> PKR 100,000 – 150,000</li>
-      <li><strong>Lahore:</strong> PKR 80,000 – 130,000</li>
-      <li><strong>Islamabad:</strong> PKR 90,000 – 140,000</li>
-    </ul>
-
-    <h2>Why Salary Slips Matter in Pakistan</h2>
-    <p>Salary slips are essential for employment verification, bank loans, visas, taxation, and more. You can <a href="https://www.salarypayslip.com/" class="button" target="_blank">Generate Your Salary Slip Now</a> using the SalaryPayslip Tool to get official documentation instantly.</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is a good salary in Pakistan for a single person?</h3>
-    <p>Between PKR 80,000 and 120,000 per month.</p>
-
-    <h3>Is 50,000 PKR enough to live in Pakistan?</h3>
-    <p>It may cover basic needs but is not ideal in large cities.</p>
-
-    <h3>What salary is middle class in Pakistan?</h3>
-    <p>PKR 60,000 to 120,000 per month.</p>
-
-    <h3>What is a high salary in Pakistan?</h3>
-    <p>Any salary above PKR 200,000 per month.</p>
-
-    <!-- Footer with all policy links, no extra disclaimer text -->
-    <footer>
-      <p>
-        <a href="privacy.html">Privacy Policy</a> |
-        <a href="terms.html">Terms</a> |
-        <a href="disclaimer.html">Disclaimer</a> |
-        <a href="cookie-policy.html">Cookie Policy</a>
-      </p>
-    </footer>
-
-  </div>
-</body>
-</html>
+</urlset>
