@@ -13,6 +13,13 @@
     <priority>1.00</priority>
   </url>
 
+   <url>
+    <loc>https://www.salarypayslip.com/how-to-calculate-free-take-home-pay-and-generate-paycheck-stubs.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+      
   <url>
     <loc>https://www.salarypayslip.com/paycheck-calculator-usa.html</loc>
     <lastmod>2026-01-09</lastmod>
@@ -82,3 +89,4 @@
   </url>
 
 </urlset>
+
