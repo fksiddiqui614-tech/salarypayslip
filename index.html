@@ -3,13 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SalaryPayslip - Global Salary Intelligence</title>
-<meta name="description" content="Explore global salary guides, salary database, payslip tools, tax insights, and profession salary reports for USA, UK, Canada, Europe, and 200+ countries.">
+<title>Global Salary Guides, Salary Database & Payslip Tools | SalaryPayslip</title>
+
+<meta name="description" content="Explore global salary guides, salary database, profession salaries, payroll resources, payslip tools, tax insights, career information, and country salary hubs from SalaryPayslip.">
 <meta name="google-site-verification" content="t5YOYcoIZ2Ea3qOcDN4upYEVD9qZ7aSZL37NH7uk8pI" />
-<link rel="sitemap" type="application/xml" title="Sitemap" href="https://salarypayslip.com/sitemap.xml">
-<link rel="canonical" href="https://salarypayslip.com/">
+<meta name="robots" content="index, follow">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.salarypayslip.com/sitemap.xml">
+<link rel="canonical" href="https://www.salarypayslip.com/">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png?v=2">
+<link rel="shortcut icon" href="/favicon.png?v=2">
+
+<!-- =========================================================
+OPEN GRAPH
+========================================================= -->
+
+<meta property="og:type" content="website">
+
+<meta property="og:site_name"
+content="SalaryPayslip">
+
+<meta property="og:locale"
+content="en_US">
+
+<meta property="og:url"
+content="https://www.salarypayslip.com/">
+
+<meta property="og:title"
+content="Global Salary Guides, Salary Database & Payslip Tools | SalaryPayslip">
+
+<meta property="og:description"
+content="Explore global salary guides, salary database, profession salaries, payroll resources, payslip tools, tax insights, career information, and country salary hubs from SalaryPayslip.">
+
+<meta property="og:image"
+content="https://www.salarypayslip.com/images/salarypayslip-homepage-2026.webp">
+
+<meta property="og:image:secure_url"
+content="https://www.salarypayslip.com/images/salarypayslip-homepage-2026.webp">
+
+<meta property="og:image:type"
+content="image/webp">
+
+<meta property="og:image:width"
+content="1200">
+
+<meta property="og:image:height"
+content="630">
+
+<meta property="og:image:alt"
+content="SalaryPayslip Global Salary Guides and Payslip Tools">
+
+<!-- =========================================================
+TWITTER (X) CARDS
+========================================================= -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:url"
+content="https://www.salarypayslip.com/">
+
+<meta name="twitter:title"
+content="SalaryPayslip | Global Salary Guides, Salary Database & Payslip Tools">
+
+<meta name="twitter:description"
+content="Explore global salary guides, salary database, profession salaries, payroll resources, payslip tools, tax insights, and career information across countries worldwide.">
+
+<meta name="twitter:image"
+content="https://www.salarypayslip.com/images/salarypayslip-homepage-2026.webp">
 
 <link rel="stylesheet" href="homepage.css">
+<link rel="stylesheet" href="policy.css">
 
 </head>
 
@@ -32,104 +98,61 @@
 <!-- ================= HERO ================= -->
 <section class="hero">
 
-  <h1>SalaryPayslip – Global Salary Guides, Salary Database & Payslip Tools</h1>
-
-  <p>A smart global salary intelligence platform providing verified salary guides, payslip breakdowns, and job market insights across major countries including USA, UK, Canada, and Europe.</p>
+  <h1>Global Salary Guides, Salary Database & Payslip Tools | SalaryPayslip</h1>
 
   <div class="stats">
-    <div>🌍 200+ Countries</div>
-    <div>💼 50K+ Salaries</div>
-    <div>📊 Real-Time Data</div>
-  </div>
+    <div>🌍 Global Salary Guides</div>
+    <div>💼 Profession Salaries</div>
+    <div>📊 Career Insights</div>
+</div>
 
   <!-- SEARCH -->
   <div class="search">
-    <input type="text" id="searchInput" placeholder="Search profession (Doctor, Engineer, IT...)">
-    <button onclick="searchSalary()">Search</button>
-  </div>
 
-  <div id="result"></div>
+    <div class="search-wrapper">
+
+        <input
+            type="text"
+            id="countrySearch"
+            placeholder="Search country (Pakistan, USA, Canada...)"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search Country">
+
+        <button id="searchBtn" type="button">
+            Search
+        </button>
+
+        <div id="countrySuggestions" class="country-suggestions"></div>
+
+    </div>
+
+</div>
 
 </section>
 
 <!-- ================= CARDS ================= -->
 <section class="cards">
 
-  <a href="salary-slip-usa.html" class="card">
+  <a href="pakistan/index.html" class="card">
     <div class="top-row">
-      <h2>USA</h2>
-      <span class="flag">
-  <img src="https://flagcdn.com/w40/us.png" alt="USA">
-</span>
+        <h2>Pakistan</h2>
+
+        <span class="flag">
+            <img src="https://flagcdn.com/w40/pk.png" alt="Pakistan Flag">
+        </span>
     </div>
 
-    <p>High paying jobs & salary breakdown</p>
+    <p>Salary guides & career insights</p>
 
     <ul>
-      <li>Tech Salaries</li>
-      <li>Healthcare</li>
-      <li>Tax Guide</li>
+        <li>Salary Guides</li>
+        <li>Payroll & Tax</li>
+        <li>Career Resources</li>
     </ul>
 
     <button>Explore →</button>
-  </a>
-
-  <a href="salary-slip-eu.html" class="card">
-    <div class="top-row">
-      <h2>Europe</h2>
-      <span class="flag">
-  <img src="https://flagcdn.com/w40/eu.png" alt="EU">
-</span>
-    </div>
-
-    <p>EU salary comparison & insights</p>
-
-    <ul>
-      <li>Country Wise Data</li>
-      <li>Job Market</li>
-      <li>Cost of Living</li>
-    </ul>
-
-    <button>Explore →</button>
-  </a>
-
-  <a href="salary-slip-canada.html" class="card">
-    <div class="top-row">
-      <h2>Canada</h2>
-      <span class="flag">
-  <img src="https://flagcdn.com/w40/ca.png" alt="Canada">
-</span>
-    </div>
-
-    <p>Income reports & pay structures</p>
-
-    <ul>
-      <li>Average Salary</li>
-      <li>Tax System</li>
-      <li>Work Visa Jobs</li>
-    </ul>
-
-    <button>Explore →</button>
-  </a>
-
-  <a href="uk.html" class="card">
-    <div class="top-row">
-      <h2>UK</h2>
-      <span class="flag">
-  <img src="https://flagcdn.com/w40/gb.png" alt="UK">
-</span>
-    </div>
-
-    <p>Salary & payroll insights</p>
-
-    <ul>
-      <li>NHS Jobs</li>
-      <li>Tax Bands</li>
-      <li>Pay Slips</li>
-    </ul>
-
-    <button>Explore →</button>
-  </a>
+</a>
 
 </section>
 
@@ -146,10 +169,6 @@
     <div class="footer-box">
       <h4>Quick Links</h4>
       <a href="index.html">Home</a>
-      <a href="usa.html">USA</a>
-      <a href="eu.html">Europe</a>
-      <a href="canada.html">Canada</a>
-      <a href="uk.html">UK</a>
     </div>
 
     <div class="footer-box">
@@ -163,13 +182,28 @@
   <div class="footer-bottom">
 
   <div class="footer-links">
-    <a href="privacy.html">Privacy Policy</a>
+   <a href="./about-us.html">About Us</a>
     <span>|</span>
-    <a href="terms.html">Terms</a>
+
+    <a href="./editorial-policy.html">Editorial Policy</a>
     <span>|</span>
-    <a href="disclaimer.html">Disclaimer</a>
+
+    <a href="./salary-research-methodology.html">Salary Research Methodology</a>
     <span>|</span>
-    <a href="cookie-policy.html">Cookie Policy</a>
+
+    <a href="./privacy.html">Privacy Policy</a>
+    <span>|</span>
+
+    <a href="./cookie-policy.html">Cookie Policy</a>
+    <span>|</span>
+
+    <a href="./disclaimer.html">Disclaimer</a>
+    <span>|</span>
+
+    <a href="./terms.html">Terms & Conditions</a>
+    <span>|</span>
+
+    <a href="./affiliate-disclosure.html">Affiliate Disclosure</a>
   </div>
 
   <p>© 2026 SalaryPayslip. All Rights Reserved.</p>
@@ -178,6 +212,58 @@
 </div>
 
 </footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"SalaryPayslip",
+  "url":"https://www.salarypayslip.com/",
+  "logo":"https://www.salarypayslip.com/favicon.png",
+  "description":"SalaryPayslip is a global salary intelligence platform providing salary guides, payroll information, payslip resources, profession salary reports, and career insights across countries worldwide."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"SalaryPayslip",
+  "url":"https://www.salarypayslip.com/",
+  "inLanguage":"en"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"SalaryPayslip | Global Salary Guides & Payslip Tools",
+  "url":"https://www.salarypayslip.com/",
+  "description":"Explore global salary guides, country salary hubs, payroll resources, payslip tools, career insights, and profession salary information across the world.",
+  "isPartOf":{
+    "@type":"WebSite",
+    "name":"SalaryPayslip",
+    "url":"https://www.salarypayslip.com/"
+  },
+  "inLanguage":"en"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Home",
+      "item":"https://www.salarypayslip.com/"
+    }
+  ]
+}
+</script>
 
 <script src="homepage.js"></script>
 
