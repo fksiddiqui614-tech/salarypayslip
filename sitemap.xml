@@ -7,33 +7,33 @@
 
   <!-- Home Page -->
   <url>
-    <loc>https://www.salarypayslip.com/</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
+  <loc>https://www.salarypayslip.com/</loc>
+  <lastmod>2026-07-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
   </url>
-      
+
   <url>
     <loc>https://www.salarypayslip.com/salary-payslip-generator-online-free-download-pakistan-pdf.html</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.8</priority>
   </url>
-      
-   <url>
+
+  <url>
     <loc>https://www.salarypayslip.com/top-10-highest-paying-jobs-usa-2026.html</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>    
+  </url>
 
-   <url>
+  <url>
     <loc>https://www.salarypayslip.com/how-to-calculate-free-take-home-pay-and-generate-paycheck-stubs.html</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-      
+
   <url>
     <loc>https://www.salarypayslip.com/paycheck-calculator-usa.html</loc>
     <lastmod>2026-01-09</lastmod>
@@ -42,81 +42,123 @@
   </url>
 
   <!-- Country SEO Pages -->
+   <url>
+    <loc>https://www.salarypayslip.com/pakistan/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/pakistan/good-salary-in-pakistan-per-month.html</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+     <loc>https://www.salarypayslip.com/pakistan/average-ca-salary-pakistan.html</loc>
+     <lastmod>2026-07-06</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+  </url>
+
   <url>
-    <loc>https://www.salarypayslip.com/good-salary-in-pakistan-per-month.html</loc>
-    <lastmod>2026-01-14</lastmod>
+     <loc>https://www.salarypayslip.com/pakistan/digital-marketing-jobs-salary-in-pakistan-per-month.html</loc>
+     <lastmod>2026-07-06</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.salarypayslip.com/pakistan/average-software-engineer-salary-in-pakistan-per-month.html</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.salarypayslip.com/average-ca-salary-pakistan.html</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://www.salarypayslip.com/digital-marketing-jobs-salary-in-pakistan-per-month.html</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>   
-
-  <url>
     <loc>https://www.salarypayslip.com/salary-slip-usa.html</loc>
     <lastmod>2026-06-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.salarypayslip.com/salary-slip-uk.html</loc>
     <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.salarypayslip.com/salary-slip-canada.html</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.salarypayslip.com/salary-slip-eu.html</loc>
     <lastmod>2026-06-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.9</priority>
   </url>
 
   <!-- Policies Pages -->
   <url>
+  <loc>https://www.salarypayslip.com/about-us.html</loc>
+  <lastmod>2026-07-06</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+  </url>
+
+  <url>
+  <loc>https://www.salarypayslip.com/editorial-policy.html</loc>
+  <lastmod>2026-07-06</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+  </url>
+
+  <url>
+  <loc>https://www.salarypayslip.com/salary-research-methodology.html</loc>
+  <lastmod>2026-07-06</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+  </url>
+
+  <url>
     <loc>https://www.salarypayslip.com/privacy.html</loc>
-    <lastmod>2026-01-09</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://www.salarypayslip.com/terms.html</loc>
-    <lastmod>2026-01-09</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://www.salarypayslip.com/disclaimer.html</loc>
-    <lastmod>2026-01-09</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>yearly</changefreq> 
+    <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://www.salarypayslip.com/cookie-policy.html</loc>
-    <lastmod>2026-01-09</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
+  <url>
+  <loc>https://www.salarypayslip.com/affiliate-disclosure.html</loc>
+  <lastmod>2026-07-06</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+  </url>
 </urlset>
-
-
-
