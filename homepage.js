@@ -1,27 +1,258 @@
-const data = {
-  doctor: "USA $180K | UK £90K | Canada $150K",
-  engineer: "USA $120K | EU €80K | Canada $100K",
-  developer: "USA $130K | EU €75K | UK £70K",
-  teacher: "USA $55K | UK £35K | Canada $60K",
-  nurse: "USA $75K | UK £40K | Canada $70K",
+/*==========================================
+ GLOBAL COUNTRY SEARCH
+ SalaryPayslip
+==========================================*/
 
-  plumber: "USA $65K | UK £30K | Canada $55K",
+const countries = [
 
-  dentist: "USA $60K | UK £35K | Canada $50K"
-};
+{
+name:"Pakistan",
+flag:"🇵🇰",
+url:"./pakistan/"
+},
 
-function searchSalary() {
-  let input = document.getElementById("searchInput").value.toLowerCase().trim();
-  let result = document.getElementById("result");
+];
 
-  if (data[input]) {
-    result.innerText = data[input];
-  } else {
-    result.innerText = "No data found. Try: doctor, engineer, plumber, nurse";
-  }
+countries.sort((a,b)=>a.name.localeCompare(b.name));
+
+const input=document.getElementById("countrySearch");
+const results=document.getElementById("countrySuggestions");
+const button=document.getElementById("searchBtn");
+
+let currentFocus=-1;
+
+/*=========================
+SHOW RESULTS
+=========================*/
+
+function showSuggestions(value){
+
+results.innerHTML="";
+
+currentFocus=-1;
+
+if(value.trim()===""){
+
+results.style.display="none";
+
+return;
+
 }
-document.getElementById("searchInput").addEventListener("keypress", function(e) {
-  if (e.key === "Enter") {
-    searchSalary();
-  }
+
+const search = value.toLowerCase().trim();
+
+const matches = countries
+
+.filter(country =>
+country.name.toLowerCase().includes(search)
+)
+
+.sort((a,b)=>{
+
+const aName=a.name.toLowerCase();
+const bName=b.name.toLowerCase();
+
+const aStarts=aName.startsWith(search);
+const bStarts=bName.startsWith(search);
+
+if(aStarts && !bStarts) return -1;
+if(!aStarts && bStarts) return 1;
+
+return aName.localeCompare(bName);
+
+});
+
+if(matches.length===0){
+
+results.innerHTML=`
+<div class="no-result">
+No country found.
+</div>
+`;
+
+results.style.display="block";
+
+return;
+
+}
+
+matches.forEach(country=>{
+
+results.innerHTML+=`
+
+<div class="country-item"
+data-url="${country.url}">
+
+<div class="country-flag">
+
+${country.flag}
+
+</div>
+
+<div class="country-name">
+
+${country.name}
+
+</div>
+
+</div>
+
+`;
+
+});
+
+results.style.display="block";
+
+}
+
+/*=========================
+INPUT
+=========================*/
+
+input.addEventListener("input",function(){
+
+showSuggestions(this.value);
+
+});
+
+/*=========================
+CLICK COUNTRY
+=========================*/
+
+results.addEventListener("click",function(e){
+
+const item=e.target.closest(".country-item");
+
+if(!item) return;
+
+window.location.href=item.dataset.url;
+
+});
+
+/*=========================
+SEARCH BUTTON
+=========================*/
+
+button.addEventListener("click",()=>{
+
+const first=results.querySelector(".country-item");
+
+if(first){
+
+window.location.href=first.dataset.url;
+
+}
+
+});
+
+/*=========================
+KEYBOARD
+=========================*/
+
+input.addEventListener("keydown",function(e){
+
+const items=results.querySelectorAll(".country-item");
+
+if(e.key==="ArrowDown"){
+
+e.preventDefault();
+
+currentFocus++;
+
+if(currentFocus>=items.length){
+
+currentFocus=0;
+
+}
+
+setActive(items);
+
+}
+
+else if(e.key==="ArrowUp"){
+
+e.preventDefault();
+
+currentFocus--;
+
+if(currentFocus<0){
+
+currentFocus=items.length-1;
+
+}
+
+setActive(items);
+
+}
+
+else if(e.key==="Enter"){
+
+e.preventDefault();
+
+if(currentFocus>-1){
+
+items[currentFocus].click();
+
+}
+
+else{
+
+const first=results.querySelector(".country-item");
+
+if(first){
+
+first.click();
+
+}
+
+}
+
+}
+
+else if(e.key==="Escape"){
+
+results.style.display="none";
+
+}
+
+});
+
+/*=========================
+ACTIVE ITEM
+=========================*/
+
+function setActive(items){
+
+items.forEach(item=>
+
+item.classList.remove("active")
+
+);
+
+if(items[currentFocus]){
+
+items[currentFocus].classList.add("active");
+
+items[currentFocus].scrollIntoView({
+
+block:"nearest"
+
+});
+
+}
+
+}
+
+/*=========================
+OUTSIDE CLICK
+=========================*/
+
+document.addEventListener("click",function(e){
+
+if(!document.querySelector(".search").contains(e.target)){
+
+results.style.display="none";
+
+}
+
 });
