@@ -104,26 +104,24 @@ category: "Career Guide"
    Category Icons
 ========================== */
 
-function getIcon(category){
+function getIcon(title){
 
-switch(category){
+if(title.includes("AI Engineer")) return "🤖";
+if(title.includes("Data Scientist")) return "🧠";
+if(title.includes("Data Analyst")) return "📊";
+if(title.includes("Cyber Security")) return "🔒";
+if(title.includes("Software Engineer")) return "💻";
+if(title.includes("Cloud Engineer")) return "☁️";
+if(title.includes("Graphic Designer")) return "🎨";
+if(title.includes("Civil Engineer")) return "🏗️";
+if(title.includes("Mechanical Engineer")) return "⚙️";
+if(title.includes("Electrical Engineer")) return "⚡";
+if(title.includes("Doctor")) return "🩺";
+if(title.includes("Digital Marketing")) return "📈";
+if(title.includes("Chartered Accountant")) return "💼";
+if(title.includes("Good Salary")) return "💰";
 
-case "Technology":
-return "💻";
-
-case "Marketing":
-return "📈";
-
-case "Finance":
-return "💼";
-
-case "Career Guide":
-return "💰";
-
-default:
 return "📄";
-
-}
 
 }
 
@@ -182,7 +180,7 @@ results.innerHTML += `
 
 <strong>
 
-${getIcon(article.category)} ${article.title}
+${getIcon(article.title)} ${article.title}
 
 </strong>
 
