@@ -16,7 +16,7 @@ category: "Engineering"
 
 {
 title: "Average Graphic Designer Salary in Pakistan Per Month",
-url: "average-graphic-designer-salary-in-pakistan-per-month.html",
+url: "/pakistan/average-graphic-designer-salary-in-pakistan-per-month.html",
 keywords: "graphic designer branding logo design social media design ui design print design adobe illustrator photoshop",
 category: "Creative"
 },
