@@ -8,6 +8,76 @@ category: "Technology"
 },
 
 {
+title: "Average Mechanical Engineer Salary in Pakistan Per Month",
+url: "average-mechanical-engineer-salary-in-pakistan-per-month.html",
+keywords: "mechanical engineer manufacturing automotive production maintenance industrial engineering energy cad",
+category: "Engineering"
+},
+
+{
+title: "Average Graphic Designer Salary in Pakistan Per Month",
+url: "average-graphic-designer-salary-in-pakistan-per-month.html",
+keywords: "graphic designer branding logo design social media design ui design print design adobe illustrator photoshop",
+category: "Creative"
+},
+
+{
+title: "Average Electrical Engineer Salary in Pakistan Per Month",
+url: "average-electrical-engineer-salary-in-pakistan-per-month.html",
+keywords: "electrical engineer power systems industrial automation renewable energy telecommunications electrical engineering maintenance",
+category: "Engineering"
+},
+
+{
+title: "Average Doctor Salary in Pakistan Per Month",
+url: "average-doctor-salary-in-pakistan-per-month.html",
+keywords: "doctor mbbs medical officer physician specialist consultant surgeon healthcare hospital",
+category: "Healthcare"
+},
+
+{
+title: "Average Data Scientist Salary in Pakistan Per Month",
+url: "average-data-scientist-salary-in-pakistan-per-month.html",
+keywords: "data scientist machine learning artificial intelligence python sql big data deep learning analytics",
+category: "Technology"
+},
+
+{
+title: "Average Data Analyst Salary in Pakistan Per Month",
+url: "average-data-analyst-salary-in-pakistan-per-month.html",
+keywords: "data analyst sql excel power bi business intelligence data visualization analytics python",
+category: "Technology"
+},
+
+{
+title: "Average Cyber Security Analyst Salary in Pakistan Per Month",
+url: "average-cyber-security-analyst-salary-in-pakistan-per-month.html",
+keywords: "cyber security analyst information security ethical hacking soc penetration testing network security cloud security siem",
+category: "Technology"
+},
+
+{
+title: "Average Cloud Engineer Salary in Pakistan Per Month",
+url: "average-cloud-engineer-salary-in-pakistan-per-month.html",
+keywords: "cloud engineer aws azure google cloud gcp devops kubernetes docker cloud computing",
+category: "Technology"
+},
+
+{
+title: "Average AI Engineer Salary in Pakistan Per Month",
+url: "average-ai-engineer-salary-in-pakistan-per-month.html",
+keywords: "ai engineer artificial intelligence machine learning deep learning generative ai nlp computer vision",
+category: "Technology"
+},
+
+{
+title: "Average Civil Engineer Salary in Pakistan Per Month",
+url: "average-civil-engineer-salary-in-pakistan-per-month.html",
+keywords: "civil engineer construction structural engineer infrastructure project engineer engineering",
+category: "Engineering"
+},
+
+{
 title: "Digital Marketing Jobs Salary in Pakistan Per Month (2026)",
 url: "digital-marketing-jobs-salary-in-pakistan-per-month.html",
 keywords: "digital marketing seo google ads ppc social media marketing",
