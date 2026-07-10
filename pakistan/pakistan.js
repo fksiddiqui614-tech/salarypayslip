@@ -2,7 +2,7 @@ const articles = [
 
 {
 title: "Average Software Engineer Jobs Salary in Pakistan (2026)",
-url: "average-software-engineer-jobs-salary-in-pakistan-per-month.html",
+url: "average-software-engineer-salary-in-pakistan-per-month.html",
 keywords: "software engineer developer programmer coding it",
 category: "Technology"
 },
