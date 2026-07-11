@@ -98,6 +98,13 @@ keywords: "good salary pakistan average salary monthly income living wage",
 category: "Career Guide"
 }
 
+{
+title: "Average DevOps Engineer Salary in Pakistan Per Month",
+url: "/pakistan/average-devops-engineer-salary-in-pakistan-per-month.html",
+keywords: "devops engineer devops kubernetes docker jenkins terraform ansible ci cd aws azure cloud engineer infrastructure automation",
+category: "Technology"
+},
+
 ];
 
 /* ==========================
@@ -120,6 +127,7 @@ if(title.includes("Doctor")) return "🩺";
 if(title.includes("Digital Marketing")) return "📈";
 if(title.includes("Chartered Accountant")) return "💼";
 if(title.includes("Good Salary")) return "💰";
+if(article.title.includes("DevOps")) return "⚙️";
 
 return "📄";
 
