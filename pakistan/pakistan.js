@@ -105,6 +105,13 @@ keywords: "devops engineer devops kubernetes docker jenkins terraform ansible ci
 category: "Technology"
 },
 
+{
+title: "Average Full Stack Developer Salary in Pakistan Per Month",
+url: "/pakistan/average-full-stack-developer-salary-in-pakistan-per-month.html",
+keywords: "full stack developer frontend backend react node.js javascript typescript html css express mongodb mysql postgresql laravel django mern mean web development",
+category: "Technology"
+},
+
 ];
 
 /* ==========================
@@ -127,7 +134,8 @@ if(title.includes("Doctor")) return "🩺";
 if(title.includes("Digital Marketing")) return "📈";
 if(title.includes("Chartered Accountant")) return "💼";
 if(title.includes("Good Salary")) return "💰";
-if(article.title.includes("DevOps")) return "⚙️";
+if(title.includes("DevOps")) return "⚙️";
+if(title.includes("Full Stack Developer")) return "⚙️";
 
 return "📄";
 
