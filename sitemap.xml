@@ -50,6 +50,13 @@
    </url>
 
    <url>
+    <loc>https://www.salarypayslip.com/pakistan/average-devops-engineer-salary-in-pakistan-per-month.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
     <loc>https://www.salarypayslip.com/pakistan/average-ai-engineer-salary-in-pakistan-per-month.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -237,5 +244,5 @@
   <lastmod>2026-07-11</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.3</priority>
-  </url>    
+  </url>
 </urlset>
