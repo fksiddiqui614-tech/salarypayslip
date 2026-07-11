@@ -96,7 +96,7 @@ title: "Good Salary in Pakistan Per Month by Profession (2026)",
 url: "/pakistan/good-salary-in-pakistan-per-month.html",
 keywords: "good salary pakistan average salary monthly income living wage",
 category: "Career Guide"
-}
+},
 
 {
 title: "Average DevOps Engineer Salary in Pakistan Per Month",
