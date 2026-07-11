@@ -112,6 +112,13 @@ keywords: "full stack developer frontend backend react node.js javascript typesc
 category: "Technology"
 },
 
+{
+title: "Average Backend Developer Salary in Pakistan Per Month",
+url: "/pakistan/average-backend-developer-salary-in-pakistan-per-month.html",
+keywords: "backend developer node.js laravel django spring boot asp.net core express.js php java python c# api rest graphql microservices mysql postgresql mongodb redis docker kubernetes server-side development",
+category: "Technology"
+},
+
 ];
 
 /* ==========================
@@ -136,6 +143,7 @@ if(title.includes("Chartered Accountant")) return "💼";
 if(title.includes("Good Salary")) return "💰";
 if(title.includes("DevOps")) return "⚙️";
 if(title.includes("Full Stack Developer")) return "⚙️";
+if(title.includes("Backend Developer")) return "⚙️";
 
 return "📄";
 
