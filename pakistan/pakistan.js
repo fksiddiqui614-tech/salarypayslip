@@ -127,6 +127,13 @@ category: "Technology"
 },
 
 {
+title: "Average Blockchain Developer Salary in Pakistan Per Month",
+url: "/pakistan/average-blockchain-developer-salary-in-pakistan-per-month.html",
+keywords: "blockchain developer solidity ethereum web3 smart contracts defi hyperledger blockchain security evm ethers.js web3.js hardhat foundry remix layer 2 polygon binance smart chain solana nft dao cryptography dapps decentralized applications",
+category: "Technology"
+},
+
+{
 title: "Average Web Developer Salary in Pakistan Per Month",
 url: "/pakistan/average-web-developer-salary-in-pakistan-per-month.html",
 keywords: "web developer html css javascript responsive web design website development web applications web development frontend backend full stack bootstrap tailwind css wordpress php react next.js ui ux",
@@ -157,9 +164,10 @@ if(title.includes("Chartered Accountant")) return "💼";
 if(title.includes("Good Salary")) return "💰";
 if(title.includes("DevOps")) return "⚙️";
 if(title.includes("Full Stack Developer")) return "⚙️";
-if(title.includes("Frontend Developer")) return "⚙️";
+if(title.includes("Frontend Developer")) return "💻";
 if(title.includes("Backend Developer")) return "⚙️";
-if(title.includes("Web Developer")) return "⚙️";
+if(title.includes("Blockchain Developer")) return "⚙💻";
+if(title.includes("Web Developer")) return "💻";
 
 return "📄";
 
