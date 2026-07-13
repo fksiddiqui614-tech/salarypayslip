@@ -113,6 +113,13 @@ category: "Technology"
 },
 
 {
+title: "Average Frontend Developer Salary in Pakistan Per Month",
+url: "/pakistan/average-frontend-developer-salary-in-pakistan-per-month.html",
+keywords: "frontend developer react next.js angular vue.js javascript typescript html css tailwind css responsive web design ui development ux accessibility core web vitals redux state management frontend testing web performance",
+category: "Technology"
+},
+
+{
 title: "Average Backend Developer Salary in Pakistan Per Month",
 url: "/pakistan/average-backend-developer-salary-in-pakistan-per-month.html",
 keywords: "backend developer node.js laravel django spring boot asp.net core express.js php java python c# api rest graphql microservices mysql postgresql mongodb redis docker kubernetes server-side development",
@@ -144,6 +151,7 @@ if(title.includes("Good Salary")) return "💰";
 if(title.includes("DevOps")) return "⚙️";
 if(title.includes("Full Stack Developer")) return "⚙️";
 if(title.includes("Backend Developer")) return "⚙️";
+if(title.includes("Frontend Developer")) return "⚙️";
 
 return "📄";
 
