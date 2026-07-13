@@ -126,6 +126,13 @@ keywords: "backend developer node.js laravel django spring boot asp.net core exp
 category: "Technology"
 },
 
+{
+title: "Average Web Developer Salary in Pakistan Per Month",
+url: "/pakistan/average-web-developer-salary-in-pakistan-per-month.html",
+keywords: "web developer html css javascript responsive web design website development web applications web development frontend backend full stack bootstrap tailwind css wordpress php react next.js ui ux",
+category: "Technology"
+},
+
 ];
 
 /* ==========================
@@ -152,6 +159,7 @@ if(title.includes("DevOps")) return "⚙️";
 if(title.includes("Full Stack Developer")) return "⚙️";
 if(title.includes("Frontend Developer")) return "⚙️";
 if(title.includes("Backend Developer")) return "⚙️";
+if(title.includes("Web Developer")) return "⚙️";
 
 return "📄";
 
