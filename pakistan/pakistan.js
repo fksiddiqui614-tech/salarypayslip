@@ -150,8 +150,8 @@ if(title.includes("Chartered Accountant")) return "💼";
 if(title.includes("Good Salary")) return "💰";
 if(title.includes("DevOps")) return "⚙️";
 if(title.includes("Full Stack Developer")) return "⚙️";
-if(title.includes("Backend Developer")) return "⚙️";
 if(title.includes("Frontend Developer")) return "⚙️";
+if(title.includes("Backend Developer")) return "⚙️";
 
 return "📄";
 
