@@ -127,6 +127,13 @@ category: "Technology"
 },
 
 {
+title: "Average Mobile App Developer Salary in Pakistan Per Month",
+url: "/pakistan/average-mobile-app-developer-salary-in-pakistan-per-month.html",
+keywords: "mobile app developer android ios flutter react native kotlin swift dart jetpack compose swiftui xcode android studio mobile applications cross-platform native app development firebase api mobile ui ux play store app store",
+category: "Technology"
+},
+
+{
 title: "Average Blockchain Developer Salary in Pakistan Per Month",
 url: "/pakistan/average-blockchain-developer-salary-in-pakistan-per-month.html",
 keywords: "blockchain developer solidity ethereum web3 smart contracts defi hyperledger blockchain security evm ethers.js web3.js hardhat foundry remix layer 2 polygon binance smart chain solana nft dao cryptography dapps decentralized applications",
@@ -166,6 +173,7 @@ if(title.includes("DevOps")) return "⚙️";
 if(title.includes("Full Stack Developer")) return "⚙️";
 if(title.includes("Frontend Developer")) return "💻";
 if(title.includes("Backend Developer")) return "⚙️";
+if(title.includes("Mobile App Developer Developer")) return "⚙💻";
 if(title.includes("Blockchain Developer")) return "⚙💻";
 if(title.includes("Web Developer")) return "💻";
 
