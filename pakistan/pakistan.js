@@ -50,6 +50,13 @@ category: "Technology"
 },
 
 {
+title: "Average Database Administrator Salary in Pakistan Per Month",
+url: "/pakistan/average-database-administrator-salary-in-pakistan-per-month.html",
+keywords: "database administrator dba sql server oracle mysql postgresql mongodb mariadb redis database engineer database management sql performance tuning replication backup recovery database security cloud database amazon rds azure sql google cloud sql",
+category: "Technology"
+},
+
+{
 title: "Average Cyber Security Analyst Salary in Pakistan Per Month",
 url: "/pakistan/average-cyber-security-analyst-salary-in-pakistan-per-month.html",
 keywords: "cyber security analyst information security ethical hacking soc penetration testing network security cloud security siem",
@@ -158,6 +165,7 @@ function getIcon(title){
 if(title.includes("AI Engineer")) return "🤖";
 if(title.includes("Data Scientist")) return "🧠";
 if(title.includes("Data Analyst")) return "📊";
+if(title.includes("Data Administrator")) return "📊";
 if(title.includes("Cyber Security")) return "🔒";
 if(title.includes("Software Engineer")) return "💻";
 if(title.includes("Cloud Engineer")) return "☁️";
