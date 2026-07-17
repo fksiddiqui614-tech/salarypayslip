@@ -92,6 +92,13 @@ category: "Technology"
 },
 
 {
+title: "Average Prompt Engineer Salary in Pakistan Per Month",
+url: "/pakistan/average-prompt-engineer-salary-in-pakistan-per-month.html",
+keywords: "prompt engineer generative ai artificial intelligence ai chatgpt large language models llm prompt engineering ai automation natural language processing nlp machine learning deep learning ai tools ml workflows",
+category: "Technology"
+},
+
+{
 title: "Average Civil Engineer Salary in Pakistan Per Month",
 url: "/pakistan/average-civil-engineer-salary-in-pakistan-per-month.html",
 keywords: "civil engineer construction structural engineer infrastructure project engineer engineering",
