@@ -78,6 +78,13 @@ category: "Technology"
 },
 
 {
+title: "Average Machine Learning Engineer Salary in Pakistan Per Month",
+url: "/pakistan/average-machine-learning-engineer-salary-in-pakistan-per-month.html",
+keywords: "machine learning engineer machine learning artificial intelligence ai deep learning python tensorflow pytorch scikit-learn data science computer vision natural language processing nlp mlops neural networks",
+category: "Technology"
+},
+
+{
 title: "Average AI Engineer Salary in Pakistan Per Month",
 url: "/pakistan/average-ai-engineer-salary-in-pakistan-per-month.html",
 keywords: "ai engineer artificial intelligence machine learning deep learning generative ai nlp computer vision",
@@ -169,6 +176,7 @@ category: "Technology"
 
 function getIcon(title){
 
+if(title.includes("Machine Learning Engineer")) return "🤖";
 if(title.includes("AI Engineer")) return "🤖";
 if(title.includes("Data Scientist")) return "🧠";
 if(title.includes("Data Analyst")) return "📊";
