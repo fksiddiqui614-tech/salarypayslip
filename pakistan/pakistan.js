@@ -99,6 +99,13 @@ category: "Technology"
 },
 
 {
+title: "Average Network Engineer Salary in Pakistan Per Month",
+url: "/pakistan/average-network-engineer-salary-in-pakistan-per-month.html",
+keywords: "network engineer salary networking ccna ccnp routing switching network security cybersecurity cloud networking firewall vpn linux networking enterprise",
+category: "Technology"
+},
+
+{
 title: "Average Civil Engineer Salary in Pakistan Per Month",
 url: "/pakistan/average-civil-engineer-salary-in-pakistan-per-month.html",
 keywords: "civil engineer construction structural engineer infrastructure project engineer engineering",
@@ -185,6 +192,8 @@ function getIcon(title){
 
 if(title.includes("Machine Learning Engineer")) return "🤖";
 if(title.includes("AI Engineer")) return "🤖";
+if(title.includes("Prompt Engineer")) return "🤖";
+if(title.includes("Network Engineer")) return "🤖";
 if(title.includes("Data Scientist")) return "🧠";
 if(title.includes("Data Analyst")) return "📊";
 if(title.includes("Database Administrator")) return "📊";
