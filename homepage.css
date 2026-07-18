@@ -31,6 +31,14 @@ body{
   color:#2563eb;
 }
 
+.logo a{
+
+text-decoration:none;
+
+color:#222;
+
+}
+
 nav a{
   margin:0 14px;
   text-decoration:none;
@@ -662,4 +670,292 @@ padding:12px 16px;
 
 }
 
+}
+
+/* Industry Profession Links */
+
+.profession-links {
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:12px;
+
+padding:20px 0 5px;
+
+list-style:none;
+
+}
+
+
+.profession-links li a {
+
+display:block;
+
+padding:10px 14px;
+
+background:#f8fafc;
+
+border:1px solid #e5e7eb;
+
+border-radius:8px;
+
+text-decoration:none;
+
+font-size:14px;
+
+font-weight:600;
+
+color:#2563eb;
+
+transition:0.3s;
+
+}
+
+
+.profession-links li a:hover {
+
+background:#2563eb;
+
+color:white;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.profession-links{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* =========================
+NAV MENU
+========================= */
+
+.nav-menu{
+
+display:flex;
+
+align-items:center;
+
+justify-content:flex-end;
+
+gap:30px;
+
+}
+
+/* =========================
+LINKS
+========================= */
+
+.nav-menu>a,
+.mega-btn{
+
+background:none;
+
+border:none;
+
+cursor:pointer;
+
+font-size:16px;
+
+font-weight:600;
+
+color:#222;
+
+text-decoration:none;
+
+padding:12px 0;
+
+font-family:inherit;
+
+}
+
+/* =========================
+MEGA MENU
+========================= */
+
+.mega-menu{
+
+position:static;
+
+}
+
+/* =========================
+DROPDOWN
+========================= */
+
+.mega-content{
+
+position:absolute;
+
+top:75px;          /* Navbar ki height */
+
+right:30px;        /* Right side alignment */
+
+width:950px;
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr;
+
+gap:40px;
+
+padding:30px;
+
+background:#fff;
+
+border-radius:14px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+opacity:0;
+
+visibility:hidden;
+
+transform:translateY(10px);
+
+transition:.25s ease;
+
+pointer-events:none;
+
+z-index:9999;
+
+}
+
+/* Show */
+
+.mega-menu:hover .mega-content{
+
+opacity:1;
+
+visibility:visible;
+
+transform:translateY(0);
+
+pointer-events:auto;
+
+}
+
+/* =========================
+COLUMNS
+========================= */
+
+.mega-column h3{
+
+margin:0 0 15px;
+
+font-size:18px;
+
+color:#2563eb;
+
+}
+
+.mega-column a{
+
+display:block;
+
+padding:8px 0;
+
+color:#444;
+
+text-decoration:none;
+
+transition:.25s;
+
+}
+
+.mega-column a:hover{
+
+color:#2563eb;
+
+padding-left:8px;
+
+}
+
+/* ===== Salary Guides Mega Menu ===== */
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.mega-menu{
+    position:relative;
+}
+
+.mega-btn{
+    text-decoration:none;
+    color:inherit;
+    font-weight:600;
+    cursor:pointer;
+    display:block;
+    padding:10px 0;
+}
+
+/* Hover bridge */
+.mega-menu::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:100%;
+    width:100%;
+    height:18px;
+}
+
+.mega-content{
+
+    display:none;
+
+    position:absolute;
+
+    top:calc(100% + 18px);
+
+    right:0;
+
+    width:900px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    padding:25px;
+
+    grid-template-columns:2fr 2fr 1fr;
+
+    gap:30px;
+
+    z-index:9999;
+
+}
+
+.mega-menu:hover .mega-content{
+    display:grid;
+}
+
+.mega-column h3{
+    margin:0 0 12px;
+    color:#2563eb;
+}
+
+.mega-column a{
+    display:block;
+    padding:7px 0;
+    text-decoration:none;
+    color:#444;
+}
+
+.mega-column a:hover{
+    color:#2563eb;
 }
