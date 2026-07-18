@@ -1,12 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/salary-payslip-generator-online-free-download-pakistan-pdf.html",
-      "destination": "/salary-slip-generator/",
-      "permanent": true
-    },
-    {
-      "source": "/(.*)",
+     "source": "/(.*)",
       "has": [
         {
           "type": "host",
