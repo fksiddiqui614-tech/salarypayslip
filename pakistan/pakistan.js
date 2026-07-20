@@ -36,6 +36,20 @@ category: "Healthcare"
 },
 
 {
+title: "Average Nurse Salary in Pakistan Per Month",
+url: "/pakistan/average-nurse-salary-in-pakistan-per-month.html",
+keywords: "nurse nursing staff registered nurse healthcare hospital medical assistant patient care clinical nursing",
+category: "Healthcare"
+},
+
+{
+title: "Average Dentist Salary in Pakistan Per Month",
+url: "/pakistan/average-dentist-salary-in-pakistan-per-month.html",
+keywords: "dentist dental surgeon orthodontist dental care healthcare hospital clinic oral health",
+category: "Healthcare"
+},
+
+{
 title: "Average Data Scientist Salary in Pakistan Per Month",
 url: "/pakistan/average-data-scientist-salary-in-pakistan-per-month.html",
 keywords: "data scientist machine learning artificial intelligence python sql big data deep learning analytics",
@@ -206,6 +220,8 @@ if(title.includes("Civil Engineer")) return "🏗️";
 if(title.includes("Mechanical Engineer")) return "⚙️";
 if(title.includes("Electrical Engineer")) return "⚡";
 if(title.includes("Doctor")) return "🩺";
+if(title.includes("Nurse")) return "🩺";
+if(title.includes("Dentist")) return "🩺";
 if(title.includes("Digital Marketing")) return "📈";
 if(title.includes("Chartered Accountant")) return "💼";
 if(title.includes("Good Salary")) return "💰";
