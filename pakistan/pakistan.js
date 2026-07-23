@@ -127,13 +127,6 @@ category: "Technology"
 },
 
 {
-title: "IT Support Engineer Salary in Pakistan",
-url: "/pakistan/it-support-engineer-salary-in-pakistan.html",
-keywords: "it support engineer salary technical support help desk desktop support system support it support specialist service desk windows networking hardware software troubleshooting active directory office 365",
-category: "Technology"
-},
-
-{
 title: "Average Civil Engineer Salary in Pakistan Per Month",
 url: "/pakistan/average-civil-engineer-salary-in-pakistan-per-month.html",
 keywords: "civil engineer construction structural engineer infrastructure project engineer engineering",
@@ -222,7 +215,6 @@ if(title.includes("Machine Learning Engineer")) return "🤖";
 if(title.includes("AI Engineer")) return "🤖";
 if(title.includes("Prompt Engineer")) return "🤖";
 if(title.includes("Network Engineer")) return "🌐";
-if(title.includes("IT Support Engineer")) return "💻";
 if(title.includes("Data Scientist")) return "🧠";
 if(title.includes("Data Analyst")) return "📊";
 if(title.includes("Database Administrator")) return "📊";
