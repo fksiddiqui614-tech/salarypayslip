@@ -8,13 +8,6 @@ category: "Technology"
 },
 
 {
-title: "Telecommunication Engineer Salary in Pakistan",
-url: "/pakistan/telecommunication-engineer-salary-in-pakistan.html",
-keywords: "telecommunication engineer salary telecom engineer telecommunications mobile networks 5g lte fiber optics wireless communication rf engineer microwave transmission network infrastructure cisco huawei nokia ericsson voip satellite communication",
-category: "Technology"
-},
-
-{
 title: "Average Mechanical Engineer Salary in Pakistan Per Month",
 url: "/pakistan/average-mechanical-engineer-salary-in-pakistan-per-month.html",
 keywords: "mechanical engineer manufacturing automotive production maintenance industrial engineering energy cad",
@@ -221,7 +214,6 @@ if(title.includes("Database Administrator")) return "📊";
 if(title.includes("System Administrator")) return "📊";
 if(title.includes("Cyber Security")) return "🔒";
 if(title.includes("Software Engineer")) return "💻";
-if(title.includes("Telecommunication Engineer")) return "📡";
 if(title.includes("Cloud Engineer")) return "☁️";
 if(title.includes("Graphic Designer")) return "🎨";
 if(title.includes("Civil Engineer")) return "🏗️";
