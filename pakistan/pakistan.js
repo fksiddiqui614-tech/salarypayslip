@@ -128,7 +128,7 @@ category: "Technology"
 
 {
 title: "IT Support Engineer Salary in Pakistan",
-url: "/pakistan/-it-support-engineer-salary-in-pakistan.html",
+url: "/pakistan/it-support-engineer-salary-in-pakistan.html",
 keywords: "it support engineer salary technical support help desk desktop support system support it support specialist service desk windows networking hardware software troubleshooting active directory office 365",
 category: "Technology"
 },
