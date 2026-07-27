@@ -48,7 +48,21 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
    </url>
-    
+      
+    <url>
+    <loc>https://www.salarypayslip.com/pakistan/neurologist-salary-in-pakistan.html/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/pakistan/radiologist-salary-in-pakistan.html/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url> 
+      
    <url>
     <loc>https://www.salarypayslip.com/pakistan/gynecologist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-25</lastmod>
