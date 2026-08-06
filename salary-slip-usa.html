@@ -34,221 +34,1882 @@
 <meta property="og:description" content="Complete guide to average salary in the USA, payroll, pay stubs, taxes, salary after tax, and profession-wise income insights for 2026.">
 <meta property="og:type" content="website">
 
-<!-- =========================
-CSS START
-========================= -->
-
 <style>
 
-/* RESET */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, sans-serif;
+:root{
+
+
+/* ==========================================
+COLOR PALETTE
+========================================== */
+
+
+--primary:#0b5ed7;
+
+--primary-dark:#084298;
+
+--primary-light:#eaf3ff;
+
+
+--secondary:#2563eb;
+
+
+--white:#ffffff;
+
+--background:#f5f9ff;
+
+--surface:#ffffff;
+
+--surface-light:#f8fbff;
+
+
+
+/* ==========================================
+TEXT
+========================================== */
+
+
+--text:#1f2937;
+
+--text-light:#6b7280;
+
+
+
+/* ==========================================
+BORDER
+========================================== */
+
+
+--border:#d9e6ff;
+
+
+
+/* ==========================================
+STATUS COLORS
+========================================== */
+
+
+--success:#198754;
+
+--warning:#fd7e14;
+
+--danger:#dc3545;
+
+
+
+/* ==========================================
+SHADOWS
+========================================== */
+
+
+--shadow-sm:0 4px 12px rgba(0,0,0,.05);
+
+--shadow:0 10px 30px rgba(0,0,0,.08);
+
+--shadow-lg:0 20px 50px rgba(11,94,215,.12);
+
+
+
+/* ==========================================
+RADIUS
+========================================== */
+
+
+--radius:18px;
+
+--radius-sm:12px;
+
+--radius-lg:24px;
+
+
+
+/* ==========================================
+LAYOUT
+========================================== */
+
+
+--container:1200px;
+
+
+
+/* ==========================================
+TRANSITIONS
+========================================== */
+
+
+--transition:.25s ease;
+
+
 }
 
-body {
-background: #f6f8fb;
-color: #222;
-line-height: 1.6;
+
+
+/* ==========================================
+RESET
+========================================== */
+
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
 }
 
-/* CONTAINER */
-.container {
-width: 92%;
-max-width: 1200px;
-margin: auto;
+
+
+html{
+
+scroll-behavior:smooth;
+
+-webkit-text-size-adjust:100%;
+
 }
 
-/* HEADER */
-header {
-background: #0b3d91;
-color: white;
-padding: 18px 0;
+
+
+body{
+
+font-family:
+Inter,
+system-ui,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+Arial,
+sans-serif;
+
+
+background:var(--background);
+
+
+color:var(--text);
+
+
+font-size:16px;
+
+
+line-height:1.75;
+
+
+letter-spacing:.2px;
+
+
+overflow-x:hidden;
+
+
+text-rendering:optimizeLegibility;
+
+
+-webkit-font-smoothing:antialiased;
+
+
+-moz-osx-font-smoothing:grayscale;
+
+
 }
 
-/* LOGO */
-.logo {
-font-size: 22px;
-font-weight: bold;
+
+
+/* ==========================================
+TYPOGRAPHY
+========================================== */
+
+
+h1,
+h2,
+h3,
+h4{
+
+
+font-weight:700;
+
+
+line-height:1.3;
+
+
+color:var(--text);
+
+
+margin-bottom:18px;
+
+
+scroll-margin-top:90px;
+
+
+text-wrap:balance;
+
+
 }
 
-/* NAV */
-nav {
-margin-top: 10px;
+
+
+h1{
+
+
+font-size:clamp(2rem,5vw,3.3rem);
+
+
+font-weight:800;
+
+
 }
 
-nav a {
-color: white;
-margin-right: 15px;
-font-size: 14px;
+
+
+h2{
+
+
+font-size:clamp(1.6rem,4vw,2.4rem);
+
+
+font-weight:800;
+
+
 }
 
-/* HERO */
-.hero {
-padding: 60px 0;
-background: linear-gradient(135deg, #0b3d91, #1e88e5);
-color: white;
-text-align: center;
+
+
+h3{
+
+
+font-size:1.25rem;
+
+
 }
 
-.hero h1 {
-font-size: 34px;
-margin-bottom: 15px;
+
+
+h4{
+
+
+font-size:1.05rem;
+
+
 }
 
-.hero p {
-font-size: 16px;
-max-width: 700px;
-margin: auto;
+
+
+p{
+
+
+margin-bottom:18px;
+
+
+color:var(--text-light);
+
+
+max-width:none;
+
+
 }
 
-/* BUTTON */
-.btn {
-display: inline-block;
-margin-top: 20px;
-padding: 12px 22px;
-background: #ffcc00;
-color: #000;
-font-weight: bold;
-border-radius: 6px;
+
+
+a{
+
+
+color:var(--primary);
+
+
+text-decoration:none;
+
+
+transition:color var(--transition);
+
+
+}
+
+
+
+a:hover{
+
+
+color:var(--primary-dark);
+
+
+}
+
+
+
+strong{
+
+
+font-weight:700;
+
+
+color:var(--text);
+
+
+}
+
+
+
+small{
+
+
+font-size:.875rem;
+
+
+color:var(--text-light);
+
+
+}
+
+
+
+/* ==========================================
+MEDIA
+========================================== */
+
+
+img{
+
+
+display:block;
+
+
+max-width:100%;
+
+
+height:auto;
+
+
+border-radius:12px;
+
+
+}
+
+/* ==========================================
+TEXT SELECTION
+========================================== */
+
+::selection{
+
+background:var(--primary);
+
+color:#ffffff;
+
+}
+
+
+
+/* ==========================================
+LAYOUT
+========================================== */
+
+
+.container{
+
+width:min(94%,var(--container));
+
+margin-inline:auto;
+
+}
+
+
+
+.section{
+
+padding:80px 0;
+
+}
+
+
+
+.section-title{
+
+max-width:900px;
+
+margin:0 auto 20px;
+
+text-align:center;
+
+font-size:clamp(1.9rem,4vw,2.7rem);
+
+font-weight:800;
+
+color: #00398b;
+
+line-height:1.25;
+
+}
+
+
+
+/* ==========================================
+GRID
+========================================== */
+
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:28px;
+
+align-items:stretch;
+
+}
+
+
+
+/* ==========================================
+CARD
+========================================== */
+
+
+.card{
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:30px;
+
+box-shadow:var(--shadow-sm);
+
+transition:
+transform var(--transition),
+box-shadow var(--transition),
+border-color var(--transition);
+
+height:100%;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-lg);
+
+border-color:rgba(11,94,215,.25);
+
+}
+
+
+
+.card h3{
+
+color:var(--primary);
+
+margin-bottom:12px;
+
+}
+
+
+
+.card p:last-child{
+
+margin-bottom:0;
+
+}
+
+
+
+/* ==========================================
+RESPONSIVE LAYOUT
+========================================== */
+
+
+@media(max-width:768px){
+
+
+.section{
+
+padding:60px 0;
+
+}
+
+
+.grid{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+
+.card{
+
+padding:22px;
+
+}
+
+
+.section-title{
+
+margin-bottom:18px;
+
+}
+
+
+.section > .container > p:first-of-type{
+
+margin-bottom:35px;
+
+}
+
+
+}
+
+
+
+
+/* ==========================================
+BUTTONS
+========================================== */
+
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:8px;
+
+padding:14px 28px;
+
+border:none;
+
+border-radius:var(--radius-sm);
+
+font-weight:700;
+
+font-size:1rem;
+
+text-decoration:none;
+
+cursor:pointer;
+
+transition:all var(--transition);
+
+}
+
+
+
+.btn-primary{
+
+background:var(--primary);
+
+color:#fff;
+
+box-shadow:var(--shadow-sm);
+
+}
+
+
+
+.btn-primary:hover{
+
+background:var(--primary-dark);
+
+color:#fff;
+
+transform:translateY(-2px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.btn-outline{
+
+background:transparent;
+
+border:2px solid rgba(255,255,255,.85);
+
+color:#fff;
+
+}
+
+
+
+.btn-outline:hover{
+
+background:#fff;
+
+color:var(--primary);
+
+transform:translateY(-2px);
+
+}
+
+
+
+/* ==========================================
+TABLES
+========================================== */
+
+
+.table-wrapper{
+
+overflow-x:auto;
+
+margin-top:28px;
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow-sm);
+
+-webkit-overflow-scrolling:touch;
+
+}
+
+
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+background:var(--surface);
+
+overflow:hidden;
+
+}
+
+
+
+thead{
+
+background:var(--primary);
+
+color:#fff;
+
+}
+
+
+
+th{
+
+padding:16px 18px;
+
+text-align:left;
+
+font-weight:700;
+
+white-space:nowrap;
+
+}
+
+
+
+td{
+
+padding:16px 18px;
+
+border-bottom:1px solid var(--border);
+
+vertical-align:top;
+
+}
+
+
+
+tbody tr{
+
+transition:background var(--transition);
+
+}
+
+
+
+tbody tr:hover{
+
+background:var(--surface-light);
+
+}
+
+
+
+tbody tr:last-child td{
+
+border-bottom:none;
+
+}
+
+
+
+/* ==========================================
+LISTS
+========================================== */
+
+
+ul{
+
+padding-left:22px;
+
+margin-bottom:20px;
+
+}
+
+
+
+li{
+
+margin-bottom:12px;
+
+color:var(--text-light);
+
+}
+
+
+
+li::marker{
+
+color:var(--primary);
+
+}
+
+
+
+/* ==========================================
+UTILITY
+========================================== */
+
+
+.text-center{
+
+text-align:center;
+
+}
+
+
+.mt-20{
+
+margin-top:20px;
+
+}
+
+
+.mt-40{
+
+margin-top:40px;
+
+}
+
+
+.mb-40{
+
+margin-bottom:40px;
+
+}
+
+
+.mb-20{
+
+margin-bottom:20px;
+
+}
+
+
+.w-100{
+
+width:100%;
+
+}
+
+/* ==========================================
+HERO
+========================================== */
+
+.hero{
+
+position:relative;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+135deg,
+#001f4d 0%,
+#032b81 55%,
+#adadad 100%
+);
+
+color:#fff;
+
+padding:90px 0;
+
+}
+
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+radial-gradient(circle at top right,
+rgba(255,255,255,.12),
+transparent 45%);
+
+pointer-events:none;
+
+}
+
+
+
+.hero .container{
+
+position:relative;
+
+z-index:2;
+
+max-width:1000px;
+
+}
+
+
+
+.breadcrumb{
+
+display:flex;
+
+flex-wrap:wrap;
+
+align-items:center;
+
+gap:8px;
+
+margin-bottom:28px;
+
+font-size:.95rem;
+
+}
+
+
+
+.breadcrumb a{
+
+color:#dbeafe;
+
+font-weight:500;
+
+}
+
+
+
+.breadcrumb a:hover{
+
+color:#ffffff;
+
+}
+
+
+
+.breadcrumb span{
+
+color:#ffffff;
+
+}
+
+
+
+.category-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:8px 18px;
+
+background:#ffffff;
+
+color:var(--primary);
+
+border-radius:999px;
+
+font-size:.85rem;
+
+font-weight:700;
+
+margin-bottom:22px;
+
+box-shadow:var(--shadow-sm);
+
+}
+
+
+
+.hero h1{
+
+color:#ffffff;
+
+margin-bottom:22px;
+
+text-wrap:balance;
+
+font-weight:800;
+
+}
+
+
+
+.hero-description{
+
+max-width:850px;
+
+font-size:1.1rem;
+
+line-height:1.8;
+
+color:#eef4ff;
+
+margin-bottom:0;
+
+}
+
+
+
+/* ==========================================
+AUTHOR BOX
+========================================== */
+
+
+.author-box{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:18px;
+
+margin-top:42px;
+
+}
+
+
+
+.author-item{
+
+background:rgba(255,255,255,.14);
+
+backdrop-filter:blur(12px);
+
+-webkit-backdrop-filter:blur(12px);
+
+padding:20px;
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,.25);
+
+transition:
+
+transform var(--transition),
+
+background var(--transition);
+
+}
+
+
+
+.author-item:hover{
+
+transform:translateY(-4px);
+
+background:rgba(255,255,255,.18);
+
+}
+
+
+
+.author-item strong{
+
+display:block;
+
+margin-bottom:8px;
+
+font-size:.9rem;
+
+font-weight:700;
+
+color:#ffffff;
+
+}
+
+
+
+.author-item span,
+.author-item time{
+
+font-size:.95rem;
+
+color:#eef4ff;
+
+}
+
+
+
+/* ==========================================
+HERO BUTTONS
+========================================== */
+
+
+.hero-buttons{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:16px;
+
+margin-top:36px;
+
+}
+
+
+
+/* ==========================================
+QUICK HIGHLIGHTS
+========================================== */
+
+
+.quick-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:26px;
+
+}
+
+
+
+.quick-card{
+
+height:100%;
+
+padding:26px;
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow-sm);
+
+transition:
+
+transform var(--transition),
+
+box-shadow var(--transition);
+
+}
+
+
+
+.quick-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.quick-card h3{
+
+margin-bottom:12px;
+
+color:var(--primary);
+
+}
+
+
+
+.quick-card p:last-child{
+
+margin-bottom:0;
+
+}
+
+
+
+/* ==========================================
+TABLE OF CONTENTS
+========================================== */
+
+
+.toc{
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:32px;
+
+box-shadow:var(--shadow-sm);
+
+position:relative;
+
+}
+
+
+
+.toc::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+height:100%;
+
+width:5px;
+
+background:var(--primary);
+
+border-radius:
+
+var(--radius)
+
+0
+
+0
+
+var(--radius);
+
+}
+
+
+
+.toc ul{
+
+list-style:none;
+
+padding:0;
+
+columns:2;
+
+column-gap:45px;
+
+}
+
+
+
+.toc li{
+
+margin-bottom:14px;
+
+break-inside:avoid;
+
+}
+
+
+
+.toc a{
+
+font-weight:600;
+
+color:var(--primary);
+
+transition:color var(--transition);
+
+}
+
+
+
+.toc a:hover{
+
+color:var(--primary-dark);
+
+}
+
+
+
+/* ==========================================
+SALARY DASHBOARD
+========================================== */
+
+
+.dashboard{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:24px;
+
+}
+
+
+
+.dashboard-card{
+
+background:var(--surface);
+
+padding:28px;
+
+border-radius:var(--radius);
+
+border:1px solid var(--border);
+
+text-align:center;
+
+box-shadow:var(--shadow-sm);
+
+transition:
+
+transform var(--transition),
+
+box-shadow var(--transition);
+
+}
+
+
+
+.dashboard-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.dashboard-card h3{
+
+color:var(--primary);
+
+margin-bottom:12px;
+
+font-weight:800;
+
+}
+
+
+
+.dashboard-card p{
+
+margin-bottom:0;
+
+}
+
+
+
+/* ==========================================
+RESPONSIVE TABLET
+========================================== */
+
+
+@media(max-width:992px){
+
+
+.toc ul{
+
+columns:1;
+
+}
+
+
+}
+
+/* ==========================================
+SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+body{
+
+font-size:15px;
+
+}
+
+
+.hero{
+
+padding:50px 0;
+
+}
+
+
+.hero-description{
+
+font-size:1rem;
+
+}
+
+
+.section{
+
+padding:45px 0;
+
+}
+
+
+.card,
+.quick-card,
+.dashboard-card{
+
+padding:18px;
+
+}
+
+
+.toc ul{
+
+font-size:.95rem;
+
+}
+
+}
+
+
+
+/* ==========================================
+PREMIUM INFO BOXES
+========================================== */
+
+
+.info-box{
+
+display:flex;
+
+gap:16px;
+
+align-items:flex-start;
+
+padding:24px;
+
+margin:30px 0;
+
+border-radius:var(--radius);
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+box-shadow:var(--shadow-sm);
+
+}
+
+
+
+.info-box strong{
+
+display:block;
+
+margin-bottom:8px;
+
+font-size:1.05rem;
+
+}
+
+
+
+.info-box p{
+
+margin-bottom:0;
+
+}
+
+
+
+/* BLUE INFO */
+
+.info-box.info{
+
+border-left:5px solid var(--primary);
+
+background:#f5f9ff;
+
+}
+
+
+
+/* GREEN SUCCESS */
+
+.info-box.success{
+
+border-left:5px solid var(--success);
+
+background:#f3fbf6;
+
+}
+
+
+
+/* ORANGE WARNING */
+
+.info-box.warning{
+
+border-left:5px solid var(--warning);
+
+background:#fff8f1;
+
+}
+
+
+
+/* ICON */
+
+.info-icon{
+
+font-size:28px;
+
+line-height:1;
+
+flex-shrink:0;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.info-box{
+
+padding:20px;
+
+gap:12px;
+
+}
+
+
+.info-icon{
+
+font-size:24px;
+
+}
+
+}
+
+
+
+/* ==========================================
+PREMIUM STATISTICS CARDS
+========================================== */
+
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:24px;
+
+margin:40px 0;
+
+}
+
+
+
+.stat-card{
+
+position:relative;
+
+overflow:hidden;
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:28px;
+
+box-shadow:var(--shadow-sm);
+
+transition:all var(--transition);
+
+}
+
+
+
+.stat-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.stat-card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:5px;
+
+background:linear-gradient(
+90deg,
+var(--primary),
+#3b82f6
+);
+
+}
+
+
+
+.stat-label{
+
+display:block;
+
+font-size:.85rem;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+letter-spacing:.8px;
+
+color:var(--text-light);
+
+margin-bottom:12px;
+
+}
+
+
+
+.stat-value{
+
+font-size:2rem;
+
+font-weight:800;
+
+color:var(--primary);
+
+line-height:1.2;
+
+margin-bottom:12px;
+
+}
+
+
+
+.stat-card p{
+
+margin:0;
+
+font-size:.95rem;
+
+}
+
+
+
+@media(max-width:768px){
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+
+.stat-card{
+
+padding:22px;
+
+}
+
+
+.stat-value{
+
+font-size:1.7rem;
+
+}
+
+}
+
+
+
+/* ==========================================
+EXTRA RESPONSIVE FIXES
+========================================== */
+
+
+@media(max-width:900px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.stats{
+
+flex-direction:column;
+
+}
+
+}
+
+
+
+@media(max-width:500px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+
+.search input{
+
+width:100%;
+
+}
+
+
+.navbar{
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+}
+
+
+
+.top-row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+.flag img{
+
+width:26px;
+
+height:18px;
+
+object-fit:cover;
+
+border-radius:3px;
+
+display:block;
+
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .cards{grid-template-columns:repeat(2,1fr);}
+  .stats{flex-direction:column;}
+}
+
+@media(max-width:500px){
+  .cards{grid-template-columns:1fr;}
+  .search input{width:100%;}
+  .navbar{flex-direction:column; gap:10px;}
+}
+
+.top-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.flag img{
+  width:26px;
+  height:18px;
+  object-fit:cover;
+  border-radius:3px;
+  display:block;
+}
+
+.footer{
+  background:#f9fafb;
+  border-top:1px solid #e5e7eb;
+  margin-top:60px;
+  padding:40px 20px 20px 20px;
+}
+
+.footer-container{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.footer-box h3{
+  color:#2563eb;
+  margin-bottom:10px;
+}
+
+.footer-box h4{
+  margin-bottom:10px;
+  color:#111827;
+}
+
+.footer-box p{
+  color:#6b7280;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.footer-box a{
+  display:block;
+  color:#6b7280;
+  text-decoration:none;
+  margin:5px 0;
+  font-size:14px;
+}
+
+.footer-box a:hover{
+  color:#2563eb;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:30px;
+  font-size:13px;
+  color:#9ca3af;
+}
+
+/* responsive */
+@media(max-width:900px){
+  .footer-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:500px){
+  .footer-container{
+    grid-template-columns:1fr;
+  }
+}
+
+.footer-links{
+    margin-bottom:15px;
+}
+
+.footer-links a{
+    color:#6b7280;
+    text-decoration:none;
+    margin:0 8px;
+    font-size:14px;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#2563eb;
+}
+
+.footer-links span{
+    color:#9ca3af;
+}
+
+.footer-bottom{
+    text-align:center;
+    border-top:1px solid #e5e7eb;
+    margin-top:30px;
+    padding-top:20px;
+}
+
+.footer-bottom p{
+    margin:6px 0;
+    color:#6b7280;
+    font-size:14px;
+}
+
+.card button:hover,
+.search button:hover,
+.btn:hover{
+    background:#1d4ed8;
 }
 
 </style>
-
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"Article",
-"headline":"USA Salary Guide 2026 | Average Salary, Pay Stub & Taxes",
-"description":"Complete guide to average salary in the USA, monthly salary, pay stubs, payroll deductions, federal and state taxes, Social Security, Medicare, gross salary and net take-home pay in 2026.",
-"image":"https://www.salarypayslip.com/images/usa-salary-guide.webp",
-"author":{
-"@type":"Organization",
-"name":"SalaryPayslip"
-},
-"publisher":{
-"@type":"Organization",
-"name":"SalaryPayslip",
-"logo":{
-"@type":"ImageObject",
-"url":"https://www.salarypayslip.com/images/logo.webp"
-}
-},
-"datePublished":"2026-06-29",
-"dateModified":"2026-06-29",
-"mainEntityOfPage":{
-"@type":"WebPage",
-"@id":"https://www.salarypayslip.com/salary-slip-usa.html"
-}
-}
-</script>
-
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"BreadcrumbList",
-"itemListElement":[
-
-{
-"@type":"ListItem",
-"position":1,
-"name":"Home",
-"item":"https://www.salarypayslip.com/"
-},
-
-{
-"@type":"ListItem",
-"position":2,
-"name":"USA Salary Guide",
-"item":"https://www.salarypayslip.com/salary-slip-usa.html"
-}
-
-]
-}
-</script>
-
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"FAQPage",
-"mainEntity":[
-
-{
-"@type":"Question",
-"name":"What is a USA pay stub?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"A USA pay stub is a payroll document that summarizes an employee's gross pay, payroll deductions, federal and state tax withholdings where applicable, Social Security, Medicare and net pay for a specific pay period."
-}
-},
-
-{
-"@type":"Question",
-"name":"Why is my net salary lower than my gross salary?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"Net salary is generally lower because payroll deductions such as federal taxes, state taxes where applicable, Social Security, Medicare and employee benefit deductions may be withheld before payment."
-}
-},
-
-{
-"@type":"Question",
-"name":"Does every U.S. state charge income tax?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"No. State income tax laws vary across the United States. Some states impose a state income tax, while others do not."
-}
-},
-
-{
-"@type":"Question",
-"name":"What deductions appear on a USA pay stub?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"A typical USA pay stub may include federal income tax withholding, state tax where applicable, Social Security, Medicare, retirement contributions, employee benefits and other payroll deductions before calculating net pay."
-}
-}
-
-]
-}
-</script>
 
 </head>
 
 <body>
 
-<!-- =========================
-HEADER START
-========================= -->
 
-<header>
-  <div class="container">
 
-    <div class="logo">
-      SalaryPayslip
-    </div>
+<!-- =========================================================
+HERO
+========================================================= -->
 
-    <nav>
-      <a href="#overview">Overview</a>
-      <a href="#paystub">Pay Stub</a>
-      <a href="#payroll">Payroll</a>
-      <a href="#taxes">Taxes</a>
-      <a href="#social-security">Social Security</a>
-      <a href="#net-salary">Net Salary</a>
-    </nav>
 
-  </div>
-</header>
+<header class="hero">
 
-<!-- =========================
-HERO EXTENDED (FEATURE CARDS)
-========================= -->
 
-<section class="hero">
+<div class="container">
 
-  <div class="container">
+
+<nav class="breadcrumb">
+
+
+<a href="./usa/index.html">
+
+Home
+
+</a>
+
+
+<span>
+
+›
+
+</span>
+
+
+<span>
+
+Salary Slip USA
+
+</span>
+
+
+</nav>
 
     <h1>Average Salary in the USA 2026: Monthly Salary, Payroll, Taxes, Pay Stub & Income Guide</h1>
 
@@ -1166,26 +2827,6 @@ color:#111;
 }
 </style>
 
-<!-- =========================
-INTERNAL LINKS SECTION
-========================= -->
-
-<section style="padding:40px 0; background:#ffffff;">
-  <div class="container">
-
-    <h2>Explore More Salary Guides</h2>
-
-    <ul style="margin-top:15px; padding-left:20px;">
-
-      <li><a href="https://www.salarypayslip.com/salary-slip-canada.html">Canada Salary Guide</a></li>
-      <li><a href="https://www.salarypayslip.com/salary-slip-uk.html">UK Salary Guide</a></li>
-      <li><a href="https://www.salarypayslip.com/salary-slip-eu.html">EU Salary Guide</a></li>
-
-    </ul>
-
-  </div>
-</section>
-
 <section style="padding:60px 0; background:#f9fbff;">
   <div class="container">
 
@@ -1258,26 +2899,6 @@ These official government resources provide payroll, tax, employment and wage in
 </section>
 
 <!-- =========================
-CONCLUSION
-========================= -->
-
-<section style="padding:50px 0;background:#f1f5f9;">
-<div class="container">
-
-<h2>Conclusion: Understanding Your USA Pay Stub</h2>
-
-<p>
-Understanding your pay stub helps you see how gross salary becomes net pay after payroll deductions. Knowing how payroll taxes, Social Security, Medicare, employee benefits and tax withholding work can help employees better understand their earnings and financial planning.
-</p>
-
-<p>
-Because payroll requirements may differ across states and employers, reviewing your pay stub regularly is one of the best ways to understand your compensation and deductions.
-</p>
-
-</div>
-</section>
-
-<!-- =========================
 FAQ
 ========================= -->
 
@@ -1304,6 +2925,10 @@ No. State income tax rules vary across the United States, and some states do not
 <h3>What information appears on a pay stub?</h3>
 <p>
 A pay stub commonly includes gross pay, hours worked (where applicable), payroll deductions, taxes withheld and net pay.
+</p>
+
+<p>
+    <a class="btn" href="https://www.salarypayslip.com/paycheck-calculator-usa.html">Free USA Paycheck Calculator</a>
 </p>
 
 </div>
@@ -1341,6 +2966,26 @@ This guide covers the complete USA salary ecosystem, including:
 </div>
 </section>
 
+<!-- =========================
+CONCLUSION
+========================= -->
+
+<section style="padding:50px 0;background:#f1f5f9;">
+<div class="container">
+
+<h2>Conclusion: Understanding Your USA Pay Stub</h2>
+
+<p>
+Understanding your pay stub helps you see how gross salary becomes net pay after payroll deductions. Knowing how payroll taxes, Social Security, Medicare, employee benefits and tax withholding work can help employees better understand their earnings and financial planning.
+</p>
+
+<p>
+Because payroll requirements may differ across states and employers, reviewing your pay stub regularly is one of the best ways to understand your compensation and deductions.
+</p>
+
+</div>
+</section>
+
 <section style="padding:40px 0;background:#ffffff;">
 <div class="container">
 
@@ -1353,26 +2998,79 @@ This guide is provided for general educational purposes only. Salary information
 </div>
 </section>
 
-<!-- =========================
-FOOTER
-========================= -->
+<!-- =========================================================
+FOOTER (SEO OPTIMIZED)
+========================================================= -->
 
-<footer style="background:#0b3d91;color:#fff;padding:25px 0;text-align:center;">
+<footer class="footer">
 
-<div class="container">
+<div class="footer-container">
+
+<!-- Brand -->
+
+<div class="footer-box">
+
+<h3>SalaryPayslip USA</h3>
+
+<p>
+
+Your trusted source for USA salary guides, career insights, labour market research and profession-specific income reports.
+
+</p>
+
+</div>
+
+<!-- Quick Links -->
+
+
+
+<!-- Contact -->
+
+<div class="footer-box">
+
+<h3>Contact</h3>
+
+<p>Email: support@salarypayslip.com</p>
+
+<p>Latest Salary Guides for 2026</p>
+
+</div>
+
+</div>
+
+<!-- Bottom -->
+
+ <div class="footer-bottom">
+
+  <div class="footer-links">
+    <a href="./about-us.html">About Us</a>
+    <span>|</span>
+
+    <a href="./editorial-policy.html">Editorial Policy</a>
+    <span>|</span>
+
+    <a href="./salary-research-methodology.html">Salary Research Methodology</a>
+    <span>|</span>
+
+    <a href="./privacy.html">Privacy Policy</a>
+    <span>|</span>
+
+    <a href="./cookie-policy.html">Cookie Policy</a>
+    <span>|</span>
+
+    <a href="./disclaimer.html">Disclaimer</a>
+    <span>|</span>
+
+    <a href="./terms.html">Terms & Conditions</a>
+    <span>|</span>
+
+    <a href="./affiliate-disclosure.html">Affiliate Disclosure</a>
+    <span>|</span>
+
+    <a href="./contact-us.html">Contact Us</a>
+  </div>
 
 <p>© 2026 SalaryPayslip. All Rights Reserved.</p>
-
-<p>
-Built for Salary Insights, Payroll Education & Global Salary Guides.
-</p>
-
-<p>
-<a href="privacy.html">Privacy Policy</a> |
-<a href="terms.html">Terms</a> |
-<a href="disclaimer.html">Disclaimer</a> |
-<a href="cookie-policy.html">Cookie Policy</a>
-</p>
 
 </div>
 
