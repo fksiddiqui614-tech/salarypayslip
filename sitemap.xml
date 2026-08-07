@@ -41,14 +41,71 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Country SEO Pages -->
+  <!-- USA Country SEO Pages -->
+   <url>
+    <loc>https://www.salarypayslip.com/usa/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/usa/salary-guides/orthodontist-salary-in-usa.html/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/usa/salary-guides/oral-and-maxillofacial-surgeon-salary-in-usa.html/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/usa/salary-guides/dentist-salary-in-usa.html/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/usa/salary-guides/neurologist-salary-in-usa.html/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/usa/salary-guides/radiologist-salary-in-usa.html/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/usa/salary-guides/cardiologist-salary-in-usa.html/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/usa/salary-guides/doctor-salary-in-usa.html/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+  <!-- Pak Country SEO Pages -->
    <url>
     <loc>https://www.salarypayslip.com/pakistan/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
    </url>
-      
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/ent-specialist-salary-in-pakistan.html/</loc>
     <lastmod>2026-08-04</lastmod>
@@ -68,15 +125,15 @@
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url>  
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/phlebotomist-salary-in-pakistan.html/</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url> 
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/endodontist-salary-in-pakistan.html/</loc>
     <lastmod>2026-08-01</lastmod>
@@ -103,8 +160,8 @@
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url> 
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/gastroenterologist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-31</lastmod>
@@ -124,22 +181,22 @@
     <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url>  
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/ophthalmologist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url>  
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/nephrologist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url> 
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/oncologist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-30</lastmod>
@@ -152,51 +209,51 @@
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url>  
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/pathologist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url>  
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/psychiatrist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url>  
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/audiologist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url>  
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/psychologist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url>  
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/dermatologist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url>  
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/anesthesiologist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url>   
-      
-    <url>
+   </url>
+
+   <url>
     <loc>https://www.salarypayslip.com/pakistan/neurologist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -208,8 +265,8 @@
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url> 
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/gynecologist-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-25</lastmod>
@@ -222,15 +279,15 @@
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-   </url> 
-      
+   </url>
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/surgeon-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
    </url>
-      
+
    <url>
     <loc>https://www.salarypayslip.com/pakistan/petroleum-engineer-salary-in-pakistan.html/</loc>
     <lastmod>2026-07-24</lastmod>
