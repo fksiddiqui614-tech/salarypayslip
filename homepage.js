@@ -11,6 +11,12 @@ flag:"🇵🇰",
 url:"./pakistan/"
 },
 
+{
+name:"USA",
+flag:"🇺🇸",
+url:"./usa/"
+},
+
 ];
 
 countries.sort((a,b)=>a.name.localeCompare(b.name));
