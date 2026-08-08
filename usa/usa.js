@@ -21,6 +21,48 @@ keywords: "doctor physician medical salary healthcare hospital surgeon internal 
 category: "Healthcare"
 },
 
+{
+    title: "Dermatologist Salary in USA (2026)",
+    url: "/usa/salary-guides/dermatologist-salary-in-usa.html",
+    keywords: "dermatologist salary skin doctor dermatology physician medical healthcare hospital residency fellowship private practice",
+    category: "Healthcare"
+},
+
+{
+    title: "Oncologist Salary in USA (2026)",
+    url: "/usa/salary-guides/oncologist-salary-in-usa.html",
+    keywords: "oncologist salary cancer doctor oncology physician medical healthcare hospital cancer treatment radiation chemotherapy",
+    category: "Healthcare"
+},
+
+{
+    title: "Anesthesiologist Salary in USA (2026)",
+    url: "/usa/salary-guides/anesthesiologist-salary-in-usa.html",
+    keywords: "anesthesiologist salary anesthesia doctor physician medical healthcare hospital surgery residency critical care private practice",
+    category: "Healthcare"
+},
+
+{
+    title: "Cardiologist Salary in USA (2026)",
+    url: "/usa/salary-guides/cardiologist-salary-in-usa.html",
+    keywords: "cardiologist salary heart doctor cardiology physician medical healthcare hospital cardiac surgery fellowship private practice",
+    category: "Healthcare"
+},
+
+{
+    title: "Neurologist Salary in USA (2026)",
+    url: "/usa/salary-guides/neurologist-salary-in-usa.html",
+    keywords: "neurologist salary brain doctor neurology physician medical healthcare hospital residency nervous system epilepsy stroke",
+    category: "Healthcare"
+},
+
+{
+    title: "Radiologist Salary in USA (2026)",
+    url: "/usa/salary-guides/radiologist-salary-in-usa.html",
+    keywords: "radiologist salary imaging doctor radiology physician medical healthcare hospital residency diagnostic imaging MRI CT scan",
+    category: "Healthcare"
+},
+
 ];
 
 /* ==========================
@@ -30,6 +72,12 @@ category: "Healthcare"
 function getIcon(title){
 
 if (title.includes("Doctor")) return "🩺";
+if (title.includes("Dermatologist")) return "🩺";
+if (title.includes("Oncologist")) return "🩺";
+if (title.includes("Anesthesiologist")) return "🩺";
+if (title.includes("Cardiologist")) return "🩺";
+if (title.includes("Neurologist")) return "🩺";
+if (title.includes("Radiologist")) return "🩺";
 if (title.includes("Dentist")) return "🦷";
 if (title.includes("Orthodontist")) return "😁";
 
