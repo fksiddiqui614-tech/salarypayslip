@@ -262,3 +262,43 @@ results.style.display="none";
 }
 
 });
+
+/*==========================================
+ CALCULATORS NAVBAR DROPDOWN
+ SalaryPayslip
+==========================================*/
+
+function toggleCalculators(){
+
+const menu =
+document.getElementById("calculatorsMenu");
+
+if(!menu) return;
+
+menu.classList.toggle("show");
+
+}
+
+
+/*=========================
+CLOSE CALCULATORS
+OUTSIDE CLICK
+=========================*/
+
+document.addEventListener("click",function(e){
+
+const calculators =
+document.querySelector(".nav-calculators");
+
+const menu =
+document.getElementById("calculatorsMenu");
+
+if(!calculators || !menu) return;
+
+if(!calculators.contains(e.target)){
+
+menu.classList.remove("show");
+
+}
+
+});
