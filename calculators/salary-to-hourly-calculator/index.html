@@ -1,0 +1,4163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Salary to Hourly Calculator – Convert Annual Salary to Hourly</title>
+
+<meta name="description"
+content="Use our free Salary to Hourly Calculator to convert annual salary to hourly, daily, weekly, biweekly and monthly pay with flexible work hours.">
+
+<link rel="canonical"
+href="https://salarypayslip.com/salary-to-hourly-calculator/">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+content="Salary to Hourly Calculator – Convert Annual Salary to Hourly">
+
+<meta property="og:description"
+content="Convert annual salary to hourly, daily, weekly, biweekly and monthly pay with this free salary conversion calculator.">
+
+<meta property="og:url"
+content="https://salarypayslip.com/salary-to-hourly-calculator/">
+
+<style>
+
+:root{
+
+
+/* ==========================================
+COLOR PALETTE
+========================================== */
+
+
+--primary:#0b5ed7;
+
+--primary-dark:#084298;
+
+--primary-light:#eaf3ff;
+
+
+--secondary:#2563eb;
+
+
+--white:#ffffff;
+
+--background:#f5f9ff;
+
+--surface:#ffffff;
+
+--surface-light:#f8fbff;
+
+
+
+/* ==========================================
+TEXT
+========================================== */
+
+
+--text:#1f2937;
+
+--text-light:#6b7280;
+
+
+
+/* ==========================================
+BORDER
+========================================== */
+
+
+--border:#d9e6ff;
+
+
+
+/* ==========================================
+STATUS COLORS
+========================================== */
+
+
+--success:#198754;
+
+--warning:#fd7e14;
+
+--danger:#dc3545;
+
+
+
+/* ==========================================
+SHADOWS
+========================================== */
+
+
+--shadow-sm:0 4px 12px rgba(0,0,0,.05);
+
+--shadow:0 10px 30px rgba(0,0,0,.08);
+
+--shadow-lg:0 20px 50px rgba(11,94,215,.12);
+
+
+
+/* ==========================================
+RADIUS
+========================================== */
+
+
+--radius:18px;
+
+--radius-sm:12px;
+
+--radius-lg:24px;
+
+
+
+/* ==========================================
+LAYOUT
+========================================== */
+
+
+--container:1200px;
+
+
+
+/* ==========================================
+TRANSITIONS
+========================================== */
+
+
+--transition:.25s ease;
+
+
+}
+
+
+
+/* ==========================================
+RESET
+========================================== */
+
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+
+
+html{
+
+scroll-behavior:smooth;
+
+-webkit-text-size-adjust:100%;
+
+}
+
+
+
+body{
+
+font-family:
+Inter,
+system-ui,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+Arial,
+sans-serif;
+
+
+background:var(--background);
+
+
+color:var(--text);
+
+
+font-size:16px;
+
+
+line-height:1.75;
+
+
+letter-spacing:.2px;
+
+
+overflow-x:hidden;
+
+
+text-rendering:optimizeLegibility;
+
+
+-webkit-font-smoothing:antialiased;
+
+
+-moz-osx-font-smoothing:grayscale;
+
+
+}
+
+
+
+/* ==========================================
+TYPOGRAPHY
+========================================== */
+
+
+h1,
+h2,
+h3,
+h4{
+
+
+font-weight:700;
+
+
+line-height:1.3;
+
+
+color:var(--text);
+
+
+margin-bottom:18px;
+
+
+scroll-margin-top:90px;
+
+
+text-wrap:balance;
+
+
+}
+
+
+
+h1{
+
+
+font-size:clamp(2rem,5vw,3.3rem);
+
+
+font-weight:800;
+
+
+}
+
+
+
+h2{
+
+
+font-size:clamp(1.6rem,4vw,2.4rem);
+
+
+font-weight:800;
+
+
+}
+
+
+
+h3{
+
+
+font-size:1.25rem;
+
+
+}
+
+
+
+h4{
+
+
+font-size:1.05rem;
+
+
+}
+
+
+
+p{
+
+
+margin-bottom:18px;
+
+
+color:var(--text-light);
+
+
+max-width:none;
+
+
+}
+
+
+
+a{
+
+
+color:var(--primary);
+
+
+text-decoration:none;
+
+
+transition:color var(--transition);
+
+
+}
+
+
+
+a:hover{
+
+
+color:var(--primary-dark);
+
+
+}
+
+
+
+strong{
+
+
+font-weight:700;
+
+
+color:var(--text);
+
+
+}
+
+
+
+small{
+
+
+font-size:.875rem;
+
+
+color:var(--text-light);
+
+
+}
+
+
+
+/* ==========================================
+MEDIA
+========================================== */
+
+
+img{
+
+
+display:block;
+
+
+max-width:100%;
+
+
+height:auto;
+
+
+border-radius:12px;
+
+
+}
+
+/* ==========================================
+TEXT SELECTION
+========================================== */
+
+::selection{
+
+background:var(--primary);
+
+color:#ffffff;
+
+}
+
+
+
+/* ==========================================
+LAYOUT
+========================================== */
+
+
+.container{
+
+width:min(94%,var(--container));
+
+margin-inline:auto;
+
+}
+
+
+
+.section{
+
+padding:80px 0;
+
+}
+
+
+
+.section-title{
+
+max-width:900px;
+
+margin:0 auto 20px;
+
+text-align:center;
+
+font-size:clamp(1.9rem,4vw,2.7rem);
+
+font-weight:800;
+
+color: #00398b;
+
+line-height:1.25;
+
+}
+
+
+
+/* ==========================================
+GRID
+========================================== */
+
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:28px;
+
+align-items:stretch;
+
+}
+
+
+
+/* ==========================================
+CARD
+========================================== */
+
+
+.card{
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:30px;
+
+box-shadow:var(--shadow-sm);
+
+transition:
+transform var(--transition),
+box-shadow var(--transition),
+border-color var(--transition);
+
+height:100%;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-lg);
+
+border-color:rgba(11,94,215,.25);
+
+}
+
+
+
+.card h3{
+
+color:var(--primary);
+
+margin-bottom:12px;
+
+}
+
+
+
+.card p:last-child{
+
+margin-bottom:0;
+
+}
+
+
+
+/* ==========================================
+RESPONSIVE LAYOUT
+========================================== */
+
+
+@media(max-width:768px){
+
+
+.section{
+
+padding:60px 0;
+
+}
+
+
+.grid{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+
+.card{
+
+padding:22px;
+
+}
+
+
+.section-title{
+
+margin-bottom:18px;
+
+}
+
+
+.section > .container > p:first-of-type{
+
+margin-bottom:35px;
+
+}
+
+
+}
+
+
+
+
+/* ==========================================
+BUTTONS
+========================================== */
+
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:8px;
+
+padding:14px 28px;
+
+border:none;
+
+border-radius:var(--radius-sm);
+
+font-weight:700;
+
+font-size:1rem;
+
+text-decoration:none;
+
+cursor:pointer;
+
+transition:all var(--transition);
+
+}
+
+
+
+.btn-primary{
+
+background:var(--primary);
+
+color:#fff;
+
+box-shadow:var(--shadow-sm);
+
+}
+
+
+
+.btn-primary:hover{
+
+background:var(--primary-dark);
+
+color:#fff;
+
+transform:translateY(-2px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.btn-outline{
+
+background:transparent;
+
+border:2px solid rgba(255,255,255,.85);
+
+color:#fff;
+
+}
+
+
+
+.btn-outline:hover{
+
+background:#fff;
+
+color:var(--primary);
+
+transform:translateY(-2px);
+
+}
+
+
+
+/* ==========================================
+TABLES
+========================================== */
+
+
+.table-wrapper{
+
+overflow-x:auto;
+
+margin-top:28px;
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow-sm);
+
+-webkit-overflow-scrolling:touch;
+
+}
+
+
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+background:var(--surface);
+
+overflow:hidden;
+
+}
+
+
+
+thead{
+
+background:var(--primary);
+
+color:#676767;
+
+}
+
+
+
+th{
+
+padding:16px 18px;
+
+text-align:left;
+
+font-weight:700;
+
+white-space:nowrap;
+
+}
+
+
+
+td{
+
+padding:16px 18px;
+
+border-bottom:1px solid var(--border);
+
+vertical-align:top;
+
+}
+
+
+
+tbody tr{
+
+transition:background var(--transition);
+
+}
+
+
+
+tbody tr:hover{
+
+background:var(--surface-light);
+
+}
+
+
+
+tbody tr:last-child td{
+
+border-bottom:none;
+
+}
+
+
+
+/* ==========================================
+LISTS
+========================================== */
+
+
+ul{
+
+padding-left:22px;
+
+margin-bottom:20px;
+
+}
+
+
+
+li{
+
+margin-bottom:12px;
+
+color:var(--text-light);
+
+}
+
+
+
+li::marker{
+
+color:var(--primary);
+
+}
+
+
+
+/* ==========================================
+UTILITY
+========================================== */
+
+
+.text-center{
+
+text-align:center;
+
+}
+
+
+.mt-20{
+
+margin-top:20px;
+
+}
+
+
+.mt-40{
+
+margin-top:40px;
+
+}
+
+
+.mb-40{
+
+margin-bottom:40px;
+
+}
+
+
+.mb-20{
+
+margin-bottom:20px;
+
+}
+
+
+.w-100{
+
+width:100%;
+
+}
+
+/* ==========================================
+HERO
+========================================== */
+
+.hero{
+
+position:relative;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+135deg,
+#001f4d 0%,
+#032b81 55%,
+#adadad 100%
+);
+
+color:#fff;
+
+padding:90px 0;
+
+}
+
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+radial-gradient(circle at top right,
+rgba(255,255,255,.12),
+transparent 45%);
+
+pointer-events:none;
+
+}
+
+
+
+.hero .container{
+
+position:relative;
+
+z-index:2;
+
+max-width:1000px;
+
+}
+
+
+
+.breadcrumb{
+
+display:flex;
+
+flex-wrap:wrap;
+
+align-items:center;
+
+gap:8px;
+
+margin-bottom:28px;
+
+font-size:.95rem;
+
+}
+
+
+
+.breadcrumb a{
+
+color:#dbeafe;
+
+font-weight:500;
+
+}
+
+
+
+.breadcrumb a:hover{
+
+color:#ffffff;
+
+}
+
+
+
+.breadcrumb span{
+
+color:#ffffff;
+
+}
+
+
+
+.category-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:8px 18px;
+
+background:#ffffff;
+
+color:var(--primary);
+
+border-radius:999px;
+
+font-size:.85rem;
+
+font-weight:700;
+
+margin-bottom:22px;
+
+box-shadow:var(--shadow-sm);
+
+}
+
+
+
+.hero h1{
+
+color:#ffffff;
+
+margin-bottom:22px;
+
+text-wrap:balance;
+
+font-weight:800;
+
+}
+
+
+
+.hero-description{
+
+max-width:850px;
+
+font-size:1.1rem;
+
+line-height:1.8;
+
+color:#eef4ff;
+
+margin-bottom:0;
+
+}
+
+
+
+/* ==========================================
+AUTHOR BOX
+========================================== */
+
+
+.author-box{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:18px;
+
+margin-top:42px;
+
+}
+
+
+
+.author-item{
+
+background:rgba(255,255,255,.14);
+
+backdrop-filter:blur(12px);
+
+-webkit-backdrop-filter:blur(12px);
+
+padding:20px;
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,.25);
+
+transition:
+
+transform var(--transition),
+
+background var(--transition);
+
+}
+
+
+
+.author-item:hover{
+
+transform:translateY(-4px);
+
+background:rgba(255,255,255,.18);
+
+}
+
+
+
+.author-item strong{
+
+display:block;
+
+margin-bottom:8px;
+
+font-size:.9rem;
+
+font-weight:700;
+
+color:#ffffff;
+
+}
+
+
+
+.author-item span,
+.author-item time{
+
+font-size:.95rem;
+
+color:#eef4ff;
+
+}
+
+
+
+/* ==========================================
+HERO BUTTONS
+========================================== */
+
+
+.hero-buttons{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:16px;
+
+margin-top:36px;
+
+}
+
+
+
+/* ==========================================
+QUICK HIGHLIGHTS
+========================================== */
+
+
+.quick-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:26px;
+
+}
+
+
+
+.quick-card{
+
+height:100%;
+
+padding:26px;
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow-sm);
+
+transition:
+
+transform var(--transition),
+
+box-shadow var(--transition);
+
+}
+
+
+
+.quick-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.quick-card h3{
+
+margin-bottom:12px;
+
+color:var(--primary);
+
+}
+
+
+
+.quick-card p:last-child{
+
+margin-bottom:0;
+
+}
+
+
+
+/* ==========================================
+TABLE OF CONTENTS
+========================================== */
+
+
+.toc{
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:32px;
+
+box-shadow:var(--shadow-sm);
+
+position:relative;
+
+}
+
+
+
+.toc::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+height:100%;
+
+width:5px;
+
+background:var(--primary);
+
+border-radius:
+
+var(--radius)
+
+0
+
+0
+
+var(--radius);
+
+}
+
+
+
+.toc ul{
+
+list-style:none;
+
+padding:0;
+
+columns:2;
+
+column-gap:45px;
+
+}
+
+
+
+.toc li{
+
+margin-bottom:14px;
+
+break-inside:avoid;
+
+}
+
+
+
+.toc a{
+
+font-weight:600;
+
+color:var(--primary);
+
+transition:color var(--transition);
+
+}
+
+
+
+.toc a:hover{
+
+color:var(--primary-dark);
+
+}
+
+
+
+/* ==========================================
+SALARY DASHBOARD
+========================================== */
+
+
+.dashboard{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:24px;
+
+}
+
+
+
+.dashboard-card{
+
+background:var(--surface);
+
+padding:28px;
+
+border-radius:var(--radius);
+
+border:1px solid var(--border);
+
+text-align:center;
+
+box-shadow:var(--shadow-sm);
+
+transition:
+
+transform var(--transition),
+
+box-shadow var(--transition);
+
+}
+
+
+
+.dashboard-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.dashboard-card h3{
+
+color:var(--primary);
+
+margin-bottom:12px;
+
+font-weight:800;
+
+}
+
+
+
+.dashboard-card p{
+
+margin-bottom:0;
+
+}
+
+
+
+/* ==========================================
+RESPONSIVE TABLET
+========================================== */
+
+
+@media(max-width:992px){
+
+
+.toc ul{
+
+columns:1;
+
+}
+
+
+}
+
+/* ==========================================
+SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+body{
+
+font-size:15px;
+
+}
+
+
+.hero{
+
+padding:50px 0;
+
+}
+
+
+.hero-description{
+
+font-size:1rem;
+
+}
+
+
+.section{
+
+padding:45px 0;
+
+}
+
+
+.card,
+.quick-card,
+.dashboard-card{
+
+padding:18px;
+
+}
+
+
+.toc ul{
+
+font-size:.95rem;
+
+}
+
+}
+
+
+
+/* ==========================================
+PREMIUM INFO BOXES
+========================================== */
+
+
+.info-box{
+
+display:flex;
+
+gap:16px;
+
+align-items:flex-start;
+
+padding:24px;
+
+margin:30px 0;
+
+border-radius:var(--radius);
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+box-shadow:var(--shadow-sm);
+
+}
+
+
+
+.info-box strong{
+
+display:block;
+
+margin-bottom:8px;
+
+font-size:1.05rem;
+
+}
+
+
+
+.info-box p{
+
+margin-bottom:0;
+
+}
+
+
+
+/* BLUE INFO */
+
+.info-box.info{
+
+border-left:5px solid var(--primary);
+
+background:#f5f9ff;
+
+}
+
+
+
+/* GREEN SUCCESS */
+
+.info-box.success{
+
+border-left:5px solid var(--success);
+
+background:#f3fbf6;
+
+}
+
+
+
+/* ORANGE WARNING */
+
+.info-box.warning{
+
+border-left:5px solid var(--warning);
+
+background:#fff8f1;
+
+}
+
+
+
+/* ICON */
+
+.info-icon{
+
+font-size:28px;
+
+line-height:1;
+
+flex-shrink:0;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.info-box{
+
+padding:20px;
+
+gap:12px;
+
+}
+
+
+.info-icon{
+
+font-size:24px;
+
+}
+
+}
+
+
+
+/* ==========================================
+PREMIUM STATISTICS CARDS
+========================================== */
+
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:24px;
+
+margin:40px 0;
+
+}
+
+
+
+.stat-card{
+
+position:relative;
+
+overflow:hidden;
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:28px;
+
+box-shadow:var(--shadow-sm);
+
+transition:all var(--transition);
+
+}
+
+
+
+.stat-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.stat-card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:5px;
+
+background:linear-gradient(
+90deg,
+var(--primary),
+#3b82f6
+);
+
+}
+
+
+
+.stat-label{
+
+display:block;
+
+font-size:.85rem;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+letter-spacing:.8px;
+
+color:var(--text-light);
+
+margin-bottom:12px;
+
+}
+
+
+
+.stat-value{
+
+font-size:2rem;
+
+font-weight:800;
+
+color:var(--primary);
+
+line-height:1.2;
+
+margin-bottom:12px;
+
+}
+
+
+
+.stat-card p{
+
+margin:0;
+
+font-size:.95rem;
+
+}
+
+
+
+@media(max-width:768px){
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+
+.stat-card{
+
+padding:22px;
+
+}
+
+
+.stat-value{
+
+font-size:1.7rem;
+
+}
+
+}
+
+
+
+/* ==========================================
+EXTRA RESPONSIVE FIXES
+========================================== */
+
+
+@media(max-width:900px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.stats{
+
+flex-direction:column;
+
+}
+
+}
+
+
+
+@media(max-width:500px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+
+.search input{
+
+width:100%;
+
+}
+
+
+.navbar{
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+}
+
+
+
+.top-row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+.flag img{
+
+width:26px;
+
+height:18px;
+
+object-fit:cover;
+
+border-radius:3px;
+
+display:block;
+
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .cards{grid-template-columns:repeat(2,1fr);}
+  .stats{flex-direction:column;}
+}
+
+@media(max-width:500px){
+  .cards{grid-template-columns:1fr;}
+  .search input{width:100%;}
+  .navbar{flex-direction:column; gap:10px;}
+}
+
+.top-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.flag img{
+  width:26px;
+  height:18px;
+  object-fit:cover;
+  border-radius:3px;
+  display:block;
+}
+
+.footer{
+  background:#f9fafb;
+  border-top:1px solid #e5e7eb;
+  margin-top:60px;
+  padding:40px 20px 20px 20px;
+}
+
+.footer-container{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.footer-box h3{
+  color:#2563eb;
+  margin-bottom:10px;
+}
+
+.footer-box h4{
+  margin-bottom:10px;
+  color:#111827;
+}
+
+.footer-box p{
+  color:#6b7280;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.footer-box a{
+  display:block;
+  color:#6b7280;
+  text-decoration:none;
+  margin:5px 0;
+  font-size:14px;
+}
+
+.footer-box a:hover{
+  color:#2563eb;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:30px;
+  font-size:13px;
+  color:#9ca3af;
+}
+
+/* responsive */
+@media(max-width:900px){
+  .footer-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:500px){
+  .footer-container{
+    grid-template-columns:1fr;
+  }
+}
+
+.footer-links{
+    margin-bottom:15px;
+}
+
+.footer-links a{
+    color:#6b7280;
+    text-decoration:none;
+    margin:0 8px;
+    font-size:14px;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#2563eb;
+}
+
+.footer-links span{
+    color:#9ca3af;
+}
+
+.footer-bottom{
+    text-align:center;
+    border-top:1px solid #e5e7eb;
+    margin-top:30px;
+    padding-top:20px;
+}
+
+.footer-bottom p{
+    margin:6px 0;
+    color:#6b7280;
+    font-size:14px;
+}
+
+.card button:hover,
+.search button:hover,
+.btn:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================================
+SALARY CHART
+========================================== */
+
+
+.salary-chart {
+
+margin-top:40px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+
+
+.salary-row {
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+
+
+.salary-label {
+
+width:220px;
+
+font-weight:600;
+
+font-size:16px;
+
+color:#1f2937;
+
+}
+
+
+
+.salary-bar {
+
+flex:1;
+
+height:45px;
+
+background:#f1f5f9;
+
+border-radius:10px;
+
+overflow:hidden;
+
+}
+
+
+
+.salary-bar span {
+
+display:flex;
+
+align-items:center;
+
+height:100%;
+
+padding-left:20px;
+
+background:#5115ff;
+
+color:white;
+
+font-weight:600;
+
+border-radius:10px;
+
+font-size:15px;
+
+}
+
+
+
+
+
+/* Mobile Responsive */
+
+
+@media(max-width:768px){
+
+
+.salary-row {
+
+flex-direction:column;
+
+align-items:stretch;
+
+gap:10px;
+
+}
+
+
+
+.salary-label {
+
+width:100%;
+
+}
+
+
+
+.salary-bar {
+
+height:40px;
+
+}
+
+
+
+.salary-bar span {
+
+font-size:14px;
+
+padding-left:15px;
+
+}
+
+
+}
+
+
+
+.calculator-page{
+    max-width:1100px;
+    width:92%;
+    margin:0 auto;
+    padding:35px 0 70px;
+}
+
+.calculator-breadcrumb{
+    font-size:14px;
+    margin-bottom:22px;
+    color:#64748b;
+}
+
+.calculator-breadcrumb a{
+    text-decoration:none;
+}
+
+.calculator-hero{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 30px;
+}
+
+.calculator-hero h1{
+    margin:0 0 14px;
+    font-size:clamp(32px,5vw,48px);
+    line-height:1.15;
+}
+
+.calculator-hero p{
+    margin:0 auto;
+    max-width:760px;
+    font-size:17px;
+    color:#64748b;
+}
+
+
+/* =========================================================
+   CALCULATOR
+========================================================= */
+
+.salary-tool{
+    max-width:850px;
+    margin:30px auto;
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 8px 25px rgba(15,23,42,.07);
+}
+
+.salary-tool-tabs{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.salary-tool-tab{
+    border:1px solid #dbe3ec;
+    background:#f8fafc;
+    color:#334155;
+    padding:13px;
+    border-radius:10px;
+    font-weight:700;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.salary-tool-tab.active{
+    background:#1769aa;
+    border-color:#1769aa;
+    color:#fff;
+}
+
+.salary-tool-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.salary-field{
+    display:flex;
+    flex-direction:column;
+}
+
+.salary-field label{
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:7px;
+}
+
+.salary-field input,
+.salary-field select{
+    height:48px;
+    width:100%;
+    padding:0 13px;
+    border:1px solid #cbd5e1;
+    border-radius:9px;
+    background:#fff;
+    font-size:16px;
+    outline:none;
+}
+
+.salary-field input:focus,
+.salary-field select:focus{
+    border-color:#1769aa;
+    box-shadow:0 0 0 3px rgba(23,105,170,.10);
+}
+
+.salary-input-wrap{
+    position:relative;
+}
+
+.salary-input-symbol{
+    position:absolute;
+    left:13px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#64748b;
+    font-weight:700;
+}
+
+.salary-input-wrap input{
+    padding-left:32px;
+}
+
+.salary-calculate{
+    width:100%;
+    height:52px;
+    margin-top:22px;
+    border:0;
+    border-radius:10px;
+    background:#1769aa;
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.salary-calculate:hover{
+    background:#12598f;
+}
+
+
+/* =========================================================
+   RESULTS
+========================================================= */
+
+.salary-results{
+    display:none;
+    margin-top:30px;
+}
+
+.salary-results.show{
+    display:block;
+}
+
+.salary-results h2{
+    font-size:21px;
+    margin:0 0 15px;
+}
+
+.salary-results-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.salary-result{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:17px;
+}
+
+.salary-result.featured{
+    background:#eff6ff;
+    border-color:#bfdbfe;
+}
+
+.salary-result-label{
+    font-size:13px;
+    color:#64748b;
+    margin-bottom:4px;
+}
+
+.salary-result-value{
+    font-size:22px;
+    font-weight:800;
+}
+
+.salary-result.featured .salary-result-value{
+    color:#1769aa;
+}
+
+.salary-formula-note{
+    margin-top:18px;
+    padding:14px;
+    background:#f8fafc;
+    border-radius:9px;
+    color:#475569;
+    font-size:14px;
+}
+
+
+/* =========================================================
+   SEO CONTENT
+========================================================= */
+
+.salary-content{
+    max-width:900px;
+    margin:32px auto 0;
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    padding:30px;
+}
+
+.salary-content h2{
+    margin-top:0;
+    font-size:27px;
+    line-height:1.3;
+}
+
+.salary-content h3{
+    font-size:20px;
+    margin-top:28px;
+}
+
+.salary-content p,
+.salary-content li{
+    color:#475569;
+}
+
+.salary-content ul{
+    padding-left:22px;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.salary-table-wrap{
+    overflow-x:auto;
+}
+
+.salary-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:18px;
+}
+
+.salary-table th,
+.salary-table td{
+    padding:13px 14px;
+    border-bottom:1px solid #e2e8f0;
+    text-align:left;
+}
+
+.salary-table th{
+    background:#f8fafc;
+    font-size:14px;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.salary-faq{
+    border-bottom:1px solid #e2e8f0;
+    padding:18px 0;
+}
+
+.salary-faq:last-child{
+    border-bottom:0;
+}
+
+.salary-faq h3{
+    margin:0 0 8px;
+    font-size:18px;
+}
+
+.salary-faq p{
+    margin:0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:700px){
+
+    .calculator-page{
+        padding-top:25px;
+    }
+
+    .salary-tool,
+    .salary-content{
+        padding:20px;
+    }
+
+    .salary-tool-grid{
+        grid-template-columns:1fr;
+    }
+
+    .salary-results-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .salary-tool-tabs{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:430px){
+
+    .salary-results-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =======================================================
+   FAQ ACCORDION WIDGET
+======================================================= */
+
+.salary-faq-widget{
+  width:100%;
+  margin-top:28px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.salary-faq-item{
+  width:100%;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  overflow:hidden;
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+.salary-faq-item:hover{
+  border-color:#cfd5dc;
+  box-shadow:0 4px 14px rgba(0,0,0,.05);
+}
+
+.salary-faq-item[open]{
+  border-color:#d6dbe1;
+  box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+
+.salary-faq-item summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:20px 22px;
+  font-size:16px;
+  font-weight:600;
+  line-height:1.5;
+  color:#171717;
+}
+
+.salary-faq-item summary::-webkit-details-marker{
+  display:none;
+}
+
+.salary-faq-item summary::marker{
+  display:none;
+}
+
+.salary-faq-item summary > span:first-child{
+  flex:1;
+}
+
+.faq-icon{
+  flex:0 0 auto;
+  width:30px;
+  height:30px;
+  border:1px solid #d9dde3;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  font-weight:400;
+  line-height:1;
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    color .25s ease;
+}
+
+.salary-faq-item[open] .faq-icon{
+  transform:rotate(45deg);
+}
+
+.salary-faq-answer{
+  padding:0 22px 21px;
+  border-top:1px solid #eef0f3;
+}
+
+.salary-faq-answer p{
+  margin:17px 0 0;
+  font-size:15px;
+  line-height:1.75;
+  color:#555;
+}
+
+@media (max-width:600px){
+
+  .salary-faq-widget{
+    gap:10px;
+  }
+
+  .salary-faq-item summary{
+    padding:17px 16px;
+    font-size:15px;
+    gap:12px;
+  }
+
+  .salary-faq-answer{
+    padding:0 16px 17px;
+  }
+
+  .salary-faq-answer p{
+    margin-top:14px;
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .faq-icon{
+    width:28px;
+    height:28px;
+    font-size:18px;
+  }
+
+}
+
+/* =======================================================
+   SALARY CONVERSION CHART — BLUE THEME
+======================================================= */
+
+.salary-chart{
+  width:100%;
+  margin-top:26px;
+
+  background:#ffffff;
+  border:1px solid #dbe7f5;
+  border-radius:14px;
+  overflow:hidden;
+
+  box-shadow:0 6px 20px rgba(30,64,175,.08);
+}
+
+
+/* =======================================================
+   CHART HEADER
+======================================================= */
+
+.salary-chart-header{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  align-items:center;
+
+  padding:16px 20px;
+
+  background:#eff6ff;
+  border-bottom:1px solid #dbe7f5;
+
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+
+  color:#1e40af;
+}
+
+
+/* =======================================================
+   CHART ROW
+======================================================= */
+
+.salary-chart-row{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  align-items:center;
+
+  padding:18px 20px;
+
+  background:#ffffff;
+  border-bottom:1px solid #edf2f7;
+
+  transition:
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+.salary-chart-row:last-child{
+  border-bottom:none;
+}
+
+
+/* =======================================================
+   HOVER
+======================================================= */
+
+.salary-chart-row:hover{
+  background:#f8fbff;
+  box-shadow:inset 3px 0 0 #2563eb;
+}
+
+
+/* =======================================================
+   ANNUAL SALARY
+======================================================= */
+
+.salary-chart-salary{
+  font-size:16px;
+  font-weight:700;
+  color:#172033;
+}
+
+
+/* =======================================================
+   HOURLY RATE — PRIMARY VALUE
+======================================================= */
+
+.salary-chart-hourly{
+  display:inline-flex;
+  align-items:baseline;
+  gap:5px;
+
+  font-size:17px;
+  font-weight:800;
+
+  color:#2563eb;
+}
+
+.salary-chart-hourly span{
+  font-size:12px;
+  font-weight:500;
+  color:#64748b;
+}
+
+
+/* =======================================================
+   MONTHLY PAY
+======================================================= */
+
+.salary-chart-monthly{
+  font-size:15px;
+  font-weight:600;
+  color:#334155;
+}
+
+
+/* =======================================================
+   MOBILE
+======================================================= */
+
+@media (max-width:600px){
+
+  .salary-chart{
+    margin-top:22px;
+    border-radius:12px;
+  }
+
+  .salary-chart-header{
+    grid-template-columns:1fr 1fr 1fr;
+    padding:13px 12px;
+
+    font-size:10px;
+    letter-spacing:.02em;
+  }
+
+  .salary-chart-row{
+    grid-template-columns:1fr 1fr 1fr;
+    padding:16px 12px;
+  }
+
+  .salary-chart-salary{
+    font-size:14px;
+  }
+
+  .salary-chart-hourly{
+    font-size:15px;
+    gap:3px;
+  }
+
+  .salary-chart-hourly span{
+    font-size:10px;
+  }
+
+  .salary-chart-monthly{
+    font-size:13px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+<!-- =========================================================
+     EXISTING SALARYPAYSLIP HEADER
+     
+     KEEP YOUR CURRENT HEADER CODE HERE EXACTLY.
+========================================================= -->
+
+
+<!-- =========================================================
+     PAGE
+========================================================= -->
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="calculator-hero">
+
+<h1>
+Salary to Hourly Calculator
+</h1>
+
+<p>
+Convert annual salary to hourly, daily, weekly, biweekly and
+monthly pay with our free salary conversion calculator. You can
+also convert hourly pay back to an annual salary.
+</p>
+
+</section>
+
+
+<!-- =======================================================
+     CALCULATOR
+======================================================= -->
+
+<section class="salary-tool"
+aria-label="Salary to Hourly Calculator">
+
+
+<div class="salary-tool-tabs">
+
+<button
+type="button"
+id="salaryModeButton"
+class="salary-tool-tab active"
+onclick="changeMode('salary')">
+
+Salary → Hourly
+
+</button>
+
+
+<button
+type="button"
+id="hourlyModeButton"
+class="salary-tool-tab"
+onclick="changeMode('hourly')">
+
+Hourly → Salary
+
+</button>
+
+</div>
+
+
+<div class="salary-tool-grid">
+
+
+<div class="salary-field">
+
+<label for="currency">
+Currency
+</label>
+
+<select id="currency">
+
+<option value="USD">USD $</option>
+<option value="EUR">EUR €</option>
+<option value="GBP">GBP £</option>
+<option value="CAD">CAD C$</option>
+<option value="AUD">AUD A$</option>
+<option value="NZD">NZD NZ$</option>
+
+<option value="CHF">CHF CHF</option>
+<option value="JPY">JPY ¥</option>
+<option value="CNY">CNY ¥</option>
+<option value="INR">INR ₹</option>
+<option value="PKR">PKR ₨</option>
+
+<option value="SGD">SGD S$</option>
+<option value="HKD">HKD HK$</option>
+
+<option value="SEK">SEK kr</option>
+<option value="NOK">NOK kr</option>
+<option value="DKK">DKK kr</option>
+
+<option value="PLN">PLN zł</option>
+
+<option value="AED">AED د.إ</option>
+<option value="SAR">SAR ﷼</option>
+
+<option value="ZAR">ZAR R</option>
+
+</select>
+
+</div>
+
+
+<div class="salary-field">
+
+<label id="amountLabel" for="amount">
+Annual Salary
+</label>
+
+<div class="salary-input-wrap">
+
+<span
+class="salary-input-symbol"
+id="currencySymbol">
+$
+</span>
+
+<input
+type="number"
+id="amount"
+min="0"
+step="0.01"
+placeholder="60000"
+inputmode="decimal">
+
+</div>
+
+</div>
+
+
+<div class="salary-field">
+
+<label for="hours">
+Hours per Week
+</label>
+
+<input
+type="number"
+id="hours"
+value="40"
+min="1"
+max="168"
+step="0.1">
+
+</div>
+
+
+<div class="salary-field">
+
+<label for="weeks">
+Weeks per Year
+</label>
+
+<input
+type="number"
+id="weeks"
+value="52"
+min="1"
+max="52"
+step="0.1">
+
+</div>
+
+
+</div>
+
+
+<button
+type="button"
+class="salary-calculate"
+onclick="calculateSalary()">
+
+Calculate
+
+</button>
+
+
+<!-- =====================================================
+     RESULTS
+===================================================== -->
+
+<div
+class="salary-results"
+id="salaryResults">
+
+<h2>
+Your Salary Conversion
+</h2>
+
+
+<div class="salary-results-grid">
+
+
+<div class="salary-result featured">
+
+<div class="salary-result-label">
+Hourly
+</div>
+
+<div
+class="salary-result-value"
+id="hourlyResult">
+$0.00
+</div>
+
+</div>
+
+
+<div class="salary-result">
+
+<div class="salary-result-label">
+Daily
+</div>
+
+<div
+class="salary-result-value"
+id="dailyResult">
+$0.00
+</div>
+
+</div>
+
+
+<div class="salary-result">
+
+<div class="salary-result-label">
+Weekly
+</div>
+
+<div
+class="salary-result-value"
+id="weeklyResult">
+$0.00
+</div>
+
+</div>
+
+
+<div class="salary-result">
+
+<div class="salary-result-label">
+Biweekly
+</div>
+
+<div
+class="salary-result-value"
+id="biweeklyResult">
+$0.00
+</div>
+
+</div>
+
+
+<div class="salary-result">
+
+<div class="salary-result-label">
+Monthly
+</div>
+
+<div
+class="salary-result-value"
+id="monthlyResult">
+$0.00
+</div>
+
+</div>
+
+
+<div class="salary-result">
+
+<div class="salary-result-label">
+Annual
+</div>
+
+<div
+class="salary-result-value"
+id="annualResult">
+$0.00
+</div>
+
+</div>
+
+
+</div>
+
+
+<div
+class="salary-formula-note"
+id="formulaNote">
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     SECTION 1
+======================================================= -->
+
+<section class="salary-content">
+
+<h2>
+Convert Annual Salary to Hourly Rate
+</h2>
+
+<p>
+Our annual salary to hourly rate calculator helps you estimate
+your hourly equivalent from a yearly salary. Enter your annual
+salary, average hours worked per week and number of working weeks
+per year to get an estimated hourly rate.
+</p>
+
+<p>
+For a standard full-time schedule, 40 hours per week and 52 weeks
+per year equals 2,080 working hours. You can change these values
+if your schedule is different.
+</p>
+
+</section>
+
+
+<!-- =======================================================
+     SECTION 2
+======================================================= -->
+
+<section class="salary-content">
+
+<h2>
+How to Calculate Hourly Rate From Salary
+</h2>
+
+<p>
+To calculate an hourly rate from an annual salary, divide the
+annual salary by the total number of working hours in a year.
+</p>
+
+<p>
+<strong>
+Hourly Rate = Annual Salary ÷ (Hours per Week × Weeks per Year)
+</strong>
+</p>
+
+<p>
+For other common pay conversions, you can use these formulas:
+</p>
+
+<p>
+<strong>
+Annual Salary → Hourly Rate:
+</strong>
+Annual Salary ÷ (Hours per Week × Weeks per Year)
+</p>
+
+<p>
+<strong>
+Hourly Rate → Annual Salary:
+</strong>
+Hourly Rate × Hours per Week × Weeks per Year
+</p>
+
+<p>
+<strong>
+Monthly Salary → Hourly Rate:
+</strong>
+(Monthly Salary × 12) ÷ (Hours per Week × Weeks per Year)
+</p>
+
+<p>
+<strong>
+Weekly Pay → Hourly Rate:
+</strong>
+Weekly Pay ÷ Hours per Week
+</p>
+
+<p>
+For example, if your annual salary is $60,000 and you work
+40 hours per week for 52 weeks, the calculation is:
+</p>
+
+<p>
+<strong>
+$60,000 ÷ (40 × 52) = $28.85 per hour
+</strong>
+</p>
+
+</section>
+
+
+<!-- =======================================================
+     SECTION 3
+======================================================= -->
+
+<section class="salary-content">
+
+<h2>
+Common Annual Salary to Hourly Rate Examples
+</h2>
+
+<p>
+The following salary-to-hourly conversions use 40 hours per week
+and 52 weeks per year.
+</p>
+
+
+<div class="salary-chart">
+
+<div class="salary-chart-header">
+
+<div>
+Annual Salary
+</div>
+
+<div>
+Hourly Rate
+</div>
+
+<div>
+Monthly Pay
+</div>
+
+</div>
+
+
+<div class="salary-chart-row">
+
+<div class="salary-chart-salary">
+$30,000
+</div>
+
+<div class="salary-chart-hourly">
+$14.42
+<span>/ hour</span>
+</div>
+
+<div class="salary-chart-monthly">
+$2,500.00
+</div>
+
+</div>
+
+
+<div class="salary-chart-row">
+
+<div class="salary-chart-salary">
+$40,000
+</div>
+
+<div class="salary-chart-hourly">
+$19.23
+<span>/ hour</span>
+</div>
+
+<div class="salary-chart-monthly">
+$3,333.33
+</div>
+
+</div>
+
+
+<div class="salary-chart-row">
+
+<div class="salary-chart-salary">
+$50,000
+</div>
+
+<div class="salary-chart-hourly">
+$24.04
+<span>/ hour</span>
+</div>
+
+<div class="salary-chart-monthly">
+$4,166.67
+</div>
+
+</div>
+
+
+<div class="salary-chart-row">
+
+<div class="salary-chart-salary">
+$60,000
+</div>
+
+<div class="salary-chart-hourly">
+$28.85
+<span>/ hour</span>
+</div>
+
+<div class="salary-chart-monthly">
+$5,000.00
+</div>
+
+</div>
+
+
+<div class="salary-chart-row">
+
+<div class="salary-chart-salary">
+$70,000
+</div>
+
+<div class="salary-chart-hourly">
+$33.65
+<span>/ hour</span>
+</div>
+
+<div class="salary-chart-monthly">
+$5,833.33
+</div>
+
+</div>
+
+
+<div class="salary-chart-row">
+
+<div class="salary-chart-salary">
+$75,000
+</div>
+
+<div class="salary-chart-hourly">
+$36.06
+<span>/ hour</span>
+</div>
+
+<div class="salary-chart-monthly">
+$6,250.00
+</div>
+
+</div>
+
+
+<div class="salary-chart-row">
+
+<div class="salary-chart-salary">
+$80,000
+</div>
+
+<div class="salary-chart-hourly">
+$38.46
+<span>/ hour</span>
+</div>
+
+<div class="salary-chart-monthly">
+$6,666.67
+</div>
+
+</div>
+
+
+<div class="salary-chart-row">
+
+<div class="salary-chart-salary">
+$100,000
+</div>
+
+<div class="salary-chart-hourly">
+$48.08
+<span>/ hour</span>
+</div>
+
+<div class="salary-chart-monthly">
+$8,333.33
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     SECTION 4
+======================================================= -->
+
+<section class="salary-content">
+
+<h2>
+Hourly to Salary Calculator
+</h2>
+
+<p>
+You can also use this calculator to convert an hourly rate into
+an estimated annual salary. Select <strong>Hourly → Salary</strong>,
+enter your hourly rate, and provide your expected hours per week
+and working weeks per year.
+</p>
+
+<p>
+The annual salary formula is:
+</p>
+
+<p>
+<strong>
+Annual Salary = Hourly Rate × Hours per Week × Weeks per Year
+</strong>
+</p>
+
+<p>
+For example, $25 per hour at 40 hours per week for 52 weeks equals
+$52,000 in annual gross pay.
+</p>
+
+</section>
+
+
+<!-- =======================================================
+     SECTION 5
+======================================================= -->
+
+<section class="salary-content">
+
+<h2>
+Salary and Hourly Pay Conversion
+</h2>
+
+<p>
+A salary and an hourly wage describe compensation in different
+ways. An annual salary provides a yearly amount, while an hourly
+rate shows the equivalent amount for each hour worked.
+</p>
+
+<p>
+The actual equivalent can change when your working schedule
+changes. That is why this calculator lets you customize hours
+per week and weeks per year instead of forcing a single schedule.
+</p>
+
+</section>
+
+
+<!-- =======================================================
+     SECTION 6
+======================================================= -->
+
+<section class="salary-content">
+
+<h2>
+What This Salary Calculator Does Not Include
+</h2>
+
+<ul>
+
+<li>Federal or state income taxes</li>
+
+<li>Payroll taxes</li>
+
+<li>Benefits or insurance deductions</li>
+
+<li>Bonuses or commissions</li>
+
+<li>Overtime premiums</li>
+
+<li>Unpaid vacation or leave</li>
+
+<li>Take-home pay</li>
+
+</ul>
+
+<p>
+The calculator provides a gross salary-to-hourly conversion based
+on the values entered by the user.
+</p>
+
+</section>
+
+
+<!-- =======================================================
+     FAQ / PAA
+======================================================= -->
+
+<section class="salary-content salary-faq-section">
+
+<h2>
+Frequently Asked Questions About Salary to Hourly Conversion
+</h2>
+
+<div class="salary-faq-widget">
+
+
+<details class="salary-faq-item">
+<summary>
+<span>How do I calculate my hourly rate from my annual salary?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+Divide your annual salary by your total working hours per year.
+For example, $60,000 divided by 2,080 hours equals approximately
+$28.85 per hour.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>How do I convert annual salary to hourly pay?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+Divide your annual salary by your hours per week multiplied by
+your weeks per year. The calculator performs this calculation
+automatically.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>What is $50,000 a year per hour?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+Using 40 hours per week and 52 weeks per year, a $50,000 annual
+salary is approximately $24.04 per hour.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>What is $60,000 a year per hour?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+Using 40 hours per week and 52 weeks per year, a $60,000 annual
+salary is approximately $28.85 per hour.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>What is $75,000 a year per hour?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+Using 40 hours per week and 52 weeks per year, a $75,000 annual
+salary is approximately $36.06 per hour.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>What is $100,000 a year per hour?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+Using 40 hours per week and 52 weeks per year, a $100,000 annual
+salary is approximately $48.08 per hour.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>How much is $15 an hour per year?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+At 40 hours per week and 52 weeks per year, $15 per hour equals
+approximately $31,200 in annual gross pay.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>How much is $20 an hour per year?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+At 40 hours per week and 52 weeks per year, $20 per hour equals
+approximately $41,600 in annual gross pay.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>How much is $25 an hour per year?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+At 40 hours per week and 52 weeks per year, $25 per hour equals
+approximately $52,000 in annual gross pay.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>How much is $30 an hour per year?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+At 40 hours per week and 52 weeks per year, $30 per hour equals
+approximately $62,400 in annual gross pay.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>How many working hours are in a year?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+A common full-time calculation uses 2,080 hours per year based
+on 40 hours per week multiplied by 52 weeks.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>Can I use this salary to hourly calculator outside the United States?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+Yes. The calculator can be used worldwide. You can enter the
+currency you want to display and customize your hours per week
+and weeks per year.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>Does the calculator calculate take-home pay?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+No. It calculates gross pay equivalents and does not subtract
+taxes or other payroll deductions.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>Can I calculate annual salary from an hourly rate?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+Yes. Select Hourly → Salary and enter your hourly rate, hours per
+week and weeks per year to calculate estimated annual gross pay.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>What is 2,080 hours a year?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+2,080 hours is a common full-time work-year calculation based on
+40 hours per week multiplied by 52 weeks per year. This standard
+is often used when converting an annual salary to an hourly rate.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>How does unpaid time off affect my hourly rate?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+Unpaid time off can increase your effective hourly rate because you
+work fewer paid weeks during the year. Enter the number of weeks
+you actually expect to work in the calculator for a more accurate
+salary-to-hourly conversion.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>How much is $40 an hour per year?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+At 40 hours per week and 52 weeks per year, $40 per hour equals
+$83,200 in annual gross pay.
+</p>
+</div>
+</details>
+
+
+<details class="salary-faq-item">
+<summary>
+<span>How much is $50 an hour per year?</span>
+<span class="faq-icon">+</span>
+</summary>
+<div class="salary-faq-answer">
+<p>
+At 40 hours per week and 52 weeks per year, $50 per hour equals
+$104,000 in annual gross pay.
+</p>
+</div>
+</details>
+
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     RELATED SALARYPAYSLIP CTA
+======================================================= -->
+
+<section class="salary-content">
+
+<h2>
+Need a Professional Payslip?
+</h2>
+
+<p>
+Use the SalaryPayslip generator to create a free PDF salary payslip online.
+</p>
+
+<p>
+<a href="https://www.salarypayslip.com/salary-slip-generator/">
+Create a Salary Payslip
+</a>
+</p>
+
+</section>
+
+
+</div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+  <div class="footer-bottom">
+
+  <div class="footer-links">
+   <a href="../../about-us.html">About Us</a>
+    <span>|</span>
+
+    <a href="../../editorial-policy.html">Editorial Policy</a>
+    <span>|</span>
+
+    <a href="../../salary-research-methodology.html">Salary Research Methodology</a>
+    <span>|</span>
+
+    <a href="../../privacy.html">Privacy Policy</a>
+    <span>|</span>
+
+    <a href="../../cookie-policy.html">Cookie Policy</a>
+    <span>|</span>
+
+    <a href="../../disclaimer.html">Disclaimer</a>
+    <span>|</span>
+
+    <a href="../../terms.html">Terms & Conditions</a>
+    <span>|</span>
+
+    <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
+    <span>|</span>
+
+    <a href="../../contact-us.html">Contact Us</a>
+  </div>
+
+  <p>© 2026 SalaryPayslip. All Rights Reserved.</p>
+  <p>Last Updated: 2026</p>
+
+</div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+let calculatorMode = "salary";
+
+
+/* =========================================================
+   CURRENCY SETTINGS
+========================================================= */
+
+const currencySymbols = {
+
+    USD: "$",
+    EUR: "€",
+    GBP: "£",
+    CAD: "C$",
+    AUD: "A$",
+    NZD: "NZ$",
+
+    CHF: "CHF",
+    JPY: "¥",
+    CNY: "¥",
+    INR: "₹",
+    PKR: "₨",
+
+    SGD: "S$",
+    HKD: "HK$",
+
+    SEK: "kr",
+    NOK: "kr",
+    DKK: "kr",
+
+    PLN: "zł",
+
+    AED: "د.إ",
+    SAR: "﷼",
+
+    ZAR: "R"
+
+};
+
+
+/* =========================================================
+   CHANGE MODE
+========================================================= */
+
+function changeMode(mode){
+
+    calculatorMode = mode;
+
+    const salaryButton =
+        document.getElementById("salaryModeButton");
+
+    const hourlyButton =
+        document.getElementById("hourlyModeButton");
+
+    const amountLabel =
+        document.getElementById("amountLabel");
+
+    const amount =
+        document.getElementById("amount");
+
+    document
+        .getElementById("salaryResults")
+        .classList.remove("show");
+
+
+    if(mode === "salary"){
+
+        salaryButton.classList.add("active");
+        hourlyButton.classList.remove("active");
+
+        amountLabel.textContent =
+            "Annual Salary";
+
+        amount.placeholder =
+            "60000";
+
+    }else{
+
+        hourlyButton.classList.add("active");
+        salaryButton.classList.remove("active");
+
+        amountLabel.textContent =
+            "Hourly Rate";
+
+        amount.placeholder =
+            "25";
+
+    }
+
+}
+
+
+/* =========================================================
+   CURRENCY CHANGE
+========================================================= */
+
+document
+    .getElementById("currency")
+    .addEventListener("change", function(){
+
+        const currencyCode = this.value;
+
+        document
+            .getElementById("currencySymbol")
+            .textContent =
+            currencySymbols[currencyCode] || "$";
+
+    });
+
+
+/* =========================================================
+   FORMAT MONEY
+========================================================= */
+
+function formatMoney(value, symbol){
+
+    return symbol +
+        value.toLocaleString(
+            undefined,
+            {
+                minimumFractionDigits:2,
+                maximumFractionDigits:2
+            }
+        );
+
+}
+
+
+/* =========================================================
+   CALCULATE SALARY
+========================================================= */
+
+function calculateSalary(){
+
+    const amount =
+        parseFloat(
+            document.getElementById("amount").value
+        );
+
+    const hours =
+        parseFloat(
+            document.getElementById("hours").value
+        );
+
+    const weeks =
+        parseFloat(
+            document.getElementById("weeks").value
+        );
+
+    const currencyCode =
+        document.getElementById("currency").value;
+
+    const symbol =
+        currencySymbols[currencyCode] || "$";
+
+
+    /* =====================================================
+       VALIDATION
+    ===================================================== */
+
+    if(
+        !Number.isFinite(amount) ||
+        amount < 0 ||
+        !Number.isFinite(hours) ||
+        hours <= 0 ||
+        !Number.isFinite(weeks) ||
+        weeks <= 0
+    ){
+
+        alert("Please enter valid values.");
+
+        return;
+
+    }
+
+
+    /* =====================================================
+       SALARY / HOURLY CALCULATION
+    ===================================================== */
+
+    let annualSalary;
+    let hourlyRate;
+
+
+    if(calculatorMode === "salary"){
+
+        annualSalary = amount;
+
+        hourlyRate =
+            annualSalary /
+            (hours * weeks);
+
+    }else{
+
+        hourlyRate = amount;
+
+        annualSalary =
+            hourlyRate *
+            hours *
+            weeks;
+
+    }
+
+
+    /* =====================================================
+       PAY PERIOD CALCULATIONS
+    ===================================================== */
+
+    const weeklyPay =
+        annualSalary / weeks;
+
+    const biweeklyPay =
+        weeklyPay * 2;
+
+    const monthlyPay =
+        annualSalary / 12;
+
+
+    /*
+       Daily estimate uses a five-day workweek.
+       This is a simple gross-pay estimate.
+    */
+
+    const dailyPay =
+        weeklyPay / 5;
+
+
+    /* =====================================================
+       DISPLAY RESULTS
+    ===================================================== */
+
+    document
+        .getElementById("hourlyResult")
+        .textContent =
+        formatMoney(hourlyRate, symbol);
+
+
+    document
+        .getElementById("dailyResult")
+        .textContent =
+        formatMoney(dailyPay, symbol);
+
+
+    document
+        .getElementById("weeklyResult")
+        .textContent =
+        formatMoney(weeklyPay, symbol);
+
+
+    document
+        .getElementById("biweeklyResult")
+        .textContent =
+        formatMoney(biweeklyPay, symbol);
+
+
+    document
+        .getElementById("monthlyResult")
+        .textContent =
+        formatMoney(monthlyPay, symbol);
+
+
+    document
+        .getElementById("annualResult")
+        .textContent =
+        formatMoney(annualSalary, symbol);
+
+
+    /* =====================================================
+       FORMULA NOTE
+    ===================================================== */
+
+    if(calculatorMode === "salary"){
+
+        document
+            .getElementById("formulaNote")
+            .textContent =
+            "Hourly Rate = Annual Salary ÷ (Hours per Week × Weeks per Year).";
+
+    }else{
+
+        document
+            .getElementById("formulaNote")
+            .textContent =
+            "Annual Salary = Hourly Rate × Hours per Week × Weeks per Year.";
+
+    }
+
+
+    /* =====================================================
+       SHOW RESULTS
+    ===================================================== */
+
+    document
+        .getElementById("salaryResults")
+        .classList.add("show");
+
+
+    document
+        .getElementById("salaryResults")
+        .scrollIntoView({
+            behavior:"smooth",
+            block:"nearest"
+        });
+
+}
+
+
+/* =========================================================
+   ENTER KEY
+========================================================= */
+
+document
+    .getElementById("amount")
+    .addEventListener("keydown", function(event){
+
+        if(event.key === "Enter"){
+
+            calculateSalary();
+
+        }
+
+    });
+
+</script>
+
+
+<!-- =========================================================
+     FAQ SCHEMA
+========================================================= -->
+
+<script type="application/ld+json">
+
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+
+    {
+      "@type":"Question",
+      "name":"How do I calculate my hourly rate from my annual salary?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Divide your annual salary by your total working hours per year. For example, $60,000 divided by 2,080 hours equals approximately $28.85 per hour."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"How do I convert annual salary to hourly pay?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Divide your annual salary by your hours per week multiplied by your weeks per year."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"What is $50,000 a year per hour?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Using 40 hours per week and 52 weeks per year, a $50,000 annual salary is approximately $24.04 per hour."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"What is $60,000 a year per hour?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Using 40 hours per week and 52 weeks per year, a $60,000 annual salary is approximately $28.85 per hour."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"What is $75,000 a year per hour?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Using 40 hours per week and 52 weeks per year, a $75,000 annual salary is approximately $36.06 per hour."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"What is $100,000 a year per hour?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Using 40 hours per week and 52 weeks per year, a $100,000 annual salary is approximately $48.08 per hour."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"How much is $15 an hour per year?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"At 40 hours per week and 52 weeks per year, $15 per hour equals approximately $31,200 in annual gross pay."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"How much is $20 an hour per year?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"At 40 hours per week and 52 weeks per year, $20 per hour equals approximately $41,600 in annual gross pay."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"How much is $25 an hour per year?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"At 40 hours per week and 52 weeks per year, $25 per hour equals approximately $52,000 in annual gross pay."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"How much is $30 an hour per year?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"At 40 hours per week and 52 weeks per year, $30 per hour equals approximately $62,400 in annual gross pay."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"How many working hours are in a year?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A common full-time calculation uses 2,080 hours per year based on 40 hours per week multiplied by 52 weeks."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"Can I use this salary to hourly calculator outside the United States?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. The calculator can be used worldwide. Users can customize the currency display, hours per week and weeks per year."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"Does the calculator calculate take-home pay?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. It calculates gross pay equivalents and does not subtract taxes or other payroll deductions."
+      }
+    },
+
+    {
+      "@type":"Question",
+      "name":"Can I calculate annual salary from an hourly rate?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. Select Hourly to Salary and enter the hourly rate, hours per week and weeks per year to calculate estimated annual gross pay."
+      }
+    },
+   
+     {
+      "@type": "Question",
+      "name": "What is 2,080 hours a year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2,080 hours is a common full-time work-year calculation based on 40 hours per week multiplied by 52 weeks per year. This standard is often used when converting an annual salary to an hourly rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does unpaid time off affect my hourly rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unpaid time off can increase your effective hourly rate because you work fewer paid weeks during the year. Enter the number of weeks you actually expect to work in the calculator for a more accurate salary-to-hourly conversion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is $40 an hour per year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 40 hours per week and 52 weeks per year, $40 per hour equals $83,200 in annual gross pay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is $50 an hour per year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 40 hours per week and 52 weeks per year, $50 per hour equals $104,000 in annual gross pay."
+      }
+    }  
+
+  ]
+}
+
+</script>
+
+
+<!-- =========================================================
+     WEB APPLICATION SCHEMA
+========================================================= -->
+
+<script type="application/ld+json">
+
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Salary to Hourly Calculator",
+  "url":"https://salarypayslip.com/salary-to-hourly-calculator/",
+  "applicationCategory":"FinanceApplication",
+  "operatingSystem":"All",
+  "browserRequirements":"Requires JavaScript enabled",
+  "description":"Free salary to hourly and hourly to salary calculator for converting gross pay between hourly, daily, weekly, biweekly, monthly and annual amounts.",
+  "offers":{
+    "@type":"Offer",
+    "price":"0",
+    "priceCurrency":"USD"
+  }
+}
+
+</script>
+
+</body>
+</html>
