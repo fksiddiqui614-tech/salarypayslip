@@ -959,3 +959,153 @@ nav{
 .mega-column a:hover{
     color:#2563eb;
 }
+
+/* =======================================================
+   CALCULATORS NAVBAR WIDGET
+======================================================= */
+
+.nav-calculators{
+  position:relative;
+  display:inline-block;
+}
+
+
+.nav-calculators-button{
+  display:flex;
+  align-items:center;
+  gap:6px;
+
+  border:none;
+  background:transparent;
+
+  font:inherit;
+  color:inherit;
+
+  cursor:pointer;
+  padding:0;
+
+  transition:color .2s ease;
+}
+
+
+.nav-calculators-button:hover{
+  color:#2563eb;
+}
+
+
+.nav-calculators-arrow{
+  font-size:12px;
+  transition:transform .2s ease;
+}
+
+
+/* =======================================================
+   DROPDOWN
+======================================================= */
+
+.nav-calculators-menu{
+  position:absolute;
+
+  top:calc(100% + 14px);
+  right:0;
+
+  width:300px;
+
+  background:#ffffff;
+
+  border:1px solid #dbe7f5;
+  border-radius:12px;
+
+  box-shadow:
+    0 12px 30px rgba(15,23,42,.12);
+
+  padding:8px;
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translateY(-6px);
+
+  transition:
+    opacity .2s ease,
+    visibility .2s ease,
+    transform .2s ease;
+
+  z-index:1000;
+}
+
+
+/* OPEN */
+
+.nav-calculators-menu.show{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+
+/* =======================================================
+   CALCULATOR ITEM
+======================================================= */
+
+.nav-calculators-menu a{
+  display:block;
+
+  padding:13px 14px;
+
+  text-decoration:none;
+
+  border-radius:9px;
+
+  color:#172033;
+
+  transition:
+    background .2s ease,
+    color .2s ease;
+}
+
+
+.nav-calculators-menu a:hover{
+  background:#eff6ff;
+  color:#2563eb;
+}
+
+
+.nav-calculators-menu strong{
+  display:block;
+
+  font-size:14px;
+  font-weight:700;
+
+  margin-bottom:4px;
+}
+
+
+.nav-calculators-menu span{
+  display:block;
+
+  font-size:12px;
+  line-height:1.5;
+
+  color:#64748b;
+}
+
+
+/* =======================================================
+   MOBILE
+======================================================= */
+
+@media (max-width:700px){
+
+  .nav-calculators-menu{
+    width:260px;
+    right:auto;
+    left:50%;
+    transform:translate(-50%,-6px);
+  }
+
+  .nav-calculators-menu.show{
+    transform:translate(-50%,0);
+  }
+
+}
