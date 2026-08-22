@@ -806,7 +806,28 @@
   <changefreq>yearly</changefreq>
   <priority>0.3</priority>
   </url>
+      
+  <url>
+    <loc>https://www.salarypayslip.com/global-salary-data-policy.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+   </url>
 
+   <url>
+    <loc>https://www.salarypayslip.com/pricing.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/features.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+   </url>
+      
   <url>
   <loc>https://www.salarypayslip.com/contact-us.html</loc>
   <lastmod>2026-07-11</lastmod>
