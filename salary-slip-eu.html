@@ -36,307 +36,1969 @@ CSS START
 
 <style>
 
-/* RESET */
+:root{
+
+
+/* ==========================================
+COLOR PALETTE
+========================================== */
+
+
+--primary:#0b5ed7;
+
+--primary-dark:#084298;
+
+--primary-light:#eaf3ff;
+
+
+--secondary:#2563eb;
+
+
+--white:#ffffff;
+
+--background:#f5f9ff;
+
+--surface:#ffffff;
+
+--surface-light:#f8fbff;
+
+
+
+/* ==========================================
+TEXT
+========================================== */
+
+
+--text:#1f2937;
+
+--text-light:#6b7280;
+
+
+
+/* ==========================================
+BORDER
+========================================== */
+
+
+--border:#d9e6ff;
+
+
+
+/* ==========================================
+STATUS COLORS
+========================================== */
+
+
+--success:#198754;
+
+--warning:#fd7e14;
+
+--danger:#dc3545;
+
+
+
+/* ==========================================
+SHADOWS
+========================================== */
+
+
+--shadow-sm:0 4px 12px rgba(0,0,0,.05);
+
+--shadow:0 10px 30px rgba(0,0,0,.08);
+
+--shadow-lg:0 20px 50px rgba(11,94,215,.12);
+
+
+
+/* ==========================================
+RADIUS
+========================================== */
+
+
+--radius:18px;
+
+--radius-sm:12px;
+
+--radius-lg:24px;
+
+
+
+/* ==========================================
+LAYOUT
+========================================== */
+
+
+--container:1200px;
+
+
+
+/* ==========================================
+TRANSITIONS
+========================================== */
+
+
+--transition:.25s ease;
+
+
+}
+
+
+
+/* ==========================================
+RESET
+========================================== */
+
 
 *{
+
 margin:0;
+
 padding:0;
+
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+
 }
+
+
+
+html{
+
+scroll-behavior:smooth;
+
+-webkit-text-size-adjust:100%;
+
+}
+
+
 
 body{
-background:#f6f8fb;
-color:#222;
-line-height:1.7;
+
+font-family:
+Inter,
+system-ui,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+Arial,
+sans-serif;
+
+
+background:var(--background);
+
+
+color:var(--text);
+
+
+font-size:16px;
+
+
+line-height:1.75;
+
+
+letter-spacing:.2px;
+
+
+overflow-x:hidden;
+
+
+text-rendering:optimizeLegibility;
+
+
+-webkit-font-smoothing:antialiased;
+
+
+-moz-osx-font-smoothing:grayscale;
+
+
 }
 
-/* CONTAINER */
+
+
+/* ==========================================
+TYPOGRAPHY
+========================================== */
+
+
+h1,
+h2,
+h3,
+h4{
+
+
+font-weight:700;
+
+
+line-height:1.3;
+
+
+color:var(--text);
+
+
+margin-bottom:18px;
+
+
+scroll-margin-top:90px;
+
+
+text-wrap:balance;
+
+
+}
+
+
+
+h1{
+
+
+font-size:clamp(2rem,5vw,3.3rem);
+
+
+font-weight:800;
+
+
+}
+
+
+
+h2{
+
+
+font-size:clamp(1.6rem,4vw,2.4rem);
+
+
+font-weight:800;
+
+
+}
+
+
+
+h3{
+
+
+font-size:1.25rem;
+
+
+}
+
+
+
+h4{
+
+
+font-size:1.05rem;
+
+
+}
+
+
+
+p{
+
+
+margin-bottom:18px;
+
+
+color:var(--text-light);
+
+
+max-width:none;
+
+
+}
+
+
+
+a{
+
+
+color:var(--primary);
+
+
+text-decoration:none;
+
+
+transition:color var(--transition);
+
+
+}
+
+
+
+a:hover{
+
+
+color:var(--primary-dark);
+
+
+}
+
+
+
+strong{
+
+
+font-weight:700;
+
+
+color:var(--text);
+
+
+}
+
+
+
+small{
+
+
+font-size:.875rem;
+
+
+color:var(--text-light);
+
+
+}
+
+
+
+/* ==========================================
+MEDIA
+========================================== */
+
+
+img{
+
+
+display:block;
+
+
+max-width:100%;
+
+
+height:auto;
+
+
+border-radius:12px;
+
+
+}
+
+/* ==========================================
+TEXT SELECTION
+========================================== */
+
+::selection{
+
+background:var(--primary);
+
+color:#ffffff;
+
+}
+
+
+
+/* ==========================================
+LAYOUT
+========================================== */
+
 
 .container{
-width:92%;
-max-width:1200px;
-margin:auto;
+
+width:min(94%,var(--container));
+
+margin-inline:auto;
+
 }
 
-/* HEADER */
 
-header{
-background:#0b3d91;
-padding:18px 0;
-color:#fff;
+
+.section{
+
+padding:80px 0;
+
 }
 
-/* LOGO */
 
-.logo{
-font-size:24px;
-font-weight:700;
-}
 
-/* NAV */
+.section-title{
 
-nav{
-margin-top:10px;
-}
+max-width:900px;
 
-nav a{
-color:#fff;
-margin-right:18px;
-font-size:14px;
-text-decoration:none;
-transition:.3s;
-}
+margin:0 auto 20px;
 
-nav a:hover{
-opacity:.8;
-}
-
-/* HERO */
-
-.hero{
-padding:70px 0;
-background:linear-gradient(135deg,#0b3d91,#1a73e8);
-color:#fff;
 text-align:center;
+
+font-size:clamp(1.9rem,4vw,2.7rem);
+
+font-weight:800;
+
+color: #00398b;
+
+line-height:1.25;
+
 }
 
-.hero h1{
-font-size:38px;
-margin-bottom:18px;
-line-height:1.3;
-}
 
-.hero p{
-max-width:850px;
-margin:auto;
-font-size:17px;
-line-height:1.8;
-}
 
-/* BUTTON */
+/* ==========================================
+GRID
+========================================== */
 
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 28px;
-background:#ffcc00;
-color:#000;
-font-weight:bold;
-border-radius:8px;
-text-decoration:none;
-transition:.3s;
-}
 
-.btn:hover{
-transform:translateY(-2px);
-}
+.grid{
 
-/* FEATURE CARDS */
-
-.feature-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:18px;
-margin-top:45px;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:28px;
+
+align-items:stretch;
+
 }
 
-.feature-card{
-background:rgba(255,255,255,.15);
-padding:22px;
-border-radius:14px;
-backdrop-filter:blur(5px);
+
+
+/* ==========================================
+CARD
+========================================== */
+
+
+.card{
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:30px;
+
+box-shadow:var(--shadow-sm);
+
+transition:
+transform var(--transition),
+box-shadow var(--transition),
+border-color var(--transition);
+
+height:100%;
+
 }
 
-.feature-card h3{
-font-size:18px;
-margin-bottom:10px;
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-lg);
+
+border-color:rgba(11,94,215,.25);
+
 }
 
-.feature-card p{
-font-size:14px;
-line-height:1.6;
+
+
+.card h3{
+
+color:var(--primary);
+
+margin-bottom:12px;
+
 }
+
+
+
+.card p:last-child{
+
+margin-bottom:0;
+
+}
+
+
+
+/* ==========================================
+RESPONSIVE LAYOUT
+========================================== */
+
 
 @media(max-width:768px){
 
-.hero h1{
-font-size:30px;
-}
 
-.hero p{
-font-size:15px;
-}
+.section{
+
+padding:60px 0;
 
 }
 
-.article-meta{
 
-display:flex;
+.grid{
 
-justify-content:center;
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+
+.card{
+
+padding:22px;
+
+}
+
+
+.section-title{
+
+margin-bottom:18px;
+
+}
+
+
+.section > .container > p:first-of-type{
+
+margin-bottom:35px;
+
+}
+
+
+}
+
+
+
+
+/* ==========================================
+BUTTONS
+========================================== */
+
+
+.btn{
+
+display:inline-flex;
 
 align-items:center;
 
-gap:25px;
+justify-content:center;
+
+gap:8px;
+
+padding:14px 28px;
+
+border:none;
+
+border-radius:var(--radius-sm);
+
+font-weight:700;
+
+font-size:1rem;
+
+text-decoration:none;
+
+cursor:pointer;
+
+transition:all var(--transition);
+
+}
+
+
+
+.btn-primary{
+
+background:var(--primary);
+
+color:#fff;
+
+box-shadow:var(--shadow-sm);
+
+}
+
+
+
+.btn-primary:hover{
+
+background:var(--primary-dark);
+
+color:#fff;
+
+transform:translateY(-2px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.btn-outline{
+
+background:transparent;
+
+border:2px solid rgba(255,255,255,.85);
+
+color:#fff;
+
+}
+
+
+
+.btn-outline:hover{
+
+background:#fff;
+
+color:var(--primary);
+
+transform:translateY(-2px);
+
+}
+
+
+
+/* ==========================================
+TABLES
+========================================== */
+
+
+.table-wrapper{
+
+overflow-x:auto;
+
+margin-top:28px;
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow-sm);
+
+-webkit-overflow-scrolling:touch;
+
+}
+
+
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+background:var(--surface);
+
+overflow:hidden;
+
+}
+
+
+
+thead{
+
+background:var(--primary);
+
+color:#fff;
+
+}
+
+
+
+th{
+
+padding:16px 18px;
+
+text-align:left;
+
+font-weight:700;
+
+white-space:nowrap;
+
+}
+
+
+
+td{
+
+padding:16px 18px;
+
+border-bottom:1px solid var(--border);
+
+vertical-align:top;
+
+}
+
+
+
+tbody tr{
+
+transition:background var(--transition);
+
+}
+
+
+
+tbody tr:hover{
+
+background:var(--surface-light);
+
+}
+
+
+
+tbody tr:last-child td{
+
+border-bottom:none;
+
+}
+
+
+
+/* ==========================================
+LISTS
+========================================== */
+
+
+ul{
+
+padding-left:22px;
+
+margin-bottom:20px;
+
+}
+
+
+
+li{
+
+margin-bottom:12px;
+
+color:var(--text-light);
+
+}
+
+
+
+li::marker{
+
+color:var(--primary);
+
+}
+
+
+
+/* ==========================================
+UTILITY
+========================================== */
+
+
+.text-center{
+
+text-align:center;
+
+}
+
+
+.mt-20{
+
+margin-top:20px;
+
+}
+
+
+.mt-40{
+
+margin-top:40px;
+
+}
+
+
+.mb-40{
+
+margin-bottom:40px;
+
+}
+
+
+.mb-20{
+
+margin-bottom:20px;
+
+}
+
+
+.w-100{
+
+width:100%;
+
+}
+
+/* ==========================================
+HERO
+========================================== */
+
+.hero{
+
+position:relative;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+135deg,
+#001f4d 0%,
+#032b81 55%,
+#adadad 100%
+);
+
+color:#fff;
+
+padding:90px 0;
+
+}
+
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+radial-gradient(circle at top right,
+rgba(255,255,255,.12),
+transparent 45%);
+
+pointer-events:none;
+
+}
+
+
+
+.hero .container{
+
+position:relative;
+
+z-index:2;
+
+max-width:1000px;
+
+}
+
+
+
+.breadcrumb{
+
+display:flex;
 
 flex-wrap:wrap;
 
-margin:18px 0 28px;
+align-items:center;
 
-font-size:14px;
+gap:8px;
 
-color:#e8f1ff;
+margin-bottom:28px;
+
+font-size:.95rem;
+
+}
+
+
+
+.breadcrumb a{
+
+color:#dbeafe;
+
+font-weight:500;
 
 }
 
-.article-meta span{
 
-background:rgba(255,255,255,.12);
 
-padding:8px 14px;
+.breadcrumb a:hover{
 
-border-radius:30px;
-
-backdrop-filter:blur(6px);
+color:#ffffff;
 
 }
+
+
+
+.breadcrumb span{
+
+color:#ffffff;
+
+}
+
+
+
+.category-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:8px 18px;
+
+background:#ffffff;
+
+color:var(--primary);
+
+border-radius:999px;
+
+font-size:.85rem;
+
+font-weight:700;
+
+margin-bottom:22px;
+
+box-shadow:var(--shadow-sm);
+
+}
+
+
+
+.hero h1{
+
+color:#ffffff;
+
+margin-bottom:22px;
+
+text-wrap:balance;
+
+font-weight:800;
+
+}
+
+
+
+.hero-description{
+
+max-width:850px;
+
+font-size:1.1rem;
+
+line-height:1.8;
+
+color:#eef4ff;
+
+margin-bottom:0;
+
+}
+
+
+
+/* ==========================================
+AUTHOR BOX
+========================================== */
+
+
+.author-box{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:18px;
+
+margin-top:42px;
+
+}
+
+
+
+.author-item{
+
+background:rgba(255,255,255,.14);
+
+backdrop-filter:blur(12px);
+
+-webkit-backdrop-filter:blur(12px);
+
+padding:20px;
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,.25);
+
+transition:
+
+transform var(--transition),
+
+background var(--transition);
+
+}
+
+
+
+.author-item:hover{
+
+transform:translateY(-4px);
+
+background:rgba(255,255,255,.18);
+
+}
+
+
+
+.author-item strong{
+
+display:block;
+
+margin-bottom:8px;
+
+font-size:.9rem;
+
+font-weight:700;
+
+color:#ffffff;
+
+}
+
+
+
+.author-item span,
+.author-item time{
+
+font-size:.95rem;
+
+color:#eef4ff;
+
+}
+
+
+
+/* ==========================================
+HERO BUTTONS
+========================================== */
+
+
+.hero-buttons{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:16px;
+
+margin-top:36px;
+
+}
+
+
+
+/* ==========================================
+QUICK HIGHLIGHTS
+========================================== */
+
+
+.quick-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:26px;
+
+}
+
+
+
+.quick-card{
+
+height:100%;
+
+padding:26px;
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow-sm);
+
+transition:
+
+transform var(--transition),
+
+box-shadow var(--transition);
+
+}
+
+
+
+.quick-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.quick-card h3{
+
+margin-bottom:12px;
+
+color:var(--primary);
+
+}
+
+
+
+.quick-card p:last-child{
+
+margin-bottom:0;
+
+}
+
+
+
+/* ==========================================
+TABLE OF CONTENTS
+========================================== */
+
+
+.toc{
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:32px;
+
+box-shadow:var(--shadow-sm);
+
+position:relative;
+
+}
+
+
+
+.toc::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+height:100%;
+
+width:5px;
+
+background:var(--primary);
+
+border-radius:
+
+var(--radius)
+
+0
+
+0
+
+var(--radius);
+
+}
+
+
+
+.toc ul{
+
+list-style:none;
+
+padding:0;
+
+columns:2;
+
+column-gap:45px;
+
+}
+
+
+
+.toc li{
+
+margin-bottom:14px;
+
+break-inside:avoid;
+
+}
+
+
+
+.toc a{
+
+font-weight:600;
+
+color:var(--primary);
+
+transition:color var(--transition);
+
+}
+
+
+
+.toc a:hover{
+
+color:var(--primary-dark);
+
+}
+
+
+
+/* ==========================================
+SALARY DASHBOARD
+========================================== */
+
+
+.dashboard{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:24px;
+
+}
+
+
+
+.dashboard-card{
+
+background:var(--surface);
+
+padding:28px;
+
+border-radius:var(--radius);
+
+border:1px solid var(--border);
+
+text-align:center;
+
+box-shadow:var(--shadow-sm);
+
+transition:
+
+transform var(--transition),
+
+box-shadow var(--transition);
+
+}
+
+
+
+.dashboard-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.dashboard-card h3{
+
+color:var(--primary);
+
+margin-bottom:12px;
+
+font-weight:800;
+
+}
+
+
+
+.dashboard-card p{
+
+margin-bottom:0;
+
+}
+
+
+
+/* ==========================================
+RESPONSIVE TABLET
+========================================== */
+
+
+@media(max-width:992px){
+
+
+.toc ul{
+
+columns:1;
+
+}
+
+
+}
+
+/* ==========================================
+SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+body{
+
+font-size:15px;
+
+}
+
+
+.hero{
+
+padding:50px 0;
+
+}
+
+
+.hero-description{
+
+font-size:1rem;
+
+}
+
+
+.section{
+
+padding:45px 0;
+
+}
+
+
+.card,
+.quick-card,
+.dashboard-card{
+
+padding:18px;
+
+}
+
+
+.toc ul{
+
+font-size:.95rem;
+
+}
+
+}
+
+
+
+/* ==========================================
+PREMIUM INFO BOXES
+========================================== */
+
+
+.info-box{
+
+display:flex;
+
+gap:16px;
+
+align-items:flex-start;
+
+padding:24px;
+
+margin:30px 0;
+
+border-radius:var(--radius);
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+box-shadow:var(--shadow-sm);
+
+}
+
+
+
+.info-box strong{
+
+display:block;
+
+margin-bottom:8px;
+
+font-size:1.05rem;
+
+}
+
+
+
+.info-box p{
+
+margin-bottom:0;
+
+}
+
+
+
+/* BLUE INFO */
+
+.info-box.info{
+
+border-left:5px solid var(--primary);
+
+background:#f5f9ff;
+
+}
+
+
+
+/* GREEN SUCCESS */
+
+.info-box.success{
+
+border-left:5px solid var(--success);
+
+background:#f3fbf6;
+
+}
+
+
+
+/* ORANGE WARNING */
+
+.info-box.warning{
+
+border-left:5px solid var(--warning);
+
+background:#fff8f1;
+
+}
+
+
+
+/* ICON */
+
+.info-icon{
+
+font-size:28px;
+
+line-height:1;
+
+flex-shrink:0;
+
+}
+
+
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-.article-meta{
+.info-box{
+
+padding:20px;
+
+gap:12px;
+
+}
+
+
+.info-icon{
+
+font-size:24px;
+
+}
+
+}
+
+
+
+/* ==========================================
+PREMIUM STATISTICS CARDS
+========================================== */
+
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:24px;
+
+margin:40px 0;
+
+}
+
+
+
+.stat-card{
+
+position:relative;
+
+overflow:hidden;
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:28px;
+
+box-shadow:var(--shadow-sm);
+
+transition:all var(--transition);
+
+}
+
+
+
+.stat-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.stat-card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:5px;
+
+background:linear-gradient(
+90deg,
+var(--primary),
+#3b82f6
+);
+
+}
+
+
+
+.stat-label{
+
+display:block;
+
+font-size:.85rem;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+letter-spacing:.8px;
+
+color:var(--text-light);
+
+margin-bottom:12px;
+
+}
+
+
+
+.stat-value{
+
+font-size:2rem;
+
+font-weight:800;
+
+color:var(--primary);
+
+line-height:1.2;
+
+margin-bottom:12px;
+
+}
+
+
+
+.stat-card p{
+
+margin:0;
+
+font-size:.95rem;
+
+}
+
+
+
+@media(max-width:768px){
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+
+.stat-card{
+
+padding:22px;
+
+}
+
+
+.stat-value{
+
+font-size:1.7rem;
+
+}
+
+}
+
+
+
+/* ==========================================
+EXTRA RESPONSIVE FIXES
+========================================== */
+
+
+@media(max-width:900px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.stats{
+
+flex-direction:column;
+
+}
+
+}
+
+
+
+@media(max-width:500px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+
+.search input{
+
+width:100%;
+
+}
+
+
+.navbar{
+
+flex-direction:column;
 
 gap:10px;
 
-font-size:13px;
+}
 
 }
 
-.article-meta span{
 
-padding:8px 12px;
+
+.top-row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
 
 }
+
+
+
+.flag img{
+
+width:26px;
+
+height:18px;
+
+object-fit:cover;
+
+border-radius:3px;
+
+display:block;
+
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .cards{grid-template-columns:repeat(2,1fr);}
+  .stats{flex-direction:column;}
+}
+
+@media(max-width:500px){
+  .cards{grid-template-columns:1fr;}
+  .search input{width:100%;}
+  .navbar{flex-direction:column; gap:10px;}
+}
+
+.top-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.flag img{
+  width:26px;
+  height:18px;
+  object-fit:cover;
+  border-radius:3px;
+  display:block;
+}
+
+.footer{
+  background:#f9fafb;
+  border-top:1px solid #e5e7eb;
+  margin-top:60px;
+  padding:40px 20px 20px 20px;
+}
+
+.footer-container{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.footer-box h3{
+  color:#2563eb;
+  margin-bottom:10px;
+}
+
+.footer-box h4{
+  margin-bottom:10px;
+  color:#111827;
+}
+
+.footer-box p{
+  color:#6b7280;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.footer-box a{
+  display:block;
+  color:#6b7280;
+  text-decoration:none;
+  margin:5px 0;
+  font-size:14px;
+}
+
+.footer-box a:hover{
+  color:#2563eb;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:30px;
+  font-size:13px;
+  color:#9ca3af;
+}
+
+/* responsive */
+@media(max-width:900px){
+  .footer-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:500px){
+  .footer-container{
+    grid-template-columns:1fr;
+  }
+}
+
+.footer-links{
+    margin-bottom:15px;
+}
+
+.footer-links a{
+    color:#6b7280;
+    text-decoration:none;
+    margin:0 8px;
+    font-size:14px;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#2563eb;
+}
+
+.footer-links span{
+    color:#9ca3af;
+}
+
+.footer-bottom{
+    text-align:center;
+    border-top:1px solid #e5e7eb;
+    margin-top:30px;
+    padding-top:20px;
+}
+
+.footer-bottom p{
+    margin:6px 0;
+    color:#6b7280;
+    font-size:14px;
+}
+
+.card button:hover,
+.search button:hover,
+.btn:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================================
+SALARY CHART
+========================================== */
+
+
+.salary-chart {
+
+margin-top:40px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+
+
+.salary-row {
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+
+
+.salary-label {
+
+width:220px;
+
+font-weight:600;
+
+font-size:16px;
+
+color:#1f2937;
+
+}
+
+
+
+.salary-bar {
+
+flex:1;
+
+height:45px;
+
+background:#f1f5f9;
+
+border-radius:10px;
+
+overflow:hidden;
+
+}
+
+
+
+.salary-bar span {
+
+display:flex;
+
+align-items:center;
+
+height:100%;
+
+padding-left:20px;
+
+background:#5115ff;
+
+color:white;
+
+font-weight:600;
+
+border-radius:10px;
+
+font-size:15px;
+
+}
+
+
+
+
+
+/* Mobile Responsive */
+
+
+@media(max-width:768px){
+
+
+.salary-row {
+
+flex-direction:column;
+
+align-items:stretch;
+
+gap:10px;
+
+}
+
+
+
+.salary-label {
+
+width:100%;
+
+}
+
+
+
+.salary-bar {
+
+height:40px;
+
+}
+
+
+
+.salary-bar span {
+
+font-size:14px;
+
+padding-left:15px;
+
+}
+
 
 }
 
 </style>
-
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"Article",
-"headline":"Average Salary in Europe (EU) 2026 | Country-wise Salaries, Payroll, Taxes & Salary Slip Guide",
-"description":"Complete guide to average salaries across Europe including country-wise salary comparisons, payroll systems, taxes, salary slips, social security contributions, and net salary calculations for 2026.",
-"image":"https://www.salarypayslip.com/images/eu-salary-guide.webp",
-"author":{
-"@type":"Organization",
-"name":"SalaryPayslip"
-},
-"publisher":{
-"@type":"Organization",
-"name":"SalaryPayslip",
-"logo":{
-"@type":"ImageObject",
-"url":"https://www.salarypayslip.com/images/logo.webp"
-}
-},
-"datePublished":"2026-06-28",
-"dateModified":"2026-06-28",
-"mainEntityOfPage":{
-"@type":"WebPage",
-"@id":"https://www.salarypayslip.com/salary-slip-eu.html"
-}
-}
-</script>
-
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"BreadcrumbList",
-"itemListElement":[
-
-{
-"@type":"ListItem",
-"position":1,
-"name":"Home",
-"item":"https://www.salarypayslip.com/"
-},
-
-{
-"@type":"ListItem",
-"position":2,
-"name":"EU Salary Guide",
-"item":"https://www.salarypayslip.com/salary-slip-eu.html"
-}
-
-]
-}
-</script>
-
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"FAQPage",
-"mainEntity":[
-
-{
-"@type":"Question",
-"name":"What is the average salary in Europe?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"Average salaries vary across Europe depending on the country, profession, experience, and local economy. Higher-income countries generally offer annual salaries between €50,000 and €75,000."
-}
-},
-
-{
-"@type":"Question",
-"name":"Which European country has the highest average salary?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"Luxembourg is among the highest-paying European countries, followed by Denmark, Ireland, Germany, and the Netherlands."
-}
-},
-
-{
-"@type":"Question",
-"name":"What is gross salary?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"Gross salary is the total amount earned before income tax, social security, pension contributions, and other payroll deductions are applied."
-}
-},
-
-{
-"@type":"Question",
-"name":"What is net salary?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"Net salary is the amount an employee receives after all mandatory payroll deductions, taxes, and social security contributions have been subtracted from the gross salary."
-}
-},
-
-{
-"@type":"Question",
-"name":"Do all European countries have the same tax system?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"No. Each European country has its own income tax rates, payroll rules, pension system, and social security contribution requirements."
-}
-},
-
-{
-"@type":"Question",
-"name":"Why do salaries vary across Europe?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"Salary levels differ due to economic conditions, labor demand, cost of living, taxation, industry, education, experience, and productivity in each country."
-}
-}
-
-]
-}
-</script>
 
 </head>
 
@@ -350,23 +2012,9 @@ HEADER START
 
 <div class="container">
 
-<div class="logo">
-SalaryPayslip
-</div>
-
 <nav>
 
 <a href="https://www.salarypayslip.com/">Home</a>
-
-<a href="#salary-slip">Salary Slip</a>
-
-<a href="#taxes">Taxes</a>
-
-<a href="#social-security">Social Security</a>
-
-<a href="#countries">Countries</a>
-
-<a href="#calculator">Calculator</a>
 
 </nav>
 
@@ -414,53 +2062,41 @@ Explore EU Salary Guide
 
 <div class="feature-grid">
 
-<div class="feature-card">
+<a href="index.html" class="feature-card-link">
+    <div class="feature-card">
+        <h3>💶 Average Salary</h3>
+        <p>
+            Compare average annual and monthly salaries across major European Union countries.
+        </p>
+    </div>
+</a>
 
-<h3>💶 Average Salary</h3>
+<a href="index.html" class="feature-card-link">
+    <div class="feature-card">
+        <h3>📄 Salary Slip</h3>
+        <p>
+            Understand European payroll, payslips, gross salary, deductions, and net income.
+        </p>
+    </div>
+</a>
 
-<p>
+<a href="index.html" class="feature-card-link">
+    <div class="feature-card">
+        <h3>🏛 Taxes & Social Security</h3>
+        <p>
+            Learn about income tax systems, payroll deductions, pension contributions, and mandatory social security.
+        </p>
+    </div>
+</a>
 
-Compare average annual and monthly salaries across major European Union countries.
-
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<h3>📄 Salary Slip</h3>
-
-<p>
-
-Understand European payroll, payslips, gross salary, deductions, and net income.
-
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<h3>🏛 Taxes & Social Security</h3>
-
-<p>
-
-Learn about income tax systems, payroll deductions, pension contributions, and mandatory social security.
-
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<h3>📊 Country Comparison</h3>
-
-<p>
-
-Compare salaries across Germany, France, Netherlands, Ireland, Spain, Italy, Sweden, Denmark, Belgium, Poland, and more.
-
-</p>
-
-</div>
+<a href="index.html" class="feature-card-link">
+    <div class="feature-card">
+        <h3>📊 Country Comparison</h3>
+        <p>
+            Compare salaries across Germany, France, Netherlands, Ireland, Spain, Italy, Sweden, Denmark, Belgium, Poland, and more.
+        </p>
+    </div>
+</a>
 
 </div>
 
@@ -488,8 +2124,9 @@ The European Union (EU) consists of multiple member countries, each with its own
 
 </p>
 
-<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
+<div class="quick-info-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
 
+<a href="index.html" style="text-decoration:none; color:inherit;">
 <div style="background:#f8fbff; padding:22px; border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,.08);">
 
 <h3>💶 Average EU Salary</h3>
@@ -497,7 +2134,9 @@ The European Union (EU) consists of multiple member countries, each with its own
 <p><strong>€32,000 – €58,000/year</strong></p>
 
 </div>
+</a>
 
+<a href="index.html" style="text-decoration:none; color:inherit;">
 <div style="background:#f8fbff; padding:22px; border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,.08);">
 
 <h3>🏛 Income Tax</h3>
@@ -505,7 +2144,9 @@ The European Union (EU) consists of multiple member countries, each with its own
 <p><strong>10% – 55%</strong><br>Depends on country</p>
 
 </div>
+</a>
 
+<a href="index.html" style="text-decoration:none; color:inherit;">
 <div style="background:#f8fbff; padding:22px; border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,.08);">
 
 <h3>🛡 Social Security</h3>
@@ -513,7 +2154,9 @@ The European Union (EU) consists of multiple member countries, each with its own
 <p><strong>Mandatory</strong><br>Country-specific deductions</p>
 
 </div>
+</a>
 
+<a href="index.html" style="text-decoration:none; color:inherit;">
 <div style="background:#f8fbff; padding:22px; border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,.08);">
 
 <h3>📈 Highest Salaries</h3>
@@ -521,6 +2164,7 @@ The European Union (EU) consists of multiple member countries, each with its own
 <p><strong>Luxembourg • Denmark • Ireland</strong></p>
 
 </div>
+</a>
 
 </div>
 
@@ -3169,37 +4813,88 @@ Readers should consult official European government agencies, tax authorities, e
 
 </section>
 
-<!-- =========================
-FOOTER
-========================= -->
+<!-- =========================================================
+FOOTER (SEO OPTIMIZED)
+========================================================= -->
 
-<footer style="background:#0b3d91;color:#fff;padding:35px 0;text-align:center;">
+<footer class="footer">
 
-<div class="container">
+<div class="footer-container">
 
-<p>
+<!-- Brand -->
 
-© 2026 SalaryPayslip. All Rights Reserved.
+<div class="footer-box">
 
-</p>
-
-<p>
-
-Helping readers understand salaries, payroll systems, taxes, and payslips across the world.
-
-</p>
+<h3>SalaryPayslip EU</h3>
 
 <p>
 
-<a href="privacy.html" style="color:#fff;">Privacy Policy</a> |
-
-<a href="terms.html" style="color:#fff;">Terms</a> |
-
-<a href="disclaimer.html" style="color:#fff;">Disclaimer</a> |
-
-<a href="cookie-policy.html" style="color:#fff;">Cookie Policy</a>
+Your trusted source for Europe salary guides, career insights, labour market research and profession-specific income reports.
 
 </p>
+
+</div>
+
+<!-- Quick Links -->
+
+
+
+<!-- Contact -->
+
+<div class="footer-box">
+
+<h3>Contact</h3>
+
+<p>Email: support@salarypayslip.com</p>
+
+<p>Latest Salary Guides for 2026</p>
+
+</div>
+
+</div>
+
+<!-- Bottom -->
+
+ <div class="footer-bottom">
+
+  <div class="footer-links">
+    <a href="about-us.html">About Us</a>
+    <span>|</span>
+
+    <a href="editorial-policy.html">Editorial Policy</a>
+    <span>|</span>
+
+    <a href="salary-research-methodology.html">Salary Research Methodology</a>
+    <span>|</span>
+
+    <a href="privacy.html">Privacy Policy</a>
+    <span>|</span>
+
+    <a href="cookie-policy.html">Cookie Policy</a>
+    <span>|</span>
+
+    <a href="disclaimer.html">Disclaimer</a>
+    <span>|</span>
+
+    <a href="terms.html">Terms & Conditions</a>
+    <span>|</span>
+
+    <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+    <span>|</span>
+
+    <a href="global-salary-data-policy.html">Global Salary Data</a>
+    <span>|</span>
+
+    <a href="pricing.html">Pricing</a>
+    <span>|</span>
+
+    <a href="features.html">Features</a>
+    <span>|</span>
+
+    <a href="contact-us.html">Contact Us</a>
+  </div>
+
+<p>© 2026 SalaryPayslip. All Rights Reserved.</p>
 
 </div>
 
