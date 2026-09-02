@@ -1109,3 +1109,176 @@ nav{
   }
 
 }
+
+/* =========================================================
+   SALARYPAYSLIP LANGUAGE SELECTOR
+   PHASE 1 — GLOBAL TRANSLATION
+========================================================= */
+
+.gtranslate_wrapper{
+  display:flex;
+  align-items:center;
+  position:relative;
+  z-index:10000;
+  margin-left:4px;
+}
+
+
+/* Main selector */
+
+.gtranslate_wrapper .gt_switcher{
+  width:auto !important;
+  min-width:120px !important;
+  font-family:"Segoe UI", sans-serif !important;
+}
+
+
+/* Selected language */
+
+.gtranslate_wrapper .gt_selected{
+  background:transparent !important;
+  border:none !important;
+}
+
+
+.gtranslate_wrapper .gt_selected a{
+  display:flex !important;
+  align-items:center !important;
+
+  min-height:38px;
+
+  padding:8px 12px !important;
+
+  border:1px solid #e5e7eb !important;
+  border-radius:8px !important;
+
+  background:#ffffff !important;
+
+  color:#374151 !important;
+
+  font-family:"Segoe UI", sans-serif !important;
+  font-size:14px !important;
+  font-weight:500 !important;
+
+  text-decoration:none !important;
+
+  transition:
+    border-color .2s ease,
+    color .2s ease,
+    background .2s ease !important;
+}
+
+
+.gtranslate_wrapper .gt_selected a:hover{
+  color:#2563eb !important;
+  border-color:#2563eb !important;
+  background:#f8fbff !important;
+}
+
+
+/* Dropdown */
+
+.gtranslate_wrapper .gt_option{
+  position:absolute !important;
+
+  top:calc(100% + 8px) !important;
+  right:0 !important;
+  left:auto !important;
+
+  width:190px !important;
+  max-height:330px;
+
+  overflow-y:auto;
+
+  background:#ffffff !important;
+
+  border:1px solid #e5e7eb !important;
+  border-radius:10px !important;
+
+  box-shadow:
+    0 12px 30px rgba(15,23,42,.14) !important;
+
+  padding:6px !important;
+
+  z-index:99999 !important;
+}
+
+
+/* Dropdown language links */
+
+.gtranslate_wrapper .gt_option a{
+  display:flex !important;
+  align-items:center !important;
+
+  width:100% !important;
+
+  padding:9px 10px !important;
+
+  border-radius:7px !important;
+
+  color:#374151 !important;
+
+  font-family:"Segoe UI", sans-serif !important;
+  font-size:14px !important;
+
+  text-decoration:none !important;
+
+  transition:
+    background .18s ease,
+    color .18s ease !important;
+}
+
+
+.gtranslate_wrapper .gt_option a:hover{
+  background:#f3f7ff !important;
+  color:#2563eb !important;
+}
+
+
+/* Prevent selector images from becoming oversized */
+
+.gtranslate_wrapper img{
+  width:auto !important;
+  max-width:18px !important;
+  height:auto !important;
+
+  margin-right:6px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:500px){
+
+  .gtranslate_wrapper{
+    width:100%;
+    justify-content:center;
+    margin-left:0;
+    margin-top:2px;
+  }
+
+
+  .gtranslate_wrapper .gt_switcher{
+    width:auto !important;
+  }
+
+
+  .gtranslate_wrapper .gt_selected a{
+    min-height:36px;
+
+    padding:7px 11px !important;
+
+    font-size:14px !important;
+  }
+
+
+  .gtranslate_wrapper .gt_option{
+    right:50% !important;
+    transform:translateX(50%);
+
+    width:190px !important;
+  }
+
+}
