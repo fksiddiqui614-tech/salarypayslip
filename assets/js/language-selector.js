@@ -45,11 +45,17 @@
 
     function createLanguageWrapper() {
 
+        /*
+         * If a page already contains a language wrapper
+         * (for example, an article hero), use that wrapper.
+         */
+
         if (
             document.querySelector(".gtranslate_wrapper")
         ) {
             return;
         }
+
 
         const wrapper = document.createElement("div");
 
@@ -60,8 +66,10 @@
             "Language selector"
         );
 
+
         /*
-         * Place selector inside the existing navbar.
+         * Homepage and pages with the standard navbar:
+         * place selector inside the navbar.
          */
 
         const nav = document.querySelector(".navbar nav");
@@ -70,18 +78,17 @@
 
             nav.appendChild(wrapper);
 
-        } else {
-
-            /*
-             * Fallback for pages that may not use
-             * the homepage navbar structure.
-             */
-
-            document.body.insertBefore(
-                wrapper,
-                document.body.firstChild
-            );
         }
+
+        /*
+         * IMPORTANT:
+         *
+         * Do NOT insert the selector into document.body
+         * as a fallback.
+         *
+         * Article pages already contain their own
+         * .gtranslate_wrapper inside the hero.
+         */
     }
 
 
@@ -98,6 +105,7 @@
         ) {
             return;
         }
+
 
         const script = document.createElement("script");
 
@@ -118,7 +126,18 @@
 
     function initializeLanguageSelector() {
 
+        /*
+         * First check for an existing wrapper.
+         *
+         * If none exists, create one in the standard
+         * homepage navbar.
+         */
+
         createLanguageWrapper();
+
+        /*
+         * Then load GTranslate.
+         */
 
         loadGTranslate();
     }
@@ -140,6 +159,7 @@
     } else {
 
         initializeLanguageSelector();
+
     }
 
 })();
