@@ -2020,6 +2020,30 @@ padding-left:15px;
 
 }
 
+/* =========================================================
+   ARTICLE LANGUAGE SELECTOR
+========================================================= */
+
+.hero{
+  position:relative;
+}
+
+.hero .gtranslate_wrapper{
+  position:absolute;
+  top:24px;
+  right:24px;
+  z-index:100;
+}
+
+@media(max-width:700px){
+
+  .hero .gtranslate_wrapper{
+    top:18px;
+    right:18px;
+  }
+
+}
+
 </style>
 
 </head>
@@ -2038,6 +2062,8 @@ HERO
 <header class="hero">
 
 <div class="container">
+
+<div class="gtranslate_wrapper"></div>
 
 <nav class="breadcrumb">
 
@@ -3029,6 +3055,20 @@ Salary Snapshot Note
 
 The U.S. Bureau of Labor Statistics reported a mean annual wage of $336,640 for Anesthesiologists in May 2024. The monthly, weekly and hourly figures shown above are simple mathematical equivalents of that annual amount and are not guaranteed payroll rates. Individual compensation may vary because of geographic location, employer type, surgical case volume, overnight and weekend coverage, practice ownership, subspecialty training and negotiated employment terms.
 
+</p>
+
+<p>
+    <strong>Want to calculate your salary?</strong>
+    Use our
+    <a href="../../salary-calculator/index.html">Salary & Take-Home Pay Calculator</a>
+    to estimate your take-home pay, taxes and deductions.
+    You can also use our
+    <a href="../../calculators/salary-to-hourly-calculator/index.html">Salary to Hourly Calculator</a>
+    to convert your salary into an hourly rate.Need a manual pay stub?
+    <a href="../../salary-slip-generator/">
+        Create Salary Pay Stub
+    </a>
+    online.
 </p>
 
 </div>
@@ -6360,6 +6400,8 @@ FAQ SCHEMA
   ]
 }
 </script>
+
+<script src="/assets/js/language-selector.js"></script>
 
 </body>
 
