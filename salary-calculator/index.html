@@ -14,6 +14,59 @@
 <link rel="apple-touch-icon" href="/favicon.png?v=2">
 <link rel="shortcut icon" href="/favicon.png?v=2">
 
+<meta name="theme-color" content="#1769e0">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Salary & Take-Home Pay Calculator | SalaryPayslip">
+<meta property="og:description" content="Calculate estimated take-home pay, income tax and payroll deductions for the USA, Canada, UK and Australia.">
+<meta property="og:url" content="https://salarypayslip.com/salary-calculator/">
+<meta property="og:site_name" content="SalaryPayslip">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Salary & Take-Home Pay Calculator | SalaryPayslip">
+<meta name="twitter:description" content="Calculate estimated take-home pay, income tax and payroll deductions for the USA, Canada, UK and Australia.">
+
+<!-- =========================================================
+     SALARY CALCULATOR SEO SCHEMA
+========================================================= -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://salarypayslip.com/salary-calculator/#webpage",
+      "url": "https://salarypayslip.com/salary-calculator/",
+      "name": "Salary & Take-Home Pay Calculator | SalaryPayslip",
+      "description": "Calculate estimated take-home pay, income tax and payroll deductions for the USA, Canada, UK and Australia.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://salarypayslip.com/#website",
+        "url": "https://salarypayslip.com/",
+        "name": "SalaryPayslip"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://salarypayslip.com/salary-calculator/#application",
+      "name": "Salary & Take-Home Pay Calculator",
+      "url": "https://salarypayslip.com/salary-calculator/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "description": "Estimate take-home pay, income tax and payroll deductions for the USA, Canada, UK and Australia.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  ]
+}
+</script>
+
 <style>
 :root{--ink:#10233f;--muted:#64748b;--line:#dbe3ee;--bg:#f5f8fc;--card:#fff;--accent:#1769e0;--good:#087f5b}
 *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}.wrap{max-width:1100px;margin:auto;padding:28px 16px 60px}.hero{text-align:center;max-width:800px;margin:8px auto 25px}.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.1;margin:0 0 10px}.hero p{color:var(--muted)}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:18px;box-shadow:0 8px 28px #10233f0d}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}input,select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;color:var(--ink);font-size:15px}.tabs,.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.tabs button,.actions button{border:1px solid var(--line);background:#fff;color:var(--ink);padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}.tabs button.active,.actions .primary{background:var(--accent);border-color:var(--accent);color:#fff}.actions{margin-top:18px;margin-bottom:0}.actions button{padding:12px 18px}.hidden{display:none!important}.country-note,.note{color:var(--muted);font-size:13px;margin-top:14px;padding:11px 13px;background:#f8fafc;border-radius:10px}.result{background:#f0f7ff;border:1px solid #cfe3ff;border-radius:16px;padding:20px}.sub{color:var(--muted);font-size:13px}.big{font-size:clamp(32px,6vw,48px);font-weight:850;color:var(--good)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px}.stat b{display:block;font-size:18px}.breakdown{margin-top:18px;border-top:1px solid var(--line)}.row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #eef2f7}.row span:last-child{font-weight:700}footer{text-align:center;color:var(--muted);font-size:12px;margin-top:24px}@media(max-width:720px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.card{padding:17px}}@media print{body{background:#fff}.hero p,.tabs,.actions,.note,.country-note,footer{display:none}.card{box-shadow:none;border:0}}
@@ -21,7 +74,7 @@
 </head>
 <body>
 <main class="wrap">
-<section class="hero"><h1>Salary & Take-Home Pay Calculator</h1><p>Estimate gross pay, income tax, payroll deductions and take-home pay for the USA, Canada, UK and Australia.</p></section>
+<section class="hero"><h1>Salary & Take-Home Pay Calculator</h1><p>Estimate gross pay, income tax, payroll deductions and take-home pay.</p></section>
 <section class="card">
 <div class="tabs" id="countryTabs">
 <button type="button" class="active" data-country="US">🇺🇸 USA</button><button type="button" data-country="CA">🇨🇦 Canada</button><button type="button" data-country="UK">🇬🇧 UK</button><button type="button" data-country="AU">🇦🇺 Australia</button>
