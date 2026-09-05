@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="it">
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Generatore di Buste Paga Online – Calcolatore Stipendio Gratuito</title> 
+<meta name="description" content="Generatore di buste paga online – Calcola lo stipendio netto con indennità, bonus, detrazioni e tasse. Calcolatore stipendio gratuito."> 
+
+<link rel="canonical" href="https://www.salarypayslip.com/salary-slip-generator/it/" />
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png?v=2">
+<link rel="shortcut icon" href="/favicon.png?v=2">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Generatore di Buste Paga Online",
+  "operatingSystem": "Web",
+  "applicationCategory": "BusinessApplication",
+  "description": "Generatore gratuito di buste paga online per creare istantaneamente buste paga professionali. Nessuna registrazione richiesta.",
+  "url": "https://www.salarypayslip.com/salary-slip-generator/it/",
+  "image": "https://www.salarypayslip.com/favicon.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<!-- WebSite Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Salary Pay Slip",
+  "url": "https://www.salarypayslip.com/salary-slip-generator/it/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.salarypayslip.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Il generatore di buste paga è gratuito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì, il generatore di buste paga è completamente gratuito e può essere utilizzato senza registrazione."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Devo registrarmi per creare una busta paga?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Non è richiesta alcuna registrazione o accesso. Puoi creare buste paga online immediatamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "La busta paga generata può essere stampata?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì, la busta paga generata può essere scaricata e stampata facilmente."
+      }
+    }
+  ]
+}
+</script>
+
+
+<header>
+  <a href="../index.html">
+    <img src="https://www.salarypayslip.com/logo.png" width="80" alt="SalaryPayslip Logo">
+  </a>
+</header>
+
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#fff;color:#000;line-height:1.6}
+header{text-align:center;padding:20px}
+header h1{font-size:28px;margin-top:10px}
+.logo-box{width:150px;height:150px;border:1px solid #000;display:flex;justify-content:center;align-items:center;margin:0 auto;overflow:hidden;position:relative}
+.logo-box img{max-width:150px;max-height:150px}
+.logo-box span{position:absolute;font-size:14px;text-align:center}
+.container{width:90%;max-width:1000px;margin:20px auto;padding:20px;border:1px solid #000;border-radius:10px}
+label{font-weight:bold;margin-top:10px;display:block}
+input,select{width:100%;padding:10px;margin-bottom:15px;border:1px solid #000;border-radius:5px}
+button{padding:12px 25px;border:1px solid #000;background:#fff;font-weight:bold;cursor:pointer;border-radius:5px;margin-right:10px}
+button:hover{background:#000;color:#fff}
+.payslip-preview{margin-top:25px;border:1px solid #000;padding:20px;border-radius:8px}
+table{width:100%;border-collapse:collapse;margin-bottom:15px}
+table,th,td{border:1px solid #000}
+th,td{padding:10px;text-align:left}
+.signature{text-align:right;margin-top:20px}
+.system-generated{text-align:center;margin-top:15px;font-weight:bold;font-size:14px}
+footer{border-top:1px solid #000;margin-top:40px;padding:20px;text-align:center;font-size:14px}
+
+/* Social Sharing */
+.social-share{margin-top:15px;display:flex;gap:10px;align-items:center}
+.social-share a{width:32px;height:32px;display:inline-block}
+.social-icon{width:100%;height:100%;filter:grayscale(100%)}
+.social-icon:hover{filter:none}
+
+/* Left-align How to Use, FAQ, Policies */
+.guide,.faq,.policies{text-align:left;margin-top:30px;padding:10px;border:1px solid #000;border-radius:8px}
+
+/* Language Selector */
+.language-selector{
+position:absolute;
+top:20px;
+right:20px;
+z-index:10
+}
+
+.language-selector select{
+width:auto;
+min-width:150px;
+padding:8px 12px;
+margin-bottom:0;
+cursor:pointer
+}
+</style>
+</head>
+
+<body>
+
+<!-- LANGUAGE SELECTOR -->
+<div class="language-selector">
+
+<select
+id="languageSelector"
+aria-label="Seleziona lingua"
+onchange="changeLanguage(this.value)">
+
+<option value="it" selected>Italiano</option>
+<option value="en">English</option>
+<option value="es">Español</option>
+<option value="pt">Português</option>
+<option value="fr">Français</option>
+<option value="de">Deutsch</option>
+
+</select>
+
+</div>
+
+
+<header>
+<div class="logo-box">
+<img id="logoPreview">
+<span id="logoText">Aggiungi logo aziendale</span>
+</div>
+
+<h1>Generatore di Buste Paga Online</h1>
+
+<label for="logoUpload" style="cursor:pointer;border:1px solid #000;padding:8px 15px;display:inline-block;margin-top:10px">
+Aggiungi logo qui
+</label>
+
+<input type="file" id="logoUpload" accept="image/*" hidden>
+</header>
+
+
+<div class="container">
+
+<label>Nome del dipendente</label>
+<input id="employeeName">
+
+<label>Qualifica</label>
+<input id="employeeDesignation">
+
+<label>ID dipendente</label>
+<input id="employeeID">
+
+<label>Data di pagamento</label>
+<input type="date" id="payDate">
+
+<label>Stipendio base</label>
+<input type="number" id="basicSalary">
+
+
+<label>Indennità</label>
+
+<input type="number" id="hra" placeholder="HRA">
+
+<input type="number" id="medical" placeholder="Indennità medica">
+
+<input type="number" id="otherAllowance" placeholder="Altra indennità">
+
+
+<label>Bonus</label>
+<input type="number" id="bonus">
+
+<label>Detrazioni</label>
+<input type="number" id="deductions">
+
+<label>Percentuale fiscale (%)</label>
+<input type="number" id="taxPercent">
+
+<label>Tassa</label>
+<input id="tax" readonly>
+
+
+<label>Valuta</label>
+
+<select id="currency">
+
+  <option value="AFN">Afghani afgano (AFN)</option>
+  <option value="ALL">Lek albanese (ALL)</option>
+  <option value="DZD">Dinaro algerino (DZD)</option>
+  <option value="ARS">Peso argentino (ARS)</option>
+  <option value="AUD">Dollaro australiano (AUD)</option>
+  <option value="AZN">Manat azero (AZN)</option>
+  <option value="BBD">Dollaro delle Barbados (BBD)</option>
+  <option value="BDT">Taka bengalese (BDT)</option>
+  <option value="BHD">Dinaro del Bahrein (BHD)</option>
+  <option value="BMD">Dollaro delle Bermuda (BMD)</option>
+  <option value="BND">Dollaro di Brunei (BND)</option>
+  <option value="BOB">Boliviano boliviano (BOB)</option>
+  <option value="BAM">Marco convertibile della Bosnia-Erzegovina (BAM)</option>
+  <option value="BRL">Real brasiliano (BRL)</option>
+  <option value="BGN">Lev bulgaro (BGN)</option>
+  <option value="BWP">Pula del Botswana (BWP)</option>
+  <option value="BSD">Dollaro delle Bahamas (BSD)</option>
+  <option value="BZD">Dollaro del Belize (BZD)</option>
+  <option value="CAD">Dollaro canadese (CAD)</option>
+  <option value="CLP">Peso cileno (CLP)</option>
+  <option value="CLF">Unità di conto cilena UF (CLF)</option>
+  <option value="CNY">Yuan cinese (CNY)</option>
+  <option value="CRC">Colón costaricano (CRC)</option>
+  <option value="HRK">Kuna croata (HRK)</option>
+  <option value="CZK">Corona ceca (CZK)</option>
+  <option value="DKK">Corona danese (DKK)</option>
+  <option value="DOP">Peso dominicano (DOP)</option>
+  <option value="EGP">Sterlina egiziana (EGP)</option>
+  <option value="ETB">Birr etiope (ETB)</option>
+  <option value="EUR">Euro (EUR)</option>
+  <option value="FJD">Dollaro delle Figi (FJD)</option>
+  <option value="GHS">Cedi ghanese (GHS)</option>
+  <option value="GEL">Lari georgiano (GEL)</option>
+  <option value="GYD">Dollaro della Guyana (GYD)</option>
+  <option value="HKD">Dollaro di Hong Kong (HKD)</option>
+  <option value="HNL">Lempira honduregna (HNL)</option>
+  <option value="HUF">Fiorino ungherese (HUF)</option>
+  <option value="ISK">Corona islandese (ISK)</option>
+  <option value="INR">Rupia indiana (INR)</option>
+  <option value="IDR">Rupia indonesiana (IDR)</option>
+  <option value="IRR">Rial iraniano (IRR)</option>
+  <option value="ILS">Shekel israeliano (ILS)</option>
+  <option value="JMD">Dollaro giamaicano (JMD)</option>
+  <option value="JPY">Yen giapponese (JPY)</option>
+  <option value="JOD">Dinaro giordano (JOD)</option>
+  <option value="KZT">Tenge kazako (KZT)</option>
+  <option value="KES">Scellino keniota (KES)</option>
+  <option value="KWD">Dinaro kuwaitiano (KWD)</option>
+  <option value="KRW">Won sudcoreano (KRW)</option>
+  <option value="LBP">Sterlina libanese (LBP)</option>
+  <option value="LKR">Rupia dello Sri Lanka (LKR)</option>
+  <option value="LVL">Lats lettone (LVL)</option>
+  <option value="LTL">Litas lituano (LTL)</option>
+  <option value="MKD">Denaro macedone (MKD)</option>
+  <option value="MGA">Ariary malgascio (MGA)</option>
+  <option value="MWK">Kwacha malawiano (MWK)</option>
+  <option value="MYR">Ringgit malese (MYR)</option>
+  <option value="MUR">Rupia mauriziana (MUR)</option>
+  <option value="MDL">Leu moldavo (MDL)</option>
+  <option value="MAD">Dirham marocchino (MAD)</option>
+  <option value="MXN">Peso messicano (MXN)</option>
+  <option value="MXV">Unidad de Inversion messicana (MXV)</option>
+  <option value="NAD">Dollaro namibiano (NAD)</option>
+  <option value="NIO">Córdoba nicaraguense (NIO)</option>
+  <option value="NZD">Dollaro neozelandese (NZD)</option>
+  <option value="NGN">Naira nigeriana (NGN)</option>
+  <option value="NOK">Corona norvegese (NOK)</option>
+  <option value="OMR">Rial omanita (OMR)</option>
+  <option value="PKR">Rupia pakistana (PKR)</option>
+  <option value="PEN">Sol peruviano (PEN)</option>
+  <option value="PHP">Peso filippino (PHP)</option>
+  <option value="PLN">Zloty polacco (PLN)</option>
+  <option value="QAR">Riyal del Qatar (QAR)</option>
+  <option value="RON">Leu rumeno (RON)</option>
+  <option value="RUB">Rublo russo (RUB)</option>
+  <option value="SAR">Riyal saudita (SAR)</option>
+  <option value="RSD">Dinaro serbo (RSD)</option>
+  <option value="SCR">Rupia delle Seychelles (SCR)</option>
+  <option value="SGD">Dollaro di Singapore (SGD)</option>
+  <option value="SBD">Dollaro delle Isole Salomone (SBD)</option>
+  <option value="SYP">Sterlina siriana (SYP)</option>
+  <option value="SEK">Corona svedese (SEK)</option>
+  <option value="CHF">Franco svizzero (CHF)</option>
+  <option value="TWD">Nuovo dollaro di Taiwan (TWD)</option>
+  <option value="THB">Baht thailandese (THB)</option>
+  <option value="TZS">Scellino tanzaniano (TZS)</option>
+  <option value="TOP">Paʻanga tongano (TOP)</option>
+  <option value="TRY">Lira turca (TRY)</option>
+  <option value="UGX">Scellino ugandese (UGX)</option>
+  <option value="UAH">Grivnia ucraina (UAH)</option>
+  <option value="AED">Dirham degli Emirati Arabi Uniti (AED)</option>
+  <option value="USD">Dollaro statunitense (USD)</option>
+  <option value="UYU">Peso uruguaiano (UYU)</option>
+  <option value="UZS">Som uzbeko (UZS)</option>
+  <option value="VEF">Bolívar venezuelano (VEF)</option>
+  <option value="VND">Dong vietnamita (VND)</option>
+  <option value="XOF">Franco CFA BCEAO (XOF)</option>
+  <option value="XAF">Franco CFA BEAC (XAF)</option>
+  <option value="XCD">Dollaro dei Caraibi orientali (XCD)</option>
+  <option value="XPF">Franco CFP (XPF)</option>
+  <option value="ZAR">Rand sudafricano (ZAR)</option>
+  <option value="ZMW">Kwacha zambiano (ZMW)</option>
+
+</select>
+
+
+<button id="calculateBtn">Calcola stipendio</button>
+
+<button id="downloadBtn">Scarica PDF</button>
+
+
+<!-- PAYSLIP -->
+
+<div class="payslip-preview" id="payslipPreview">
+
+<div style="text-align:center;margin-bottom:15px">
+
+<img id="previewLogo" style="max-width:120px;margin-bottom:10px">
+
+<h2>Busta Paga</h2>
+
+</div>
+
+
+<table>
+
+<tr>
+<th>Nome del dipendente</th>
+<td id="previewName"></td>
+</tr>
+
+<tr>
+<th>Qualifica</th>
+<td id="previewDesignation"></td>
+</tr>
+
+<tr>
+<th>ID dipendente</th>
+<td id="previewID"></td>
+</tr>
+
+<tr>
+<th>Data di pagamento</th>
+<td id="previewDate"></td>
+</tr>
+
+<tr>
+<th>Stipendio base</th>
+<td id="previewBasic"></td>
+</tr>
+
+<tr>
+<th>HRA</th>
+<td id="previewHRA"></td>
+</tr>
+
+<tr>
+<th>Indennità medica</th>
+<td id="previewMedical"></td>
+</tr>
+
+<tr>
+<th>Altra indennità</th>
+<td id="previewOther"></td>
+</tr>
+
+<tr>
+<th>Bonus</th>
+<td id="previewBonus"></td>
+</tr>
+
+<tr>
+<th>Detrazioni</th>
+<td id="previewDeductions"></td>
+</tr>
+
+<tr>
+<th>Tassa</th>
+<td id="previewTax"></td>
+</tr>
+
+<tr>
+<th>Stipendio netto</th>
+<td id="previewNet"></td>
+</tr>
+
+</table>
+
+
+<div class="signature">
+
+<p>Firma autorizzata</p>
+
+<hr style="width:150px">
+
+</div>
+
+
+<div class="system-generated">
+Generato dal sistema
+</div>
+
+</div>
+
+
+<!-- HOW TO USE -->
+
+<div class="guide">
+
+<h2>Come utilizzare</h2>
+
+<p>
+Questo è uno strumento online per la generazione di buste paga destinato a scopi personali, educativi e d'ufficio. Non è un servizio di gestione delle paghe.
+Inizia caricando il logo della tua azienda, che apparirà sia sulla busta paga sia nel PDF scaricato.
+Inserisci i dati del dipendente, come nome, qualifica, ID dipendente e data di pagamento.
+Inserisci lo stipendio base insieme alle indennità, tra cui HRA, indennità medica e qualsiasi altra indennità applicabile.
+Aggiungi bonus e detrazioni, se applicabili.
+Inserisci la percentuale fiscale e lo strumento calcolerà automaticamente l'importo della tassa.
+Seleziona la valuta preferita dal menu a discesa.
+Fai clic su "Calcola stipendio" per visualizzare la busta paga, quindi fai clic su "Scarica PDF" per ottenere una busta paga pronta all'uso e generata dal sistema.
+</p>
+
+</div>
+
+
+<!-- FAQ -->
+
+<div class="faq">
+
+<h2>Domande frequenti</h2>
+
+
+<p>
+<strong>D1: Questo generatore di buste paga online è adatto a tutti?</strong><br>
+Sì, questo strumento è disponibile per tutti gli utenti in tutto il mondo. Puoi creare e scaricare un numero illimitato di buste paga.
+</p>
+
+
+<p>
+<strong>D2: Il PDF scaricato corrisponderà alla busta paga?</strong><br>
+Sì, il PDF scaricato corrisponderà esattamente alla busta paga, inclusi i dati del dipendente, il dettaglio dello stipendio, le indennità e il logo aziendale.
+</p>
+
+
+<p>
+<strong>D3: Come viene calcolata la tassa in questo strumento?</strong><br>
+La tassa viene calcolata automaticamente in base alla percentuale fiscale inserita. Il sistema applica tale percentuale allo stipendio lordo.
+</p>
+
+
+<p>
+<strong>D4: Posso cambiare la valuta per dipendenti diversi?</strong><br>
+Sì, puoi selezionare la valuta preferita dal menu a discesa prima di calcolare lo stipendio.
+</p>
+
+
+<p>
+<strong>D5: Questo generatore di buste paga è compatibile con i dispositivi mobili?</strong><br>
+Sì, lo strumento è completamente responsive e funziona su telefoni cellulari, tablet e computer desktop.
+</p>
+
+</div>
+
+
+<!-- Social Share -->
+
+<div class="social-share">
+
+<strong>Condividi:</strong>
+
+<a id="shareFacebook" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" class="social-icon">
+</a>
+
+<a id="shareTwitter" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" class="social-icon">
+</a>
+
+<a id="shareLinkedIn" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" class="social-icon">
+</a>
+
+<a id="shareWhatsApp" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" class="social-icon">
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>
+
+<a href="../../about-us.html">About Us</a>
+
+<a href="../../editorial-policy.html">Editorial Policy</a>
+
+<a href="../../salary-research-methodology.html">Salary Research Methodology</a>
+
+<a href="../../privacy.html">Privacy Policy</a>
+
+<a href="../../cookie-policy.html">Cookie Policy</a>
+
+<a href="../../disclaimer.html">Disclaimer</a>
+
+<a href="../../terms.html">Terms & Conditions</a>
+
+<a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
+
+<a href="../../global-salary-data-policy.html">Global Salary Data</a>
+
+<a href="../../pricing.html">Pricing</a>
+
+<a href="../../features.html">Features</a>
+
+<a href="../../contact-us.html">Contact Us</a> 
+
+</p>
+
+
+<p>© 2026 Salary Payslip Tutti i diritti riservati</p>
+
+<p>Ultimo aggiornamento 2026</p>
+
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+<script>
+
+// =========================================================
+// LANGUAGE SELECTOR
+// =========================================================
+
+function changeLanguage(language){
+
+    if(language === "en"){
+        window.location.href="/salary-slip-generator/";
+    }
+
+    if(language === "es"){
+        window.location.href="/salary-slip-generator/es/";
+    }
+
+    if(language === "pt"){
+        window.location.href="/salary-slip-generator/pt/";
+    }
+
+    if(language === "fr"){
+        window.location.href="/salary-slip-generator/fr/";
+    }
+
+    if(language === "de"){
+        window.location.href="/salary-slip-generator/de/";
+    }
+
+    if(language === "it"){
+        window.location.href="/salary-slip-generator/it/";
+    }
+
+}
+
+
+// Logo upload & preview
+
+const logoUpload=document.getElementById('logoUpload');
+
+const logoPreview=document.getElementById('logoPreview');
+
+const previewLogo=document.getElementById('previewLogo');
+
+const logoText=document.getElementById('logoText');
+
+
+logoUpload.onchange=e=>{
+
+    const f=e.target.files[0];
+
+    if(!f) return;
+
+    const r=new FileReader();
+
+    r.onload=ev=>{
+
+        logoPreview.src = previewLogo.src = ev.target.result;
+
+        logoText.style.display = "none";
+
+    };
+
+    r.readAsDataURL(f);
+
+};
+
+
+// Calculate payslip
+
+document.getElementById('calculateBtn').onclick=()=>{
+
+    const g=id=>+document.getElementById(id).value||0;
+
+    const cur=document.getElementById('currency').value;
+
+    const gross=
+        g('basicSalary')+
+        g('hra')+
+        g('medical')+
+        g('otherAllowance')+
+        g('bonus');
+
+    const tax=(gross*g('taxPercent'))/100;
+
+    document.getElementById('tax').value = tax.toFixed(2);
+
+    const net=gross-g('deductions')-tax;
+
+
+    previewName.innerText = employeeName.value;
+
+    previewDesignation.innerText = employeeDesignation.value;
+
+    previewID.innerText = employeeID.value;
+
+    previewDate.innerText = payDate.value;
+
+    previewBasic.innerText = cur+g('basicSalary').toFixed(2);
+
+    previewHRA.innerText = cur+g('hra').toFixed(2);
+
+    previewMedical.innerText = cur+g('medical').toFixed(2);
+
+    previewOther.innerText = cur+g('otherAllowance').toFixed(2);
+
+    previewBonus.innerText = cur+g('bonus').toFixed(2);
+
+    previewDeductions.innerText = cur+g('deductions').toFixed(2);
+
+    previewTax.innerText = cur+tax.toFixed(2);
+
+    previewNet.innerText = cur+net.toFixed(2);
+
+
+    updateSocial();
+
+};
+
+
+// Download PDF
+
+downloadBtn.onclick=()=>{
+
+    html2canvas(payslipPreview,{scale:2}).then(c=>{
+
+        const pdf=new jspdf.jsPDF('p','pt','a4');
+
+        pdf.addImage(
+            c.toDataURL(),
+            'PNG',
+            0,
+            0,
+            595,
+            (c.height*595)/c.width
+        );
+
+        pdf.save('Busta_Paga.pdf');
+
+    });
+
+};
+
+
+// Social share
+
+function updateSocial(){
+
+    const url = encodeURIComponent(location.href);
+
+    const text = encodeURIComponent(
+        "Usa il generatore di buste paga online!"
+    );
+
+    shareFacebook.href =
+        `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+
+    shareTwitter.href =
+        `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+
+    shareLinkedIn.href =
+        `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+
+    shareWhatsApp.href =
+        `https://api.whatsapp.com/send?text=${text}%20${url}`;
+
+}
+
+
+window.addEventListener('load', updateSocial);
+
+
+</script>
+
+</body>
+</html>
