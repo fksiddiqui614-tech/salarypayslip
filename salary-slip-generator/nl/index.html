@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Online Salarisstrook Generator – Gratis Salarisberekening</title> 
+<meta name="description" content="Online salarisstrook generator – Bereken nettosalaris inclusief toeslagen, bonussen, inhoudingen en belastingen. Gratis salaristool."> 
+
+<link rel="canonical" href="https://www.salarypayslip.com/salary-slip-generator/nl/" />
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png?v=2">
+<link rel="shortcut icon" href="/favicon.png?v=2">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Online Salarisstrook Generator",
+  "operatingSystem": "Web",
+  "applicationCategory": "BusinessApplication",
+  "description": "Gratis online salarisstrook generator om direct professionele salarisstroken te maken. Geen registratie vereist.",
+  "url": "https://www.salarypayslip.com/salary-slip-generator/nl/",
+  "image": "https://www.salarypayslip.com/favicon.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<!-- WebSite Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Salary Pay Slip",
+  "url": "https://www.salarypayslip.com/salary-slip-generator/nl/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.salarypayslip.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is de salarisstrook generator gratis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, de salarisstrook generator is volledig gratis en kan zonder registratie worden gebruikt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Moet ik mij registreren om een salarisstrook te maken?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nee, registratie of inloggen is niet nodig. U kunt direct online salarisstroken maken."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan de gegenereerde salarisstrook worden afgedrukt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, de gegenereerde salarisstrook kan eenvoudig worden gedownload en afgedrukt."
+      }
+    }
+  ]
+}
+</script>
+
+
+<header>
+  <a href="../index.html">
+    <img src="https://www.salarypayslip.com/logo.png" width="80" alt="SalaryPayslip Logo">
+  </a>
+</header>
+
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#fff;color:#000;line-height:1.6}
+header{text-align:center;padding:20px}
+header h1{font-size:28px;margin-top:10px}
+.logo-box{width:150px;height:150px;border:1px solid #000;display:flex;justify-content:center;align-items:center;margin:0 auto;overflow:hidden;position:relative}
+.logo-box img{max-width:150px;max-height:150px}
+.logo-box span{position:absolute;font-size:14px;text-align:center}
+.container{width:90%;max-width:1000px;margin:20px auto;padding:20px;border:1px solid #000;border-radius:10px}
+label{font-weight:bold;margin-top:10px;display:block}
+input,select{width:100%;padding:10px;margin-bottom:15px;border:1px solid #000;border-radius:5px}
+button{padding:12px 25px;border:1px solid #000;background:#fff;font-weight:bold;cursor:pointer;border-radius:5px;margin-right:10px}
+button:hover{background:#000;color:#fff}
+.payslip-preview{margin-top:25px;border:1px solid #000;padding:20px;border-radius:8px}
+table{width:100%;border-collapse:collapse;margin-bottom:15px}
+table,th,td{border:1px solid #000}
+th,td{padding:10px;text-align:left}
+.signature{text-align:right;margin-top:20px}
+.system-generated{text-align:center;margin-top:15px;font-weight:bold;font-size:14px}
+footer{border-top:1px solid #000;margin-top:40px;padding:20px;text-align:center;font-size:14px}
+
+/* Social Sharing */
+.social-share{margin-top:15px;display:flex;gap:10px;align-items:center}
+.social-share a{width:32px;height:32px;display:inline-block}
+.social-icon{width:100%;height:100%;filter:grayscale(100%)}
+.social-icon:hover{filter:none}
+
+/* Left-align How to Use, FAQ, Policies */
+.guide,.faq,.policies{text-align:left;margin-top:30px;padding:10px;border:1px solid #000;border-radius:8px}
+
+/* Language Selector */
+.language-selector{
+position:absolute;
+top:20px;
+right:20px;
+z-index:10
+}
+
+.language-selector select{
+width:auto;
+min-width:150px;
+padding:8px 12px;
+margin-bottom:0;
+cursor:pointer
+}
+</style>
+</head>
+
+<body>
+
+<!-- LANGUAGE SELECTOR -->
+<div class="language-selector">
+
+<select
+id="languageSelector"
+aria-label="Taal selecteren"
+onchange="changeLanguage(this.value)">
+
+<option value="nl" selected>Dutch</option>
+<option value="en">English</option>
+<option value="es">Español</option>
+<option value="pt">Português</option>
+<option value="fr">Français</option>
+<option value="de">Deutsch</option>
+<option value="it">Italiano</option>
+
+</select>
+
+</div>
+
+
+<header>
+<div class="logo-box">
+<img id="logoPreview">
+<span id="logoText">Bedrijfslogo toevoegen</span>
+</div>
+
+<h1>Online Salarisstrook Generator</h1>
+
+<label for="logoUpload" style="cursor:pointer;border:1px solid #000;padding:8px 15px;display:inline-block;margin-top:10px">
+Logo hier toevoegen
+</label>
+
+<input type="file" id="logoUpload" accept="image/*" hidden>
+</header>
+
+
+<div class="container">
+
+<label>Naam werknemer</label>
+<input id="employeeName">
+
+<label>Functie</label>
+<input id="employeeDesignation">
+
+<label>Werknemers-ID</label>
+<input id="employeeID">
+
+<label>Betaaldatum</label>
+<input type="date" id="payDate">
+
+<label>Basissalaris</label>
+<input type="number" id="basicSalary">
+
+
+<label>Toeslagen</label>
+
+<input type="number" id="hra" placeholder="HRA">
+
+<input type="number" id="medical" placeholder="Medische toeslag">
+
+<input type="number" id="otherAllowance" placeholder="Overige toeslag">
+
+
+<label>Bonus</label>
+<input type="number" id="bonus">
+
+<label>Inhoudingen</label>
+<input type="number" id="deductions">
+
+<label>Belastingpercentage (%)</label>
+<input type="number" id="taxPercent">
+
+<label>Belasting</label>
+<input id="tax" readonly>
+
+
+<label>Valuta</label>
+
+<select id="currency">
+
+  <option value="AFN">Afghaanse Afghani (AFN)</option>
+  <option value="ALL">Albanese Lek (ALL)</option>
+  <option value="DZD">Algerijnse Dinar (DZD)</option>
+  <option value="ARS">Argentijnse Peso (ARS)</option>
+  <option value="AUD">Australische Dollar (AUD)</option>
+  <option value="AZN">Azerbeidzjaanse Manat (AZN)</option>
+  <option value="BBD">Barbadiaanse Dollar (BBD)</option>
+  <option value="BDT">Bengaalse Taka (BDT)</option>
+  <option value="BHD">Bahreinse Dinar (BHD)</option>
+  <option value="BMD">Bermudaanse Dollar (BMD)</option>
+  <option value="BND">Bruneise Dollar (BND)</option>
+  <option value="BOB">Boliviaanse Boliviano (BOB)</option>
+  <option value="BAM">Bosnisch-Herzegovinese Convertibele Mark (BAM)</option>
+  <option value="BRL">Braziliaanse Real (BRL)</option>
+  <option value="BGN">Bulgaarse Lev (BGN)</option>
+  <option value="BWP">Botswaanse Pula (BWP)</option>
+  <option value="BSD">Bahamaanse Dollar (BSD)</option>
+  <option value="BZD">Belizaanse Dollar (BZD)</option>
+  <option value="CAD">Canadese Dollar (CAD)</option>
+  <option value="CLP">Chileense Peso (CLP)</option>
+  <option value="CLF">Chileense Rekeneenheid UF (CLF)</option>
+  <option value="CNY">Chinese Yuan (CNY)</option>
+  <option value="CRC">Costa Ricaanse Colón (CRC)</option>
+  <option value="HRK">Kroatische Kuna (HRK)</option>
+  <option value="CZK">Tsjechische Kroon (CZK)</option>
+  <option value="DKK">Deense Kroon (DKK)</option>
+  <option value="DOP">Dominicaanse Peso (DOP)</option>
+  <option value="EGP">Egyptisch Pond (EGP)</option>
+  <option value="ETB">Ethiopische Birr (ETB)</option>
+  <option value="EUR">Euro (EUR)</option>
+  <option value="FJD">Fijische Dollar (FJD)</option>
+  <option value="GHS">Ghanese Cedi (GHS)</option>
+  <option value="GEL">Georgische Lari (GEL)</option>
+  <option value="GYD">Guyanese Dollar (GYD)</option>
+  <option value="HKD">Hongkongse Dollar (HKD)</option>
+  <option value="HNL">Hondurese Lempira (HNL)</option>
+  <option value="HUF">Hongaarse Forint (HUF)</option>
+  <option value="ISK">IJslandse Kroon (ISK)</option>
+  <option value="INR">Indiase Roepie (INR)</option>
+  <option value="IDR">Indonesische Roepia (IDR)</option>
+  <option value="IRR">Iraanse Rial (IRR)</option>
+  <option value="ILS">Israëlische Shekel (ILS)</option>
+  <option value="JMD">Jamaicaanse Dollar (JMD)</option>
+  <option value="JPY">Japanse Yen (JPY)</option>
+  <option value="JOD">Jordaanse Dinar (JOD)</option>
+  <option value="KZT">Kazachse Tenge (KZT)</option>
+  <option value="KES">Keniaanse Shilling (KES)</option>
+  <option value="KWD">Koeweitse Dinar (KWD)</option>
+  <option value="KRW">Zuid-Koreaanse Won (KRW)</option>
+  <option value="LBP">Libanees Pond (LBP)</option>
+  <option value="LKR">Sri Lankaanse Roepie (LKR)</option>
+  <option value="LVL">Letse Lats (LVL)</option>
+  <option value="LTL">Litouwse Litas (LTL)</option>
+  <option value="MKD">Macedonische Denar (MKD)</option>
+  <option value="MGA">Malagassische Ariary (MGA)</option>
+  <option value="MWK">Malawische Kwacha (MWK)</option>
+  <option value="MYR">Maleisische Ringgit (MYR)</option>
+  <option value="MUR">Mauritiaanse Roepie (MUR)</option>
+  <option value="MDL">Moldavische Leu (MDL)</option>
+  <option value="MAD">Marokkaanse Dirham (MAD)</option>
+  <option value="MXN">Mexicaanse Peso (MXN)</option>
+  <option value="MXV">Mexicaanse Unidad de Inversion (MXV)</option>
+  <option value="NAD">Namibische Dollar (NAD)</option>
+  <option value="NIO">Nicaraguaanse Córdoba (NIO)</option>
+  <option value="NZD">Nieuw-Zeelandse Dollar (NZD)</option>
+  <option value="NGN">Nigeriaanse Naira (NGN)</option>
+  <option value="NOK">Noorse Kroon (NOK)</option>
+  <option value="OMR">Omaanse Rial (OMR)</option>
+  <option value="PKR">Pakistaanse Roepie (PKR)</option>
+  <option value="PEN">Peruaanse Sol (PEN)</option>
+  <option value="PHP">Filipijnse Peso (PHP)</option>
+  <option value="PLN">Poolse Zloty (PLN)</option>
+  <option value="QAR">Qatarese Riyal (QAR)</option>
+  <option value="RON">Roemeense Leu (RON)</option>
+  <option value="RUB">Russische Roebel (RUB)</option>
+  <option value="SAR">Saoedische Riyal (SAR)</option>
+  <option value="RSD">Servische Dinar (RSD)</option>
+  <option value="SCR">Seychelse Roepie (SCR)</option>
+  <option value="SGD">Singaporese Dollar (SGD)</option>
+  <option value="SBD">Salomonseilandse Dollar (SBD)</option>
+  <option value="SYP">Syrisch Pond (SYP)</option>
+  <option value="SEK">Zweedse Kroon (SEK)</option>
+  <option value="CHF">Zwitserse Frank (CHF)</option>
+  <option value="TWD">Nieuwe Taiwanese Dollar (TWD)</option>
+  <option value="THB">Thaise Baht (THB)</option>
+  <option value="TZS">Tanzaniaanse Shilling (TZS)</option>
+  <option value="TOP">Tongaanse Paʻanga (TOP)</option>
+  <option value="TRY">Turkse Lira (TRY)</option>
+  <option value="UGX">Oegandese Shilling (UGX)</option>
+  <option value="UAH">Oekraïense Hryvnia (UAH)</option>
+  <option value="AED">VAE-Dirham (AED)</option>
+  <option value="USD">Amerikaanse Dollar (USD)</option>
+  <option value="UYU">Uruguayaanse Peso (UYU)</option>
+  <option value="UZS">Oezbeekse Som (UZS)</option>
+  <option value="VEF">Venezolaanse Bolívar (VEF)</option>
+  <option value="VND">Vietnamese Dong (VND)</option>
+  <option value="XOF">CFA-Franc BCEAO (XOF)</option>
+  <option value="XAF">CFA-Franc BEAC (XAF)</option>
+  <option value="XCD">Oost-Caribische Dollar (XCD)</option>
+  <option value="XPF">CFP-Franc (XPF)</option>
+  <option value="ZAR">Zuid-Afrikaanse Rand (ZAR)</option>
+  <option value="ZMW">Zambiaanse Kwacha (ZMW)</option>
+
+</select>
+
+
+<button id="calculateBtn">Salaris berekenen</button>
+
+<button id="downloadBtn">PDF downloaden</button>
+
+
+<!-- PAYSLIP -->
+
+<div class="payslip-preview" id="payslipPreview">
+
+<div style="text-align:center;margin-bottom:15px">
+
+<img id="previewLogo" style="max-width:120px;margin-bottom:10px">
+
+<h2>Salarisstrook</h2>
+
+</div>
+
+
+<table>
+
+<tr>
+<th>Naam werknemer</th>
+<td id="previewName"></td>
+</tr>
+
+<tr>
+<th>Functie</th>
+<td id="previewDesignation"></td>
+</tr>
+
+<tr>
+<th>Werknemers-ID</th>
+<td id="previewID"></td>
+</tr>
+
+<tr>
+<th>Betaaldatum</th>
+<td id="previewDate"></td>
+</tr>
+
+<tr>
+<th>Basissalaris</th>
+<td id="previewBasic"></td>
+</tr>
+
+<tr>
+<th>HRA</th>
+<td id="previewHRA"></td>
+</tr>
+
+<tr>
+<th>Medische toeslag</th>
+<td id="previewMedical"></td>
+</tr>
+
+<tr>
+<th>Overige toeslag</th>
+<td id="previewOther"></td>
+</tr>
+
+<tr>
+<th>Bonus</th>
+<td id="previewBonus"></td>
+</tr>
+
+<tr>
+<th>Inhoudingen</th>
+<td id="previewDeductions"></td>
+</tr>
+
+<tr>
+<th>Belasting</th>
+<td id="previewTax"></td>
+</tr>
+
+<tr>
+<th>Nettosalaris</th>
+<td id="previewNet"></td>
+</tr>
+
+</table>
+
+
+<div class="signature">
+
+<p>Geautoriseerde handtekening</p>
+
+<hr style="width:150px">
+
+</div>
+
+
+<div class="system-generated">
+Systeemgegenereerd
+</div>
+
+</div>
+
+
+<!-- HOW TO USE -->
+
+<div class="guide">
+
+<h2>Hoe te gebruiken</h2>
+
+<p>
+Dit is een online salarisstrook generator voor persoonlijke, educatieve en zakelijke doeleinden. Het is geen salarisadministratieservice.
+Begin met het uploaden van het bedrijfslogo. Het logo verschijnt zowel op de salarisstrook als op de gedownloade PDF.
+Voer de gegevens van de werknemer in, zoals naam, functie, werknemers-ID en betaaldatum.
+Voer het basissalaris in, samen met toeslagen zoals HRA, medische toeslag en andere toepasselijke toeslagen.
+Voeg indien van toepassing bonussen en inhoudingen toe.
+Voer het belastingpercentage in. De tool berekent het belastingbedrag automatisch.
+Selecteer uw gewenste valuta in het vervolgkeuzemenu.
+Klik op "Salaris berekenen" om de salarisstrook te bekijken en klik vervolgens op "PDF downloaden" om een kant-en-klare, systeemgegenereerde salarisstrook te verkrijgen.
+</p>
+
+</div>
+
+
+<!-- FAQ -->
+
+<div class="faq">
+
+<h2>Veelgestelde vragen</h2>
+
+
+<p>
+<strong>V1: Is deze online salarisstrook generator voor iedereen geschikt?</strong><br>
+Ja, deze tool is wereldwijd beschikbaar voor iedereen. U kunt onbeperkt salarisstroken maken en downloaden.
+</p>
+
+
+<p>
+<strong>V2: Komt de gedownloade PDF overeen met de salarisstrook?</strong><br>
+Ja, de gedownloade PDF komt exact overeen met de salarisstrook, inclusief werknemersgegevens, salarisopbouw, toeslagen en bedrijfslogo.
+</p>
+
+
+<p>
+<strong>V3: Hoe wordt de belasting in deze tool berekend?</strong><br>
+De belasting wordt automatisch berekend op basis van het ingevoerde belastingpercentage. Het systeem past dit percentage toe op het brutoloon.
+</p>
+
+
+<p>
+<strong>V4: Kan ik de valuta voor verschillende werknemers wijzigen?</strong><br>
+Ja, u kunt vóór het berekenen van het salaris de gewenste valuta selecteren in het vervolgkeuzemenu.
+</p>
+
+
+<p>
+<strong>V5: Is deze salarisstrook generator geschikt voor mobiele apparaten?</strong><br>
+Ja, de tool is volledig responsive en werkt op mobiele telefoons, tablets en desktopcomputers.
+</p>
+
+</div>
+
+
+<!-- Social Share -->
+
+<div class="social-share">
+
+<strong>Delen:</strong>
+
+<a id="shareFacebook" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" class="social-icon">
+</a>
+
+<a id="shareTwitter" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" class="social-icon">
+</a>
+
+<a id="shareLinkedIn" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" class="social-icon">
+</a>
+
+<a id="shareWhatsApp" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" class="social-icon">
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>
+
+<a href="../../about-us.html">Over ons</a>
+
+<a href="../../editorial-policy.html">Redactioneel beleid</a>
+
+<a href="../../salary-research-methodology.html">Methodologie voor salarisonderzoek</a>
+
+<a href="../../privacy.html">Privacybeleid</a>
+
+<a href="../../cookie-policy.html">Cookiebeleid</a>
+
+<a href="../../disclaimer.html">Disclaimer</a>
+
+<a href="../../terms.html">Algemene voorwaarden</a>
+
+<a href="../../affiliate-disclosure.html">Affiliateverklaring</a>
+
+<a href="../../global-salary-data-policy.html">Wereldwijde salarisgegevens</a>
+
+<a href="../../pricing.html">Prijzen</a>
+
+<a href="../../features.html">Functies</a>
+
+<a href="../../contact-us.html">Contact</a>
+
+</p>
+
+
+<p>© 2026 Salary Payslip Alle rechten voorbehouden</p>
+
+<p>Laatst bijgewerkt 2026</p>
+
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+<script>
+
+// =========================================================
+// LANGUAGE SELECTOR
+// =========================================================
+
+function changeLanguage(language){
+
+    if(language === "en"){
+        window.location.href="/salary-slip-generator/";
+    }
+
+    if(language === "es"){
+        window.location.href="/salary-slip-generator/es/";
+    }
+
+    if(language === "pt"){
+        window.location.href="/salary-slip-generator/pt/";
+    }
+
+    if(language === "fr"){
+        window.location.href="/salary-slip-generator/fr/";
+    }
+
+    if(language === "de"){
+        window.location.href="/salary-slip-generator/de/";
+    }
+
+    if(language === "it"){
+        window.location.href="/salary-slip-generator/it/";
+    }
+
+    if(language === "nl"){
+        window.location.href="/salary-slip-generator/nl/";
+    }
+
+}
+
+
+// Logo upload & preview
+
+const logoUpload=document.getElementById('logoUpload');
+
+const logoPreview=document.getElementById('logoPreview');
+
+const previewLogo=document.getElementById('previewLogo');
+
+const logoText=document.getElementById('logoText');
+
+
+logoUpload.onchange=e=>{
+
+    const f=e.target.files[0];
+
+    if(!f) return;
+
+    const r=new FileReader();
+
+    r.onload=ev=>{
+
+        logoPreview.src = previewLogo.src = ev.target.result;
+
+        logoText.style.display = "none";
+
+    };
+
+    r.readAsDataURL(f);
+
+};
+
+
+// Calculate payslip
+
+document.getElementById('calculateBtn').onclick=()=>{
+
+    const g=id=>+document.getElementById(id).value||0;
+
+    const cur=document.getElementById('currency').value;
+
+    const gross=
+        g('basicSalary')+
+        g('hra')+
+        g('medical')+
+        g('otherAllowance')+
+        g('bonus');
+
+    const tax=(gross*g('taxPercent'))/100;
+
+    document.getElementById('tax').value = tax.toFixed(2);
+
+    const net=gross-g('deductions')-tax;
+
+
+    previewName.innerText = employeeName.value;
+
+    previewDesignation.innerText = employeeDesignation.value;
+
+    previewID.innerText = employeeID.value;
+
+    previewDate.innerText = payDate.value;
+
+    previewBasic.innerText = cur+g('basicSalary').toFixed(2);
+
+    previewHRA.innerText = cur+g('hra').toFixed(2);
+
+    previewMedical.innerText = cur+g('medical').toFixed(2);
+
+    previewOther.innerText = cur+g('otherAllowance').toFixed(2);
+
+    previewBonus.innerText = cur+g('bonus').toFixed(2);
+
+    previewDeductions.innerText = cur+g('deductions').toFixed(2);
+
+    previewTax.innerText = cur+tax.toFixed(2);
+
+    previewNet.innerText = cur+net.toFixed(2);
+
+
+    updateSocial();
+
+};
+
+
+// Download PDF
+
+downloadBtn.onclick=()=>{
+
+    html2canvas(payslipPreview,{scale:2}).then(c=>{
+
+        const pdf=new jspdf.jsPDF('p','pt','a4');
+
+        pdf.addImage(
+            c.toDataURL(),
+            'PNG',
+            0,
+            0,
+            595,
+            (c.height*595)/c.width
+        );
+
+        pdf.save('Salarisstrook.pdf');
+
+    });
+
+};
+
+
+// Social share
+
+function updateSocial(){
+
+    const url = encodeURIComponent(location.href);
+
+    const text = encodeURIComponent(
+        "Gebruik de online salarisstrook generator!"
+    );
+
+    shareFacebook.href =
+        `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+
+    shareTwitter.href =
+        `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+
+    shareLinkedIn.href =
+        `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+
+    shareWhatsApp.href =
+        `https://api.whatsapp.com/send?text=${text}%20${url}`;
+
+}
+
+
+window.addEventListener('load', updateSocial);
+
+</script>
+
+</body>
+</html>
