@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Générateur de Fiches de Paie en Ligne – Calculateur Gratuit</title> 
+<meta name="description" content="Générateur de fiches de paie en ligne – Calculez le salaire net avec avantages, primes, retenues et impôts. Calculateur de salaire gratuit."> 
+
+<link rel="canonical" href="https://www.salarypayslip.com/salary-slip-generator/fr/" />
+
+<link rel="alternate" hreflang="en" href="https://www.salarypayslip.com/salary-slip-generator/">
+<link rel="alternate" hreflang="es" href="https://www.salarypayslip.com/salary-slip-generator/es/">
+<link rel="alternate" hreflang="pt" href="https://www.salarypayslip.com/salary-slip-generator/pt/">
+<link rel="alternate" hreflang="fr" href="https://www.salarypayslip.com/salary-slip-generator/fr/">
+<link rel="alternate" hreflang="x-default" href="https://www.salarypayslip.com/salary-slip-generator/">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png?v=2">
+<link rel="shortcut icon" href="/favicon.png?v=2">
+
+
+<!-- SoftwareApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Générateur de Fiches de Paie en Ligne",
+  "operatingSystem": "Web",
+  "applicationCategory": "BusinessApplication",
+  "description": "Générateur gratuit de fiches de paie en ligne pour créer instantanément des fiches de paie professionnelles. Aucune inscription requise.",
+  "url": "https://www.salarypayslip.com/salary-slip-generator/fr/",
+  "image": "https://www.salarypayslip.com/favicon.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+
+<!-- WebSite Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Salary Pay Slip",
+  "url": "https://www.salarypayslip.com/salary-slip-generator/fr/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.salarypayslip.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Le générateur de fiches de paie Salary Payslip est-il gratuit ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, le générateur de fiches de paie Salary Payslip est entièrement gratuit et peut être utilisé sans inscription."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dois-je m'inscrire pour créer une fiche de paie ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, aucune inscription ni connexion n'est requise. Vous pouvez créer une fiche de paie instantanément en ligne."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "La fiche de paie générée peut-elle être imprimée ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, la fiche de paie générée peut être téléchargée en PDF et facilement imprimée."
+      }
+    }
+  ]
+}
+</script>
+
+
+<header>
+
+  <!-- Language Selector -->
+  <div class="language-selector">
+
+    <select id="languageSelector"
+            aria-label="Sélectionner la langue"
+            onchange="changeLanguage(this.value)">
+
+      <option value="fr" selected>Français</option>
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="pt">Português</option>
+
+    </select>
+
+  </div>
+
+  <a href="../">
+    <img src="https://www.salarypayslip.com/logo.png" width="80" alt="Salary Payslip">
+  </a>
+
+</header>
+
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#fff;color:#000;line-height:1.6}
+header{text-align:center;padding:20px;position:relative}
+header h1{font-size:28px;margin-top:10px}
+.logo-box{width:150px;height:150px;border:1px solid #000;display:flex;justify-content:center;align-items:center;margin:0 auto;overflow:hidden;position:relative}
+.logo-box img{max-width:150px;max-height:150px}
+.logo-box span{position:absolute;font-size:14px;text-align:center}
+.container{width:90%;max-width:1000px;margin:20px auto;padding:20px;border:1px solid #000;border-radius:10px}
+label{font-weight:bold;margin-top:10px;display:block}
+input,select{width:100%;padding:10px;margin-bottom:15px;border:1px solid #000;border-radius:5px}
+button{padding:12px 25px;border:1px solid #000;background:#fff;font-weight:bold;cursor:pointer;border-radius:5px;margin-right:10px}
+button:hover{background:#000;color:#fff}
+.payslip-preview{margin-top:25px;border:1px solid #000;padding:20px;border-radius:8px}
+table{width:100%;border-collapse:collapse;margin-bottom:15px}
+table,th,td{border:1px solid #000}
+th,td{padding:10px;text-align:left}
+.signature{text-align:right;margin-top:20px}
+.system-generated{text-align:center;margin-top:15px;font-weight:bold;font-size:14px}
+footer{border-top:1px solid #000;margin-top:40px;padding:20px;text-align:center;font-size:14px}
+
+/* Language Selector */
+.language-selector{
+position:absolute;
+top:20px;
+right:20px;
+z-index:10
+}
+
+.language-selector select{
+width:auto;
+min-width:150px;
+padding:8px 12px;
+margin-bottom:0;
+cursor:pointer
+}
+
+/* Social Sharing */
+.social-share{margin-top:15px;display:flex;gap:10px;align-items:center}
+.social-share a{width:32px;height:32px;display:inline-block}
+.social-icon{width:100%;height:100%;filter:grayscale(100%)}
+.social-icon:hover{filter:none}
+
+/* Left-align How to Use, FAQ, Policies */
+.guide,.faq,.policies{text-align:left;margin-top:30px;padding:10px;border:1px solid #000;border-radius:8px}
+
+@media(max-width:600px){
+.language-selector{
+position:static;
+margin-bottom:10px
+}
+}
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+<div class="logo-box">
+
+<img id="logoPreview">
+
+<span id="logoText">Ajouter le logo de l'entreprise</span>
+
+</div>
+
+<h1>Générateur de Fiches de Paie en Ligne</h1>
+
+<label for="logoUpload" style="cursor:pointer;border:1px solid #000;padding:8px 15px;display:inline-block;margin-top:10px">
+Ajouter le logo
+</label>
+
+<input type="file" id="logoUpload" accept="image/*" hidden>
+
+</header>
+
+
+<div class="container">
+
+<label>Nom du salarié</label>
+<input id="employeeName">
+
+<label>Poste</label>
+<input id="employeeDesignation">
+
+<label>ID du salarié</label>
+<input id="employeeID">
+
+<label>Date de paiement</label>
+<input type="date" id="payDate">
+
+<label>Salaire de base</label>
+<input type="number" id="basicSalary">
+
+
+<label>Avantages</label>
+
+<input type="number" id="hra" placeholder="HRA">
+
+<input type="number" id="medical" placeholder="Médical">
+
+<input type="number" id="otherAllowance" placeholder="Autre">
+
+
+<label>Prime</label>
+<input type="number" id="bonus">
+
+<label>Retenues</label>
+<input type="number" id="deductions">
+
+<label>Pourcentage d'impôt (%)</label>
+<input type="number" id="taxPercent">
+
+<label>Impôt</label>
+<input id="tax" readonly>
+
+
+<label>Devise</label>
+
+<select id="currency">
+
+  <option value="AFN">Afghani afghan (AFN)</option>
+  <option value="ALL">Lek albanais (ALL)</option>
+  <option value="DZD">Dinar algérien (DZD)</option>
+  <option value="ARS">Peso argentin (ARS)</option>
+  <option value="AUD">Dollar australien (AUD)</option>
+  <option value="AZN">Manat azerbaïdjanais (AZN)</option>
+  <option value="BBD">Dollar barbadien (BBD)</option>
+  <option value="BDT">Taka bangladais (BDT)</option>
+  <option value="BHD">Dinar bahreïni (BHD)</option>
+  <option value="BMD">Dollar bermudien (BMD)</option>
+  <option value="BND">Dollar de Brunei (BND)</option>
+  <option value="BOB">Boliviano bolivien (BOB)</option>
+  <option value="BAM">Mark convertible de Bosnie-Herzégovine (BAM)</option>
+  <option value="BRL">Real brésilien (BRL)</option>
+  <option value="BGN">Lev bulgare (BGN)</option>
+  <option value="BWP">Pula botswanais (BWP)</option>
+  <option value="BSD">Dollar bahaméen (BSD)</option>
+  <option value="BZD">Dollar bélizien (BZD)</option>
+  <option value="CAD">Dollar canadien (CAD)</option>
+  <option value="CLP">Peso chilien (CLP)</option>
+  <option value="CLF">Unité de compte chilienne UF (CLF)</option>
+  <option value="CNY">Yuan chinois (CNY)</option>
+  <option value="CRC">Colón costaricien (CRC)</option>
+  <option value="HRK">Kuna croate (HRK)</option>
+  <option value="CZK">Couronne tchèque (CZK)</option>
+  <option value="DKK">Couronne danoise (DKK)</option>
+  <option value="DOP">Peso dominicain (DOP)</option>
+  <option value="EGP">Livre égyptienne (EGP)</option>
+  <option value="ETB">Birr éthiopien (ETB)</option>
+  <option value="EUR">Euro (EUR)</option>
+  <option value="FJD">Dollar fidjien (FJD)</option>
+  <option value="GHS">Cedi ghanéen (GHS)</option>
+  <option value="GEL">Lari géorgien (GEL)</option>
+  <option value="GYD">Dollar guyanien (GYD)</option>
+  <option value="HKD">Dollar de Hong Kong (HKD)</option>
+  <option value="HNL">Lempira hondurien (HNL)</option>
+  <option value="HUF">Forint hongrois (HUF)</option>
+  <option value="ISK">Couronne islandaise (ISK)</option>
+  <option value="INR">Roupie indienne (INR)</option>
+  <option value="IDR">Roupie indonésienne (IDR)</option>
+  <option value="IRR">Rial iranien (IRR)</option>
+  <option value="ILS">Shekel israélien (ILS)</option>
+  <option value="JMD">Dollar jamaïcain (JMD)</option>
+  <option value="JPY">Yen japonais (JPY)</option>
+  <option value="JOD">Dinar jordanien (JOD)</option>
+  <option value="KZT">Tenge kazakh (KZT)</option>
+  <option value="KES">Shilling kényan (KES)</option>
+  <option value="KWD">Dinar koweïtien (KWD)</option>
+  <option value="KRW">Won sud-coréen (KRW)</option>
+  <option value="LBP">Livre libanaise (LBP)</option>
+  <option value="LKR">Roupie sri-lankaise (LKR)</option>
+  <option value="LVL">Lats letton (LVL) <!-- ancien --></option>
+  <option value="LTL">Litas lituanien (LTL) <!-- ancien --></option>
+  <option value="MKD">Denar macédonien (MKD)</option>
+  <option value="MGA">Ariary malgache (MGA)</option>
+  <option value="MWK">Kwacha malawite (MWK)</option>
+  <option value="MYR">Ringgit malaisien (MYR)</option>
+  <option value="MUR">Roupie mauricienne (MUR)</option>
+  <option value="MDL">Leu moldave (MDL)</option>
+  <option value="MAD">Dirham marocain (MAD)</option>
+  <option value="MXN">Peso mexicain (MXN)</option>
+  <option value="MXV">Unidad de Inversión mexicaine (MXV)</option>
+  <option value="NAD">Dollar namibien (NAD)</option>
+  <option value="NIO">Córdoba nicaraguayen (NIO)</option>
+  <option value="NZD">Dollar néo-zélandais (NZD)</option>
+  <option value="NGN">Naira nigérian (NGN)</option>
+  <option value="NOK">Couronne norvégienne (NOK)</option>
+  <option value="OMR">Rial omanais (OMR)</option>
+  <option value="PKR">Roupie pakistanaise (PKR)</option>
+  <option value="PEN">Sol péruvien (PEN)</option>
+  <option value="PHP">Peso philippin (PHP)</option>
+  <option value="PLN">Zloty polonais (PLN)</option>
+  <option value="QAR">Riyal qatari (QAR)</option>
+  <option value="RON">Leu roumain (RON)</option>
+  <option value="RUB">Rouble russe (RUB)</option>
+  <option value="SAR">Riyal saoudien (SAR)</option>
+  <option value="RSD">Dinar serbe (RSD)</option>
+  <option value="SCR">Roupie seychelloise (SCR)</option>
+  <option value="SGD">Dollar de Singapour (SGD)</option>
+  <option value="SBD">Dollar des Îles Salomon (SBD)</option>
+  <option value="SYP">Livre syrienne (SYP)</option>
+  <option value="SEK">Couronne suédoise (SEK)</option>
+  <option value="CHF">Franc suisse (CHF)</option>
+  <option value="TWD">Nouveau dollar taïwanais (TWD)</option>
+  <option value="THB">Baht thaïlandais (THB)</option>
+  <option value="TZS">Shilling tanzanien (TZS)</option>
+  <option value="TOP">Paʻanga tongien (TOP)</option>
+  <option value="TRY">Livre turque (TRY)</option>
+  <option value="UGX">Shilling ougandais (UGX)</option>
+  <option value="UAH">Hryvnia ukrainienne (UAH)</option>
+  <option value="AED">Dirham des Émirats arabes unis (AED)</option>
+  <option value="USD">Dollar des États-Unis (USD)</option>
+  <option value="UYU">Peso uruguayen (UYU)</option>
+  <option value="UZS">Sum ouzbek (UZS)</option>
+  <option value="VEF">Bolivar vénézuélien (VEF)</option>
+  <option value="VND">Dong vietnamien (VND)</option>
+  <option value="XOF">Franc CFA BCEAO (XOF)</option>
+  <option value="XAF">Franc CFA BEAC (XAF)</option>
+  <option value="XCD">Dollar des Caraïbes orientales (XCD)</option>
+  <option value="XPF">Franc CFP (XPF)</option>
+  <option value="ZAR">Rand sud-africain (ZAR)</option>
+  <option value="ZMW">Kwacha zambien (ZMW)</option>
+
+</select>
+
+
+<button id="calculateBtn">
+Calculer le salaire
+</button>
+
+<button id="downloadBtn">
+Télécharger le PDF
+</button>
+
+
+<!-- PAYSLIP -->
+
+<div class="payslip-preview" id="payslipPreview">
+
+<!-- LOGO CENTER ALIGNED -->
+
+<div style="text-align:center;margin-bottom:15px">
+
+<img id="previewLogo" style="max-width:120px;margin-bottom:10px">
+
+<h2>Fiche de Paie</h2>
+
+</div>
+
+
+<table>
+
+<tr>
+<th>Nom du salarié</th>
+<td id="previewName"></td>
+</tr>
+
+<tr>
+<th>Poste</th>
+<td id="previewDesignation"></td>
+</tr>
+
+<tr>
+<th>ID du salarié</th>
+<td id="previewID"></td>
+</tr>
+
+<tr>
+<th>Date de paiement</th>
+<td id="previewDate"></td>
+</tr>
+
+<tr>
+<th>Salaire de base</th>
+<td id="previewBasic"></td>
+</tr>
+
+<tr>
+<th>HRA</th>
+<td id="previewHRA"></td>
+</tr>
+
+<tr>
+<th>Médical</th>
+<td id="previewMedical"></td>
+</tr>
+
+<tr>
+<th>Autre</th>
+<td id="previewOther"></td>
+</tr>
+
+<tr>
+<th>Prime</th>
+<td id="previewBonus"></td>
+</tr>
+
+<tr>
+<th>Retenues</th>
+<td id="previewDeductions"></td>
+</tr>
+
+<tr>
+<th>Impôt</th>
+<td id="previewTax"></td>
+</tr>
+
+<tr>
+<th>Salaire net</th>
+<td id="previewNet"></td>
+</tr>
+
+</table>
+
+
+<div class="signature">
+
+<p>Signature autorisée</p>
+
+<hr style="width:150px">
+
+</div>
+
+
+<div class="system-generated">
+Généré par le système
+</div>
+
+</div>
+
+
+<!-- HOW TO USE -->
+
+<div class="guide">
+
+<h2>
+Comment utiliser
+</h2>
+
+<p>
+Cet outil de génération de fiches de paie en ligne est destiné uniquement à un usage personnel, éducatif et professionnel. Il ne s'agit pas d'un service de paie.
+Commencez par télécharger le logo de votre entreprise, qui apparaîtra sur la fiche de paie et dans le PDF téléchargé.
+Saisissez les informations du salarié telles que le nom, le poste, l'ID du salarié et la date de paiement.
+Entrez le salaire de base ainsi que les avantages, notamment HRA, les avantages médicaux et tout autre avantage applicable.
+Ajoutez les primes et les retenues si nécessaire.
+Saisissez le pourcentage d'impôt et l'outil calculera automatiquement le montant de l'impôt.
+Sélectionnez votre devise préférée dans la liste déroulante.
+Cliquez sur « Calculer le salaire » pour afficher la fiche de paie, puis sur « Télécharger le PDF » pour obtenir une fiche de paie prête à l'emploi générée par le système.
+</p>
+
+</div>
+
+
+<!-- FAQ -->
+
+<div class="faq">
+
+<h2>Questions fréquentes</h2>
+
+
+<p>
+<strong>Q1 : Ce générateur de fiches de paie en ligne est-il destiné à tout le monde ?</strong><br>
+
+Oui, cet outil est destiné à tous les utilisateurs dans le monde. Vous pouvez créer et télécharger un nombre illimité de fiches de paie.
+</p>
+
+
+<p>
+<strong>Q2 : Le PDF téléchargé correspondra-t-il à la fiche de paie ?</strong><br>
+
+Oui, le PDF téléchargé correspondra exactement à la fiche de paie, y compris les informations du salarié, le détail du salaire, les avantages et le logo de l'entreprise.
+</p>
+
+
+<p>
+<strong>Q3 : Comment l'impôt est-il calculé dans cet outil ?</strong><br>
+
+L'impôt est calculé automatiquement en fonction du pourcentage d'impôt saisi. Le système l'applique au salaire brut.
+</p>
+
+
+<p>
+<strong>Q4 : Puis-je modifier la devise pour différents salariés ?</strong><br>
+
+Oui, vous pouvez sélectionner votre devise préférée dans la liste déroulante avant de calculer le salaire.
+</p>
+
+
+<p>
+<strong>Q5 : Ce générateur de fiches de paie est-il compatible avec les appareils mobiles ?</strong><br>
+
+Oui, l'outil est entièrement responsive et fonctionne sur les téléphones mobiles, tablettes et ordinateurs.
+</p>
+
+</div>
+
+
+<!-- Social Share -->
+
+<div class="social-share">
+
+<strong>Partager :</strong>
+
+<a id="shareFacebook" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" class="social-icon">
+</a>
+
+<a id="shareTwitter" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" class="social-icon">
+</a>
+
+<a id="shareLinkedIn" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" class="social-icon">
+</a>
+
+<a id="shareWhatsApp" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" class="social-icon">
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>
+
+<a href="../../about-us.html">About Us</a>
+
+<a href="../../editorial-policy.html">Editorial Policy</a>
+
+<a href="../../salary-research-methodology.html">Salary Research Methodology</a>
+
+<a href="../../privacy.html">Privacy Policy</a>
+
+<a href="../../cookie-policy.html">Cookie Policy</a>
+
+<a href="../../disclaimer.html">Disclaimer</a>
+
+<a href="../../terms.html">Terms & Conditions</a>
+
+<a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
+
+<a href="../../global-salary-data-policy.html">Global Salary Data</a>
+
+<a href="../../pricing.html">Pricing</a>
+
+<a href="../../features.html">Features</a>
+
+<a href="../../contact-us.html">Contact Us</a> 
+
+</p>
+
+
+<p>
+© 2026 Salary Payslip Tous droits réservés
+</p>
+
+<p>
+Dernière mise à jour 2026
+</p>
+
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+<script>
+
+/* =========================================================
+LANGUAGE SELECTOR
+========================================================= */
+
+function changeLanguage(language){
+
+    if(language === "en"){
+        window.location.href =
+        "/salary-slip-generator/";
+    }
+
+    if(language === "es"){
+        window.location.href =
+        "/salary-slip-generator/es/";
+    }
+
+    if(language === "pt"){
+        window.location.href =
+        "/salary-slip-generator/pt/";
+    }
+
+    if(language === "fr"){
+        window.location.href =
+        "/salary-slip-generator/fr/";
+    }
+
+}
+
+
+/* =========================================================
+LOGO UPLOAD & PREVIEW
+========================================================= */
+
+const logoUpload =
+document.getElementById('logoUpload');
+
+const logoPreview =
+document.getElementById('logoPreview');
+
+const previewLogo =
+document.getElementById('previewLogo');
+
+const logoText =
+document.getElementById('logoText');
+
+
+logoUpload.onchange = e => {
+
+    const f =
+    e.target.files[0];
+
+    if(!f) return;
+
+    const r =
+    new FileReader();
+
+    r.onload = ev => {
+
+        logoPreview.src =
+        previewLogo.src =
+        ev.target.result;
+
+        logoText.style.display =
+        "none";
+
+    };
+
+    r.readAsDataURL(f);
+
+};
+
+
+/* =========================================================
+CALCULATE PAYSLIP
+========================================================= */
+
+document.getElementById(
+'calculateBtn'
+).onclick = () => {
+
+    const g =
+    id =>
+    +document.getElementById(id).value || 0;
+
+
+    const cur =
+    document.getElementById(
+        'currency'
+    ).value;
+
+
+    const gross =
+
+        g('basicSalary') +
+
+        g('hra') +
+
+        g('medical') +
+
+        g('otherAllowance') +
+
+        g('bonus');
+
+
+    const tax =
+    (
+        gross *
+        g('taxPercent')
+    ) / 100;
+
+
+    document.getElementById(
+        'tax'
+    ).value =
+    tax.toFixed(2);
+
+
+    const net =
+    gross -
+    g('deductions') -
+    tax;
+
+
+    previewName.innerText =
+    employeeName.value;
+
+
+    previewDesignation.innerText =
+    employeeDesignation.value;
+
+
+    previewID.innerText =
+    employeeID.value;
+
+
+    /* French date format */
+
+    if(payDate.value){
+
+        const date =
+        new Date(
+            payDate.value + "T00:00:00"
+        );
+
+        previewDate.innerText =
+        date.toLocaleDateString(
+            "fr-FR"
+        );
+
+    }else{
+
+        previewDate.innerText =
+        "";
+
+    }
+
+
+    /* French number formatting */
+
+    const format =
+    value =>
+    Number(value).toLocaleString(
+        "fr-FR",
+        {
+            minimumFractionDigits:2,
+            maximumFractionDigits:2
+        }
+    );
+
+
+    previewBasic.innerText =
+    cur + format(
+        g('basicSalary')
+    );
+
+
+    previewHRA.innerText =
+    cur + format(
+        g('hra')
+    );
+
+
+    previewMedical.innerText =
+    cur + format(
+        g('medical')
+    );
+
+
+    previewOther.innerText =
+    cur + format(
+        g('otherAllowance')
+    );
+
+
+    previewBonus.innerText =
+    cur + format(
+        g('bonus')
+    );
+
+
+    previewDeductions.innerText =
+    cur + format(
+        g('deductions')
+    );
+
+
+    previewTax.innerText =
+    cur + format(
+        tax
+    );
+
+
+    previewNet.innerText =
+    cur + format(
+        net
+    );
+
+
+    updateSocial();
+
+};
+
+
+/* =========================================================
+DOWNLOAD PDF
+========================================================= */
+
+downloadBtn.onclick = () => {
+
+    html2canvas(
+        payslipPreview,
+        {
+            scale:2
+        }
+    ).then(c => {
+
+        const pdf =
+        new jspdf.jsPDF(
+            'p',
+            'pt',
+            'a4'
+        );
+
+
+        pdf.addImage(
+            c.toDataURL(),
+            'PNG',
+            0,
+            0,
+            595,
+            (c.height * 595) / c.width
+        );
+
+
+        pdf.save(
+            'Bulletin-de-Paie.pdf'
+        );
+
+    });
+
+};
+
+
+/* =========================================================
+SOCIAL SHARE
+========================================================= */
+
+function updateSocial(){
+
+    const url =
+    encodeURIComponent(
+        location.href
+    );
+
+
+    const text =
+    encodeURIComponent(
+        "Découvrez ce générateur de fiches de paie en ligne gratuit !"
+    );
+
+
+    shareFacebook.href =
+    `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+
+
+    shareTwitter.href =
+    `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+
+
+    shareLinkedIn.href =
+    `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+
+
+    shareWhatsApp.href =
+    `https://api.whatsapp.com/send?text=${text}%20${url}`;
+
+}
+
+
+window.addEventListener(
+'load',
+updateSocial
+);
+
+</script>
+
+</body>
+</html>
