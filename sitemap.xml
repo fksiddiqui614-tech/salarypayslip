@@ -541,7 +541,56 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     </url>
+      
+   <url>
+    <loc>https://www.salarypayslip.com/salary-slip-generator/ar/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
 
+   <url>
+    <loc>https://www.salarypayslip.com/salary-slip-generator/nl/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/salary-slip-generator/it/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/salary-slip-generator/de/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/salary-slip-generator/fr/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/salary-slip-generator/pt/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/salary-slip-generator/es/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+      
    <url>
     <loc>https://www.salarypayslip.com/salary-slip-generator/</loc>
     <lastmod>2026-07-21</lastmod>
