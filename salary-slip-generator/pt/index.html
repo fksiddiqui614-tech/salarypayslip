@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gerador de Recibos de Salário Grátis | SalaryPayslip</title>
+
+<meta name="description" content="Crie recibos de salário profissionais grátis. Calcule salário líquido, benefícios, bônus, descontos e impostos e baixe o PDF.">
+
+<link rel="canonical" href="https://www.salarypayslip.com/salary-slip-generator/pt/">
+
+<link rel="alternate" hreflang="en"
+      href="https://www.salarypayslip.com/salary-slip-generator/">
+
+<link rel="alternate" hreflang="pt"
+      href="https://www.salarypayslip.com/salary-slip-generator/pt/">
+
+<link rel="alternate" hreflang="es"
+      href="https://www.salarypayslip.com/salary-slip-generator/es/">
+
+<link rel="alternate" hreflang="x-default"
+      href="https://www.salarypayslip.com/salary-slip-generator/">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png?v=2">
+<link rel="shortcut icon" href="/favicon.png?v=2">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gerador de Recibos de Salário Grátis | SalaryPayslip">
+<meta property="og:description" content="Crie recibos de salário profissionais, calcule o salário líquido e baixe seu recibo em PDF gratuitamente.">
+<meta property="og:url" content="https://www.salarypayslip.com/salary-slip-generator/pt/">
+<meta property="og:image" content="https://www.salarypayslip.com/favicon.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gerador de Recibos de Salário Grátis">
+<meta name="twitter:description" content="Crie recibos de salário profissionais e baixe o PDF gratuitamente.">
+<meta name="twitter:image" content="https://www.salarypayslip.com/favicon.png">
+
+
+<!-- =========================================================
+SOFTWARE APPLICATION SCHEMA
+========================================================= -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Gerador de Recibos de Salário Online",
+  "operatingSystem": "Web",
+  "applicationCategory": "BusinessApplication",
+  "description": "Gerador gratuito de recibos de salário para criar recibos profissionais instantaneamente. Não é necessário cadastro.",
+  "url": "https://www.salarypayslip.com/salary-slip-generator/pt/",
+  "image": "https://www.salarypayslip.com/favicon.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+
+<!-- =========================================================
+WEBSITE SCHEMA
+========================================================= -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SalaryPayslip",
+  "url": "https://www.salarypayslip.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.salarypayslip.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+
+<!-- =========================================================
+FAQ SCHEMA
+========================================================= -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Este gerador de recibos de salário é gratuito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O gerador de recibos de salário da SalaryPayslip é gratuito e não requer cadastro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso me cadastrar para criar um recibo de salário?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Você não precisa criar uma conta nem fazer login para gerar um recibo de salário."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso baixar o recibo de salário em PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Você pode calcular o salário e baixar o recibo de salário gerado em formato PDF."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como o imposto é calculado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O imposto é calculado com base na porcentagem informada pelo usuário e aplicado ao salário bruto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso alterar a moeda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Você pode selecionar a moeda de sua preferência antes de calcular o salário."
+      }
+    }
+  ]
+}
+</script>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif
+}
+
+body{
+    background:#fff;
+    color:#000;
+    line-height:1.6
+}
+
+header{
+    text-align:center;
+    padding:20px
+}
+
+header h1{
+    font-size:28px;
+    margin-top:10px
+}
+
+.logo-box{
+    width:150px;
+    height:150px;
+    border:1px solid #000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto;
+    overflow:hidden;
+    position:relative
+}
+
+.logo-box img{
+    max-width:150px;
+    max-height:150px
+}
+
+.logo-box span{
+    position:absolute;
+    font-size:14px;
+    text-align:center
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:20px auto;
+    padding:20px;
+    border:1px solid #000;
+    border-radius:10px
+}
+
+label{
+    font-weight:bold;
+    margin-top:10px;
+    display:block
+}
+
+input,
+select{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+    border:1px solid #000;
+    border-radius:5px
+}
+
+button{
+    padding:12px 25px;
+    border:1px solid #000;
+    background:#fff;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:5px;
+    margin-right:10px
+}
+
+button:hover{
+    background:#000;
+    color:#fff
+}
+
+.payslip-preview{
+    margin-top:25px;
+    border:1px solid #000;
+    padding:20px;
+    border-radius:8px
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:15px
+}
+
+table,
+th,
+td{
+    border:1px solid #000
+}
+
+th,
+td{
+    padding:10px;
+    text-align:left
+}
+
+.signature{
+    text-align:right;
+    margin-top:20px
+}
+
+.system-generated{
+    text-align:center;
+    margin-top:15px;
+    font-weight:bold;
+    font-size:14px
+}
+
+footer{
+    border-top:1px solid #000;
+    margin-top:40px;
+    padding:20px;
+    text-align:center;
+    font-size:14px
+}
+
+/* Language Selector */
+
+.language-selector{
+    text-align:center;
+    margin-bottom:10px
+}
+
+.language-selector select{
+    width:auto;
+    min-width:150px;
+    padding:8px 12px;
+    margin-bottom:0;
+    cursor:pointer
+}
+
+/* Social Sharing */
+
+.social-share{
+    margin-top:15px;
+    display:flex;
+    gap:10px;
+    align-items:center
+}
+
+.social-share a{
+    width:32px;
+    height:32px;
+    display:inline-block
+}
+
+.social-icon{
+    width:100%;
+    height:100%;
+    filter:grayscale(100%)
+}
+
+.social-icon:hover{
+    filter:none
+}
+
+/* Left-align Guide / FAQ */
+
+.guide,
+.faq,
+.policies{
+    text-align:left;
+    margin-top:30px;
+    padding:10px;
+    border:1px solid #000;
+    border-radius:8px
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:24px
+    }
+
+    .container{
+        width:94%;
+        padding:15px
+    }
+
+    button{
+        width:100%;
+        margin-bottom:10px;
+        margin-right:0
+    }
+
+    th,
+    td{
+        padding:8px;
+        font-size:14px
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+HEADER
+========================================================= -->
+
+<header>
+
+<!-- Language Selector -->
+
+<div class="language-selector">
+
+<select id="languageSelector"
+        aria-label="Selecionar idioma"
+        onchange="changeLanguage(this.value)">
+
+<option value="pt" selected>Português</option>
+<option value="en">English</option>
+<option value="es">Español</option>
+
+</select>
+
+</div>
+
+
+<a href="/salary-slip-generator/">
+
+<img
+src="https://www.salarypayslip.com/logo.png"
+width="80"
+alt="SalaryPayslip"
+>
+
+</a>
+
+</header>
+
+
+<header>
+
+<div class="logo-box">
+
+<img id="logoPreview" alt="Logotipo da empresa">
+
+<span id="logoText">
+Adicionar logotipo da empresa
+</span>
+
+</div>
+
+
+<h1>
+Gerador de Recibos de Salário Online
+</h1>
+
+
+<label
+for="logoUpload"
+style="cursor:pointer;border:1px solid #000;padding:8px 15px;display:inline-block;margin-top:10px">
+
+Adicionar logotipo aqui
+
+</label>
+
+
+<input
+type="file"
+id="logoUpload"
+accept="image/*"
+hidden
+>
+
+</header>
+
+
+<!-- =========================================================
+MAIN CONTAINER
+========================================================= -->
+
+<div class="container">
+
+
+<label for="employeeName">
+Nome do funcionário
+</label>
+
+<input
+id="employeeName"
+type="text"
+>
+
+
+<label for="employeeDesignation">
+Cargo
+</label>
+
+<input
+id="employeeDesignation"
+type="text"
+>
+
+
+<label for="employeeID">
+ID do funcionário
+</label>
+
+<input
+id="employeeID"
+type="text"
+>
+
+
+<label for="payDate">
+Data de pagamento
+</label>
+
+<input
+type="date"
+id="payDate"
+>
+
+
+<label for="basicSalary">
+Salário básico
+</label>
+
+<input
+type="number"
+id="basicSalary"
+>
+
+
+<label>
+Benefícios
+</label>
+
+
+<input
+type="number"
+id="hra"
+placeholder="Benefício de moradia (HRA)"
+>
+
+
+<input
+type="number"
+id="medical"
+placeholder="Benefício médico"
+>
+
+
+<input
+type="number"
+id="otherAllowance"
+placeholder="Outro benefício"
+>
+
+
+<label for="bonus">
+Bônus
+</label>
+
+<input
+type="number"
+id="bonus"
+>
+
+
+<label for="deductions">
+Descontos
+</label>
+
+<input
+type="number"
+id="deductions"
+>
+
+
+<label for="taxPercent">
+Porcentagem de imposto (%)
+</label>
+
+<input
+type="number"
+id="taxPercent"
+>
+
+
+<label for="tax">
+Imposto
+</label>
+
+<input
+id="tax"
+readonly
+>
+
+
+<!-- =========================================================
+CURRENCY
+========================================================= -->
+
+<label for="currency">
+Moeda
+</label>
+
+
+<select id="currency">
+
+<option value="AFN">Afegane afegão (AFN)</option>
+<option value="ALL">Lek albanês (ALL)</option>
+<option value="DZD">Dinar argelino (DZD)</option>
+<option value="ARS">Peso argentino (ARS)</option>
+<option value="AUD">Dólar australiano (AUD)</option>
+<option value="AZN">Manat azerbaijano (AZN)</option>
+<option value="BBD">Dólar de Barbados (BBD)</option>
+<option value="BDT">Taka de Bangladesh (BDT)</option>
+<option value="BHD">Dinar bareinita (BHD)</option>
+<option value="BMD">Dólar bermudense (BMD)</option>
+<option value="BND">Dólar de Brunei (BND)</option>
+<option value="BOB">Boliviano (BOB)</option>
+<option value="BAM">Marco conversível da Bósnia e Herzegovina (BAM)</option>
+<option value="BRL">Real brasileiro (BRL)</option>
+<option value="BGN">Lev búlgaro (BGN)</option>
+<option value="BWP">Pula de Botsuana (BWP)</option>
+<option value="BSD">Dólar das Bahamas (BSD)</option>
+<option value="BZD">Dólar de Belize (BZD)</option>
+<option value="CAD">Dólar canadense (CAD)</option>
+<option value="CLP">Peso chileno (CLP)</option>
+<option value="CLF">Unidade de Conta do Chile (CLF)</option>
+<option value="CNY">Yuan chinês (CNY)</option>
+<option value="CRC">Colón costa-riquenho (CRC)</option>
+<option value="HRK">Kuna croata (HRK)</option>
+<option value="CZK">Coroa tcheca (CZK)</option>
+<option value="DKK">Coroa dinamarquesa (DKK)</option>
+<option value="DOP">Peso dominicano (DOP)</option>
+<option value="EGP">Libra egípcia (EGP)</option>
+<option value="ETB">Birr etíope (ETB)</option>
+<option value="EUR">Euro (EUR)</option>
+<option value="FJD">Dólar fijiano (FJD)</option>
+<option value="GHS">Cedi ganês (GHS)</option>
+<option value="GEL">Lari georgiano (GEL)</option>
+<option value="GYD">Dólar guianense (GYD)</option>
+<option value="HKD">Dólar de Hong Kong (HKD)</option>
+<option value="HNL">Lempira hondurenha (HNL)</option>
+<option value="HUF">Forint húngaro (HUF)</option>
+<option value="ISK">Coroa islandesa (ISK)</option>
+<option value="INR">Rupia indiana (INR)</option>
+<option value="IDR">Rupia indonésia (IDR)</option>
+<option value="IRR">Rial iraniano (IRR)</option>
+<option value="ILS">Novo shekel israelense (ILS)</option>
+<option value="JMD">Dólar jamaicano (JMD)</option>
+<option value="JPY">Iene japonês (JPY)</option>
+<option value="JOD">Dinar jordaniano (JOD)</option>
+<option value="KZT">Tenge cazaque (KZT)</option>
+<option value="KES">Xelim queniano (KES)</option>
+<option value="KWD">Dinar kuwaitiano (KWD)</option>
+<option value="KRW">Won sul-coreano (KRW)</option>
+<option value="LBP">Libra libanesa (LBP)</option>
+<option value="LKR">Rupia do Sri Lanka (LKR)</option>
+<option value="LVL">Lats letão (LVL)</option>
+<option value="LTL">Litas lituano (LTL)</option>
+<option value="MKD">Denar macedônio (MKD)</option>
+<option value="MGA">Ariary malgaxe (MGA)</option>
+<option value="MWK">Kwacha malauiano (MWK)</option>
+<option value="MYR">Ringgit malaio (MYR)</option>
+<option value="MUR">Rupia mauriciana (MUR)</option>
+<option value="MDL">Leu moldavo (MDL)</option>
+<option value="MAD">Dirham marroquino (MAD)</option>
+<option value="MXN">Peso mexicano (MXN)</option>
+<option value="MXV">Unidade de Investimento Mexicana (MXV)</option>
+<option value="NAD">Dólar namibiano (NAD)</option>
+<option value="NIO">Córdoba nicaraguense (NIO)</option>
+<option value="NZD">Dólar neozelandês (NZD)</option>
+<option value="NGN">Naira nigeriana (NGN)</option>
+<option value="NOK">Coroa norueguesa (NOK)</option>
+<option value="OMR">Rial omanense (OMR)</option>
+<option value="PKR">Rupia paquistanesa (PKR)</option>
+<option value="PEN">Sol peruano (PEN)</option>
+<option value="PHP">Peso filipino (PHP)</option>
+<option value="PLN">Zloty polonês (PLN)</option>
+<option value="QAR">Rial catariano (QAR)</option>
+<option value="RON">Leu romeno (RON)</option>
+<option value="RUB">Rublo russo (RUB)</option>
+<option value="SAR">Rial saudita (SAR)</option>
+<option value="RSD">Dinar sérvio (RSD)</option>
+<option value="SCR">Rupia seichelense (SCR)</option>
+<option value="SGD">Dólar de Singapura (SGD)</option>
+<option value="SBD">Dólar das Ilhas Salomão (SBD)</option>
+<option value="SYP">Libra síria (SYP)</option>
+<option value="SEK">Coroa sueca (SEK)</option>
+<option value="CHF">Franco suíço (CHF)</option>
+<option value="TWD">Novo dólar taiwanês (TWD)</option>
+<option value="THB">Baht tailandês (THB)</option>
+<option value="TZS">Xelim tanzaniano (TZS)</option>
+<option value="TOP">Paʻanga tonganês (TOP)</option>
+<option value="TRY">Lira turca (TRY)</option>
+<option value="UGX">Xelim ugandense (UGX)</option>
+<option value="UAH">Hryvnia ucraniana (UAH)</option>
+<option value="AED">Dirham dos Emirados Árabes Unidos (AED)</option>
+<option value="USD">Dólar dos Estados Unidos (USD)</option>
+<option value="UYU">Peso uruguaio (UYU)</option>
+<option value="UZS">Som uzbeque (UZS)</option>
+<option value="VEF">Bolívar venezuelano (VEF)</option>
+<option value="VND">Dong vietnamita (VND)</option>
+<option value="XOF">Franco CFA da África Ocidental (XOF)</option>
+<option value="XAF">Franco CFA da África Central (XAF)</option>
+<option value="XCD">Dólar do Caribe Oriental (XCD)</option>
+<option value="XPF">Franco CFP (XPF)</option>
+<option value="ZAR">Rand sul-africano (ZAR)</option>
+<option value="ZMW">Kwacha zambiano (ZMW)</option>
+
+</select>
+
+
+<button id="calculateBtn">
+Calcular salário
+</button>
+
+
+<button id="downloadBtn">
+Baixar PDF
+</button>
+
+
+<!-- =========================================================
+PAYSLIP PREVIEW
+========================================================= -->
+
+<div
+class="payslip-preview"
+id="payslipPreview"
+>
+
+
+<div style="text-align:center;margin-bottom:15px">
+
+<img
+id="previewLogo"
+alt="Logotipo da empresa"
+style="max-width:120px;margin-bottom:10px"
+>
+
+<h2>
+Recibo de Salário
+</h2>
+
+</div>
+
+
+<table>
+
+<tr>
+<th>Nome do funcionário</th>
+<td id="previewName"></td>
+</tr>
+
+<tr>
+<th>Cargo</th>
+<td id="previewDesignation"></td>
+</tr>
+
+<tr>
+<th>ID do funcionário</th>
+<td id="previewID"></td>
+</tr>
+
+<tr>
+<th>Data de pagamento</th>
+<td id="previewDate"></td>
+</tr>
+
+<tr>
+<th>Salário básico</th>
+<td id="previewBasic"></td>
+</tr>
+
+<tr>
+<th>Benefício de moradia (HRA)</th>
+<td id="previewHRA"></td>
+</tr>
+
+<tr>
+<th>Benefício médico</th>
+<td id="previewMedical"></td>
+</tr>
+
+<tr>
+<th>Outro benefício</th>
+<td id="previewOther"></td>
+</tr>
+
+<tr>
+<th>Bônus</th>
+<td id="previewBonus"></td>
+</tr>
+
+<tr>
+<th>Descontos</th>
+<td id="previewDeductions"></td>
+</tr>
+
+<tr>
+<th>Imposto</th>
+<td id="previewTax"></td>
+</tr>
+
+<tr>
+<th>Salário líquido</th>
+<td id="previewNet"></td>
+</tr>
+
+</table>
+
+
+<div class="signature">
+
+<p>
+Assinatura autorizada
+</p>
+
+<hr style="width:150px">
+
+</div>
+
+
+<div class="system-generated">
+Gerado pelo sistema
+</div>
+
+
+</div>
+
+
+<!-- =========================================================
+HOW TO USE
+========================================================= -->
+
+<div class="guide">
+
+<h2>
+Como usar
+</h2>
+
+<p>
+
+Este gerador de recibos de salário online foi desenvolvido para fins pessoais, educacionais e profissionais. Não é um serviço de folha de pagamento.
+
+</p>
+
+<p>
+
+Comece adicionando o logotipo da sua empresa. O logotipo aparecerá no recibo de salário e no PDF baixado.
+
+</p>
+
+<p>
+
+Digite os dados do funcionário, como nome, cargo, ID do funcionário e data de pagamento.
+
+</p>
+
+<p>
+
+Informe o salário básico junto com os benefícios aplicáveis, como benefício de moradia (HRA), benefício médico e outros benefícios.
+
+</p>
+
+<p>
+
+Adicione bônus e descontos quando aplicável.
+
+</p>
+
+<p>
+
+Informe a porcentagem de imposto. O sistema calculará automaticamente o valor do imposto com base na porcentagem informada e no salário bruto.
+
+</p>
+
+<p>
+
+Selecione a moeda de sua preferência no menu suspenso.
+
+</p>
+
+<p>
+
+Clique em <strong>“Calcular salário”</strong> para gerar o recibo. Depois, clique em <strong>“Baixar PDF”</strong> para obter um recibo de salário pronto para uso.
+
+</p>
+
+</div>
+
+
+<!-- =========================================================
+FAQ
+========================================================= -->
+
+<div class="faq">
+
+<h2>
+Perguntas frequentes
+</h2>
+
+
+<p>
+
+<strong>Q1: Este gerador de recibos de salário é para todos?</strong>
+
+<br>
+
+Sim. Esta ferramenta pode ser usada em todo o mundo para criar recibos de salário personalizados. Você pode gerar e baixar quantos recibos precisar.
+
+</p>
+
+
+<p>
+
+<strong>Q2: O PDF baixado corresponde ao recibo exibido?</strong>
+
+<br>
+
+Sim. O PDF baixado inclui os dados do funcionário, o detalhamento salarial, os benefícios, os descontos e o logotipo da empresa exibidos no recibo.
+
+</p>
+
+
+<p>
+
+<strong>Q3: Como o imposto é calculado?</strong>
+
+<br>
+
+O imposto é calculado automaticamente com base na porcentagem informada. O sistema aplica essa porcentagem ao salário bruto.
+
+</p>
+
+
+<p>
+
+<strong>Q4: Posso alterar a moeda para diferentes funcionários?</strong>
+
+<br>
+
+Sim. Você pode selecionar a moeda de sua preferência antes de calcular cada recibo de salário.
+
+</p>
+
+
+<p>
+
+<strong>Q5: Este gerador de recibos de salário funciona em celulares?</strong>
+
+<br>
+
+Sim. A ferramenta é responsiva e funciona em celulares, tablets e computadores.
+
+</p>
+
+</div>
+
+
+<!-- =========================================================
+SOCIAL SHARE
+========================================================= -->
+
+<div class="social-share">
+
+<strong>
+Compartilhar:
+</strong>
+
+
+<a
+id="shareFacebook"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Compartilhar no Facebook"
+>
+
+<img
+src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+class="social-icon"
+alt=""
+>
+
+</a>
+
+
+<a
+id="shareTwitter"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Compartilhar no Twitter"
+>
+
+<img
+src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg"
+class="social-icon"
+alt=""
+>
+
+</a>
+
+
+<a
+id="shareLinkedIn"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Compartilhar no LinkedIn"
+>
+
+<img
+src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+class="social-icon"
+alt=""
+>
+
+</a>
+
+
+<a
+id="shareWhatsApp"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Compartilhar no WhatsApp"
+>
+
+<img
+src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+class="social-icon"
+alt=""
+>
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- =========================================================
+FOOTER
+========================================================= -->
+
+<footer>
+
+<p>
+
+<a href="../../about-us.html">
+About Us
+</a>
+
+&nbsp;
+
+<a href="../../editorial-policy.html">
+Editorial Policy
+</a>
+
+&nbsp;
+
+<a href="../../salary-research-methodology.html">
+Salary Research Methodology
+</a>
+
+&nbsp;
+
+<a href="../../privacy.html">
+Privacy Policy
+</a>
+
+&nbsp;
+
+<a href="../../cookie-policy.html">
+Cookie Policy
+</a>
+
+&nbsp;
+
+<a href="../../disclaimer.html">
+Disclaimer
+</a>
+
+&nbsp;
+
+<a href="../../terms.html">
+Terms & Conditions
+</a>
+
+&nbsp;
+
+<a href="../../affiliate-disclosure.html">
+Affiliate Disclosure
+</a>
+
+&nbsp;
+
+<a href="../../global-salary-data-policy.html">
+Global Salary Data
+</a>
+
+&nbsp;
+
+<a href="../../pricing.html">
+Pricing
+</a>
+
+&nbsp;
+
+<a href="../../features.html">
+Features
+</a>
+
+&nbsp;
+
+<a href="../../contact-us.html">
+Contact Us
+</a>
+
+</p>
+
+
+<p>
+© 2026 Salary Payslip All Rights Reserved
+</p>
+
+
+<p>
+Last Updated 2026
+</p>
+
+</footer>
+
+
+<!-- =========================================================
+LIBRARIES
+========================================================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+<!-- =========================================================
+JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+LANGUAGE SELECTOR
+========================================================= */
+
+function changeLanguage(language){
+
+    if(language === "en"){
+
+        window.location.href =
+        "/salary-slip-generator/";
+
+    }
+
+    if(language === "es"){
+
+        window.location.href =
+        "/salary-slip-generator/es/";
+
+    }
+
+    if(language === "pt"){
+
+        window.location.href =
+        "/salary-slip-generator/pt/";
+
+    }
+
+}
+
+
+/* =========================================================
+ELEMENT REFERENCES
+========================================================= */
+
+const logoUpload =
+document.getElementById("logoUpload");
+
+const logoPreview =
+document.getElementById("logoPreview");
+
+const previewLogo =
+document.getElementById("previewLogo");
+
+const logoText =
+document.getElementById("logoText");
+
+const employeeName =
+document.getElementById("employeeName");
+
+const employeeDesignation =
+document.getElementById("employeeDesignation");
+
+const employeeID =
+document.getElementById("employeeID");
+
+const payDate =
+document.getElementById("payDate");
+
+const basicSalary =
+document.getElementById("basicSalary");
+
+const calculateBtn =
+document.getElementById("calculateBtn");
+
+const downloadBtn =
+document.getElementById("downloadBtn");
+
+const payslipPreview =
+document.getElementById("payslipPreview");
+
+const currency =
+document.getElementById("currency");
+
+const taxInput =
+document.getElementById("tax");
+
+
+/* =========================================================
+LOGO UPLOAD & PREVIEW
+========================================================= */
+
+logoUpload.onchange = function(e){
+
+    const file = e.target.files[0];
+
+    if(!file){
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(event){
+
+        logoPreview.src =
+        event.target.result;
+
+        previewLogo.src =
+        event.target.result;
+
+        logoText.style.display =
+        "none";
+
+    };
+
+    reader.readAsDataURL(file);
+
+};
+
+
+/* =========================================================
+NUMBER FORMAT
+PORTUGUESE FORMAT
+========================================================= */
+
+function formatMoney(value){
+
+    return Number(value).toLocaleString(
+        "pt-PT",
+        {
+            minimumFractionDigits:2,
+            maximumFractionDigits:2
+        }
+    );
+
+}
+
+
+/* =========================================================
+DATE FORMAT
+========================================================= */
+
+function formatPortugueseDate(value){
+
+    if(!value){
+        return "";
+    }
+
+    const date =
+    new Date(value + "T00:00:00");
+
+    return date.toLocaleDateString(
+        "pt-PT",
+        {
+            day:"2-digit",
+            month:"2-digit",
+            year:"numeric"
+        }
+    );
+
+}
+
+
+/* =========================================================
+CALCULATE PAYSLIP
+========================================================= */
+
+calculateBtn.onclick = function(){
+
+    const getNumber = function(id){
+
+        return Number(
+            document.getElementById(id).value
+        ) || 0;
+
+    };
+
+
+    const cur =
+    currency.value;
+
+
+    /*
+     * Gross Salary
+     *
+     * Basic Salary
+     * + HRA
+     * + Medical
+     * + Other Allowance
+     * + Bonus
+     */
+
+    const gross =
+        getNumber("basicSalary") +
+        getNumber("hra") +
+        getNumber("medical") +
+        getNumber("otherAllowance") +
+        getNumber("bonus");
+
+
+    /*
+     * Tax
+     */
+
+    const tax =
+        (
+            gross *
+            getNumber("taxPercent")
+        ) / 100;
+
+
+    taxInput.value =
+    tax.toFixed(2);
+
+
+    /*
+     * Net Salary
+     */
+
+    const net =
+        gross -
+        getNumber("deductions") -
+        tax;
+
+
+    /*
+     * Employee Details
+     */
+
+    document.getElementById(
+        "previewName"
+    ).innerText =
+    employeeName.value;
+
+
+    document.getElementById(
+        "previewDesignation"
+    ).innerText =
+    employeeDesignation.value;
+
+
+    document.getElementById(
+        "previewID"
+    ).innerText =
+    employeeID.value;
+
+
+    document.getElementById(
+        "previewDate"
+    ).innerText =
+    formatPortugueseDate(payDate.value);
+
+
+    /*
+     * Salary Breakdown
+     */
+
+    document.getElementById(
+        "previewBasic"
+    ).innerText =
+    cur + " " +
+    formatMoney(getNumber("basicSalary"));
+
+
+    document.getElementById(
+        "previewHRA"
+    ).innerText =
+    cur + " " +
+    formatMoney(getNumber("hra"));
+
+
+    document.getElementById(
+        "previewMedical"
+    ).innerText =
+    cur + " " +
+    formatMoney(getNumber("medical"));
+
+
+    document.getElementById(
+        "previewOther"
+    ).innerText =
+    cur + " " +
+    formatMoney(getNumber("otherAllowance"));
+
+
+    document.getElementById(
+        "previewBonus"
+    ).innerText =
+    cur + " " +
+    formatMoney(getNumber("bonus"));
+
+
+    document.getElementById(
+        "previewDeductions"
+    ).innerText =
+    cur + " " +
+    formatMoney(getNumber("deductions"));
+
+
+    document.getElementById(
+        "previewTax"
+    ).innerText =
+    cur + " " +
+    formatMoney(tax);
+
+
+    document.getElementById(
+        "previewNet"
+    ).innerText =
+    cur + " " +
+    formatMoney(net);
+
+
+    /*
+     * Update social sharing
+     */
+
+    updateSocial();
+
+};
+
+
+/* =========================================================
+DOWNLOAD PDF
+========================================================= */
+
+downloadBtn.onclick = function(){
+
+    html2canvas(
+        payslipPreview,
+        {
+            scale:2
+        }
+    ).then(function(canvas){
+
+        const pdf =
+        new jspdf.jsPDF(
+            "p",
+            "pt",
+            "a4"
+        );
+
+
+        const pdfWidth =
+        595;
+
+
+        const pdfHeight =
+        (
+            canvas.height *
+            pdfWidth
+        ) / canvas.width;
+
+
+        pdf.addImage(
+            canvas.toDataURL("image/png"),
+            "PNG",
+            0,
+            0,
+            pdfWidth,
+            pdfHeight
+        );
+
+
+        pdf.save(
+            "Recibo-de-Salario.pdf"
+        );
+
+    });
+
+};
+
+
+/* =========================================================
+SOCIAL SHARING
+========================================================= */
+
+function updateSocial(){
+
+    const url =
+    encodeURIComponent(
+        window.location.href
+    );
+
+
+    const text =
+    encodeURIComponent(
+        "Confira este gerador de recibos de salário online."
+    );
+
+
+    document.getElementById(
+        "shareFacebook"
+    ).href =
+    "https://www.facebook.com/sharer/sharer.php?u=" +
+    url;
+
+
+    document.getElementById(
+        "shareTwitter"
+    ).href =
+    "https://twitter.com/intent/tweet?url=" +
+    url +
+    "&text=" +
+    text;
+
+
+    document.getElementById(
+        "shareLinkedIn"
+    ).href =
+    "https://www.linkedin.com/sharing/share-offsite/?url=" +
+    url;
+
+
+    document.getElementById(
+        "shareWhatsApp"
+    ).href =
+    "https://api.whatsapp.com/send?text=" +
+    text +
+    "%20" +
+    url;
+
+}
+
+
+/* =========================================================
+INITIAL SOCIAL URL
+========================================================= */
+
+window.addEventListener(
+    "load",
+    updateSocial
+);
+
+
+</script>
+
+
+</body>
+</html>
