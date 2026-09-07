@@ -604,7 +604,21 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     </url>
+      
+   <url>
+    <loc>https://www.salarypayslip.com/pakistan/sap-consultant-salary-in-pakistan.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
 
+   <url>
+    <loc>https://www.salarypayslip.com/pakistan/erp-consultant-salary-in-pakistan.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+      
    <url>
     <loc>https://www.salarypayslip.com/pakistan/average-network-engineer-salary-in-pakistan-per-month.html</loc>
     <lastmod>2026-07-18</lastmod>
