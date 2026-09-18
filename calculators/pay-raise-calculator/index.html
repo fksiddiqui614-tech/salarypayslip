@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WX97B7GR');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pay Raise Calculator – Quick Calculation Period (2026)</title>
+
+<meta name="description" content="Use our free Pay Raise Calculator to calculate salary increases, raise percentages, new salary, and annual, monthly, biweekly, weekly and hourly pay changes.">
+
+<link rel="canonical" href="https://www.salarypayslip.com/calculators/pay-raise-calculator/">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png?v=2">
+<link rel="shortcut icon" href="/favicon.png?v=2">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Pay Raise Calculator – Salary Increase Calculator">
+<meta property="og:description" content="Calculate your pay raise, salary increase percentage, new salary, and how much your raise adds per month, paycheck, week, and hour.">
+<meta property="og:url" content="https://www.salarypayslip.com/calculators/pay-raise-calculator/">
+<meta property="og:type" content="website">
+
+
+<style>
+:root{
+  --primary:#0b5ed7;
+  --primary-dark:#084298;
+  --primary-light:#eaf3ff;
+  --secondary:#2563eb;
+  --white:#ffffff;
+  --background:#f5f9ff;
+  --surface:#ffffff;
+  --surface-light:#f8fbff;
+  --text:#1f2937;
+  --text-light:#6b7280;
+  --border:#d9e6ff;
+  --success:#198754;
+  --warning:#fd7e14;
+  --danger:#dc3545;
+  --shadow-sm:0 4px 12px rgba(0,0,0,.05);
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+  --shadow-lg:0 20px 50px rgba(11,94,215,.12);
+  --radius:18px;
+  --radius-sm:12px;
+  --radius-lg:24px;
+  --container:1200px;
+  --transition:.25s ease;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--background);
+  color:var(--text);
+  font-size:16px;
+  line-height:1.75;
+}
+
+a{
+  color:var(--primary);
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+button,
+input,
+select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.calculator-page{
+  width:92%;
+  max-width:1100px;
+  margin:0 auto;
+  padding:35px 0 70px;
+}
+
+.calculator-hero{
+  text-align:center;
+  max-width:850px;
+  margin:0 auto 30px;
+}
+
+.calculator-hero h1{
+  margin:0 0 12px;
+  color:#111827;
+  font-size:clamp(32px,5vw,48px);
+  line-height:1.15;
+  letter-spacing:-.5px;
+}
+
+.calculator-hero p{
+  max-width:760px;
+  margin:0 auto;
+  color:var(--text-light);
+  font-size:17px;
+}
+
+/* Calculator */
+.salary-tool{
+  max-width:850px;
+  margin:30px auto;
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:18px;
+  padding:28px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.salary-tool-tabs{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-bottom:25px;
+  background:#f8fafc;
+  padding:6px;
+  border-radius:12px;
+}
+
+.salary-tool-tab{
+  border:0;
+  background:#f8fafc;
+  color:#475569;
+  padding:12px 10px;
+  border-radius:9px;
+  font-weight:700;
+  transition:.25s ease;
+}
+
+.salary-tool-tab:hover{
+  background:#eaf3ff;
+  color:#1769aa;
+}
+
+.salary-tool-tab.active{
+  background:#1769aa;
+  color:#fff;
+}
+
+.salary-tool-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+.salary-field{
+  display:flex;
+  flex-direction:column;
+}
+
+.salary-field label{
+  margin-bottom:7px;
+  font-size:14px;
+  font-weight:700;
+  color:#334155;
+}
+
+.salary-input-wrap{
+  position:relative;
+}
+
+.salary-input-prefix{
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#64748b;
+  font-weight:700;
+  pointer-events:none;
+}
+
+.salary-input{
+  width:100%;
+  height:48px;
+  border:1px solid #cbd5e1;
+  border-radius:9px;
+  padding:0 14px 0 38px;
+  background:#fff;
+  color:#1f2937;
+  outline:none;
+  transition:.25s ease;
+}
+
+.salary-input:focus{
+  border-color:#1769aa;
+  box-shadow:0 0 0 3px rgba(23,105,170,.12);
+}
+
+.salary-select{
+  width:100%;
+  height:48px;
+  border:1px solid #cbd5e1;
+  border-radius:9px;
+  padding:0 14px;
+  background:#fff;
+  color:#1f2937;
+  outline:none;
+}
+
+.salary-select:focus{
+  border-color:#1769aa;
+  box-shadow:0 0 0 3px rgba(23,105,170,.12);
+}
+
+.salary-quick-actions{
+  grid-column:1 / -1;
+  margin-top:-3px;
+}
+
+.salary-quick-label{
+  display:block;
+  margin-bottom:8px;
+  font-size:13px;
+  font-weight:700;
+  color:#64748b;
+}
+
+.salary-quick-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.salary-quick-button{
+  border:1px solid #bfdbfe;
+  background:#eff6ff;
+  color:#1769aa;
+  border-radius:8px;
+  padding:7px 14px;
+  font-size:13px;
+  font-weight:700;
+  transition:.25s ease;
+}
+
+.salary-quick-button:hover{
+  background:#1769aa;
+  color:#fff;
+}
+
+.salary-calculate{
+  grid-column:1 / -1;
+  width:100%;
+  height:52px;
+  margin-top:4px;
+  border:0;
+  border-radius:10px;
+  background:#1769aa;
+  color:#fff;
+  font-weight:700;
+  font-size:16px;
+  transition:.25s ease;
+}
+
+.salary-calculate:hover{
+  background:#12598f;
+  transform:translateY(-1px);
+}
+
+.salary-results{
+  display:none;
+  margin-top:25px;
+}
+
+.salary-results.show{
+  display:block;
+}
+
+.salary-results-title{
+  margin:0 0 15px;
+  font-size:20px;
+  color:#1e293b;
+}
+
+.salary-result-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+
+.salary-result-card{
+  padding:16px;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  background:#fff;
+}
+
+.salary-result-card.featured{
+  background:#eff6ff;
+  border-color:#bfdbfe;
+}
+
+.salary-result-label{
+  display:block;
+  margin-bottom:4px;
+  font-size:13px;
+  color:#64748b;
+  font-weight:600;
+}
+
+.salary-result-value{
+  display:block;
+  font-size:22px;
+  line-height:1.3;
+  font-weight:800;
+  color:#1f2937;
+}
+
+.salary-result-card.featured .salary-result-value{
+  color:#1769aa;
+}
+
+.salary-formula-note{
+  margin-top:18px;
+  padding:15px 16px;
+  border-radius:10px;
+  background:#f8fafc;
+  color:#475569;
+  font-size:14px;
+}
+
+.salary-formula-note strong{
+  color:#334155;
+}
+
+/* Content */
+.salary-content{
+  max-width:900px;
+  margin:30px auto 0;
+  padding:30px;
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:16px;
+  box-shadow:var(--shadow-sm);
+}
+
+.salary-content h2{
+  margin:0 0 12px;
+  color:#111827;
+  font-size:28px;
+  line-height:1.3;
+}
+
+.salary-content h2:not(:first-child){
+  margin-top:35px;
+}
+
+.salary-content h3{
+  margin:25px 0 8px;
+  color:#1e293b;
+  font-size:21px;
+}
+
+.salary-content p{
+  margin:0 0 15px;
+  color:#475569;
+}
+
+.salary-content ul{
+  margin:10px 0 18px;
+  padding-left:22px;
+  color:#475569;
+}
+
+.salary-content li{
+  margin-bottom:6px;
+}
+
+.salary-table-wrap{
+  overflow-x:auto;
+  margin:18px 0 25px;
+}
+
+.salary-table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:600px;
+}
+
+.salary-table th,
+.salary-table td{
+  padding:12px 14px;
+  border:1px solid #dbe5f1;
+  text-align:left;
+}
+
+.salary-table th{
+  background:#eff6ff;
+  color:#1e293b;
+  font-weight:700;
+}
+
+.salary-table td{
+  color:#475569;
+}
+
+/* Conversion-style chart */
+.salary-chart{
+  margin:20px 0 25px;
+  border:1px solid #dbe5f1;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.salary-chart-row{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+}
+
+.salary-chart-row > div{
+  padding:11px 14px;
+  border-right:1px solid #dbe5f1;
+  border-bottom:1px solid #dbe5f1;
+}
+
+.salary-chart-row > div:last-child{
+  border-right:0;
+}
+
+.salary-chart-row:last-child > div{
+  border-bottom:0;
+}
+
+.salary-chart-header{
+  background:#eff6ff;
+  font-weight:700;
+  color:#1e293b;
+}
+
+.salary-faq-widget{
+  margin-top:15px;
+}
+
+.salary-faq-widget details{
+  border:1px solid #dbe5f1;
+  border-radius:10px;
+  margin-bottom:10px;
+  background:#fff;
+  overflow:hidden;
+}
+
+.salary-faq-widget summary{
+  padding:15px 17px;
+  cursor:pointer;
+  font-weight:700;
+  color:#1e293b;
+  list-style:none;
+}
+
+.salary-faq-widget summary::-webkit-details-marker{
+  display:none;
+}
+
+.salary-faq-widget summary:after{
+  content:"+";
+  float:right;
+  color:#1769aa;
+  font-size:20px;
+  line-height:1;
+}
+
+.salary-faq-widget details[open] summary:after{
+  content:"−";
+}
+
+.salary-faq-answer{
+  padding:0 17px 16px;
+  color:#475569;
+  font-size:15px;
+}
+
+/* CTA */
+.salary-cta{
+  margin-top:35px;
+  padding:22px;
+  border-radius:14px;
+  background:#eff6ff;
+  border:1px solid #bfdbfe;
+  text-align:center;
+}
+
+.salary-cta h3{
+  margin:0 0 7px;
+  color:#1769aa;
+}
+
+.salary-cta p{
+  margin:0 0 12px;
+}
+
+.salary-cta a{
+  display:inline-block;
+  padding:9px 16px;
+  border-radius:9px;
+  background:#1769aa;
+  color:#fff;
+  font-weight:700;
+}
+
+.salary-cta a:hover{
+  text-decoration:none;
+  background:#12598f;
+}
+
+/* Footer */
+.footer{
+  margin-top:30px;
+  background:#fff;
+  border-top:1px solid #dbe5f1;
+}
+
+.footer-bottom{
+  width:92%;
+  max-width:1200px;
+  margin:0 auto;
+  padding:25px 0;
+  text-align:center;
+  color:#64748b;
+  font-size:14px;
+}
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px 18px;
+  margin-bottom:12px;
+}
+
+.footer-links a{
+  color:#475569;
+}
+
+.footer-links a:hover{
+  color:#1769aa;
+}
+
+/* Responsive */
+@media(max-width:760px){
+  .calculator-page{
+    width:94%;
+    padding-top:25px;
+  }
+
+  .salary-tool{
+    padding:20px;
+  }
+
+  .salary-tool-tabs{
+    grid-template-columns:1fr;
+  }
+
+  .salary-tool-grid{
+    grid-template-columns:1fr;
+  }
+
+  .salary-quick-actions,
+  .salary-calculate{
+    grid-column:auto;
+  }
+
+  .salary-result-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .salary-content{
+    padding:22px;
+  }
+
+  .salary-content h2{
+    font-size:24px;
+  }
+
+  .salary-chart-row{
+    grid-template-columns:1fr;
+  }
+
+  .salary-chart-row > div{
+    border-right:0;
+  }
+
+  .salary-chart-header{
+    display:none;
+  }
+
+  .salary-chart-row:not(.salary-chart-header) > div{
+    border-bottom:1px solid #dbe5f1;
+  }
+
+  .salary-chart-row:last-child > div:last-child{
+    border-bottom:0;
+  }
+}
+
+@media(max-width:480px){
+  .salary-result-grid{
+    grid-template-columns:1fr;
+  }
+
+  .calculator-hero h1{
+    font-size:32px;
+  }
+
+  .calculator-hero p{
+    font-size:15px;
+  }
+}
+
+/* =========================================================
+   ARTICLE LANGUAGE SELECTOR
+========================================================= */
+
+.hero{
+  position:relative;
+}
+
+.hero .gtranslate_wrapper{
+  position:absolute;
+  top:24px;
+  right:24px;
+  z-index:100;
+}
+
+@media(max-width:700px){
+
+  .hero .gtranslate_wrapper{
+    top:18px;
+    right:18px;
+  }
+
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WX97B7GR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<main class="calculator-page">
+
+<div class="gtranslate_wrapper"></div>
+
+  <!-- HERO -->
+  <section class="calculator-hero">
+    <h1>Pay Raise Calculator</h1>
+    <p>
+      Calculate a salary increase, pay raise percentage, new annual salary,
+      and how much your raise adds per month, biweekly paycheck, week, and hour.
+    </p>
+  </section>
+
+
+  <!-- CALCULATOR -->
+  <section class="salary-tool" aria-label="Pay Raise Calculator">
+
+    <div class="salary-tool-tabs">
+
+      <button
+        type="button"
+        class="salary-tool-tab active"
+        id="percentageTab"
+        onclick="changeRaiseMode('percentage')">
+        Percentage Raise
+      </button>
+
+      <button
+        type="button"
+        class="salary-tool-tab"
+        id="amountTab"
+        onclick="changeRaiseMode('amount')">
+        Dollar Raise
+      </button>
+
+      <button
+        type="button"
+        class="salary-tool-tab"
+        id="newSalaryTab"
+        onclick="changeRaiseMode('newSalary')">
+        Find Raise %
+      </button>
+
+    </div>
+
+
+    <div class="salary-tool-grid">
+
+      <!-- Current Salary -->
+      <div class="salary-field">
+        <label for="currentSalary">Current Annual Salary</label>
+
+        <div class="salary-input-wrap">
+          <span class="salary-input-prefix" id="currentSalarySymbol">$</span>
+
+          <input
+            type="number"
+            id="currentSalary"
+            class="salary-input"
+            value="50000"
+            min="0"
+            step="0.01"
+            placeholder="50000"
+            inputmode="decimal"
+            aria-label="Current annual salary">
+        </div>
+      </div>
+
+
+      <!-- Currency -->
+      <div class="salary-field">
+        <label for="currency">Currency</label>
+
+        <select id="currency" class="salary-select" aria-label="Currency">
+          <option value="USD" selected>USD – US Dollar</option>
+          <option value="EUR">EUR – Euro</option>
+          <option value="GBP">GBP – British Pound</option>
+          <option value="CAD">CAD – Canadian Dollar</option>
+          <option value="AUD">AUD – Australian Dollar</option>
+          <option value="NZD">NZD – New Zealand Dollar</option>
+          <option value="CHF">CHF – Swiss Franc</option>
+          <option value="JPY">JPY – Japanese Yen</option>
+          <option value="CNY">CNY – Chinese Yuan</option>
+          <option value="INR">INR – Indian Rupee</option>
+          <option value="PKR">PKR – Pakistani Rupee</option>
+          <option value="SGD">SGD – Singapore Dollar</option>
+          <option value="HKD">HKD – Hong Kong Dollar</option>
+          <option value="SEK">SEK – Swedish Krona</option>
+          <option value="NOK">NOK – Norwegian Krone</option>
+          <option value="DKK">DKK – Danish Krone</option>
+          <option value="PLN">PLN – Polish Zloty</option>
+          <option value="AED">AED – UAE Dirham</option>
+          <option value="SAR">SAR – Saudi Riyal</option>
+          <option value="ZAR">ZAR – South African Rand</option>
+        </select>
+      </div>
+
+
+      <!-- Dynamic Input -->
+      <div class="salary-field">
+
+        <label for="changeValue" id="changeLabel">
+          Raise Percentage
+        </label>
+
+        <div class="salary-input-wrap">
+
+          <span class="salary-input-prefix" id="changePrefix">%</span>
+
+          <input
+            type="number"
+            id="changeValue"
+            class="salary-input"
+            value="5"
+            min="0"
+            step="0.01"
+            placeholder="5"
+            inputmode="decimal"
+            aria-label="Raise percentage">
+
+        </div>
+
+      </div>
+
+
+      <!-- Hours -->
+      <div class="salary-field">
+        <label for="hoursPerWeek">Hours per Week</label>
+
+        <div class="salary-input-wrap">
+
+          <input
+            type="number"
+            id="hoursPerWeek"
+            class="salary-input"
+            value="40"
+            min="1"
+            step="0.5"
+            placeholder="40"
+            inputmode="decimal"
+            aria-label="Hours per week"
+            style="padding-left:14px;">
+
+        </div>
+      </div>
+
+
+      <!-- Weeks -->
+      <div class="salary-field">
+        <label for="weeksPerYear">Weeks per Year</label>
+
+        <div class="salary-input-wrap">
+
+          <input
+            type="number"
+            id="weeksPerYear"
+            class="salary-input"
+            value="52"
+            min="1"
+            step="1"
+            placeholder="52"
+            inputmode="numeric"
+            aria-label="Weeks per year"
+            style="padding-left:14px;">
+
+        </div>
+      </div>
+
+
+      <!-- Quick Raise Buttons -->
+      <div class="salary-quick-actions" id="quickRaiseActions">
+
+        <span class="salary-quick-label">
+          Common Raise Percentages
+        </span>
+
+        <div class="salary-quick-buttons">
+
+          <button type="button" class="salary-quick-button" onclick="setQuickRaise(2)">
+            2%
+          </button>
+
+          <button type="button" class="salary-quick-button" onclick="setQuickRaise(3)">
+            3%
+          </button>
+
+          <button type="button" class="salary-quick-button" onclick="setQuickRaise(5)">
+            5%
+          </button>
+
+          <button type="button" class="salary-quick-button" onclick="setQuickRaise(10)">
+            10%
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- Calculate -->
+      <button
+        type="button"
+        class="salary-calculate"
+        onclick="calculateRaise()">
+        Calculate Pay Raise
+      </button>
+
+    </div>
+
+
+    <!-- RESULTS -->
+    <div class="salary-results" id="salaryResults">
+
+      <h2 class="salary-results-title">
+        Pay Raise Results
+      </h2>
+
+      <div class="salary-result-grid">
+
+        <div class="salary-result-card featured">
+          <span class="salary-result-label">New Annual Salary</span>
+          <span class="salary-result-value" id="newSalaryResult">$52,500.00</span>
+        </div>
+
+        <div class="salary-result-card">
+          <span class="salary-result-label" id="annualChangeLabel">Annual Increase</span>
+          <span class="salary-result-value" id="annualIncreaseResult">$2,500.00</span>
+        </div>
+
+        <div class="salary-result-card">
+          <span class="salary-result-label">Raise Percentage</span>
+          <span class="salary-result-value" id="raisePercentResult">5.00%</span>
+        </div>
+
+        <div class="salary-result-card">
+          <span class="salary-result-label" id="monthlyChangeLabel">Monthly Increase</span>
+          <span class="salary-result-value" id="monthlyIncreaseResult">$208.33</span>
+        </div>
+
+        <div class="salary-result-card">
+          <span class="salary-result-label" id="biweeklyChangeLabel">Biweekly Increase</span>
+          <span class="salary-result-value" id="biweeklyIncreaseResult">$96.15</span>
+        </div>
+
+        <div class="salary-result-card">
+          <span class="salary-result-label" id="weeklyChangeLabel">Weekly Increase</span>
+          <span class="salary-result-value" id="weeklyIncreaseResult">$48.08</span>
+        </div>
+
+        <div class="salary-result-card">
+          <span class="salary-result-label" id="hourlyChangeLabel">Hourly Increase</span>
+          <span class="salary-result-value" id="hourlyIncreaseResult">$1.20</span>
+        </div>
+
+        <div class="salary-result-card featured">
+          <span class="salary-result-label">New Hourly Rate</span>
+          <span class="salary-result-value" id="newHourlyResult">$25.24</span>
+        </div>
+
+      </div>
+
+
+      <div class="salary-formula-note" id="formulaNote">
+        <strong>Formula:</strong>
+        Raise Amount = Current Salary × Raise Percentage ÷ 100.
+        New Salary = Current Salary + Raise Amount.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SEO CONTENT -->
+  <section class="salary-content">
+
+    <h2>Pay Raise Calculator</h2>
+
+    <p>
+      Our Pay Raise Calculator helps you calculate a salary increase from your
+      current annual salary. Enter a raise percentage, a dollar raise amount,
+      or your new salary to find the increase percentage and updated pay.
+    </p>
+
+    <p>
+      The calculator shows the change in annual, monthly, biweekly, weekly,
+      and hourly pay. It uses gross salary and does not estimate taxes,
+      deductions, or take-home pay.
+    </p>
+
+
+    <h2>How to Calculate a Pay Raise</h2>
+
+    <p>
+      A percentage-based pay raise can be calculated by multiplying your
+      current salary by the raise percentage.
+    </p>
+
+    <ul>
+      <li><strong>Raise Amount = Current Salary × Raise % ÷ 100</strong></li>
+      <li><strong>New Salary = Current Salary + Raise Amount</strong></li>
+      <li><strong>Raise % = Raise Amount ÷ Current Salary × 100</strong></li>
+      <li><strong>Hourly Increase = Annual Increase ÷ (Hours per Week × Weeks per Year)</strong></li>
+    </ul>
+
+    <p>
+      For example, a 5% raise on a $50,000 annual salary is a $2,500 increase.
+      The new annual salary is $52,500.
+    </p>
+
+
+    <h2>What Is a 5% Raise on $50,000?</h2>
+
+    <p>
+      A 5% raise on $50,000 is <strong>$2,500</strong>. The new annual salary
+      is <strong>$52,500</strong>. Using 40 hours per week and 52 weeks per
+      year, the annual increase is approximately <strong>$1.20 per hour</strong>.
+    </p>
+
+
+    <h2>Common Pay Raise Examples</h2>
+
+    <div class="salary-chart">
+
+      <div class="salary-chart-row salary-chart-header">
+        <div>Current Salary</div>
+        <div>5% Raise</div>
+        <div>New Salary</div>
+      </div>
+
+      <div class="salary-chart-row">
+        <div>$30,000</div>
+        <div>+$1,500</div>
+        <div>$31,500</div>
+      </div>
+
+      <div class="salary-chart-row">
+        <div>$40,000</div>
+        <div>+$2,000</div>
+        <div>$42,000</div>
+      </div>
+
+      <div class="salary-chart-row">
+        <div>$50,000</div>
+        <div>+$2,500</div>
+        <div>$52,500</div>
+      </div>
+
+      <div class="salary-chart-row">
+        <div>$60,000</div>
+        <div>+$3,000</div>
+        <div>$63,000</div>
+      </div>
+
+      <div class="salary-chart-row">
+        <div>$70,000</div>
+        <div>+$3,500</div>
+        <div>$73,500</div>
+      </div>
+
+      <div class="salary-chart-row">
+        <div>$80,000</div>
+        <div>+$4,000</div>
+        <div>$84,000</div>
+      </div>
+
+      <div class="salary-chart-row">
+        <div>$100,000</div>
+        <div>+$5,000</div>
+        <div>$105,000</div>
+      </div>
+
+    </div>
+
+
+    <h2>How Much Is a $2,000, $5,000, or $10,000 Raise Per Hour?</h2>
+
+    <p>
+      Assuming 40 hours per week and 52 weeks per year, there are 2,080
+      working hours in a year. Dividing an annual raise by 2,080 gives the
+      approximate hourly increase.
+    </p>
+
+    <div class="salary-table-wrap">
+
+      <table class="salary-table">
+        <thead>
+          <tr>
+            <th>Annual Raise</th>
+            <th>Approx. Hourly Increase</th>
+            <th>Approx. Biweekly Increase</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>$2,000</td>
+            <td>$0.96/hour</td>
+            <td>$76.92</td>
+          </tr>
+
+          <tr>
+            <td>$5,000</td>
+            <td>$2.40/hour</td>
+            <td>$192.31</td>
+          </tr>
+
+          <tr>
+            <td>$10,000</td>
+            <td>$4.81/hour</td>
+            <td>$384.62</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+    <h2>Salary Increase Calculator</h2>
+
+    <p>
+      “Salary increase calculator,” “pay raise calculator,” “salary raise
+      calculator,” and “salary increment calculator” can describe the same
+      basic calculation: finding the difference between an existing salary
+      and a higher salary.
+    </p>
+
+    <p>
+      If you know your current salary and the percentage of your raise, use
+      the <strong>Percentage Raise</strong> mode. If you know the dollar amount
+      of the increase, use <strong>Dollar Raise</strong>. If you know your old
+      and new salaries, use <strong>Find Raise %</strong>.
+    </p>
+
+
+    <h2>How to Calculate a Salary Increment</h2>
+
+    <p>
+      To calculate a salary increment, subtract the old salary from the new
+      salary. To express the increase as a percentage, divide that difference
+      by the old salary and multiply by 100.
+    </p>
+
+    <p>
+      For example, if your salary increases from $50,000 to $52,500, the
+      increase is $2,500 and the percentage increase is 5%.
+    </p>
+
+
+    <h2>How Much Does a $5,000 Raise Increase Your Paycheck?</h2>
+
+    <p>
+      A $5,000 annual raise is approximately $192.31 more per biweekly
+      paycheck when the salary is paid over 26 biweekly pay periods,
+      before taxes and other deductions. If paid monthly, the annual
+      increase is approximately $416.67 per month before deductions.
+    </p>
+
+
+    <h2>What Is a 2%, 3%, 5%, or 10% Raise?</h2>
+
+    <p>
+      The dollar value depends on your current salary. For example, on a
+      $50,000 salary:
+    </p>
+
+    <div class="salary-table-wrap">
+
+      <table class="salary-table">
+        <thead>
+          <tr>
+            <th>Raise</th>
+            <th>Annual Increase</th>
+            <th>New Salary</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>2%</td>
+            <td>$1,000</td>
+            <td>$51,000</td>
+          </tr>
+
+          <tr>
+            <td>3%</td>
+            <td>$1,500</td>
+            <td>$51,500</td>
+          </tr>
+
+          <tr>
+            <td>5%</td>
+            <td>$2,500</td>
+            <td>$52,500</td>
+          </tr>
+
+          <tr>
+            <td>10%</td>
+            <td>$5,000</td>
+            <td>$55,000</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+    <h2>Is a 3.5% Raise Good in 2026?</h2>
+
+    <p>
+      A 3.5% raise means your annual salary increases by 3.5%. Whether that
+      increase is considered sufficient depends on factors such as your role,
+      employer, performance, market conditions, and inflation. This calculator
+      focuses on calculating the dollar and hourly effect of the raise rather
+      than judging whether a particular raise is appropriate.
+    </p>
+
+
+    <h2>What This Pay Raise Calculator Does Not Include</h2>
+
+    <p>
+      This calculator estimates gross salary changes. It does not calculate
+      federal or state income taxes, Social Security, Medicare, retirement
+      contributions, insurance premiums, bonuses, commissions, overtime,
+      or other payroll deductions.
+    </p>
+
+    <p>
+      Your actual paycheck increase may therefore be different from the gross
+      increase shown by this calculator.
+    </p>
+
+
+    <!-- FAQ -->
+    <h2>Pay Raise Calculator FAQ</h2>
+
+    <div class="salary-faq-widget">
+
+      <details>
+        <summary>How do I calculate my salary increment?</summary>
+        <div class="salary-faq-answer">
+          Subtract your old salary from your new salary to find the dollar
+          increase. To calculate the percentage increase, divide the increase
+          by your old salary and multiply by 100.
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I calculate a 5% pay raise?</summary>
+        <div class="salary-faq-answer">
+          Multiply your current salary by 0.05. For example, a 5% raise on
+          $50,000 is $2,500, making the new salary $52,500.
+        </div>
+      </details>
+
+      <details>
+        <summary>What is a 5% raise on $50,000?</summary>
+        <div class="salary-faq-answer">
+          A 5% raise on $50,000 is $2,500. The resulting annual salary is
+          $52,500.
+        </div>
+      </details>
+
+      <details>
+        <summary>What is a 5% raise on $60,000?</summary>
+        <div class="salary-faq-answer">
+          A 5% raise on $60,000 is $3,000. The resulting annual salary is
+          $63,000.
+        </div>
+      </details>
+
+      <details>
+        <summary>What is a 3% raise on $30,000?</summary>
+        <div class="salary-faq-answer">
+          A 3% raise on $30,000 is $900. The new annual salary is $30,900.
+        </div>
+      </details>
+
+      <details>
+        <summary>How much is a 2% raise?</summary>
+        <div class="salary-faq-answer">
+          A 2% raise equals your current salary multiplied by 0.02. For
+          example, a 2% raise on $50,000 is $1,000.
+        </div>
+      </details>
+
+      <details>
+        <summary>What is a 10% raise?</summary>
+        <div class="salary-faq-answer">
+          A 10% raise equals your current salary multiplied by 0.10. For
+          example, a 10% raise on $50,000 is $5,000.
+        </div>
+      </details>
+
+      <details>
+        <summary>How much is a $2,000 raise per hour?</summary>
+        <div class="salary-faq-answer">
+          Assuming 40 hours per week and 52 weeks per year, a $2,000 annual
+          raise is approximately $0.96 more per hour.
+        </div>
+      </details>
+
+      <details>
+        <summary>How much is a $5,000 raise per hour?</summary>
+        <div class="salary-faq-answer">
+          Assuming 40 hours per week and 52 weeks per year, a $5,000 annual
+          raise is approximately $2.40 more per hour.
+        </div>
+      </details>
+
+      <details>
+        <summary>How much is a $10,000 raise per hour?</summary>
+        <div class="salary-faq-answer">
+          Assuming 40 hours per week and 52 weeks per year, a $10,000 annual
+          raise is approximately $4.81 more per hour.
+        </div>
+      </details>
+
+      <details>
+        <summary>How much does a $5,000 raise increase your paycheck?</summary>
+        <div class="salary-faq-answer">
+          With 26 biweekly pay periods, a $5,000 annual raise is approximately
+          $192.31 more per biweekly paycheck before taxes and deductions.
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I calculate percentage salary increase?</summary>
+        <div class="salary-faq-answer">
+          Use this formula: (New Salary − Old Salary) ÷ Old Salary × 100.
+        </div>
+      </details>
+
+      <details>
+        <summary>What is the difference between a raise amount and a raise percentage?</summary>
+        <div class="salary-faq-answer">
+          The raise amount is the dollar increase in salary. The raise
+          percentage expresses that same increase relative to the original
+          salary.
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I calculate a raise from my new salary?</summary>
+        <div class="salary-faq-answer">
+          Yes. Select Find Raise %, enter your current salary and new annual
+          salary, and the calculator will calculate the dollar and percentage
+          increase.
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I calculate an hourly pay raise?</summary>
+        <div class="salary-faq-answer">
+          Yes. Enter your annual salary and raise information. The calculator
+          estimates the hourly increase using your hours per week and weeks
+          per year.
+        </div>
+      </details>
+
+      <details>
+        <summary>What is a 2.8% raise in dollars?</summary>
+        <div class="salary-faq-answer">
+          A 2.8% raise equals your current salary multiplied by 0.028. For
+          example, on $50,000, a 2.8% raise is $1,400.
+        </div>
+      </details>
+
+      <details>
+        <summary>Is a $5,000 raise good?</summary>
+        <div class="salary-faq-answer">
+          A $5,000 raise increases annual gross salary by $5,000. Whether it
+          is considered sufficient depends on the person's starting salary,
+          role, employer, market conditions, and other circumstances.
+        </div>
+      </details>
+
+      <details>
+        <summary>Does this calculator include taxes?</summary>
+        <div class="salary-faq-answer">
+          No. The calculator shows gross salary changes and does not estimate
+          taxes, deductions, or take-home pay.
+        </div>
+      </details>
+
+    </div>
+
+
+    <!-- CTA -->
+    <section class="salary-content">
+
+      <h3>More Calculator Resouces</h3>
+
+<p>
+    <strong>Want to calculate your salary?</strong>
+    Use our
+    <a href="../../salary-calculator/index.html">Salary & Take-Home Pay Calculator</a>
+    to estimate your take-home pay, taxes and deductions.
+    You can also use our
+    <a href="../../calculators/salary-to-hourly-calculator/index.html">Salary to Hourly Calculator</a>
+    to convert your salary into an hourly rate also need a manual pay stub?
+    <a href="../../salary-slip-generator/">
+        Create Salary Pay Stub
+    </a>
+    online.
+</p>
+
+  </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+  <div class="footer-bottom">
+
+  <div class="footer-links">
+   <a href="../../about-us.html">About Us</a>
+    <span>|</span>
+
+    <a href="../../editorial-policy.html">Editorial Policy</a>
+    <span>|</span>
+
+    <a href="../../salary-research-methodology.html">Salary Research Methodology</a>
+    <span>|</span>
+
+    <a href="../../privacy.html">Privacy Policy</a>
+    <span>|</span>
+
+    <a href="../../cookie-policy.html">Cookie Policy</a>
+    <span>|</span>
+
+    <a href="../../disclaimer.html">Disclaimer</a>
+    <span>|</span>
+
+    <a href="../../terms.html">Terms & Conditions</a>
+    <span>|</span>
+
+    <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
+    <span>|</span>
+
+    <a href="../../global-salary-data-policy.html">Global Salary Data</a>
+    <span>|</span>
+
+    <a href="../../pricing.html">Pricing</a>
+    <span>|</span>
+
+    <a href="../../features.html">Features</a>
+    <span>|</span>
+
+    <a href="../../contact-us.html">Contact Us</a>
+  </div>
+
+  <p>© 2026 SalaryPayslip. All Rights Reserved.</p>
+  <p>Last Updated: 2026</p>
+
+</div>
+
+</footer>
+
+
+<script>
+const currencySymbols = {
+  USD:"$",
+  EUR:"€",
+  GBP:"£",
+  CAD:"C$",
+  AUD:"A$",
+  NZD:"NZ$",
+  CHF:"CHF ",
+  JPY:"¥",
+  CNY:"¥",
+  INR:"₹",
+  PKR:"₨",
+  SGD:"S$",
+  HKD:"HK$",
+  SEK:"kr ",
+  NOK:"kr ",
+  DKK:"kr ",
+  PLN:"zł ",
+  AED:"د.إ ",
+  SAR:"﷼ ",
+  ZAR:"R "
+};
+
+let raiseMode = "percentage";
+
+
+function getCurrencySymbol(){
+  const currency = document.getElementById("currency").value;
+  return currencySymbols[currency] || "$";
+}
+
+
+function formatMoney(value){
+  const symbol = getCurrencySymbol();
+
+  return symbol + Number(value).toLocaleString("en-US",{
+    minimumFractionDigits:2,
+    maximumFractionDigits:2
+  });
+}
+
+
+function formatPercent(value){
+  if(value === null || !Number.isFinite(value)){
+    return "N/A";
+  }
+
+  return Number(value).toLocaleString("en-US",{
+    minimumFractionDigits:2,
+    maximumFractionDigits:2
+  }) + "%";
+}
+
+
+function changeRaiseMode(mode){
+
+  raiseMode = mode;
+
+  const percentageTab = document.getElementById("percentageTab");
+  const amountTab = document.getElementById("amountTab");
+  const newSalaryTab = document.getElementById("newSalaryTab");
+
+  percentageTab.classList.remove("active");
+  amountTab.classList.remove("active");
+  newSalaryTab.classList.remove("active");
+
+  const changeLabel = document.getElementById("changeLabel");
+  const changeValue = document.getElementById("changeValue");
+  const changePrefix = document.getElementById("changePrefix");
+  const quickActions = document.getElementById("quickRaiseActions");
+
+  if(mode === "percentage"){
+
+    percentageTab.classList.add("active");
+
+    changeLabel.textContent = "Raise Percentage";
+    changeValue.value = "5";
+    changeValue.placeholder = "5";
+    changeValue.min = "0";
+    changeValue.step = "0.01";
+
+    changePrefix.textContent = "%";
+    quickActions.style.display = "block";
+
+    changeValue.setAttribute("aria-label","Raise percentage");
+
+  }else if(mode === "amount"){
+
+    amountTab.classList.add("active");
+
+    changeLabel.textContent = "Raise Amount";
+    changeValue.value = "2500";
+    changeValue.placeholder = "2500";
+    changeValue.min = "0";
+    changeValue.step = "0.01";
+
+    changePrefix.textContent = getCurrencySymbol();
+    quickActions.style.display = "none";
+
+    changeValue.setAttribute("aria-label","Raise amount");
+
+  }else{
+
+    newSalaryTab.classList.add("active");
+
+    changeLabel.textContent = "New Annual Salary";
+    changeValue.value = "52500";
+    changeValue.placeholder = "52500";
+    changeValue.min = "0";
+    changeValue.step = "0.01";
+
+    changePrefix.textContent = getCurrencySymbol();
+    quickActions.style.display = "none";
+
+    changeValue.setAttribute("aria-label","New annual salary");
+
+  }
+
+  document.getElementById("salaryResults").classList.remove("show");
+}
+
+
+function setQuickRaise(value){
+
+  if(raiseMode !== "percentage"){
+    return;
+  }
+
+  document.getElementById("changeValue").value = value;
+
+  calculateRaise();
+}
+
+
+function calculateRaise(){
+
+  const currentSalary = parseFloat(
+    document.getElementById("currentSalary").value
+  );
+
+  const changeValue = parseFloat(
+    document.getElementById("changeValue").value
+  );
+
+  const hoursPerWeek = parseFloat(
+    document.getElementById("hoursPerWeek").value
+  );
+
+  const weeksPerYear = parseFloat(
+    document.getElementById("weeksPerYear").value
+  );
+
+  if(
+    !Number.isFinite(currentSalary) ||
+    currentSalary <= 0
+  ){
+    alert("Please enter a current annual salary greater than 0.");
+    return;
+  }
+
+  if(
+    !Number.isFinite(changeValue) ||
+    changeValue < 0
+  ){
+    alert("Please enter a valid raise value.");
+    return;
+  }
+
+  if(
+    !Number.isFinite(hoursPerWeek) ||
+    hoursPerWeek <= 0
+  ){
+    alert("Please enter valid hours per week.");
+    return;
+  }
+
+  if(
+    !Number.isFinite(weeksPerYear) ||
+    weeksPerYear <= 0
+  ){
+    alert("Please enter valid weeks per year.");
+    return;
+  }
+
+
+  let annualIncrease = 0;
+  let newSalary = 0;
+  let raisePercent = 0;
+
+
+  if(raiseMode === "percentage"){
+
+    raisePercent = changeValue;
+
+    annualIncrease =
+      currentSalary * (raisePercent / 100);
+
+    newSalary =
+      currentSalary + annualIncrease;
+
+  }
+
+
+  else if(raiseMode === "amount"){
+
+    annualIncrease = changeValue;
+
+    newSalary =
+      currentSalary + annualIncrease;
+
+    raisePercent =
+      (annualIncrease / currentSalary) * 100;
+
+  }
+
+
+  else if(raiseMode === "newSalary"){
+
+    newSalary = changeValue;
+
+    if(newSalary < currentSalary){
+
+      alert(
+        "The new salary must be greater than or equal to the current salary for a pay raise."
+      );
+
+      return;
+    }
+
+    annualIncrease =
+      newSalary - currentSalary;
+
+    raisePercent =
+      (annualIncrease / currentSalary) * 100;
+
+  }
+
+
+  const monthlyIncrease =
+    annualIncrease / 12;
+
+  const weeklyIncrease =
+    annualIncrease / weeksPerYear;
+
+  const biweeklyIncrease =
+    weeklyIncrease * 2;
+
+  const hourlyIncrease =
+    annualIncrease / (hoursPerWeek * weeksPerYear);
+
+  const newHourlyRate =
+    newSalary / (hoursPerWeek * weeksPerYear);
+
+
+  document.getElementById("newSalaryResult").textContent =
+    formatMoney(newSalary);
+
+  document.getElementById("annualIncreaseResult").textContent =
+    formatMoney(annualIncrease);
+
+  document.getElementById("raisePercentResult").textContent =
+    formatPercent(raisePercent);
+
+  document.getElementById("monthlyIncreaseResult").textContent =
+    formatMoney(monthlyIncrease);
+
+  document.getElementById("biweeklyIncreaseResult").textContent =
+    formatMoney(biweeklyIncrease);
+
+  document.getElementById("weeklyIncreaseResult").textContent =
+    formatMoney(weeklyIncrease);
+
+  document.getElementById("hourlyIncreaseResult").textContent =
+    formatMoney(hourlyIncrease);
+
+  document.getElementById("newHourlyResult").textContent =
+    formatMoney(newHourlyRate);
+
+
+  document.getElementById("annualChangeLabel").textContent =
+    "Annual Increase";
+
+  document.getElementById("monthlyChangeLabel").textContent =
+    "Monthly Increase";
+
+  document.getElementById("biweeklyChangeLabel").textContent =
+    "Biweekly Increase";
+
+  document.getElementById("weeklyChangeLabel").textContent =
+    "Weekly Increase";
+
+  document.getElementById("hourlyChangeLabel").textContent =
+    "Hourly Increase";
+
+
+  const formulaNote =
+    document.getElementById("formulaNote");
+
+
+  if(raiseMode === "percentage"){
+
+    formulaNote.innerHTML =
+      "<strong>Formula:</strong> " +
+      "Raise Amount = Current Salary × Raise Percentage ÷ 100. " +
+      "New Salary = Current Salary + Raise Amount.";
+
+  }
+
+  else if(raiseMode === "amount"){
+
+    formulaNote.innerHTML =
+      "<strong>Formula:</strong> " +
+      "New Salary = Current Salary + Raise Amount. " +
+      "Raise Percentage = Raise Amount ÷ Current Salary × 100.";
+
+  }
+
+  else{
+
+    formulaNote.innerHTML =
+      "<strong>Formula:</strong> " +
+      "Raise Amount = New Salary − Current Salary. " +
+      "Raise Percentage = Raise Amount ÷ Current Salary × 100.";
+
+  }
+
+
+  const results =
+    document.getElementById("salaryResults");
+
+  results.classList.add("show");
+
+  setTimeout(function(){
+    results.scrollIntoView({
+      behavior:"smooth",
+      block:"nearest"
+    });
+  },50);
+}
+
+
+/* Currency change */
+document.getElementById("currency").addEventListener("change",function(){
+
+  if(raiseMode !== "percentage"){
+    document.getElementById("changePrefix").textContent =
+      getCurrencySymbol();
+  }
+
+  if(document.getElementById("salaryResults").classList.contains("show")){
+    calculateRaise();
+  }
+
+});
+
+
+/* Enter key */
+document.querySelectorAll(
+  "#currentSalary, #changeValue, #hoursPerWeek, #weeksPerYear"
+).forEach(function(input){
+
+  input.addEventListener("keydown",function(event){
+
+    if(event.key === "Enter"){
+      calculateRaise();
+    }
+
+  });
+
+});
+
+
+/* Initialize */
+changeRaiseMode("percentage");
+</script>
+
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"How do I calculate my salary increment?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Subtract your old salary from your new salary to find the dollar increase. To calculate the percentage increase, divide the increase by your old salary and multiply by 100."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How do I calculate a 5% pay raise?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Multiply your current salary by 0.05. For example, a 5% raise on $50,000 is $2,500, making the new salary $52,500."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What is a 5% raise on $50,000?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A 5% raise on $50,000 is $2,500. The resulting annual salary is $52,500."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What is a 5% raise on $60,000?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A 5% raise on $60,000 is $3,000. The resulting annual salary is $63,000."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What is a 3% raise on $30,000?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A 3% raise on $30,000 is $900. The new annual salary is $30,900."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How much is a 2% raise?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A 2% raise equals your current salary multiplied by 0.02. For example, a 2% raise on $50,000 is $1,000."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What is a 10% raise?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A 10% raise equals your current salary multiplied by 0.10. For example, a 10% raise on $50,000 is $5,000."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How much is a $2,000 raise per hour?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Assuming 40 hours per week and 52 weeks per year, a $2,000 annual raise is approximately $0.96 more per hour."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How much is a $5,000 raise per hour?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Assuming 40 hours per week and 52 weeks per year, a $5,000 annual raise is approximately $2.40 more per hour."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How much is a $10,000 raise per hour?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Assuming 40 hours per week and 52 weeks per year, a $10,000 annual raise is approximately $4.81 more per hour."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How much does a $5,000 raise increase your paycheck?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"With 26 biweekly pay periods, a $5,000 annual raise is approximately $192.31 more per biweekly paycheck before taxes and deductions."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How do I calculate percentage salary increase?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Use this formula: (New Salary − Old Salary) ÷ Old Salary × 100."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What is the difference between a raise amount and a raise percentage?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"The raise amount is the dollar increase in salary. The raise percentage expresses that same increase relative to the original salary."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I calculate a raise from my new salary?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. Select Find Raise %, enter your current salary and new annual salary, and the calculator will calculate the dollar and percentage increase."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I calculate an hourly pay raise?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. Enter your annual salary and raise information. The calculator estimates the hourly increase using your hours per week and weeks per year."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What is a 2.8% raise in dollars?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A 2.8% raise equals your current salary multiplied by 0.028. For example, on $50,000, a 2.8% raise is $1,400."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Is a $5,000 raise good?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A $5,000 raise increases annual gross salary by $5,000. Whether it is considered sufficient depends on the person's starting salary, role, employer, market conditions, and other circumstances."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Does this calculator include taxes?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. The calculator shows gross salary changes and does not estimate taxes, deductions, or take-home pay."
+      }
+    }
+  ]
+}
+</script>
+
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Pay Raise Calculator",
+  "url":"https://www.salarypayslip.com/calculators/pay-raise-calculator/",
+  "description":"Free Pay Raise Calculator for calculating salary increases, raise percentages, new annual salary, and annual, monthly, biweekly, weekly and hourly pay changes.",
+  "applicationCategory":"FinanceApplication",
+  "operatingSystem":"All",
+  "browserRequirements":"Requires JavaScript",
+  "offers":{
+    "@type":"Offer",
+    "price":"0",
+    "priceCurrency":"USD"
+  }
+}
+</script>
+
+<script src="/assets/js/language-selector.js"></script>
+
+</body>
+</html>
