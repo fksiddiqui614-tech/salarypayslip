@@ -112,6 +112,43 @@
     <priority>0.9</priority>
    </url>
       
+   <!-- USA Finance SEO Pages -->
+
+   <url>
+    <loc>https://www.salarypayslip.com/usa/salary-guides/tax-auditor-salary-in-usa.html/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/usa/salary-guides/external-auditor-salary-in-usa.html/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/usa/salary-guides/internal-auditor-salary-in-usa.html/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/usa/salary-guides/auditor-salary-in-usa.html/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>
+
+   <url>
+    <loc>https://www.salarypayslip.com/usa/salary-guides/accountant-salary-in-usa.html/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+   </url>   
+   
    <!-- USA Gov SEO Pages -->
 
    <url>
